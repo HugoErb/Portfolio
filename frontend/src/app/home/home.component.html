@@ -1,6 +1,6 @@
 <header class="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-white z-50 shadow-sm border-b border-gray-200">
   <div class="flex items-center justify-center mb-0.5 cursor-pointer" (click)="scrollToSection('landing')">
-    <fa-icon class="text-2xl text-gray-700" [icon]="icons.faCode"></fa-icon>
+    <i class="fa-solid fa-code text-2xl text-gray-700"></i>
     <span class="text-xl font-semibold ml-4">Hugo Eribon</span>
   </div>
 
@@ -22,7 +22,7 @@
 
   <!-- Menu burger pour les petits écrans -->
   <button class="lg:hidden ml-auto mr-3" (click)="toggleBurgerMenu($event)">
-    <fa-icon class="text-2xl text-gray-700" [icon]="icons.faBars"></fa-icon>
+    <i class="fa-solid fa-bars text-2xl text-gray-700"></i>
   </button>
   <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"
     *ngIf="burgerMenuOpened">
@@ -130,7 +130,7 @@
     </div>
   </section>
 
-  <section id="services" class="flex justify-center items-center w-full pt-16 pb-20">
+  <!-- <section id="services" class="flex justify-center items-center w-full pt-16 pb-20">
     <div class="container space-y-12 px-4 md:px-6">
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
         <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">Services</h2>
@@ -192,9 +192,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="formateur" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100">
+  <!-- <section id="formateur" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100">
     <div class="container space-y-12 px-4 md:px-6">
       <div class="flex flex-col items-center justify-center space-y-4 text-center mx-auto">
         <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">Votre formateur</h2>
@@ -247,9 +247,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="catalogue" class="flex justify-center items-center w-full pt-16 pb-20">
+  <!-- <section id="catalogue" class="flex justify-center items-center w-full pt-16 pb-20">
     <div class="container grid items-center justify-center gap-6 px-4 md:px-6">
       <div class="space-y-4 text-center mx-auto">
         <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">Catalogue de formations</h2>
@@ -491,7 +491,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="contact" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100">
     <div class="container space-y-12 px-4 md:px-6">
@@ -526,7 +526,7 @@
             <input
               class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               id="phoneNumber" #inputField placeholder="Entrez votre numéro de téléphone" type="tel"
-              [(ngModel)]="phoneNumberMail" (input)="formatAndRestrictPhoneInput($event)">
+              [(ngModel)]="phoneNumberMail" (input)="commonService.formatAndRestrictPhoneInput($event)">
           </div>
           <div class="space-y-2">
             <label class="text-sm font-medium leading-none" for="message">Message
