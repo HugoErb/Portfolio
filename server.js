@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -9,11 +10,6 @@ const optionsCors = {
 }
 
 if (process.env.NODE_ENV === 'dev') {
-  optionsCors.cors = {
-    origin: 'http://localhost:4200/',
-    methods: ["GET", "POST"]
-  }
-} else if (process.env.NODE_ENV === 'prd') {
   optionsCors.cors = {
     origin: 'http://localhost:4200/',
     methods: ["GET", "POST"]
@@ -73,4 +69,13 @@ app.post('/send-mail', async (req, res) => {
   }
 });
 
+if (process.env.NODE_ENV !== 'dev') {
+  var distDir = __dirname + "/dist/";
+  app.use(express.static(distDir));
+
+  app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/dist/index.html');
+  });
+}
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
