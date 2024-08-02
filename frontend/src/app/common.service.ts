@@ -1,4 +1,4 @@
-import { ElementRef, Injectable, QueryList } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { MailService } from './mail.service';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -103,16 +103,10 @@ export class CommonService {
   async validateInputs(inputLabelMap: Map<string, string>): Promise<boolean> {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const phoneNumberRegex = /^(0[1-9]) (\d{2}) (\d{2}) (\d{2}) (\d{2})$/;
-    const postalCodeRegex = /^\d{5}$/;
 
     for (const [label, value] of inputLabelMap.entries()) {
       const trimmedValue = value.trim();
       const lowerCaseLabel = label.toLowerCase();
-
-      // Exclusion du champ optionnel "Informations complémentaires"
-      if (lowerCaseLabel === "informations complémentaires") {
-        continue;
-      }
 
       // Vérification des champs obligatoires
       if (!trimmedValue) {
@@ -137,22 +131,6 @@ export class CommonService {
       else if (lowerCaseLabel.includes('téléphone')) {
         if (!phoneNumberRegex.test(trimmedValue)) {
           this.showValidationError('Le format du numéro de téléphone est invalide.');
-          return false;
-        }
-      }
-      // Vérification pour le code postal
-      else if (lowerCaseLabel.includes('code postal')) {
-        const postalCodeValue = parseInt(trimmedValue, 10);
-        if (!postalCodeRegex.test(trimmedValue) || postalCodeValue < 1000 || postalCodeValue > 98890) {
-          this.showValidationError('Le code postal est invalide.');
-          return false;
-        }
-      }
-      // Vérification pour le nombre de personnes
-      else if (lowerCaseLabel.includes('nombre de personnes')) {
-        const numberOfPeople = parseInt(trimmedValue, 10);
-        if (isNaN(numberOfPeople) || numberOfPeople < 6 || numberOfPeople > 12) {
-          this.showValidationError('Le nombre de personnes doit être un entier entre 6 et 12.');
           return false;
         }
       }
