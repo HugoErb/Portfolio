@@ -7,11 +7,11 @@
   <!-- Navigation principale pour les grands écrans -->
   <nav class="hidden lg:flex ml-auto gap-4 sm:gap-6 items-center">
     <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
-      (click)="scrollToSection('services')">
-      Services</div>
+      (click)="scrollToSection('projects')">
+      Projets</div>
     <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
-      (click)="scrollToSection('formateur')">
-      Formateur</div>
+      (click)="scrollToSection('technologies')">
+      Technologies</div>
     <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
       (click)="scrollToSection('catalogue')">
       Catalogue</div>
@@ -27,9 +27,9 @@
   <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"
     *ngIf="burgerMenuOpened">
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
-      (click)="scrollToSection('services')">Services</div>
+      (click)="scrollToSection('projects')">Projets</div>
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
-      (click)="scrollToSection('formateur')">Formateur</div>
+      (click)="scrollToSection('technologies')">Technologies</div>
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
       (click)="scrollToSection('catalogue')">Catalogue</div>
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
@@ -102,7 +102,7 @@
           <div
             class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
             <h3 class="text-xl font-bold">Tik Tok Dynamic Lives</h3>
-            <p class="text-gray-300">Un outil angular et python permettant de rendre des lives Tik Tok réactifs aux dons
+            <p class="text-gray-300">Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons
               des viewers.</p>
           </div>
         </a>
@@ -124,9 +124,8 @@
           <div
             class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
             <h3 class="text-xl font-bold">Easy breaking</h3>
-            <p class="text-gray-300">Application Angular permettant d'optimiser le brisage d'items sur Dofus afin de
-              maximiser la rentabilité à partir du taux de
-              brisage.</p>
+            <p class="text-gray-300">Application Angular sur Dofus permettant d'optimiser le brisage d'items afin de
+              maximiser la rentabilité.</p>
           </div>
         </a>
       </div>
@@ -143,36 +142,74 @@
           sur la base d'un code propre et structuré.
         </p>
       </div>
-      <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:justify-end">
+      <div class="grid grid-cols-3 gap-6 lg:justify-end">
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="React" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
-          <div class="text-sm font-medium">React</div>
+          <i class="fa-brands fa-python text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Python</div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="Node.js" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
-          <div class="text-sm font-medium">Node.js</div>
+          <i class="fa-brands fa-aws text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Amazon Web Services</div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="MongoDB" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
-          <div class="text-sm font-medium">MongoDB</div>
+          <i class="fa-brands fa-angular text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Angular</div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="Next.js" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
-          <div class="text-sm font-medium">Next.js</div>
+          <i class="fa-brands fa-html5 text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">HTML</div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="Express" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
+          <i class="fa-brands fa-css3-alt text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">CSS</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-square-git text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Git</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-js text-5xl text-gray-700"></i>
           <div class="text-sm font-medium">Express</div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <img src="/placeholder.svg" alt="PostgreSQL" width="48" height="48" class="w-12 h-12"
-            style="aspect-ratio:48/48;object-fit:cover" />
-          <div class="text-sm font-medium">PostgreSQL</div>
+          <i class="fa-brands fa-php text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">PHP</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-js text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">JavaScript</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-js text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">TypeScript</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-java text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Java</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Node JS</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Tailwind CSS</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">Terraform</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">PL/SQL</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">.NET</div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+          <div class="text-sm font-medium">C#</div>
         </div>
       </div>
     </div>
@@ -213,11 +250,11 @@
         </div>
       </div>
       <div class="space-y-2 text-center lg:text-left">
-        <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Diplômes &amp; Certifications</h2>
-        <p
-          class="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-          Je vous présente ici plusieurs diplômes et certifications que j'ai obtenus tout au long de mon parcours
-          professionnel, témoignant de mon expertise dans divers domaines et technologies.
+        <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">Diplômes &amp; Certifications
+        </h2>
+        <p class="max-w-[600px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications, témoignant de
+          mon expertise dans divers domaines et technologies.
         </p>
       </div>
     </div>
@@ -348,11 +385,16 @@
             <div class="dui-timeline-start mb-10 md:text-end">
               <time class="font-mono italic">2022 - Aujourd'hui</time>
               <div class="text-lg font-black mb-1">Ingénieur études et développement - Sopra Steria</div>
-              Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria, un poste qui me permet de poursuivre sur la
-              lancée de mon stage en utilisant quotidiennement Python, AWS, Terraform, mais aussi .NET C#, PLSQL et plus encore. Grâce à mes compétences et à mon
-              engagement, j'ai gravi les échelons pour devenir responsable technique sur un des projets pour le client Teréga. Ce
-              rôle m'a offert de nouvelles opportunités, y compris la gestion de la relation client, des responsabilités accrues et
-              une pression stimulante, me permettant de continuer à développer mes compétences et à relever de nouveaux défis.
+              Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria, un poste qui me permet de
+              poursuivre sur la
+              lancée de mon stage en utilisant quotidiennement Python, AWS, Terraform, mais aussi .NET C#, PLSQL et plus
+              encore. Grâce à mes compétences et à mon
+              engagement, j'ai gravi les échelons pour devenir responsable technique sur un des projets pour le client
+              Teréga. Ce
+              rôle m'a offert de nouvelles opportunités, y compris la gestion de la relation client, des responsabilités
+              accrues et
+              une pression stimulante, me permettant de continuer à développer mes compétences et à relever de nouveaux
+              défis.
             </div>
           </li>
         </ul>
