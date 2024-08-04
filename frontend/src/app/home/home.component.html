@@ -12,7 +12,7 @@
     <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
       (click)="scrollToSection('technologies')">
       Technologies</div>
-      <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
+    <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
       (click)="scrollToSection('diplomas')">
       Diplômes</div>
     <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
@@ -33,7 +33,7 @@
       (click)="scrollToSection('projects')">Projets</div>
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
       (click)="scrollToSection('technologies')">Technologies</div>
-      <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
+    <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
       (click)="scrollToSection('diplomas')">Diplômes</div>
     <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
       (click)="scrollToSection('carrier')">Parcours</div>
@@ -147,110 +147,174 @@
           sur la base d'un code propre et structuré.
         </p>
       </div>
-      <div class="grid grid-cols-3 gap-6 lg:justify-end">
-        <div class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 px-0 cursor-pointer transition-all">
-          <i class="fa-brands fa-python text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Python</div>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 512 512" class="w-full h-full fill-current ml-1">
-              <path
-                d="M335.2219849,244.6636963h14.1854858L347.5634155,262h-14.1361694L335.2219849,244.6636963z M454.9803467,147.4076538v217.1847534c-0.4816284,13.7158203-7.4530029,25.9771729-19.7009888,34.1234131L247.1911011,507.3074341c-10.8347778,6.2567139-28.5671387,6.2567139-39.4018555,0L19.7009277,398.7158203C8.2855835,391.2316895,0.8429565,379.1637573,0,364.5924072V147.4076538c0-12.5119629,8.864624-27.8682861,19.7009277-34.1235352L207.7892456,4.6925049c10.8347168-6.2566528,28.5670776-6.2566528,39.4018555,0l188.0882568,108.5916138C446.6565552,120.9649048,454.5403442,134.2429199,454.9803467,147.4076538z M358.8307495,331.8723755l-65.6346436-37.9788818c-43.7824097,70.0854492-140.475647,35.8363037-141.5360107-37.8928223c3.5307617-79.998291,101.9100952-103.4307861,141.5316162-37.8971558l65.6345825-37.9804077C273.2891846,42.5216675,74.9389038,107.9119263,75.8300781,256.0006714C79.6317749,415.6530762,283.4476929,462.7354736,358.8307495,331.8723755z M374.5,232.5919189h-11.2527466L365.2755127,213h-12.5l-2.0839844,19.5919189h-14.2197876L338.5,213H326l-2.0839844,19.5919189H312v12.0717773h10.631958L320.7879028,262H308.5v12.0717773h11.0037842L317.2244873,295.5h12.7346802l2.2183838-21.4282227h14.1017456L344,295.5h12.7346802l2.2183838-21.4282227H371V262h-10.7972412l1.7947388-17.3363037H374.5V232.5919189z" />
-            </svg>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-python text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">Python</div>
           </div>
-          <div class="text-sm font-medium">C#</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-aws text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Amazon Web Services</div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 512 512" class="w-full h-full fill-current ml-1">
+                <path
+                  d="M335.2219849,244.6636963h14.1854858L347.5634155,262h-14.1361694L335.2219849,244.6636963z M454.9803467,147.4076538v217.1847534c-0.4816284,13.7158203-7.4530029,25.9771729-19.7009888,34.1234131L247.1911011,507.3074341c-10.8347778,6.2567139-28.5671387,6.2567139-39.4018555,0L19.7009277,398.7158203C8.2855835,391.2316895,0.8429565,379.1637573,0,364.5924072V147.4076538c0-12.5119629,8.864624-27.8682861,19.7009277-34.1235352L207.7892456,4.6925049c10.8347168-6.2566528,28.5670776-6.2566528,39.4018555,0l188.0882568,108.5916138C446.6565552,120.9649048,454.5403442,134.2429199,454.9803467,147.4076538z M358.8307495,331.8723755l-65.6346436-37.9788818c-43.7824097,70.0854492-140.475647,35.8363037-141.5360107-37.8928223c3.5307617-79.998291,101.9100952-103.4307861,141.5316162-37.8971558l65.6345825-37.9804077C273.2891846,42.5216675,74.9389038,107.9119263,75.8300781,256.0006714C79.6317749,415.6530762,283.4476929,462.7354736,358.8307495,331.8723755z M374.5,232.5919189h-11.2527466L365.2755127,213h-12.5l-2.0839844,19.5919189h-14.2197876L338.5,213H326l-2.0839844,19.5919189H312v12.0717773h10.631958L320.7879028,262H308.5v12.0717773h11.0037842L317.2244873,295.5h12.7346802l2.2183838-21.4282227h14.1017456L344,295.5h12.7346802l2.2183838-21.4282227H371V262h-10.7972412l1.7947388-17.3363037H374.5V232.5919189z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">C#</div>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-angular text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Angular</div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-aws text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">AWS</div>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-html5 text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">HTML</div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-angular text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">Angular</div>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-css3-alt text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">CSS</div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-html5 text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">HTML</div>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-git-alt text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Git</div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-css3-alt text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">CSS</div>
+          </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-git-alt text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">Git</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
                 <path
                   d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z" />
               </svg>
+            </div>
+            <div class="text-sm font-medium">Express</div>
           </div>
-          <div class="text-sm font-medium">Express</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-php text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">PHP</div>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-js text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">JavaScript</div>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
-              <path
-                d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />
-            </svg>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-php text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">PHP</div>
           </div>
-          <div class="text-sm font-medium">TypeScript</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-java text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Java</div>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <i class="fa-brands fa-node text-5xl text-gray-700"></i>
-          <div class="text-sm font-medium">Node JS</div>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
-              <path
-                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
-            </svg>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-js text-[3.3rem] text-gray-700"></i>
+            <div class="text-sm font-medium">JavaScript</div>
           </div>
-          <div class="text-sm font-medium">Tailwind CSS</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
-              <path
-                d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z" />
-            </svg>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
+                <path
+                  d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">TypeScript</div>
           </div>
-          <div class="text-sm font-medium">Terraform</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current ml-[0.35rem]">
-              <path
-                d="m852.97077 1013.9363c-6.55238-.4723-13.02857-2.1216-17.00034-4.3296-2.26232-1.2576-3.98589-2.8032-4.66223-4.1807l-.4024-.8196v-25.70807-25.7081l.31843-.6465c1.42297-2.889 5.96432-5.4935 12.30378-7.0562 2.15195-.5305 5.2586-1.0588 7.79304-1.3252 2.58797-.2721 9.44765-.2307 12.02919.073 6.86123.8061 12.69967 2.6108 16.29768 5.0377 1.38756.9359 2.81137 2.4334 3.29371 3.4642l.41358.8838-.0354 25.6303-.0354 25.63047-.33195.6744c-.18257.3709-.73406 1.1007-1.22553 1.6216-2.99181 3.1715-9.40919 5.5176-17.8267 6.5172-1.71567.2038-9.16916.3686-10.92937.2417zm12.07501-22.02839c-.0252-.0657-1.00472-.93831-2.17671-1.93922s-2.18138-1.86687-2.24309-1.92436c-.0617-.0575.15481-.26106.48117-.45237.32635-.19131.95163-.7235 1.3895-1.18265 1.2805-1.34272 1.88466-3.00131 1.88466-5.17388 0-2.1388-.65162-3.8645-1.95671-5.1818-1.31533-1.3278-2.82554-1.8983-5.02486-1.8983-3.39007 0-5.99368 1.9781-6.82468 5.1851-.28586 1.1031-.28432 3.33211.003 4.31023.74941 2.55136 2.79044 4.40434 5.33062 4.83946.8596.14724.97605.21071 1.5621.85144.34829.38078 1.06301 1.14085 1.58827 1.68904l.95501.9967h2.53878c1.39633 0 2.51816-.0537 2.49296-.11939zm-8.70653-7.10848c-.61119-.31868-.84225-.56599-1.19079-1.27453-.26919-.54724-.31522-.85851-.31824-2.15197-.003-1.3143.0388-1.5983.31987-2.169.45985-.9339 1.09355-1.376 2.07384-1.4469 1.36454-.099 2.15217.5707 2.56498 2.1801.50612 1.97321-.0504 4.07107-1.26471 4.76729-.63707.36527-1.58737.40659-2.18495.095zm-11.25315 3.66269c2.66179-.5048 4.1728-2.0528 4.1728-4.27495 0-1.97137-.97548-3.12004-3.6716-4.32364-1.54338-.689-2.10241-1.1215-2.10241-1.6268 0-.4188.53052-.8777 1.14813-.993.60302-.1126 2.20237.1652 3.14683.5467l.79167.3198v-1.7524-1.7525l-.85923-.1906c-.53103-.1178-1.64689-.1885-2.92137-.1849-1.80528 0-2.15881.044-2.83818.3138-1.98445.7878-2.92613 2.1298-2.91107 4.1485.0141 1.8898 1.01108 3.06864 3.49227 4.12912 1.46399.62572 2.05076 1.10218 2.05076 1.66522 0 1.1965-1.99362 1.34375-4.10437.30315-.57805-.28498-1.09739-.54137-1.1541-.56976-.0567-.0284-.10311.79023-.10311 1.81917 0 1.86239.002 1.87137.33919 1.99974 1.26979.48278 4.07626.69787 5.52379.42335zm30.4308-1.72766v-1.58098h-2.40584-2.40583v-5.43035-5.4303h-2.13089-2.13088v7.0113 7.01131h4.53672 4.53672zm-14.84745-27.70503c4.23447-.2937 7.4086-.8482 10.20178-1.7821 2.78264-.9304 4.42643-2.0562 4.79413-3.2834.14166-.4729.13146-.6523-.0665-1.1708-.88775-2.3245-5.84694-4.1104-13.42493-4.8345-3.24154-.3098-9.13671-.2094-12.22745.2081-4.71604.6372-8.54333 1.8208-10.2451 3.1683-3.44251 2.726.19793 5.7242 8.66397 7.1354 3.67084.6119 8.42674.828 12.30414.559z"
-                transform="translate(-830.906 -943.981)" />
-            </svg>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-java text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">Java</div>
           </div>
-          <div class="text-sm font-medium">PL/SQL</div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="w-12 h-12 text-gray-700">
-            <svg viewBox="0 0 24 24" class="w-full h-full fill-current">
-              <path
-                d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z" />
-            </svg>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <i class="fa-brands fa-node text-5xl text-gray-700"></i>
+            <div class="text-sm font-medium">Node JS</div>
           </div>
-          <div class="text-sm font-medium">.NET</div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
+                <path
+                  d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">Tailwind CSS</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current">
+                <path
+                  d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">Terraform</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full fill-current ml-[0.35rem]">
+                <path
+                  d="m852.97077 1013.9363c-6.55238-.4723-13.02857-2.1216-17.00034-4.3296-2.26232-1.2576-3.98589-2.8032-4.66223-4.1807l-.4024-.8196v-25.70807-25.7081l.31843-.6465c1.42297-2.889 5.96432-5.4935 12.30378-7.0562 2.15195-.5305 5.2586-1.0588 7.79304-1.3252 2.58797-.2721 9.44765-.2307 12.02919.073 6.86123.8061 12.69967 2.6108 16.29768 5.0377 1.38756.9359 2.81137 2.4334 3.29371 3.4642l.41358.8838-.0354 25.6303-.0354 25.63047-.33195.6744c-.18257.3709-.73406 1.1007-1.22553 1.6216-2.99181 3.1715-9.40919 5.5176-17.8267 6.5172-1.71567.2038-9.16916.3686-10.92937.2417zm12.07501-22.02839c-.0252-.0657-1.00472-.93831-2.17671-1.93922s-2.18138-1.86687-2.24309-1.92436c-.0617-.0575.15481-.26106.48117-.45237.32635-.19131.95163-.7235 1.3895-1.18265 1.2805-1.34272 1.88466-3.00131 1.88466-5.17388 0-2.1388-.65162-3.8645-1.95671-5.1818-1.31533-1.3278-2.82554-1.8983-5.02486-1.8983-3.39007 0-5.99368 1.9781-6.82468 5.1851-.28586 1.1031-.28432 3.33211.003 4.31023.74941 2.55136 2.79044 4.40434 5.33062 4.83946.8596.14724.97605.21071 1.5621.85144.34829.38078 1.06301 1.14085 1.58827 1.68904l.95501.9967h2.53878c1.39633 0 2.51816-.0537 2.49296-.11939zm-8.70653-7.10848c-.61119-.31868-.84225-.56599-1.19079-1.27453-.26919-.54724-.31522-.85851-.31824-2.15197-.003-1.3143.0388-1.5983.31987-2.169.45985-.9339 1.09355-1.376 2.07384-1.4469 1.36454-.099 2.15217.5707 2.56498 2.1801.50612 1.97321-.0504 4.07107-1.26471 4.76729-.63707.36527-1.58737.40659-2.18495.095zm-11.25315 3.66269c2.66179-.5048 4.1728-2.0528 4.1728-4.27495 0-1.97137-.97548-3.12004-3.6716-4.32364-1.54338-.689-2.10241-1.1215-2.10241-1.6268 0-.4188.53052-.8777 1.14813-.993.60302-.1126 2.20237.1652 3.14683.5467l.79167.3198v-1.7524-1.7525l-.85923-.1906c-.53103-.1178-1.64689-.1885-2.92137-.1849-1.80528 0-2.15881.044-2.83818.3138-1.98445.7878-2.92613 2.1298-2.91107 4.1485.0141 1.8898 1.01108 3.06864 3.49227 4.12912 1.46399.62572 2.05076 1.10218 2.05076 1.66522 0 1.1965-1.99362 1.34375-4.10437.30315-.57805-.28498-1.09739-.54137-1.1541-.56976-.0567-.0284-.10311.79023-.10311 1.81917 0 1.86239.002 1.87137.33919 1.99974 1.26979.48278 4.07626.69787 5.52379.42335zm30.4308-1.72766v-1.58098h-2.40584-2.40583v-5.43035-5.4303h-2.13089-2.13088v7.0113 7.01131h4.53672 4.53672zm-14.84745-27.70503c4.23447-.2937 7.4086-.8482 10.20178-1.7821 2.78264-.9304 4.42643-2.0562 4.79413-3.2834.14166-.4729.13146-.6523-.0665-1.1708-.88775-2.3245-5.84694-4.1104-13.42493-4.8345-3.24154-.3098-9.13671-.2094-12.22745.2081-4.71604.6372-8.54333 1.8208-10.2451 3.1683-3.44251 2.726.19793 5.7242 8.66397 7.1354 3.67084.6119 8.42674.828 12.30414.559z"
+                  transform="translate(-830.906 -943.981)" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">PL/SQL</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" class="w-full h-full fill-current">
+                <path
+                  d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">.NET</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
+            <div class="w-12 h-12 text-gray-700">
+              <svg viewBox="0 0 24 24" class="w-full h-full fill-current">
+                <path
+                  d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
+              </svg>
+            </div>
+            <div class="text-sm font-medium">Mongo DB</div>
+          </div>
         </div>
       </div>
     </div>
