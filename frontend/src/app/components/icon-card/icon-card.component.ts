@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 export class IconCardComponent {
   @Input() iconClass: string = '';
   @Input() label: string = '';
+  @Input() path: string = '';
   @Input() isSvg: boolean = false;
-  @Input() viewBox: number = 512;
+  @Input() viewBox: string = '';
 }
