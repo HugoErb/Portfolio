@@ -11,4 +11,5 @@ export class IconCardComponent {
   @Input() iconClass: string = '';
   @Input() label: string = '';
   @Input() isSvg: boolean = false;
+  @Input() viewBox: number = 512;
 }
