@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
+import { IconCardComponent } from '../components/icon-card/icon-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, IconCardComponent],
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
