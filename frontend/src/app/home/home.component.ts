@@ -1,10 +1,19 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { IconCardComponent } from '../components/icon-card/icon-card.component';
-import { technoIcons } from '../../assets/data/technoIcons';
+import { HttpClient } from '@angular/common/http';
+
+interface Icon {
+    iconClass: string;
+    label: string;
+    isSvg: boolean;
+    viewBox: string;
+    path: string;
+    description: string;
+}
 
 @Component({
     selector: 'app-home',
@@ -12,15 +21,9 @@ import { technoIcons } from '../../assets/data/technoIcons';
     imports: [CommonModule, FormsModule, IconCardComponent],
     templateUrl: './home.component.html'
 })
+export class HomeComponent { 
+    constructor(private router: Router, private http: HttpClient, protected commonService: CommonService) { }
 
-export interface Icon {
-    iconClass: string;
-    label: string;
-    description: string;
-}
-
-export class HomeComponent {
-    constructor(private router: Router, private activatedRoute: ActivatedRoute, protected commonService: CommonService) { }
     burgerMenuOpened: boolean = false;
 
     // Variables pour le mail
@@ -32,8 +35,8 @@ export class HomeComponent {
     messageMail: string = "";
 
     // Icônes de la partie "technologies"
-    icons = icons;
-    visibleIcons = [];
+    icons: Icon[] = [];
+    visibleIcons: Icon[] = [];
     currentPage = 0;
     iconsPerPage = 6;
 
@@ -147,20 +150,34 @@ export class HomeComponent {
     }
 
     /**
-   * Met à jour la liste des icônes visibles en fonction de la page actuelle.
-   * Cette méthode calcule les icônes à afficher pour la page en cours
-   * en utilisant l'index de début basé sur `currentPage` et `iconsPerPage`.
-   */
+    * Charge les icônes à partir du fichier JSON.
+    * 
+    * Cette méthode récupère les données des icônes depuis un fichier JSON local
+    * situé dans le dossier `assets`. Une fois les données chargées, elle les assigne
+    * à la variable `icons` et initialise l'affichage des icônes visibles.
+    */
+    loadIcons(): void {
+        this.http.get<any>('../../assets/data/technoIcons.json').subscribe(data => {
+            this.icons = data.icons;            
+            this.updateVisibleIcons();
+        });
+    }
+
+    /**
+    * Met à jour la liste des icônes visibles en fonction de la page actuelle.
+    * Cette méthode calcule les icônes à afficher pour la page en cours
+    * en utilisant l'index de début basé sur `currentPage` et `iconsPerPage`.
+    */
     updateVisibleIcons(): void {
         const startIndex = this.currentPage * this.iconsPerPage;
         this.visibleIcons = this.icons.slice(startIndex, startIndex + this.iconsPerPage);
     }
 
     /**
-     * Passe à la page suivante des icônes, si elle existe.
-     * Incrémente le numéro de page `currentPage` et met à jour les icônes visibles.
-     * Cette méthode ne fait rien si la page actuelle est la dernière disponible.
-     */
+    * Passe à la page suivante des icônes, si elle existe.
+    * Incrémente le numéro de page `currentPage` et met à jour les icônes visibles.
+    * Cette méthode ne fait rien si la page actuelle est la dernière disponible.
+    */
     nextPage(): void {
         if ((this.currentPage + 1) * this.iconsPerPage < this.icons.length) {
             this.currentPage++;
@@ -169,10 +186,10 @@ export class HomeComponent {
     }
 
     /**
-     * Revient à la page précédente des icônes, si elle existe.
-     * Décrémente le numéro de page `currentPage` et met à jour les icônes visibles.
-     * Cette méthode ne fait rien si la page actuelle est la première.
-     */
+    * Revient à la page précédente des icônes, si elle existe.
+    * Décrémente le numéro de page `currentPage` et met à jour les icônes visibles.
+    * Cette méthode ne fait rien si la page actuelle est la première.
+    */
     prevPage(): void {
         if (this.currentPage > 0) {
             this.currentPage--;
