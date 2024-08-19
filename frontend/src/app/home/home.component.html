@@ -312,7 +312,9 @@
                         label="Mongo DB">
                     </app-icon-card> -->
                     <ng-container *ngFor="let icon of visibleIcons">
-                        <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label"></app-icon-card>
+                        <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label" [isSvg]="icon.isSvg" [viewBox]="icon.viewBox"
+                            [path]="icon.path">
+                        </app-icon-card>
                     </ng-container>
                 </div>
                 <button (click)="nextPage()" 
