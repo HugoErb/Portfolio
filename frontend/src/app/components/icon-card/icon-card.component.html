@@ -1,4 +1,5 @@
-<div class="flex justify-center items-center">
+
+<div class="flex justify-center items-center" (click)="this.commonService.showModal('modal' + label)">
     <div class="flex flex-col items-center gap-2 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all">
         @if (isSvg) {
         <div class="w-12 h-12 text-gray-700">
@@ -13,3 +14,39 @@
         <div class="text-sm font-medium">{{ label }}</div>
     </div>
 </div>
+
+
+<!-- MODAL -->
+<dialog [id]="'modal' + label" class="dui-modal">
+    <div class="dui-modal-box w-fit max-w-5xl text-gray-800 bg-white dark:bg-secondary-dark-bg">
+        <h4 class="m-0 mb-4 text-lg font-semibold text-gray-800 tracking-wider">
+            Mon expérience avec {{label}}
+        </h4>
+        <!-- <form method="dialog">
+            <button class="dui-btn dui-btn-sm dui-btn-circle dui-btn-ghost absolute right-2 top-2 outline-none">✕</button>
+        </form> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+    <form method="dialog" class="dui-modal-backdrop">
+        <button class="outline-none border-none bg-transparent"></button>
+    </form>
+</dialog>

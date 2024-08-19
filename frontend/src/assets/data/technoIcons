@@ -1,0 +1,12 @@
+export const technoIcons = [
+    {
+        iconClass: 'fa-brands fa-python',
+        label: 'Python',
+        description: 'Python is a high-level programming language used for general-purpose programming...'
+    },
+    {
+        iconClass: 'fa-brands fa-aws',
+        label: 'AWS',
+        description: 'Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform...'
+    },
+];
