@@ -39,8 +39,11 @@ export class HomeComponent {
     visibleIcons: Icon[] = [];
     currentPage = 0;
     iconsPerPage = 6;
-    swipeLeft = false;
-    swipeRight = false;
+    swipeLeftOut = false;
+    swipeRightOut = false;
+    swipeLeftIn = false;
+    swipeRightIn = false;
+    isTransitioning = false;
 
     ngOnInit() {
         this.loadIcons();
@@ -175,44 +178,51 @@ export class HomeComponent {
         this.visibleIcons = this.icons.slice(startIndex, startIndex + this.iconsPerPage);
     }
 
+    /**
+     * Passe à la page suivante d'icônes. Applique l'animation `swipeLeft` avant de mettre à jour
+     * la liste des icônes visibles.
+     * L'animation dure 300 ms avant que la page ne soit réellement changée.
+     */
     nextPage(): void {
-        /**
-         * Passe à la page suivante d'icônes. Applique l'animation `swipeLeft` avant de mettre à jour
-         * la liste des icônes visibles.
-         * L'animation dure 300 ms avant que la page ne soit réellement changée.
-         */
-        if ((this.currentPage + 1) * this.iconsPerPage < this.icons.length) {
-            this.swipeLeft = true;
+        if (!this.isTransitioning && (this.currentPage + 1) * this.iconsPerPage < this.icons.length) {
+            this.isTransitioning = true;
+            this.swipeLeftOut = true;
+
             setTimeout(() => {
                 this.currentPage++;
                 this.updateVisibleIcons();
-                this.resetAnimations();
-            }, 500); // La durée de l'animation doit correspondre à celle définie dans Tailwind CSS
-        }
-    }
+                this.swipeLeftOut = false;
+                this.swipeLeftIn = true;
 
-    prevPage(): void {
-        /**
-         * Retourne à la page précédente d'icônes. Applique l'animation `swipeRight` avant de mettre à jour
-         * la liste des icônes visibles.
-         * L'animation dure 300 ms avant que la page ne soit réellement changée.
-         */
-        if (this.currentPage > 0) {
-            this.swipeRight = true;
-            setTimeout(() => {
-                this.currentPage--;
-                this.updateVisibleIcons();
-                this.resetAnimations();
-            }, 500); // La durée de l'animation doit correspondre à celle définie dans Tailwind CSS
+                setTimeout(() => {
+                    this.swipeLeftIn = false;
+                    this.isTransitioning = false;
+                }, 300); // Durée de l'animation d'entrée
+            }, 300); // Durée de l'animation de sortie
         }
     }
 
     /**
-    * Réinitialise les animations en mettant les booléens `swipeLeft` et `swipeRight` à `false`.
-    * Cela permet de réappliquer les animations lors du prochain changement de page.
-    */
-    resetAnimations(): void {
-        this.swipeLeft = false;
-        this.swipeRight = false;
+     * Retourne à la page précédente d'icônes. Applique l'animation `swipeRight` avant de mettre à jour
+     * la liste des icônes visibles.
+     * L'animation dure 300 ms avant que la page ne soit réellement changée.
+     */
+    prevPage(): void {
+        if (!this.isTransitioning && this.currentPage > 0) {
+            this.isTransitioning = true;
+            this.swipeRightOut = true;
+
+            setTimeout(() => {
+                this.currentPage--;
+                this.updateVisibleIcons();
+                this.swipeRightOut = false;
+                this.swipeRightIn = true;
+
+                setTimeout(() => {
+                    this.swipeRightIn = false;
+                    this.isTransitioning = false;
+                }, 300); // Durée de l'animation d'entrée
+            }, 300); // Durée de l'animation de sortie
+        }
     }
 }
