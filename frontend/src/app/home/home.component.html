@@ -268,7 +268,7 @@
                         'bg-gray-200 hover:bg-gray-300 cursor-pointer': currentPage > 0, 
                         'bg-white cursor-not-allowed pointer-events-none': currentPage === 0
                     }" class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 px-3 py-4 rounded-full z-10">
-                    <i class="fas fa-chevron-left text-xl"></i>
+                    <i class="fas fa-chevron-left text-2xl"></i>
                 </div>
             
                 <div [ngClass]="{
@@ -288,7 +288,7 @@
                         'bg-gray-200 hover:bg-gray-300 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
                         'bg-white cursor-not-allowed pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
                     }" class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-3 py-4 rounded-full z-10">
-                    <i class="fas fa-chevron-right text-xl"></i>
+                    <i class="fas fa-chevron-right text-2xl"></i>
                 </div>
             </div>
 
