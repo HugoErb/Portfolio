@@ -181,7 +181,7 @@ export class HomeComponent {
     /**
      * Passe à la page suivante d'icônes. Applique l'animation `swipeLeft` avant de mettre à jour
      * la liste des icônes visibles.
-     * L'animation dure 300 ms avant que la page ne soit réellement changée.
+     * L'animation dure 150 ms avant que la page ne soit réellement changée.
      */
     nextPage(): void {
         if (!this.isTransitioning && (this.currentPage + 1) * this.iconsPerPage < this.icons.length) {
@@ -197,15 +197,15 @@ export class HomeComponent {
                 setTimeout(() => {
                     this.swipeLeftIn = false;
                     this.isTransitioning = false;
-                }, 300); // Durée de l'animation d'entrée
-            }, 300); // Durée de l'animation de sortie
+                }, 150); // Durée de l'animation d'entrée
+            }, 150); // Durée de l'animation de sortie
         }
     }
 
     /**
      * Retourne à la page précédente d'icônes. Applique l'animation `swipeRight` avant de mettre à jour
      * la liste des icônes visibles.
-     * L'animation dure 300 ms avant que la page ne soit réellement changée.
+     * L'animation dure 150 ms avant que la page ne soit réellement changée.
      */
     prevPage(): void {
         if (!this.isTransitioning && this.currentPage > 0) {
@@ -221,8 +221,8 @@ export class HomeComponent {
                 setTimeout(() => {
                     this.swipeRightIn = false;
                     this.isTransitioning = false;
-                }, 300); // Durée de l'animation d'entrée
-            }, 300); // Durée de l'animation de sortie
+                }, 150); // Durée de l'animation d'entrée
+            }, 150); // Durée de l'animation de sortie
         }
     }
 }

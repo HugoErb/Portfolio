@@ -40,10 +40,10 @@ module.exports = {
             },
             animation: {
                 appear: 'appear 0.3s ease forwards',
-                swipeLeftOut: 'swipeLeftOut 0.3s ease forwards',
-                swipeRightOut: 'swipeRightOut 0.3s ease forwards',
-                swipeLeftIn: 'swipeLeftIn 0.3s ease forwards',
-                swipeRightIn: 'swipeRightIn 0.3s ease forwards',
+                swipeLeftOut: 'swipeLeftOut 0.15s ease forwards',
+                swipeRightOut: 'swipeRightOut 0.15s ease forwards',
+                swipeLeftIn: 'swipeLeftIn 0.15s ease forwards',
+                swipeRightIn: 'swipeRightIn 0.15s ease forwards',
             },
             transformOrigin: {
                 'center': 'center',
