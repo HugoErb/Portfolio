@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -9,9 +10,6 @@ import { HttpClient } from '@angular/common/http';
 interface Icon {
     iconClass: string;
     label: string;
-    isSvg: boolean;
-    viewBox: string;
-    path: string;
     description: string;
 }
 
@@ -19,7 +17,8 @@ interface Icon {
     selector: 'app-home',
     standalone: true,
     imports: [CommonModule, FormsModule, IconCardComponent],
-    templateUrl: './home.component.html'
+    templateUrl: './home.component.html',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent {
     constructor(private router: Router, private http: HttpClient, protected commonService: CommonService) { }
