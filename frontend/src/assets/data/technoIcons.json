@@ -97,7 +97,7 @@
         },
         {
             "iconClass": "devicon-plain:bash",
-            "label": "MBash",
+            "label": "Bash",
             "description": "Description pour bash."
         }
     ]
