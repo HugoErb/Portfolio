@@ -98,7 +98,12 @@
         {
             "iconClass": "devicon-plain:bash",
             "label": "Bash",
-            "description": "Description pour bash."
+            "description": "Description pour Bash."
+        },
+        {
+            "iconClass": "uil:android",
+            "label": "Android",
+            "description": "Description pour Android."
         }
     ]
 }

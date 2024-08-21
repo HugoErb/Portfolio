@@ -252,7 +252,7 @@
         </div>
     </section>
 
-    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
+    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32 transition-all">
         <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
             <div class="space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Langages &amp; Technologies</h2>
@@ -266,11 +266,11 @@
 
             <div class="relative w-full max-w-4xl mx-auto">
                 <div (click)="prevPage()" [ngClass]="{
-                        'bg-gray-200 hover:bg-gray-300 cursor-pointer': currentPage > 0, 
-                        'bg-white cursor-not-allowed pointer-events-none': currentPage === 0
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': currentPage > 0, 
+                        'text-gray-300 pointer-events-none': currentPage === 0
                     }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 px-3 py-4 rounded-full z-10 transition-all">
-                    <iconify-icon icon="fluent:chevron-left-20-filled" class="text-4xl"></iconify-icon>
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
                 </div>
                 <div [ngClass]="{
                       'animate-swipeLeftOut': swipeLeftOut, 
@@ -284,11 +284,11 @@
                     </ng-container>
                 </div>
                 <div (click)="nextPage()" [ngClass]="{
-                        'bg-gray-200 hover:bg-gray-300 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
-                        'bg-white cursor-not-allowed pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
+                        'text-gray-300 pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
                     }"
                     class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
-                    <iconify-icon icon="fluent:chevron-right-20-filled" class="text-4xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
                 </div>
             </div>
         </div>
