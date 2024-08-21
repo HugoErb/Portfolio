@@ -104,6 +104,11 @@
             "iconClass": "uil:android",
             "label": "Android",
             "description": "Description pour Android."
+        },
+        {
+            "iconClass": "cib:ionic",
+            "label": "Ionic",
+            "description": "Description pour Ionic."
         }
     ]
 }
