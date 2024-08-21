@@ -3,127 +3,127 @@
         {
             "iconClass": "fontisto:python",
             "label": "Python",
-            "description": "Description pour Python."
+            "description": "Python est un langage de programmation polyvalent, souvent utilisé pour de l'automatisation, de l'analyse de données, de l'intelligence artificielle, ou encore du développement web."
         },
         {
             "iconClass": "fa6-brands:aws",
             "label": "SDK AWS",
-            "description": "Description pour AWS."
+            "description": "AWS SDK permet aux développeurs d'intégrer facilement les services Amazon Web Services dans leurs applications avec des bibliothèques, exemples de code, et documentation."
         },
         {
             "iconClass": "cib:angular",
             "label": "Angular",
-            "description": "Description pour Angular."
+            "description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client."
         },
         {
             "iconClass": "uiw:html5",
             "label": "HTML",
-            "description": "Description pour HTML."
+            "description": "HTML (HyperText Markup Language) est le langage standard utilisé pour créer et structurer des pages web."
         },
         {
             "iconClass": "uiw:css3",
             "label": "CSS",
-            "description": "Description pour CSS."
+            "description": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour décrire la présentation d'un document HTML."
         },
         {
             "iconClass": "bi:git",
             "label": "Git",
-            "description": "Description pour Git."
+            "description": "Git est un système de contrôle de version décentralisé qui permet aux développeurs de suivre les modifications de code et de travailler en collaboration."
         },
         {
             "iconClass": "simple-icons:php",
             "label": "PHP",
-            "description": "Description pour PHP."
+            "description": "PHP est un langage de script côté serveur principalement utilisé pour le développement de pages web dynamiques."
         },
         {
             "iconClass": "akar-icons:javascript-fill",
             "label": "Javascript",
-            "description": "Description pour Javascript."
+            "description": "JavaScript est un langage de programmation côté client utilisé pour créer des interactions dynamiques sur les pages web."
         },
         {
             "iconClass": "fa6-brands:java",
             "label": "Java",
-            "description": "Description pour Java."
+            "description": "Java est un langage de programmation orienté objet largement utilisé pour le développement d'applications web, mobiles, et d'entreprise."
         },
         {
             "iconClass": "devicon-plain:nodejs-wordmark",
             "label": "Node JS",
-            "description": "Description pour Node JS."
+            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives."
         },
         {
             "iconClass": "devicon-plain:csharp",
             "label": "C#",
-            "description": "Description pour C#."
+            "description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET."
         },
         {
             "iconClass": "devicon:express",
             "label": "Express",
-            "description": "Description pour Express."
+            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides."
         },
         {
             "iconClass": "akar-icons:typescript-fill",
             "label": "TypeScript",
-            "description": "Description pour TypeScript."
+            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle."
         },
         {
             "iconClass": "ri:tailwind-css-fill",
             "label": "Tailwind CSS",
-            "description": "Description pour Tailwind CSS."
+            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML."
         },
         {
             "iconClass": "cib:terraform",
             "label": "Terraform",
-            "description": "Description pour Terraform."
+            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée."
         },
         {
             "iconClass": "mdi:sql-query",
             "label": "PL/SQL",
-            "description": "Description pour PL/SQL."
+            "description": "PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes."
         },
         {
             "iconClass": "mdi:dot-net",
             "label": ".NET",
-            "description": "Description pour .NET."
+            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation."
         },
         {
             "iconClass": "simple-icons:mongodb",
             "label": "Mongo DB",
-            "description": "Description pour Mongo DB."
+            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées."
         },
         {
             "iconClass": "cib:cplusplus",
             "label": "C++",
-            "description": "Description pour C++."
+            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées."
         },
         {
             "iconClass": "devicon-plain:bash",
             "label": "Bash",
-            "description": "Description pour Bash."
+            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix."
         },
         {
             "iconClass": "uil:android",
             "label": "SDK Android",
-            "description": "Description pour Android."
+            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android."
         },
         {
             "iconClass": "cib:ionic",
             "label": "Ionic",
-            "description": "Description pour Ionic."
+            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript."
         },
         {
             "iconClass": "simple-icons:neo4j",
             "label": "Cypher",
-            "description": "Description pour Cypher."
+            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées."
         },
         {
             "iconClass": "simple-icons:lua",
             "label": "Lua",
-            "description": "Description pour Lua."
+            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances."
         },
         {
             "iconClass": "simple-icons:autohotkey",
             "label": "AHK",
-            "description": "Description pour AHK."
+            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows."
         }
     ]
 }
