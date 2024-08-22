@@ -138,13 +138,15 @@
                         <li>
                             <div class="flex items-center gap-2 cursor-pointer">
                                 <i class="fa-solid fa-envelope"></i>
-                                <span (click)="scrollToSection('contact')" class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-0.5 before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">eribon.hugo&#64;gmail.com</span>
+                                <span (click)="scrollToSection('contact')"
+                                    class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-[1px] before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">eribon.hugo&#64;gmail.com</span>
                             </div>
                         </li>
                         <li>
                             <a href="www.linkedin.com/in/hugo-eribon" class="flex items-center gap-2 cursor-pointer">
                                 <i class="fa-brands fa-linkedin-in"></i>
-                                <span class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-0.5 before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">linkedin.com/hugo-eribon</span>
+                                <span
+                                    class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-[1px] before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">linkedin.com/hugo-eribon</span>
                             </a>
                         </li>
                     </ul>
@@ -252,8 +254,8 @@
         </div>
     </section>
 
-    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32 transition-all">
-        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
+    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
             <div class="space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Langages &amp; Frameworks</h2>
                 <p
@@ -264,7 +266,7 @@
                 </p>
             </div>
 
-            <div class="relative w-full max-w-4xl mx-auto">
+            <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
                 <div (click)="prevPage()" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': currentPage > 0, 
                         'text-gray-300 pointer-events-none': currentPage === 0
@@ -277,7 +279,7 @@
                       'animate-swipeRightOut': swipeRightOut, 
                       'animate-swipeLeftIn': swipeLeftIn, 
                       'animate-swipeRightIn': swipeRightIn 
-                    }" id="icon-container" class="grid grid-cols-3 gap-3 overflow-hidden">
+                    }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
                     <ng-container *ngFor="let icon of visibleIcons">
                         <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label"
                             [description]="icon.description"></app-icon-card>
@@ -296,16 +298,35 @@
 
     <section id="diplomas" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div
-            class="container mx-auto flex flex-col items-center justify-center gap-6 px-4 md:px-6 lg:flex-row lg:gap-16">
-            <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:justify-center text-gray-100">
-                <app-icon-card iconClass="fa-brands fa-python" label="Python"></app-icon-card>
-                <app-icon-card iconClass="fa-brands fa-aws" label="AWS"></app-icon-card>
-                <app-icon-card iconClass="fa-brands fa-angular" label="Angular"></app-icon-card>
-                <app-icon-card iconClass="fa-brands fa-html5" label="HTML"></app-icon-card>
-                <app-icon-card iconClass="fa-brands fa-css3-alt" label="CSS"></app-icon-card>
-                <app-icon-card iconClass="fa-brands fa-git-alt" label="Git"></app-icon-card>
+            class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+            <div class="relative w-full max-w-4xl mx-auto">
+                <div (click)="prevPage()" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': currentPage > 0, 
+                                    'text-gray-600 pointer-events-none': currentPage === 0
+                                }"
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+                <div [ngClass]="{
+                                  'animate-swipeLeftOut': swipeLeftOut, 
+                                  'animate-swipeRightOut': swipeRightOut, 
+                                  'animate-swipeLeftIn': swipeLeftIn, 
+                                  'animate-swipeRightIn': swipeRightIn 
+                                }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                    <ng-container *ngFor="let icon of visibleIcons">
+                        <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label"
+                            [description]="icon.description"></app-icon-card>
+                    </ng-container>
+                </div>
+                <div (click)="nextPage()" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
+                                    'text-gray-600 pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
+                                }"
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
             </div>
-            <div class="space-y-2 text-center lg:text-left">
+            <div class="space-y-2 ml-10">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">Diplômes &amp;
                     Certifications
                 </h2>

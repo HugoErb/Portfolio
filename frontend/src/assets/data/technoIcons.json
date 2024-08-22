@@ -56,7 +56,7 @@
             "description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET."
         },
         {
-            "iconClass": "devicon:express",
+            "iconClass": "simple-icons:express",
             "label": "Express",
             "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides."
         },
