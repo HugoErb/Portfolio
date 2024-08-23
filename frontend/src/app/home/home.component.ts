@@ -39,30 +39,35 @@ export class HomeComponent {
     phoneNumberMail: string = "";
     messageMail: string = "";
 
-    // Icônes de la partie "Langages & Frameworks"
-    technos: Technology[] = [];
-    technosVisibleIcons: Technology[] = [];
-    technosCurrentPage = 0;
-    technosIconsPerPage = 6;
-    technosSwipeLeftOut = false;
-    technosSwipeRightOut = false;
-    technosSwipeLeftIn = false;
-    technosSwipeRightIn = false;
-    technosIsTransitioning = false;
-    
-    // Icônes de la partie "Diplômes & Certifications"
-    certifs: Certification[] = [];
-    certifsVisibleIcons: Certification[] = [];
-    certifsCurrentPage = 0;
-    certifsIconsPerPage = 6;
-    certifsSwipeLeftOut = false;
-    certifsSwipeRightOut = false;
-    certifsSwipeLeftIn = false;
-    certifsSwipeRightIn = false;
-    certifsIsTransitioning = false;
+    // Objets génériques pour stocker les états et les méthodes liés aux technos et certifs
+    elementsConfig = {
+        technos: {
+            items: [] as Technology[],
+            visibleItems: [] as Technology[],
+            currentPage: 0,
+            itemsPerPage: 6,
+            swipeLeftOut: false,
+            swipeRightOut: false,
+            swipeLeftIn: false,
+            swipeRightIn: false,
+            isTransitioning: false
+        },
+        certifs: {
+            items: [] as Certification[],
+            visibleItems: [] as Certification[],
+            currentPage: 0,
+            itemsPerPage: 6,
+            swipeLeftOut: false,
+            swipeRightOut: false,
+            swipeLeftIn: false,
+            swipeRightIn: false,
+            isTransitioning: false
+        }
+    };
 
     ngOnInit() {
-        this.loadAssets();
+        this.loadAssets('technos');
+        this.loadAssets('certifs');
     }
 
     /**
@@ -170,76 +175,71 @@ export class HomeComponent {
         });
     }
 
-    /**
-    * Charge les données à partir du fichier JSON.
-    * 
-    * Cette méthode récupère les données depuis un fichier JSON local
-    * situé dans le dossier `assets`.
-    */
-    loadAssets(): void {
-        this.http.get<any>('../../assets/data/technos.json').subscribe(data => {
-            this.technos = data.technos;
-            this.updateVisibleIcons();
-        });
-        this.http.get<any>('../../assets/data/certifs.json').subscribe(data => {
-            this.certifs = data.certifs;
-            this.updateVisibleIcons();
+   /**
+   * Charge les données à partir du fichier JSON pour le type spécifié.
+   * @param type - Le type d'éléments à charger ("technos" ou "certifs").
+   */
+    loadAssets(type: 'technos' | 'certifs'): void {
+        const filePath = type === 'technos' ? '../../assets/data/technos.json' : '../../assets/data/certifs.json';
+        this.http.get<any>(filePath).subscribe(data => {
+            this.elementsConfig[type].items = data[type];
+            this.updateVisibleElements(type);
         });
     }
 
     /**
-    * Met à jour la liste des icônes visibles en fonction de la page actuelle.
-    * Cette méthode calcule les icônes à afficher pour la page en cours
-    * en utilisant l'index de début basé sur `currentPage` et `iconsPerPage`.
-    */
-    updateVisibleIcons(): void {
-        const startIndex = this.currentPage * this.iconsPerPage;
-        this.visibleIcons = this.icons.slice(startIndex, startIndex + this.iconsPerPage);
-    }
-
-    /**
-     * Passe à la page suivante d'icônes. Applique l'animation `swipeLeft` avant de mettre à jour
-     * la liste des icônes visibles.
-     * L'animation dure 125 ms avant que la page ne soit réellement changée.
+     * Met à jour la liste des éléments visibles en fonction de la page actuelle.
+     * @param type - Le type d'éléments à mettre à jour ("technos" ou "certifs").
      */
-    nextPage(): void {
-        if (!this.isTransitioning && (this.currentPage + 1) * this.iconsPerPage < this.icons.length) {
-            this.isTransitioning = true;
-            this.swipeLeftOut = true;
+    updateVisibleElements(type: 'technos' | 'certifs'): void {
+        const config = this.elementsConfig[type];
+        const startIndex = config.currentPage * config.itemsPerPage;
+        config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
+    }
+
+    /**
+     * Passe à la page suivante d'éléments (icônes ou images).
+     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos" ou "certifs").
+     */
+    nextPage(type: 'technos' | 'certifs'): void {
+        const config = this.elementsConfig[type];
+        if (!config.isTransitioning && (config.currentPage + 1) * config.itemsPerPage < config.items.length) {
+            config.isTransitioning = true;
+            config.swipeLeftOut = true;
 
             setTimeout(() => {
-                this.currentPage++;
-                this.updateVisibleIcons();
-                this.swipeLeftOut = false;
-                this.swipeLeftIn = true;
+                config.currentPage++;
+                this.updateVisibleElements(type);
+                config.swipeLeftOut = false;
+                config.swipeLeftIn = true;
 
                 setTimeout(() => {
-                    this.swipeLeftIn = false;
-                    this.isTransitioning = false;
+                    config.swipeLeftIn = false;
+                    config.isTransitioning = false;
                 }, 125); // Durée de l'animation d'entrée
             }, 125); // Durée de l'animation de sortie
         }
     }
 
     /**
-     * Retourne à la page précédente d'icônes. Applique l'animation `swipeRight` avant de mettre à jour
-     * la liste des icônes visibles.
-     * L'animation dure 125 ms avant que la page ne soit réellement changée.
+     * Retourne à la page précédente d'éléments (icônes ou images).
+     * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos" ou "certifs").
      */
-    prevPage(): void {
-        if (!this.isTransitioning && this.currentPage > 0) {
-            this.isTransitioning = true;
-            this.swipeRightOut = true;
+    prevPage(type: 'technos' | 'certifs'): void {
+        const config = this.elementsConfig[type];
+        if (!config.isTransitioning && config.currentPage > 0) {
+            config.isTransitioning = true;
+            config.swipeRightOut = true;
 
             setTimeout(() => {
-                this.currentPage--;
-                this.updateVisibleIcons();
-                this.swipeRightOut = false;
-                this.swipeRightIn = true;
+                config.currentPage--;
+                this.updateVisibleElements(type);
+                config.swipeRightOut = false;
+                config.swipeRightIn = true;
 
                 setTimeout(() => {
-                    this.swipeRightIn = false;
-                    this.isTransitioning = false;
+                    config.swipeRightIn = false;
+                    config.isTransitioning = false;
                 }, 125); // Durée de l'animation d'entrée
             }, 125); // Durée de l'animation de sortie
         }
