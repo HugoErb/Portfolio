@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
-import { IconCardComponent } from '../components/icon-card/icon-card.component';
+import { TechnologyComponent } from '../components/technology/technology.component';
+import { CertificationComponent } from '../components/certification/certification.component';
 import { HttpClient } from '@angular/common/http';
 
 interface Technology {
@@ -22,7 +23,7 @@ interface Certification {
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, IconCardComponent],
+    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent],
     templateUrl: './home.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -175,10 +176,10 @@ export class HomeComponent {
         });
     }
 
-   /**
-   * Charge les données à partir du fichier JSON pour le type spécifié.
-   * @param type - Le type d'éléments à charger ("technos" ou "certifs").
-   */
+    /**
+    * Charge les données à partir du fichier JSON pour le type spécifié.
+    * @param type - Le type d'éléments à charger ("technos" ou "certifs").
+    */
     loadAssets(type: 'technos' | 'certifs'): void {
         const filePath = type === 'technos' ? '../../assets/data/technos.json' : '../../assets/data/certifs.json';
         this.http.get<any>(filePath).subscribe(data => {

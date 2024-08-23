@@ -16,7 +16,7 @@
             (click)="scrollToSection('technologies')">
             Technologies</div>
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
-            (click)="scrollToSection('diplomas')">
+            (click)="scrollToSection('certifications')">
             Diplômes</div>
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
             (click)="scrollToSection('carrier')">
@@ -39,7 +39,7 @@
         <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
             (click)="scrollToSection('technologies')">Technologies</div>
         <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
-            (click)="scrollToSection('diplomas')">Diplômes</div>
+            (click)="scrollToSection('certifications')">Diplômes</div>
         <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
             (click)="scrollToSection('carrier')">Parcours</div>
         <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-green-600 hover:text-white"
@@ -280,8 +280,8 @@
                       'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
                     }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
                     <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
-                        <app-icon-card [iconClass]="technology.iconClass" [label]="technology.label"
-                            [description]="technology.description"></app-icon-card>
+                        <app-technology [iconClass]="technology.iconClass" [label]="technology.label"
+                            [description]="technology.description"></app-technology>
                     </ng-container>
                 </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
@@ -295,7 +295,7 @@
         </div>
     </section>
 
-    <section id="diplomas" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+    <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
             <div class="relative w-full max-w-4xl mx-auto">
                 <div (click)="prevPage('certifs')" [ngClass]="{
