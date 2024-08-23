@@ -1,0 +1,29 @@
+{
+    "certifs": [
+        {
+            "iconClass": "fontisto:python",
+            "label": "Python",
+            "description": "Python est un langage de programmation polyvalent, souvent utilisé pour de l'automatisation, de l'analyse de données, de l'intelligence artificielle, ou encore du développement web."
+        },
+        {
+            "iconClass": "fa6-brands:aws",
+            "label": "SDK AWS",
+            "description": "AWS SDK permet aux développeurs d'intégrer facilement les services Amazon Web Services dans leurs applications avec des bibliothèques, exemples de code, et documentation."
+        },
+        {
+            "iconClass": "cib:angular",
+            "label": "Angular",
+            "description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client."
+        },
+        {
+            "iconClass": "cib:angular",
+            "label": "Angular",
+            "description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client."
+        },
+        {
+            "iconClass": "cib:angular",
+            "label": "Angular",
+            "description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client."
+        }
+    ]
+}

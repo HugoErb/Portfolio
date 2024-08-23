@@ -7,10 +7,16 @@ import { CommonService } from '../common.service';
 import { IconCardComponent } from '../components/icon-card/icon-card.component';
 import { HttpClient } from '@angular/common/http';
 
-interface Icon {
+interface Technology {
     iconClass: string;
     label: string;
     description: string;
+}
+
+interface Certification {
+    path: string;
+    label: string;
+    link: string;
 }
 
 @Component({
@@ -33,19 +39,30 @@ export class HomeComponent {
     phoneNumberMail: string = "";
     messageMail: string = "";
 
-    // Icônes de la partie "technologies"
-    icons: Icon[] = [];
-    visibleIcons: Icon[] = [];
-    currentPage = 0;
-    iconsPerPage = 6;
-    swipeLeftOut = false;
-    swipeRightOut = false;
-    swipeLeftIn = false;
-    swipeRightIn = false;
-    isTransitioning = false;
+    // Icônes de la partie "Langages & Frameworks"
+    technos: Technology[] = [];
+    technosVisibleIcons: Technology[] = [];
+    technosCurrentPage = 0;
+    technosIconsPerPage = 6;
+    technosSwipeLeftOut = false;
+    technosSwipeRightOut = false;
+    technosSwipeLeftIn = false;
+    technosSwipeRightIn = false;
+    technosIsTransitioning = false;
+    
+    // Icônes de la partie "Diplômes & Certifications"
+    certifs: Certification[] = [];
+    certifsVisibleIcons: Certification[] = [];
+    certifsCurrentPage = 0;
+    certifsIconsPerPage = 6;
+    certifsSwipeLeftOut = false;
+    certifsSwipeRightOut = false;
+    certifsSwipeLeftIn = false;
+    certifsSwipeRightIn = false;
+    certifsIsTransitioning = false;
 
     ngOnInit() {
-        this.loadIcons();
+        this.loadAssets();
     }
 
     /**
@@ -154,15 +171,18 @@ export class HomeComponent {
     }
 
     /**
-    * Charge les icônes à partir du fichier JSON.
+    * Charge les données à partir du fichier JSON.
     * 
-    * Cette méthode récupère les données des icônes depuis un fichier JSON local
-    * situé dans le dossier `assets`. Une fois les données chargées, elle les assigne
-    * à la variable `icons` et initialise l'affichage des icônes visibles.
+    * Cette méthode récupère les données depuis un fichier JSON local
+    * situé dans le dossier `assets`.
     */
-    loadIcons(): void {
-        this.http.get<any>('../../assets/data/technoIcons.json').subscribe(data => {
-            this.icons = data.icons;
+    loadAssets(): void {
+        this.http.get<any>('../../assets/data/technos.json').subscribe(data => {
+            this.technos = data.technos;
+            this.updateVisibleIcons();
+        });
+        this.http.get<any>('../../assets/data/certifs.json').subscribe(data => {
+            this.certifs = data.certifs;
             this.updateVisibleIcons();
         });
     }
