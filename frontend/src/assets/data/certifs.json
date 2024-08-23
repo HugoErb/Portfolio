@@ -5,28 +5,20 @@
             "label": "AWS Certified Developer Associate",
             "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
         },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
+            "imgPath": "../../assets/imgs/pcep.png",
+            "label": "Certified Entry-Level Python Programmer",
+            "link": "https://pythoninstitute.org/pcep"
+        },{
+            "imgPath": "../../assets/imgs/python_essentials_1.png",
+            "label": "Cisco Python Essentials 1",
             "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
         },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
+            "imgPath": "../../assets/imgs/introduction_to_cybersecurity.png",
+            "label": "Cisco Introduction To Cybersecurity",
             "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
         },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
-        },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
-        },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
-        },{
-            "imgPath": "../../assets/imgs/aws_cda.png",
-            "label": "AWS Certified Developer Associate",
+            "imgPath": "../../assets/imgs/bases_materiel_informatique.png",
+            "label": "Cisco Introduction To Cybersecurity",
             "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
         }
     ]

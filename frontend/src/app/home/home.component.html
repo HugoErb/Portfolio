@@ -278,7 +278,7 @@
                       'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
                       'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn, 
                       'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
-                    }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                    }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
                     <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
                         <app-technology [iconClass]="technology.iconClass" [label]="technology.label"
                             [description]="technology.description"></app-technology>
@@ -310,7 +310,7 @@
                                   'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
                                   'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
                                   'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
-                                }" id="certif-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                                }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
                     <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
                         <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
                             [link]="certif.link"></app-certification>

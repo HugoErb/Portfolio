@@ -57,7 +57,7 @@ export class HomeComponent {
             items: [] as Certification[],
             visibleItems: [] as Certification[],
             currentPage: 0,
-            itemsPerPage: 6,
+            itemsPerPage: 3,
             swipeLeftOut: false,
             swipeRightOut: false,
             swipeLeftIn: false,
