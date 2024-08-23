@@ -261,33 +261,32 @@
                 <p
                     class="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                     Je maîtrise un large éventail de technologies me permettant de créer des applications modernes et
-                    évolutives
-                    sur la base d'un code propre et structuré.
+                    évolutives sur la base d'un code propre et structuré.
                 </p>
             </div>
 
             <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
-                <div (click)="prevPage()" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': currentPage > 0, 
-                        'text-gray-300 pointer-events-none': currentPage === 0
+                <div (click)="prevPage('technos')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
+                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
                     }"
                     class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
                 </div>
                 <div [ngClass]="{
-                      'animate-swipeLeftOut': swipeLeftOut, 
-                      'animate-swipeRightOut': swipeRightOut, 
-                      'animate-swipeLeftIn': swipeLeftIn, 
-                      'animate-swipeRightIn': swipeRightIn 
+                      'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut, 
+                      'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
+                      'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn, 
+                      'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
                     }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
-                    <ng-container *ngFor="let icon of visibleIcons">
-                        <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label"
-                            [description]="icon.description"></app-icon-card>
+                    <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
+                        <app-icon-card [iconClass]="technology.iconClass" [label]="technology.label"
+                            [description]="technology.description"></app-icon-card>
                     </ng-container>
                 </div>
-                <div (click)="nextPage()" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
-                        'text-gray-300 pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
+                <div (click)="nextPage('technos')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
+                        'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
                     }"
                     class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
@@ -297,30 +296,29 @@
     </section>
 
     <section id="diplomas" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-        <div
-            class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+        <div class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
             <div class="relative w-full max-w-4xl mx-auto">
-                <div (click)="prevPage()" [ngClass]="{
-                                    'text-gray-100 hover:text-gray-400 cursor-pointer': currentPage > 0, 
-                                    'text-gray-600 pointer-events-none': currentPage === 0
+                <div (click)="prevPage('certifs')" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
+                                    'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
                                 }"
                     class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
                 </div>
                 <div [ngClass]="{
-                                  'animate-swipeLeftOut': swipeLeftOut, 
-                                  'animate-swipeRightOut': swipeRightOut, 
-                                  'animate-swipeLeftIn': swipeLeftIn, 
-                                  'animate-swipeRightIn': swipeRightIn 
-                                }" id="icon-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
-                    <ng-container *ngFor="let icon of visibleIcons">
-                        <app-icon-card [iconClass]="icon.iconClass" [label]="icon.label"
-                            [description]="icon.description"></app-icon-card>
+                                  'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut, 
+                                  'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
+                                  'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
+                                  'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
+                                }" id="certif-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                    <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
+                        <app-certif-card [imageSrc]="certif.path" [label]="certif.label"
+                            [link]="certif.link"></app-certif-card>
                     </ng-container>
                 </div>
-                <div (click)="nextPage()" [ngClass]="{
-                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (currentPage + 1) * iconsPerPage < icons.length, 
-                                    'text-gray-600 pointer-events-none': (currentPage + 1) * iconsPerPage >= icons.length
+                <div (click)="nextPage('certifs')" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
+                                    'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
                                 }"
                     class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
@@ -332,8 +330,7 @@
                 </h2>
                 <p class="max-w-[600px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
-                    témoignant de
-                    mon expertise dans divers domaines et technologies.
+                    témoignant de mon expertise dans divers domaines et technologies.
                 </p>
             </div>
         </div>
