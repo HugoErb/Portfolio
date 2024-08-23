@@ -1,7 +1,6 @@
 <div class="flex justify-center items-center">
-    <div class="flex flex-col items-center gap-3 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all"
-        (click)="this.commonService.showModal('modal' + label)">
-        <iconify-icon [icon]="iconClass" class="text-[2.75rem] text-gray-700"></iconify-icon>
-        <div class="text-sm font-medium">{{ label }}</div>
+    <div class="flex flex-col items-center gap-3 hover:bg-gray-400 rounded-lg py-3 w-28 cursor-pointer transition-all">
+        <img [src]="imgPath" [alt]="label" class="w-36">
+        <div class="text-sm font-medium text-center text-gray-200">{{ label }}</div>
     </div>
 </div>

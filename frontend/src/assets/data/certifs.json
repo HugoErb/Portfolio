@@ -1,7 +1,31 @@
 {
     "certifs": [
         {
-            "path": "../imgs/aws_cda.png",
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
+            "label": "AWS Certified Developer Associate",
+            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+        },{
+            "imgPath": "../../assets/imgs/aws_cda.png",
             "label": "AWS Certified Developer Associate",
             "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
         }

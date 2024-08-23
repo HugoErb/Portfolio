@@ -15,7 +15,7 @@ interface Technology {
 }
 
 interface Certification {
-    path: string;
+    imgPath: string;
     label: string;
     link: string;
 }

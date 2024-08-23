@@ -312,8 +312,8 @@
                                   'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
                                 }" id="certif-container" class="grid grid-cols-3 gap-y-3 overflow-hidden">
                     <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
-                        <app-certif-card [imageSrc]="certif.path" [label]="certif.label"
-                            [link]="certif.link"></app-certif-card>
+                        <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
+                            [link]="certif.link"></app-certification>
                     </ng-container>
                 </div>
                 <div (click)="nextPage('certifs')" [ngClass]="{
