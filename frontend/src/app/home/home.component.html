@@ -138,12 +138,6 @@
                                 <span>Français, Anglais</span>
                             </div>
                         </li>
-                        <!-- <li>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>(123) 456-7890</span>
-                            </div>
-                        </li> -->
                         <li>
                             <div class="flex items-center gap-2 cursor-pointer">
                                 <iconify-icon icon="ic:round-mail" class="text-lg"></iconify-icon>
@@ -277,11 +271,11 @@
     </section>
 
     <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
             <div class="space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Langages &amp; Frameworks</h2>
                 <p
-                    class="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
                     Je maîtrise un large éventail de technologies me permettant de créer des applications modernes et
                     évolutives sur la base d'un code propre et structuré.
                 </p>
@@ -318,7 +312,16 @@
     </section>
 
     <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-        <div class="container mx-auto grid items-center gap-20 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+            <div class="lg:hidden space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
+                    Diplômes &amp; Certifications
+                </h2>
+                <p class="max-w-[600px] text-gray-400 text-lg">
+                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
+                    témoignant de mon expertise dans divers domaines et technologies.
+                </p>
+            </div>
             <div class="relative w-full max-w-4xl mx-auto">
                 <div (click)="prevPage('certifs')" [ngClass]="{
                                     'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
@@ -346,11 +349,11 @@
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
                 </div>
             </div>
-            <div class="space-y-2 ml-10">
-                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">Diplômes &amp;
-                    Certifications
+            <div class="hidden lg:block space-y-2 ml-10">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
+                    Diplômes &amp; Certifications
                 </h2>
-                <p class="max-w-[600px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p class="max-w-[600px] text-gray-400 text-xl">
                     J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
                     témoignant de mon expertise dans divers domaines et technologies.
                 </p>
