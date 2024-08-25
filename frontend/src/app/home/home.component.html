@@ -60,7 +60,7 @@
                             Hugo Eribon
                         </h1>
                         <p class="max-w-[600px] text-gray-500 md:text-xl mx-auto lg:mx-0">
-                            Développeur Full-Stack | Passionné par l'informatique, spécialisé dans le développement
+                            <span [@cubeRotate]="rotationState">{{ words[currentWordIndex] }}</span> | Passionné par l'informatique, spécialisé dans le développement
                             d'applications de
                             toutes sortes et fervent des nouvelles technologies.
                         </p>
@@ -126,8 +126,14 @@
                     <ul class="mt-4 space-y-2 ">
                         <li>
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <iconify-icon icon="ion:location-sharp" class="text-lg"></iconify-icon>
                                 <span>Pau, France</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="f7:text-bubble-fill" class="text-lg"></iconify-icon>
+                                <span>Français, Anglais</span>
                             </div>
                         </li>
                         <!-- <li>
@@ -138,16 +144,23 @@
                         </li> -->
                         <li>
                             <div class="flex items-center gap-2 cursor-pointer">
-                                <i class="fa-solid fa-envelope"></i>
+                                <iconify-icon icon="ic:round-mail" class="text-lg"></iconify-icon>
                                 <span (click)="scrollToSection('contact')"
                                     class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-[1px] before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">eribon.hugo&#64;gmail.com</span>
                             </div>
                         </li>
                         <li>
                             <a href="www.linkedin.com/in/hugo-eribon" class="flex items-center gap-2 cursor-pointer">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                                <iconify-icon icon="jam:linkedin" class="text-lg"></iconify-icon>
                                 <span
                                     class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-[1px] before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">linkedin.com/hugo-eribon</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/HugoErb" class="flex items-center gap-2 cursor-pointer">
+                                <iconify-icon icon="eva:github-fill" class="text-lg"></iconify-icon>
+                                <span
+                                    class="relative before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0 before:h-[1px] before:bg-gray-800 before:scale-x-0 before:transition-transform before:duration-200 hover:before:w-full hover:before:scale-x-100 hover:before:origin-center">github.com/HugoErb</span>
                             </a>
                         </li>
                     </ul>
@@ -157,25 +170,31 @@
                     <ul class="mt-4 space-y-2 ">
                         <li>
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-check"></i>
+                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
                                 <span>Informatique (développement, IA...)</span>
                             </div>
                         </li>
                         <li>
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-check"></i>
+                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+                                <span>Jeux Vidéo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
                                 <span>Sport</span>
                             </div>
                         </li>
                         <li>
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-check"></i>
+                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
                                 <span>Poker</span>
                             </div>
                         </li>
                         <li>
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-check"></i>
+                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
                                 <span>Animaux</span>
                             </div>
                         </li>
