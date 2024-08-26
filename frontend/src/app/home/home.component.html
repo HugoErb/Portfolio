@@ -7,9 +7,6 @@
     <!-- Navigation principale pour les grands écrans -->
     <nav class="hidden lg:flex ml-auto gap-4 sm:gap-6 items-center">
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
-            (click)="scrollToSection('about')">
-            À propos</div>
-        <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
             (click)="scrollToSection('projects')">
             Projets</div>
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
@@ -19,6 +16,9 @@
             (click)="scrollToSection('certifications')">
             Diplômes</div>
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
+            (click)="scrollToSection('about')">
+            À propos</div>
+        <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
             (click)="scrollToSection('carrier')">
             Parcours</div>
         <div class="text-base cursor-pointer font-medium hover:text-green-700 transition-colors"
@@ -27,7 +27,7 @@
     </nav>
 
     <!-- Menu burger pour les petits écrans -->
-    <button class="lg:hidden ml-auto mr-3" (click)="toggleBurgerMenu($event)">
+    <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)">
         <iconify-icon icon="heroicons-outline:menu-alt-3"
             class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1"></iconify-icon>
     </button>
@@ -59,8 +59,30 @@
                             class="xl:text-6xl lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold tracking-tighter ">
                             Hugo Eribon
                         </h1>
+                        <!-- <div class="loader">
+                            <div class="words">
+                                <span class="word">Développeur Full-Stack</span>
+                                <span class="word">Disponible pour toutes vos demandes</span>
+                                <span class="word">Ingénieur étude et développement</span>
+                                <span class="word">Passionné d'informatique</span>
+                                <span class="word">Développeur Full-Stack</span>
+                            </div>
+                        </div> -->
+                        <div class="flex h-10 text-[25px] font-bold box-content">
+                            <div class="relative overflow-hidden">
+                                <div
+                                    class="absolute inset-0 z-20 bg-gradient-to-b from-[var(--bg-color)] via-transparent via-70% to-[var(--bg-color)]">
+                                </div>
+                                <span class="block h-full text-gray-800 animate-spinCustom">Développeur Full-Stack</span>
+                                <span class="block h-full text-gray-800 animate-spinCustom">Disponible pour toutes vos demandes</span>
+                                <span class="block h-full text-gray-800 animate-spinCustom">Ingénieur étude et développement</span>
+                                <span class="block h-full text-gray-800 animate-spinCustom">Passionné d'informatique</span>
+                                <span class="block h-full text-gray-800 animate-spinCustom">Développeur Full-Stack</span>
+                            </div>
+                        </div>
+
                         <p class="max-w-[600px] text-gray-500 md:text-xl mx-auto lg:mx-0">
-                            <span [@cubeRotate]="rotationState">{{ words[currentWordIndex] }}</span> | Passionné par
+                            Passionné par
                             l'informatique, spécialisé dans le développement
                             d'applications de
                             toutes sortes et fervent des nouvelles technologies.
@@ -79,6 +101,166 @@
                 </div>
                 <img src="../../assets/imgs/dev.png" width="550" height="550" alt="Hero"
                     class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square" />
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100 mt-1">
+        <div class="container px-4 md:px-6">
+            <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Mes projets personnels</h2>
+                    <p
+                        class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                        Découvrez quelques-uns de mes projets, pourquoi et comment je les ai créés, les défis rencontrés
+                        et comment
+                        je les utilise aujourd'hui.
+                    </p>
+                </div>
+            </div>
+            <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                    href="#">
+                    <img src="../../assets/imgs/poker.jpg" alt="Poker HL"
+                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
+                        width="550" height="310" />
+                    <div
+                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
+                        <h3 class="text-xl font-bold">Poker HL</h3>
+                        <p class="text-gray-300">Application Angular permettant de s'entraîner au Poker, consulter ses
+                            statistiques
+                            et gérer ses ranges d'actions.</p>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                    href="#">
+                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Tik Tok Dynamic Lives"
+                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
+                        width="550" height="310" />
+                    <div
+                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
+                        <h3 class="text-xl font-bold">Tik Tok Dynamic Lives</h3>
+                        <p class="text-gray-300">Un outil Angular et Python permettant de rendre des lives Tik Tok
+                            réactifs aux dons
+                            des viewers.</p>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                    href="#">
+                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Prédicteur de vélocité par sprint"
+                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
+                        width="550" height="310" />
+                    <div
+                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
+                        <h3 class="text-xl font-bold">Prédicteur de vélocité par sprint</h3>
+                        <p class="text-gray-300">Un outil Python utilisant le machine learning pour calculer la vélocité
+                            d'une
+                            équipe agile sur un sprint.</p>
+                    </div>
+                </a>
+                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
+                    href="#">
+                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Easy breaking"
+                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
+                        width="550" height="310" />
+                    <div
+                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
+                        <h3 class="text-xl font-bold">Easy breaking</h3>
+                        <p class="text-gray-300">Application Angular sur Dofus permettant d'optimiser le brisage d'items
+                            afin de
+                            maximiser la rentabilité.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
+        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Langages &amp; Frameworks</h2>
+                <p class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
+                    Je maîtrise un large éventail de technologies me permettant de créer des applications modernes et
+                    évolutives sur la base d'un code propre et structuré.
+                </p>
+            </div>
+
+            <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
+                <div (click)="prevPage('technos')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
+                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
+                    }"
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+                <div [ngClass]="{
+                      'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut, 
+                      'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
+                      'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn, 
+                      'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
+                    }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                    <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
+                        <app-technology [iconClass]="technology.iconClass" [label]="technology.label"
+                            [description]="technology.description"></app-technology>
+                    </ng-container>
+                </div>
+                <div (click)="nextPage('technos')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
+                        'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
+                    }"
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+            <div class="lg:hidden space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
+                    Diplômes &amp; Certifications
+                </h2>
+                <p class="max-w-[600px] text-gray-400 text-lg">
+                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
+                    témoignant de mon expertise dans divers domaines et technologies.
+                </p>
+            </div>
+            <div class="relative w-full max-w-4xl mx-auto">
+                <div (click)="prevPage('certifs')" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
+                                    'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
+                                }"
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+                <div [ngClass]="{
+                                  'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut, 
+                                  'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
+                                  'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
+                                  'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
+                                }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                    <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
+                        <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
+                            [link]="certif.link"></app-certification>
+                    </ng-container>
+                </div>
+                <div (click)="nextPage('certifs')" [ngClass]="{
+                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
+                                    'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
+                                }"
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+            </div>
+            <div class="hidden lg:block space-y-2 ml-10">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
+                    Diplômes &amp; Certifications
+                </h2>
+                <p class="max-w-[600px] text-gray-400 text-xl">
+                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
+                    témoignant de mon expertise dans divers domaines et technologies.
+                </p>
             </div>
         </div>
     </section>
@@ -196,167 +378,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100 mt-1">
-        <div class="container px-4 md:px-6">
-            <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <div class="space-y-2">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Mes projets personnels</h2>
-                    <p
-                        class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                        Découvrez quelques-uns de mes projets, pourquoi et comment je les ai créés, les défis rencontrés
-                        et comment
-                        je les utilise aujourd'hui.
-                    </p>
-                </div>
-            </div>
-            <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
-                    href="#">
-                    <img src="../../assets/imgs/poker.jpg" alt="Poker HL"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Poker HL</h3>
-                        <p class="text-gray-300">Application Angular permettant de s'entraîner au Poker, consulter ses
-                            statistiques
-                            et gérer ses ranges d'actions.</p>
-                    </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
-                    href="#">
-                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Tik Tok Dynamic Lives"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Tik Tok Dynamic Lives</h3>
-                        <p class="text-gray-300">Un outil Angular et Python permettant de rendre des lives Tik Tok
-                            réactifs aux dons
-                            des viewers.</p>
-                    </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
-                    href="#">
-                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Prédicteur de vélocité par sprint"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Prédicteur de vélocité par sprint</h3>
-                        <p class="text-gray-300">Un outil Python utilisant le machine learning pour calculer la vélocité
-                            d'une
-                            équipe agile sur un sprint.</p>
-                    </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:focus-visible:ring-gray-300"
-                    href="#">
-                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Easy breaking"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Easy breaking</h3>
-                        <p class="text-gray-300">Application Angular sur Dofus permettant d'optimiser le brisage d'items
-                            afin de
-                            maximiser la rentabilité.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
-            <div class="space-y-2">
-                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Langages &amp; Frameworks</h2>
-                <p
-                    class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
-                    Je maîtrise un large éventail de technologies me permettant de créer des applications modernes et
-                    évolutives sur la base d'un code propre et structuré.
-                </p>
-            </div>
-
-            <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
-                <div (click)="prevPage('technos')" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
-                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
-                    }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                </div>
-                <div [ngClass]="{
-                      'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut, 
-                      'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
-                      'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn, 
-                      'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
-                    }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
-                    <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
-                        <app-technology [iconClass]="technology.iconClass" [label]="technology.label"
-                            [description]="technology.description"></app-technology>
-                    </ng-container>
-                </div>
-                <div (click)="nextPage('technos')" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
-                        'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
-                    }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
-            <div class="lg:hidden space-y-2">
-                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
-                    Diplômes &amp; Certifications
-                </h2>
-                <p class="max-w-[600px] text-gray-400 text-lg">
-                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
-                    témoignant de mon expertise dans divers domaines et technologies.
-                </p>
-            </div>
-            <div class="relative w-full max-w-4xl mx-auto">
-                <div (click)="prevPage('certifs')" [ngClass]="{
-                                    'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
-                                    'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
-                                }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                </div>
-                <div [ngClass]="{
-                                  'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut, 
-                                  'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
-                                  'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
-                                  'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
-                                }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
-                    <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
-                        <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
-                            [link]="certif.link"></app-certification>
-                    </ng-container>
-                </div>
-                <div (click)="nextPage('certifs')" [ngClass]="{
-                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
-                                    'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
-                                }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                </div>
-            </div>
-            <div class="hidden lg:block space-y-2 ml-10">
-                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight text-gray-100">
-                    Diplômes &amp; Certifications
-                </h2>
-                <p class="max-w-[600px] text-gray-400 text-xl">
-                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
-                    témoignant de mon expertise dans divers domaines et technologies.
-                </p>
             </div>
         </div>
     </section>

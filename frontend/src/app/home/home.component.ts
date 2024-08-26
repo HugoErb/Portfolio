@@ -7,7 +7,6 @@ import { CommonService } from '../common.service';
 import { TechnologyComponent } from '../components/technology/technology.component';
 import { CertificationComponent } from '../components/certification/certification.component';
 import { HttpClient } from '@angular/common/http';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 interface Technology {
     iconClass: string;
@@ -27,15 +26,8 @@ interface Certification {
     imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent],
     templateUrl: './home.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    animations: [
-        trigger('cubeRotate', [
-            state('start', style({ transform: 'rotateX(0deg)' })),
-            state('end', style({ transform: 'rotateX(-90deg)' })),
-            transition('start => end', animate('1s cubic-bezier(0.68, -0.55, 0.27, 1.55)')),
-            transition('end => start', animate('1s cubic-bezier(0.68, -0.55, 0.27, 1.55)'))
-        ])
-    ]
 })
+
 export class HomeComponent {
     constructor(private router: Router, private http: HttpClient, protected commonService: CommonService) { }
 
@@ -78,18 +70,6 @@ export class HomeComponent {
     ngOnInit() {
         this.loadAssets('technos');
         this.loadAssets('certifs');
-        setInterval(() => this.rotateWord(), 2000);
-    }
-
-    words = ['Développeur Full-Stack', 'Passioné', 'Ingénieur étude et dévellopement'];
-    currentWordIndex = 0;
-    rotationState = 'start';
-
-    rotateWord() {
-        this.rotationState = this.rotationState === 'start' ? 'end' : 'start';
-        setTimeout(() => {
-            this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
-        }, 500); // Change the word halfway through the rotation
     }
 
     /**
