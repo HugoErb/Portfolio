@@ -38,14 +38,10 @@ module.exports = {
                     '100%': { opacity: '1', transform: 'translateX(0)' },
                 },
                 spinCustom: {
-                    '10%': { transform: 'translateY(-102%)' },
-                    '25%': { transform: 'translateY(-100%)' },
-                    '35%': { transform: 'translateY(-202%)' },
-                    '50%': { transform: 'translateY(-200%)' },
-                    '60%': { transform: 'translateY(-302%)' },
-                    '75%': { transform: 'translateY(-300%)' },
-                    '85%': { transform: 'translateY(-402%)' },
-                    '100%': { transform: 'translateY(-400%)' },
+                    '25%': { transform: 'translateY(-90%)' },
+                    '50%': { transform: 'translateY(-190%)' },
+                    '75%': { transform: 'translateY(-290%)' },
+                    '100%': { transform: 'translateY(-390%)' },
                 },
             },
             animation: {
@@ -54,7 +50,7 @@ module.exports = {
                 swipeRightOut: 'swipeRightOut 0.20s ease forwards',
                 swipeLeftIn: 'swipeLeftIn 0.20s ease forwards',
                 swipeRightIn: 'swipeRightIn 0.20s ease forwards',
-                spinCustom: 'spinCustom 10s infinite',
+                spinCustom: 'spinCustom 8s infinite',
             },
             transformOrigin: {
                 'center': 'center',
@@ -63,6 +59,9 @@ module.exports = {
                 '0': '0',
                 '100': '1',
             },
+            backgroundImage: {
+                'custom-gradient': 'linear-gradient(to bottom, white 0%, transparent 30%, transparent 70%, white 100%)',
+            }
         },
     },
     plugins: [daisyui],
