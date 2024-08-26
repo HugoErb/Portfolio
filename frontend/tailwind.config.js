@@ -38,9 +38,14 @@ module.exports = {
                     '100%': { opacity: '1', transform: 'translateX(0)' },
                 },
                 spinCustom: {
+                    '0%': { transform: 'translateY(10%)' },
+                    '10%': { transform: 'translateY(-90%)' },
                     '25%': { transform: 'translateY(-90%)' },
+                    '35%': { transform: 'translateY(-190%)' },
                     '50%': { transform: 'translateY(-190%)' },
+                    '60%': { transform: 'translateY(-290%)' },
                     '75%': { transform: 'translateY(-290%)' },
+                    '85%': { transform: 'translateY(-390%)' },
                     '100%': { transform: 'translateY(-390%)' },
                 },
             },
@@ -50,7 +55,7 @@ module.exports = {
                 swipeRightOut: 'swipeRightOut 0.20s ease forwards',
                 swipeLeftIn: 'swipeLeftIn 0.20s ease forwards',
                 swipeRightIn: 'swipeRightIn 0.20s ease forwards',
-                spinCustom: 'spinCustom 8s infinite',
+                spinCustom: 'spinCustom 15s infinite',
             },
             transformOrigin: {
                 'center': 'center',
@@ -60,7 +65,7 @@ module.exports = {
                 '100': '1',
             },
             backgroundImage: {
-                'custom-gradient': 'linear-gradient(to bottom, white 0%, transparent 30%, transparent 70%, white 100%)',
+                'custom-gradient': 'linear-gradient(to bottom, white 0%, transparent 20%, transparent 80%, white 100%)',
             }
         },
     },
