@@ -1,0 +1,32 @@
+{
+    "technos": [
+        {
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Poker HL",
+            "smallDescription": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "link": ""
+        },
+        {
+            "imgPath": "../../assets/imgs/tiktok.jpg",
+            "label": "Tik Tok Dynamic Lives",
+            "smallDescription": "Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons des viewers.",
+            "description": "Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons des viewers.",
+            "link": ""
+        },
+        {
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Poker HL",
+            "smallDescription": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "link": ""
+        },
+        {
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Poker HL",
+            "smallDescription": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "link": ""
+        }
+    ]
+}
