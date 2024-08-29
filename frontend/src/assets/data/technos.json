@@ -18,12 +18,12 @@
         {
             "iconClass": "uiw:html5",
             "label": "HTML",
-            "description": "HTML (HyperText Markup Language) est le langage standard utilisé pour créer et structurer des pages web."
+            "description": "HTML (HyperText Markup Language) est le langage standard utilisé pour créer et structurer des pages web.HTML est la base incontournable de tout développement web.<br><br>Dès mes débuts, j'ai rapidement compris l'importance de maîtriser ce langage, car il constitue le fondement de toute structure de page web. Au fil des projets, j'ai acquis une solide expertise en HTML, ce qui me permet aujourd'hui de l'utiliser avec aisance dans une grande variété de contextes.<br><br>Que ce soit pour créer des interfaces utilisateur simples ou pour structurer des pages complexes, HTML est toujours au cœur de mes développements. J'ai eu l'occasion de l'intégrer dans de nombreux projets, qu'il s'agisse de sites web statiques, d'applications dynamiques ou de composants front-end dans des frameworks plus avancés. Aujourd'hui, je suis parfaitement rodé avec ce langage, qui reste un outil indispensable dans mon quotidien de développeur web."
         },
         {
             "iconClass": "uiw:css3",
             "label": "CSS",
-            "description": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour décrire la présentation d'un document HTML."
+            "description": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour décrire la présentation d'un document HTML.<br><br>CSS va naturellement de pair avec HTML, formant le duo essentiel pour tout développement web. Dès que j'ai commencé à travailler avec HTML, j'ai aussi appris à maîtriser CSS pour donner vie aux interfaces, en stylisant et en structurant les pages web de manière efficace. Contrairement à beaucoup de mes collègues développeurs qui voient CSS comme une tâche fastidieuse, j'ai toujours apprécié son utilisation. J'aime jouer avec les styles, les animations, et les mises en page pour créer des designs attrayants, fonctionnels mais tout en restant intuitifs.<br><br>Au fil des projets, j'ai utilisé CSS autant que HTML, prenant plaisir à explorer toutes les possibilités qu'il offre. Cependant, avec l'évolution des technologies, j'ai progressivement migré vers Tailwind CSS, qui simplifie grandement le processus de stylisation. Aujourd'hui, bien que je n'utilise plus vraiment CSS pur, mes connaissances approfondies de cette technologie continuent de m'être utiles dans mon travail avec Tailwind."
         },
         {
             "iconClass": "bi:git",
