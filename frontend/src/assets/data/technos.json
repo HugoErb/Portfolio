@@ -3,7 +3,7 @@
         {
             "iconClass": "fontisto:python",
             "label": "Python",
-            "description": "Python est un langage de programmation polyvalent, souvent utilisé pour de l'automatisation, de l'analyse de données, de l'intelligence artificielle, ou encore du développement web."
+            "description": "Python est un langage de programmation polyvalent, souvent utilisé pour l'automatisation, l'analyse de données, l'intelligence artificielle, ainsi que le développement web.<br><br>J'ai appris Python lorsque j'étais en BTS, et j'en suis tombé amoureux. En effet, Python est mon langage préféré, tout simplement parce qu'il est simple, intuitif, très polyvalent, et qu'il existe de nombreuses bibliothèques créées par la communauté, ce qui permet de ne pas avoir à réinventer la roue à chaque fois.<br><br>Ma passion pour ce langage m'a poussé à m'y intéresser de plus en plus, jusqu'à obtenir une certification sur cette technologie, la certification PCEP de Python Institute.<br><br>J'ai beaucoup utilisé Python depuis le BTS, et aujourd'hui, c'est encore le langage dont je me sers le plus, autant sur mes projets personnels que dans mon quotidien professionnel.<br><br>Sur mes propres projets, j'ai utilisé Python pour des jeux avec Pygame, pour du machine learning avec Matplotlib, Pandas, ou encore Scikit-Learn, pour du web scraping avec BeautifulSoup, ainsi que pour d'autres scripts principalement dédiés à l'automatisation.<br><br>Chez Sopra Steria, j'ai surtout utilisé Python sur le projet dont j'étais le responsable technique. Un projet en lien avec AWS, où je développais des lambdas pour la gestion de plusieurs flux d'une importance capitale chez Teréga."
         },
         {
             "iconClass": "fa6-brands:aws",
