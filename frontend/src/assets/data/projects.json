@@ -15,17 +15,53 @@
             "link": ""
         },
         {
-            "imgPath": "../../assets/imgs/poker.jpg",
-            "label": "Poker HL",
-            "smallDescription": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
-            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "imgPath": "../../assets/imgs/agile.webp",
+            "label": "Prédicteur de vélocité par sprint",
+            "smallDescription": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
+            "description": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
             "link": ""
         },
         {
             "imgPath": "../../assets/imgs/poker.jpg",
-            "label": "Poker HL",
-            "smallDescription": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
-            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "label": "Easy Breaking",
+            "smallDescription": "Application Angular sur Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
+            "description": "Application Angular sur Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Space Invaders",
+            "smallDescription": "Un Space Invaders en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
+            "description": "Lors de ma troisième année de licence informatique, j'ai eu comme projet de coder un jeu Space Invaders avec comme contrainte l'utilisation de la bibliothèque Three.js. De plus, les ennemis devaient avoir plusieurs niveaux d'intelligence artificielle (facile, moyen et difficile) afin d'être capable de tuer le joueur.",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Site de Safesec Formation",
+            "smallDescription": "Un site internet développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
+            "description": "",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Le cul de chouette",
+            "smallDescription": "Une application web Java permettant de jouer en multi-session au Cul de Chouette, inspiré de la série Kaamelott.",
+            "description": "",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Site de S.D.C.S",
+            "smallDescription": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
+            "description": "",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Aim Display",
+            "smallDescription": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
+            "description": "",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Nameless Game",
+            "smallDescription": "Un jeu rétro développé avec Pygame Python, inspiré de Zelda.",
+            "description": "",
             "link": ""
         }
     ]
