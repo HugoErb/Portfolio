@@ -28,7 +28,7 @@
         {
             "iconClass": "bi:git",
             "label": "Git",
-            "description": "Git est un système de contrôle de version décentralisé qui permet aux développeurs de suivre les modifications de code et de travailler en collaboration."
+            "description": "Git est un système de contrôle de version décentralisé qui permet aux développeurs de suivre les modifications de code et de travailler en collaboration.<br><br>Comme tout développeur, j'utilise Git au quotidien pour gérer les versions de mon code. C'est un outil indispensable dans mon travail, me permettant de collaborer efficacement avec d'autres développeurs, de gérer les branches, et de suivre l'historique des modifications avec précision.<br><br>Au fil du temps, j'ai acquis des bases solides en Git, maîtrisant les commandes essentielles et les concepts clés tels que les merges, les rebasings, et les pull requests. Git fait partie intégrante de mon quotidien de développeur, et je l'utilise avec assurance dans tous mes projets, qu'ils soient personnels ou professionnels."
         },
         {
             "iconClass": "simple-icons:php",
