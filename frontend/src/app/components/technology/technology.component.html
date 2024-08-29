@@ -8,7 +8,7 @@
 
 
 <!-- MODAL -->
-<dialog [id]="'modal' + label" class="dui-modal">
+<dialog [id]="'modal' + label" class="dui-modal px-5 lg:px-0">
     <div class="dui-modal-box w-fit max-w-5xl text-gray-800 bg-white dark:bg-secondary-dark-bg">
         <div class="text-center">
             <iconify-icon [icon]="iconClass" class="text-[2.75rem] text-gray-700"></iconify-icon>
@@ -16,9 +16,9 @@
                 Mon expérience avec {{label}}
             </h4>
         </div>
-        <!-- <form method="dialog">
+        <form class="lg:hidden" method="dialog">
             <button class="dui-btn dui-btn-sm dui-btn-circle dui-btn-ghost absolute right-2 top-2 outline-none">✕</button>
-        </form> -->
+        </form>
         <p [innerHTML]="description"></p>
     </div>
     <form method="dialog" class="dui-modal-backdrop">
