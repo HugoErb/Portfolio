@@ -3,7 +3,7 @@
         {
             "iconClass": "fontisto:python",
             "label": "Python",
-            "description": "Python est un langage de programmation incroyablement polyvalent, largement adopté pour des tâches variées telles que l'automatisation, l'analyse de données, l'intelligence artificielle, ainsi que le développement web.<br><br>J'ai découvert Python durant mon BTS, et ce fut un véritable coup de cœur. Ce langage est rapidement devenu mon favori grâce à sa simplicité, son intuitivité, et sa grande polyvalence. L'énorme quantité de bibliothèques développées par la communauté permet d'éviter de réinventer la roue à chaque projet, ce qui est un atout majeur.<br><br>Ma passion pour Python m'a conduit à approfondir mes compétences en suivant des formations spécialisées, jusqu'à obtenir la certification PCEP du Python Institute, témoignant de ma maîtrise de cette technologie. Depuis, Python est resté mon outil de prédilection, que j'utilise aussi bien pour mes projets personnels que dans mon quotidien professionnel.<br><br>Pour mes projets personnels, j'ai exploité Python de multiples façons : création de jeux avec Pygame, machine learning avec Matplotlib, Pandas et Scikit-Learn, web scraping avec BeautifulSoup, et développement de scripts d'automatisation.<br><br>Chez Sopra Steria, j'ai surtout mis Python à profit dans un projet dont j'étais le responsable technique. Ce projet, en lien avec AWS, impliquait le développement de lambdas pour la gestion de flux critiques chez Teréga, mettant en évidence l'importance stratégique de cette technologie."
+            "description": "Python est un langage de programmation incroyablement polyvalent, largement adopté pour des tâches variées telles que l'automatisation, l'analyse de données, l'intelligence artificielle, ainsi que le développement web.<br><br>J'ai découvert Python durant mon BTS, et ce fut un véritable coup de cœur. Ce langage est rapidement devenu mon favori grâce à sa simplicité, son intuitivité, et sa grande polyvalence. L'énorme quantité de bibliothèques développées par la communauté permet d'éviter de réinventer la roue à chaque projet, ce qui est un atout majeur.<br><br>Ma passion pour Python m'a conduit à approfondir mes compétences en suivant des formations spécialisées, jusqu'à obtenir la certification PCEP du Python Institute, témoignant de ma maîtrise de cette technologie. Depuis, Python est resté mon outil de prédilection, que j'utilise aussi bien pour mes projets personnels que dans mon quotidien professionnel.<br><br>Pour mes projets personnels, j'ai exploité Python de multiples façons : création de jeux avec Pygame, machine learning avec Matplotlib, Pandas et Scikit-Learn, web scraping avec BeautifulSoup, et développement de scripts d'automatisation.<br><br>Chez Sopra Steria, j'ai surtout mis Python à profit dans un projet dont j'étais le responsable technique. Ce projet, en lien avec AWS, impliquait le développement de lambdas pour la gestion de flux critiques chez Teréga."
         },
         {
             "iconClass": "fa6-brands:aws",
@@ -124,6 +124,10 @@
             "iconClass": "simple-icons:autohotkey",
             "label": "AHK",
             "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>"
+        },{
+            "iconClass": "mdi:google",
+            "label": "Google App Script",
+            "description": "Google Apps Script est un environnement de développement basé sur JavaScript pour automatiser et personnaliser les applications Google.<br><br>"
         }
     ]
 }
