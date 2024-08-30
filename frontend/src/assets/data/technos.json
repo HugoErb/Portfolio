@@ -48,7 +48,7 @@
         {
             "iconClass": "devicon-plain:nodejs-wordmark",
             "label": "Node JS",
-            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives.<br><br>"
+            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives.<br><br>J'ai appris Node.js en autodidacte en travaillant sur mes projets Angular, ce qui m'a permis d'acquérir une bonne expérience avec cette technologie au fil des nombreux projets que j'ai réalisés. Node.js s'est révélé être un outil puissant et parfaitement adapté aux besoins de mes applications, en particulier pour le développement full-stack.<br><br>J'apprécie particulièrement Node.js pour sa modernité et sa capacité à gérer efficacement des tâches côté serveur tout en s'intégrant harmonieusement avec Angular. Cette technologie est devenue un élément clé de mon workflow."
         },
         {
             "iconClass": "devicon-plain:csharp",
