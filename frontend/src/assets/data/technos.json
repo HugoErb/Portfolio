@@ -33,97 +33,97 @@
         {
             "iconClass": "simple-icons:php",
             "label": "PHP",
-            "description": "PHP est un langage de script côté serveur principalement utilisé pour le développement de pages web dynamiques."
+            "description": "PHP est un langage de script côté serveur principalement utilisé pour le développement de pages web dynamiques.<br><br>J'ai appris PHP durant mon BTS, et c'était l'un des premiers langages côté serveur que j'ai maîtrisé. J'ai utilisé PHP pour plusieurs projets il y a quelques années, notamment pour des sites web dynamiques et des applications simples. J'ai trouvé cette technologie intéressante, en particulier pour son intégration facile avec les bases de données.<br><br>Cependant, avec l'évolution rapide des technologies web, j'ai constaté que PHP est progressivement sur le déclin, ce qui m'a conduit à me concentrer sur d'autres langages et frameworks plus modernes. Aujourd'hui, je n'utilise plus vraiment PHP dans mes projets, mais mon expérience passée avec ce langage reste solide, me permettant de comprendre et de travailler avec des systèmes qui l'utilisent encore."
         },
         {
             "iconClass": "akar-icons:javascript-fill",
             "label": "Javascript",
-            "description": "JavaScript est un langage de programmation côté client utilisé pour créer des interactions dynamiques sur les pages web."
+            "description": "JavaScript est un langage de programmation côté client utilisé pour créer des interactions dynamiques sur les pages web.<br><br>J'ai appris JavaScript en autodidacte, attiré par sa réputation pour créer des sites web interactifs. J'ai toujours aimé travailler avec cette technologie, qui est à la base de la majorité des applications web modernes. Cependant, au fil du temps, j'ai développé une préférence pour TypeScript, son \"petit frère\" typé, que je trouve plus structuré et mieux adapté pour des projets Angular.<br><br>J'ai réalisé plusieurs projets personnels avec JavaScript, dont un jeu Space Invaders, et j'ai exploré des bibliothèques comme Three.js pour créer des expériences 3D immersives.<br>De plus, j'ai souvent utilisé JavaScript pour ajouter des fonctionnalités dynamiques à mes sites internet, rendant mes pages web plus interactives et engageantes. Bien que je m'appuie désormais principalement sur TypeScript, mon expérience avec JavaScript reste un pilier de mon expertise en développement web."
         },
         {
             "iconClass": "fa6-brands:java",
             "label": "Java",
-            "description": "Java est un langage de programmation orienté objet largement utilisé pour le développement d'applications web, mobiles, et d'entreprise."
+            "description": "Java est un langage de programmation orienté objet largement utilisé pour le développement d'applications web, mobiles, et d'entreprise.<br><br>"
         },
         {
             "iconClass": "devicon-plain:nodejs-wordmark",
             "label": "Node JS",
-            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives."
+            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives.<br><br>"
         },
         {
             "iconClass": "devicon-plain:csharp",
             "label": "C#",
-            "description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET."
+            "description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET.<br><br>"
         },
         {
             "iconClass": "simple-icons:express",
             "label": "Express",
-            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides."
+            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides.<br><br>"
         },
         {
             "iconClass": "akar-icons:typescript-fill",
             "label": "TypeScript",
-            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle."
+            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle.<br><br>"
         },
         {
             "iconClass": "ri:tailwind-css-fill",
             "label": "Tailwind CSS",
-            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML."
+            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML.<br><br>"
         },
         {
             "iconClass": "cib:terraform",
             "label": "Terraform",
-            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée."
+            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée.<br><br>"
         },
         {
             "iconClass": "mdi:sql-query",
             "label": "PL/SQL",
-            "description": "PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes."
+            "description": "PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes.<br><br>"
         },
         {
             "iconClass": "mdi:dot-net",
             "label": ".NET",
-            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation."
+            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation.<br><br>"
         },
         {
             "iconClass": "simple-icons:mongodb",
             "label": "Mongo DB",
-            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées."
+            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées.<br><br>"
         },
         {
             "iconClass": "cib:cplusplus",
             "label": "C++",
-            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées."
+            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées.<br><br>"
         },
         {
             "iconClass": "devicon-plain:bash",
             "label": "Bash",
-            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix."
+            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix.<br><br>"
         },
         {
             "iconClass": "uil:android",
             "label": "SDK Android",
-            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android."
+            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android.<br><br>"
         },
         {
             "iconClass": "cib:ionic",
             "label": "Ionic",
-            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript."
+            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript.<br><br>"
         },
         {
             "iconClass": "simple-icons:neo4j",
             "label": "Cypher",
-            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées."
+            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées.<br><br>"
         },
         {
             "iconClass": "simple-icons:lua",
             "label": "Lua",
-            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances."
+            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances.<br><br>"
         },
         {
             "iconClass": "simple-icons:autohotkey",
             "label": "AHK",
-            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows."
+            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>"
         }
     ]
 }
