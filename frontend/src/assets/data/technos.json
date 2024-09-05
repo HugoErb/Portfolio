@@ -58,17 +58,17 @@
         {
             "iconClass": "simple-icons:express",
             "label": "Express",
-            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides.<br><br>"
+            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides.<br><br>J'ai utilisé Express dans plusieurs de mes projets Angular couplés à Node.js. Bien que je ne l'aie pas énormément exploité, je m'en suis servi principalement pour gérer les routes nécessaires à l'envoi d'e-mails et pour exposer mon frontend, en le conservant dans le même projet que mon backend.<br><br>Express m'a permis de simplifier la gestion des requêtes et de structurer mes applications de manière efficace, même si mes besoins étaient assez spécifiques et limités à ces tâches. C'est une technologie que je trouve pratique, même si je n'ai pas encore eu l'occasion de l'explorer pleinement dans des projets plus complexes."
         },
         {
             "iconClass": "akar-icons:typescript-fill",
             "label": "TypeScript",
-            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle.<br><br>"
+            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle.<br><br>J'ai découvert TypeScript en travaillant sur des projets avec Angular, et il est rapidement devenu mon langage préféré pour le développement web. J'apprécie particulièrement TypeScript pour la structure et la sécurité qu'il apporte par rapport à JavaScript.<br><br>J'ai utilisé TypeScript dans bon nombre de mes projets, notamment pour des applications complexes, où sa flexibilité et ses fonctionnalités avancées se sont révélées indispensables. Que ce soit pour des projets personnels ou professionnels, TypeScript est devenu un de mes outils de prédilection, surpassant selon moi JavaScript en termes de clarté et de rigueur, tout en conservant puissance et modernité."
         },
         {
             "iconClass": "ri:tailwind-css-fill",
             "label": "Tailwind CSS",
-            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML.<br><br>"
+            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML.<br><br>Après avoir beaucoup travaillé avec CSS, la découverte de Tailwind CSS a été une véritable révélation. Ce framework a transformé ma façon de concevoir et de structurer mes interfaces, en rendant le processus de stylisation bien plus rapide et intuitif. Tailwind m'a permis de gagner un temps précieux tout en conservant une flexibilité totale dans mes designs.<br><br>J'apprécie énormément Tailwind, et je suis convaincu qu'il devrait devenir la norme pour le développement front-end. Son approche utilitaire me permet de créer efficacement des interfaces responsives et avec un dark thème, sans me perdre dans des feuilles de styles complexes. Aujourd'hui, je l'utilise dans tous mes projets, et il est devenu un outil indispensable dans mon workflow."
         },
         {
             "iconClass": "cib:terraform",
