@@ -73,12 +73,12 @@
         {
             "iconClass": "cib:terraform",
             "label": "Terraform",
-            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée.<br><br>"
+            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée.<br><br>J'ai appris Terraform à la fois grâce à de petites formations internes délivrées par Sopra Steria et en autodidacte sur les différents projets pour Teréga, et sur des ressources AWS. Terraform m'a permis de me plonger dans l'infrastructure as code (IaC), un concept que je trouve extrêmement intéressant pour l'automatisation et la gestion des ressources cloud.<br><br>Cependant, malgré l'intérêt de l'approche IaC, je trouve Terraform plutôt compliqué et peu intuitif pour un développeur. L'apprentissage a parfois été frustrant en raison de la complexité des configurations et des erreurs auxquelles j'ai dû faire face. Même si je suis désormais bien rodé sur la technologie et que j'ai acquis une solide expérience en résolvant de nombreux problèmes de configuration, Terraform n'est pas un outil que j'apprécie particulièrement."
         },
         {
             "iconClass": "mdi:sql-query",
             "label": "PL/SQL",
-            "description": "PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes.<br><br>"
+            "description": "SQL (Structured Query Language) est un langage utilisé pour gérer et manipuler des bases de données relationnelles en permettant de créer, lire, mettre à jour et supprimer des données.<br><br>PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes.<br><br>J'ai appris le SQL dès le début de mes études, et depuis, je l'utilise quotidiennement dans mes projets. Comme tout développeur, je m'en sers pour interroger et manipuler les bases de données, qu'il s'agisse de réaliser des requêtes simples ou des opérations plus complexes.<br><br>À mon arrivée chez Sopra Steria, j'ai commencé à travailler avec PL/SQL, une version étendue de SQL qui intègre des fonctionnalités procédurales. Bien que PL/SQL soit sensiblement différent de SQL classique, il combine des opérations de langage que je maîtrise bien, ce qui m'a permis de rapidement prendre en main cette variante. Aujourd'hui, je suis à l'aise avec PL/SQL, tout en continuant à utiliser SQL au quotidien pour mes projets."
         },
         {
             "iconClass": "mdi:dot-net",
