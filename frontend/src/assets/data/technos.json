@@ -83,17 +83,17 @@
         {
             "iconClass": "mdi:dot-net",
             "label": ".NET",
-            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation.<br><br>"
+            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation.<br><br>J'ai utilisé .NET en travaillant avec C# chez Sopra Steria, notamment sur des projets \"legacy\" complexes nécessitant une plateforme robuste et fiable. .NET m'a permis de tirer parti des fonctionnalités avancées de C# et de développer des applications performantes et bien structurées.<br><br>Cependant, même si je trouve la technologie intéressante et adaptée à de nombreux scénarios professionnels, je la considère assez basique dans sa conception, et peut être un peu \"has been\". Malgré cela, grâce à mon expérience chez Sopra Steria, je maîtrise bien .NET et je l'utilise avec assurance dans les projets où il est requis."
         },
         {
             "iconClass": "simple-icons:mongodb",
             "label": "Mongo DB",
-            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées.<br><br>"
+            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées.<br><br>J'ai commencé à utiliser MongoDB pendant mes études, où j'ai réalisé plusieurs projets étudiants en exploitant cette base de données NoSQL si connue. MongoDB m'a rapidement séduit par son approche flexible et sa capacité à gérer de grandes quantités de données de manière efficace, et le tout, sans utiliser de SQL.<br><br>J'adore l'idée derrière MongoDB, de par sa puissance et sa structure de documents. Bien que je n'aie pas encore eu l'occasion de l'utiliser sur des projets professionnels majeurs, j'aimerais beaucoup en faire davantage et approfondir mes compétences avec cette technologie."
         },
         {
             "iconClass": "cib:cplusplus",
             "label": "C++",
-            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées.<br><br>"
+            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées.<br><br>Je n'ai pas eu beaucoup d'opportunités d'utiliser C++ dans mes projets personnels, mais je l'ai tout de même employé pour programmer des microcontrôleurs Arduino. Cette expérience m'a permis de mettre un pied dans le développement embarqué, une branche de l'informatique qui relie étroitement le logiciel et le matériel.<br><br>J'ai beaucoup apprécié ces projets, et j'ai trouvé C++ à la fois puissant et adapté à ce type de développement. Même si je n'ai pas encore eu l'occasion d'explorer pleinement ce langage, j'aimerais beaucoup l'utiliser davantage à l'avenir, notamment dans des projets liés au hardware."
         },
         {
             "iconClass": "devicon-plain:bash",
