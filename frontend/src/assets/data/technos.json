@@ -98,36 +98,35 @@
         {
             "iconClass": "devicon-plain:bash",
             "label": "Bash",
-            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix.<br><br>"
+            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix.<br><br>J'ai passé mes années à la faculté à travailler sous Linux, et par extension, à utiliser des commandes Bash régulièrement. Cet environnement m'a permis de développer une certaine maîtrise de Bash, que j'ai utilisé pour une variété de tâches, que ce soit pour l'automatisation de processus ou la gestion du système.<br><br>Aujourd'hui encore, j'utilise Bash pour automatiser des tâches, simplifier certaines opérations répétitives, et gérer mon VPS. Cependant, étant autodidacte dans ce langage, je reste un peu frileux, car il me manque encore de l'expérience pour être pleinement à l'aise avec Bash. J'ai encore des progrès à faire avant de me sentir totalement confiant avec cette technologie."
         },
         {
             "iconClass": "uil:android",
             "label": "SDK Android",
-            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android.<br><br>"
+            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android.<br><br>Durant mes années de BTS, j'ai eu l'occasion de coder plusieurs applications Android en utilisant le SDK Android. Étant déjà à l'aise avec Java, la prise en main de ce SDK s'est faite de manière assez naturelle, ce qui m'a permis de me concentrer rapidement sur le développement des fonctionnalités spécifiques à Android.<br><br>J'ai principalement travaillé avec Android Studio, l'outil de référence pour ce type de projets, et j'ai pris beaucoup de plaisir à créer des applications mobiles. Ces projets ont été particulièrement enrichissants, et j'ai beaucoup apprécié l'environnement de développement Android ainsi que la flexibilité qu'il offre. Cependant, depuis cette période, je n'ai pas eu l'opportunité de retravailler avec le SDK Android, bien que ce soit une expérience que j'aimerais réitérer."
         },
         {
             "iconClass": "cib:ionic",
             "label": "Ionic",
-            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript.<br><br>"
+            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript.<br><br>J'ai découvert Ionic grâce à mes projets Angular, et j'ai décidé d'utiliser ce framework pour développer une application mobile qui serait téléchargeable à la fois sur Android et iOS. Le projet consistait à créer une application de jeu de société, et j'ai pris beaucoup de plaisir à travailler dessus, en profitant de l'intégration entre Ionic et Angular pour structurer l'application.<br><br>Cependant, malgré l'intérêt que j'ai eu à réaliser ce projet, certains aspects d'Ionic n'étaient pas toujours clairs pour moi, et j'ai rencontré de nombreux problèmes, notamment en ce qui concerne l'interface utilisateur et le rendu sur téléphone. Ces difficultés ont un peu gâché mon expérience, car la gestion des détails de compatibilité et d'affichage sur différents appareils a été plus compliquée que prévu. Malgré tout, j'ai beaucoup appris à travers ce projet et reste intéressé par les possibilités offertes par Ionic."
         },
         {
             "iconClass": "simple-icons:neo4j",
             "label": "Cypher",
-            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées.<br><br>"
+            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées.<br><br>J'ai utilisé Cypher durant mes études, notamment dans des projets avec des bases de données orientées graphes. J'ai trouvé cette approche particulièrement originale, car elle offre une façon différente et plus naturelle de modéliser certaines relations complexes entre les données. L'utilisation de Cypher s'est révélée assez intuitive, et j'ai apprécié la manière dont ce langage de requête est bien adapté aux bases de données orientées graphes.<br><br>Bien que je n'aie pas utilisé ces technologies depuis longtemps, j'aimerais beaucoup avoir l'opportunité de retravailler avec Cypher et les bases de données orientées graphes un jour. Ces technologies m'ont laissé une impression positive et enrichissante, et je serai toujours curieux d'explorer davantage leur potentiel."
         },
         {
             "iconClass": "simple-icons:lua",
             "label": "Lua",
-            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances.<br><br>"
-        },
+            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances.<br><br>J'ai travaillé avec Lua sur des projets personnels en autodidacte, notamment pour des scripts d'automatisation, des outils de triche pour des jeux vidéo, ainsi que des macros. J'ai trouvé l'utilisation de Lua intéressante, surtout dans le cadre de tâches spécifiques où sa légèreté et sa flexibilité sont appréciables.<br><br>Cependant, bien que Lua soit pratique pour ces types de projets, je trouve que le langage lui-même reste assez simple et basique. Il manque de certaines fonctionnalités avancées que l'on retrouve dans d'autres langages. Malgré cela, j'ai apprécié l'utiliser pour des tâches ciblées, et il reste un outil utile dans mon arsenal pour des projets nécessitant un langage léger et rapide."        },
         {
             "iconClass": "simple-icons:autohotkey",
             "label": "AHK",
-            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>"
+            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>J'ai travaillé avec AutoHotkey sur des projets personnels, principalement pour des scripts d'automatisation, des macros, et même des outils de triche pour des jeux vidéo. J'ai trouvé AutoHotkey pratique pour simplifier certaines tâches répétitives et automatiser des processus.<br><br>Cela dit, bien que son utilisation soit intéressante pour ces types de projets, AutoHotkey reste un langage assez rudimentaire. Il est facile à prendre en main, mais il manque de puissance et de fonctionnalités plus sophistiquées. Malgré cela, j'ai apprécié l'utiliser pour des besoins spécifiques, et il reste un excellent choix pour des scripts rapides et efficaces, même si je pense que Python le bat à plate couture dans toutes les catégories."
         },{
             "iconClass": "mdi:google",
             "label": "Google App Script",
-            "description": "Google Apps Script est un environnement de développement basé sur JavaScript pour automatiser et personnaliser les applications Google.<br><br>"
+            "description": "Google Apps Script est un environnement de développement basé sur JavaScript pour automatiser et personnaliser les applications Google.<br><br>J'ai eu l'occasion de travailler avec Google Apps Script sur un projet chez Sopra Steria, où j'ai développé plusieurs fonctionnalités pour automatiser des tâches sur différentes feuilles de calcul Google Sheets. Ce projet m'a permis de découvrir la puissance de Google Apps Script pour optimiser et personnaliser les workflows au sein des applications Google.<br><br>J'ai trouvé ce langage très similaire à JavaScript, ce qui a facilité sa prise en main. Les fonctionnalités ajoutées par Google pour interagir avec ses différentes suites d'outils, comme Sheets, Docs, et Gmail, sont bien implémentées et rendent le langage particulièrement adapté pour automatiser des processus liés à ces services. C'est une technologie que j'ai trouvée pratique et efficace dans ce contexte."
         }
     ]
 }
