@@ -41,8 +41,20 @@
             "link": ""
         },{
             "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Site Portfolio",
+            "smallDescription": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
+            "description": "",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
+            "label": "Bot Low Rake",
+            "smallDescription": "Un bot Discord Python envoyant des alertes lorsqu'un paris sportif au retour élevé apparaît.",
+            "description": "Ce projet utilise Playwright pour scraper les cotes des matchs depuis un site de comparaison de cotes et envoie des alertes sur Discord lorsque les cotes dépassent un certain seuil ou augmentent significativement par rapport à une précédente alerte. Il est conçu pour fonctionner en continu, vérifiant périodiquement les cotes toutes les X minutes et envoyant des alertes si nécessaire.",
+            "link": ""
+        },{
+            "imgPath": "../../assets/imgs/poker.jpg",
             "label": "Le cul de chouette",
-            "smallDescription": "Une application web Java permettant de jouer en multi-session au Cul de Chouette, inspiré de la série Kaamelott.",
+            "smallDescription": "Une application web Java permettant de jouer en multi-session au Cul de Chouette, inspirée de la série Kaamelott.",
             "description": "",
             "link": ""
         },{
