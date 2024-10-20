@@ -13,17 +13,17 @@
         {
             "imgPath": "../../assets/imgs/python_essentials_1.png",
             "label": "Cisco Python Essentials 1",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+            "link": "https://www.netacad.com/fr/courses/python-essentials-1?courseLang=en-US"
         },
         {
             "imgPath": "../../assets/imgs/introduction_to_cybersecurity.png",
             "label": "Cisco Introduction To Cybersecurity",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+            "link": "https://www.netacad.com/fr/courses/introduction-to-cybersecurity?courseLang=fr-FR"
         },
         {
             "imgPath": "../../assets/imgs/bases_materiel_informatique.png",
             "label": "Cisco Introduction To Cybersecurity",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+            "link": "https://www.netacad.com/fr/courses/computer-hardware-basics?courseLang=fr-FR"
         },
         {
             "imgPath": "../../assets/imgs/uppa.png",
