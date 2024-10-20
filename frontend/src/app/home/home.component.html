@@ -111,42 +111,45 @@
                     <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Mes projets personnels</h2>
                     <p
                         class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                        Découvrez quelques-uns de mes projets, pourquoi et comment je les ai créés, les défis rencontrés
-                        et comment
+                        Découvrez quelques-uns de mes projets, pourquoi et comment je les ai créés, les défis rencontrés et
+                        comment
                         je les utilise aujourd'hui.
                     </p>
                 </div>
             </div>
-
-                <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
-                    <div (click)="prevPage('projects')" [ngClass]="{
-                                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
-                                        'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
-                                    }"
-                        class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
-                        <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                    </div>
-                    <div [ngClass]="{ 'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut, 
-                                      'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
-                                      'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
-                                      'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
-                                    }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+    
+            <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center">
+                <!-- Ajout de justify-center -->
+                <div (click)="prevPage('projects')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
+                        'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
+                    }" class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+    
+                <div [ngClass]="{
+                        'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut, 
+                        'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
+                        'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
+                        'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
+                    }" class="grid gap-6 py-12 max-w-5xl lg:grid-cols-2 lg:gap-12 overflow-hidden items-center">
                         <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
                             <app-project [imgPath]="project.imgPath" [name]="project.name"
                                 [description]="project.description" [link]="project.link"></app-project>
                         </ng-container>
-                    </div>
-                    <div (click)="nextPage('projects')" [ngClass]="{
-                                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
-                                        'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
-                                    }"
-                        class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
-                        <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                    </div>
                 </div>
-                
+    
+                <div (click)="nextPage('projects')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
+                        'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
+                    }"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
             </div>
+        </div>
     </section>
+
 
     <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
         <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
