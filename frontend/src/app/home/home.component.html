@@ -55,8 +55,7 @@
             <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div class="flex flex-col justify-center space-y-4 text-center lg:text-left">
                     <div class="space-y-2">
-                        <h1
-                            class="xl:text-6xl lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold tracking-tighter">
+                        <h1 class="xl:text-6xl lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold tracking-tighter">
                             Hugo Eribon
                         </h1>
                         <div class="flex h-10 text-2xl box-content">
@@ -118,61 +117,34 @@
                     </p>
                 </div>
             </div>
-            <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 "
-                    href="#">
-                    <img src="../../assets/imgs/poker.jpg" alt="Poker HL"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Poker HL</h3>
-                        <p class="text-gray-300">Application Angular permettant de s'entraîner au Poker, consulter ses
-                            statistiques
-                            et gérer ses ranges d'actions.</p>
+
+                <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
+                    <div (click)="prevPage('projects')" [ngClass]="{
+                                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
+                                        'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
+                                    }"
+                        class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                        <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
                     </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 "
-                    href="#">
-                    <img src="../../assets/imgs/tiktok.jpg" alt="Tik Tok Dynamic Lives"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Tik Tok Dynamic Lives</h3>
-                        <p class="text-gray-300">Un outil Angular et Python permettant de rendre des lives Tik Tok
-                            réactifs aux dons
-                            des viewers.</p>
+                    <div [ngClass]="{ 'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut, 
+                                      'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
+                                      'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
+                                      'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
+                                    }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                        <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
+                            <app-project [imgPath]="project.imgPath" [name]="project.name"
+                                [description]="project.description" [link]="project.link"></app-project>
+                        </ng-container>
                     </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 "
-                    href="#">
-                    <img src="../../assets/imgs/agile.webp" alt="Prédicteur de vélocité par sprint"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Prédicteur de vélocité par sprint</h3>
-                        <p class="text-gray-300">Un outil Python utilisant le machine learning pour calculer la vélocité
-                            d'une
-                            équipe agile sur un sprint.</p>
+                    <div (click)="nextPage('projects')" [ngClass]="{
+                                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
+                                        'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
+                                    }"
+                        class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                        <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
                     </div>
-                </a>
-                <a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 "
-                    href="#">
-                    <img src="../../assets/imgs/placeholderimg.jpg" alt="Easy breaking"
-                        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
-                        width="550" height="310" />
-                    <div
-                        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
-                        <h3 class="text-xl font-bold">Easy Breaking</h3>
-                        <p class="text-gray-300">Application Angular sur Dofus permettant d'optimiser le brisage d'items
-                            afin de
-                            maximiser la rentabilité.</p>
-                    </div>
-                </a>
+                </div>
             </div>
-        </div>
     </section>
 
     <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">

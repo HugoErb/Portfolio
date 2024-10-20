@@ -1,0 +1,11 @@
+<a class="group relative overflow-hidden rounded-xl transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 "
+    [href]="link">
+    <img [src]="imgPath" [alt]="name"
+        class="mx-auto aspect-video w-full object-cover object-center transition-all group-hover:brightness-75"
+        width="550" height="310" />
+    <div
+        class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-white transition-all group-hover:bg-transparent">
+        <h3 class="text-xl font-bold">{{ name }}</h3>
+        <p class="text-gray-300">{{ description }}</p>
+    </div>
+</a>

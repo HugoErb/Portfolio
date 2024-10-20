@@ -20,6 +20,13 @@ interface Certification {
     link: string;
 }
 
+interface Project {
+    imgPath: string;
+    name: string;
+    description: string;
+    link: string;
+}
+
 @Component({
     selector: 'app-home',
     standalone: true,
@@ -41,7 +48,7 @@ export class HomeComponent {
     phoneNumberMail: string = "";
     messageMail: string = "";
 
-    // Objets génériques pour stocker les états et les méthodes liés aux technos et certifs
+    // Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
     elementsConfig = {
         technos: {
             items: [] as Technology[],
@@ -64,12 +71,24 @@ export class HomeComponent {
             swipeLeftIn: false,
             swipeRightIn: false,
             isTransitioning: false
+        },
+        projects: {
+            items: [] as Project[],
+            visibleItems: [] as Project[],
+            currentPage: 0,
+            itemsPerPage: 4,
+            swipeLeftOut: false,
+            swipeRightOut: false,
+            swipeLeftIn: false,
+            swipeRightIn: false,
+            isTransitioning: false
         }
     };
 
     ngOnInit() {
         this.loadAssets('technos');
         this.loadAssets('certifs');
+        this.loadAssets('projects');
     }
 
     /**
@@ -178,22 +197,28 @@ export class HomeComponent {
     }
 
     /**
-    * Charge les données à partir du fichier JSON pour le type spécifié.
-    * @param type - Le type d'éléments à charger ("technos" ou "certifs").
-    */
-    loadAssets(type: 'technos' | 'certifs'): void {
-        const filePath = type === 'technos' ? '../../assets/data/technos.json' : '../../assets/data/certifs.json';
+ * Charge les données à partir du fichier JSON pour le type spécifié.
+ * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
+ */
+    loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
+        const filePath = {
+            'technos': '../../assets/data/technos.json',
+            'certifs': '../../assets/data/certifs.json',
+            'projects': '../../assets/data/projects.json'
+        }[type]; // Sélectionne le bon fichier JSON en fonction du type
+
         this.http.get<any>(filePath).subscribe(data => {
             this.elementsConfig[type].items = data[type];
             this.updateVisibleElements(type);
         });
     }
 
+
     /**
      * Met à jour la liste des éléments visibles en fonction de la page actuelle.
      * @param type - Le type d'éléments à mettre à jour ("technos" ou "certifs").
      */
-    updateVisibleElements(type: 'technos' | 'certifs'): void {
+    updateVisibleElements(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         const startIndex = config.currentPage * config.itemsPerPage;
         config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
@@ -203,7 +228,7 @@ export class HomeComponent {
      * Passe à la page suivante d'éléments (icônes ou images).
      * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos" ou "certifs").
      */
-    nextPage(type: 'technos' | 'certifs'): void {
+    nextPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && (config.currentPage + 1) * config.itemsPerPage < config.items.length) {
             config.isTransitioning = true;
@@ -227,7 +252,7 @@ export class HomeComponent {
      * Retourne à la page précédente d'éléments (icônes ou images).
      * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos" ou "certifs").
      */
-    prevPage(type: 'technos' | 'certifs'): void {
+    prevPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && config.currentPage > 0) {
             config.isTransitioning = true;
