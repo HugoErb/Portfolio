@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { TechnologyComponent } from '../components/technology/technology.component';
 import { CertificationComponent } from '../components/certification/certification.component';
+import { ProjectComponent } from '../components/project/project.component';
 import { HttpClient } from '@angular/common/http';
 
 interface Technology {
@@ -30,7 +31,7 @@ interface Project {
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent],
+    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent, ProjectComponent],
     templateUrl: './home.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -86,9 +87,10 @@ export class HomeComponent {
     };
 
     ngOnInit() {
-        this.loadAssets('technos');
-        this.loadAssets('certifs');
         this.loadAssets('projects');
+        this.loadAssets('technos');
+        
+        this.loadAssets('certifs');
     }
 
     /**
@@ -216,7 +218,7 @@ export class HomeComponent {
 
     /**
      * Met à jour la liste des éléments visibles en fonction de la page actuelle.
-     * @param type - Le type d'éléments à mettre à jour ("technos" ou "certifs").
+     * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
      */
     updateVisibleElements(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
@@ -226,7 +228,7 @@ export class HomeComponent {
 
     /**
      * Passe à la page suivante d'éléments (icônes ou images).
-     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos" ou "certifs").
+     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos", "certifs" ou "projects").
      */
     nextPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
@@ -250,7 +252,7 @@ export class HomeComponent {
 
     /**
      * Retourne à la page précédente d'éléments (icônes ou images).
-     * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos" ou "certifs").
+     * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos", "certifs" ou "projects").
      */
     prevPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
