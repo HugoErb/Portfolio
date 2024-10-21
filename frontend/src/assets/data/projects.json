@@ -25,22 +25,22 @@
             "link": "https://github.com/HugoErb/EasyBreaking"
         },
         {
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/mastermind.jpg",
             "name": "Mastermind",
             "description": "Jeu du Mastermind, avec solveur basé sur l'algorithme de Knuth, codé en Python.",
             "link": "https://github.com/HugoErb/Mastermind"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/space_invaders.webp",
             "name": "Space Invaders",
             "description": "Un Space Invaders en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/logo_safesec.webp",
             "name": "Site de Safesec Formation",
             "description": "Un site internet développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
             "link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/dev.png",
             "name": "Site Portfolio",
             "description": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
             "link": "https://github.com/HugoErb/Portfolio"
@@ -52,27 +52,27 @@
         },{
             "imgPath": "../../assets/imgs/poker.jpg",
             "name": "Scrapping Best Daily Bet",
-            "description": "",
+            "description": "Un script Python permettant de récupérer la liste des meilleurs paris sportifs par bookmaker.",
             "link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/perceval.webp",
             "name": "Le cul de chouette",
             "description": "Une application web Java permettant de jouer en multi-session au Cul de Chouette, inspirée de la série Kaamelott.",
             "link": "https://github.com/ArnaudMarcel/CulDeChouette"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/logo_sdcs.png",
             "name": "Site de la S.D.C.S",
             "description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
             "link": "https://github.com/HugoErb/sdcs"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/tir.webp",
             "name": "Aim Display",
             "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
             "link": ""
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/pygame.png",
             "name": "Nameless Game",
-            "description": "Un jeu rétro développé avec Pygame Python, inspiré de Zelda.",
+            "description": "Un jeu rétro développé avec Pygame en Python, inspiré des premiers jeux Zelda.",
             "link": "https://github.com/HugoErb/Nameless-Game"
         }
     ]
