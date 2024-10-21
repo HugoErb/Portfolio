@@ -32,7 +32,7 @@
         },{
             "imgPath": "../../assets/imgs/space_invaders.webp",
             "name": "Space Invaders",
-            "description": "Un Space Invaders en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
+            "description": "Un Space Invaders 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
         },{
             "imgPath": "../../assets/imgs/logo_safesec.webp",
