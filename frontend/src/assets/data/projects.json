@@ -30,7 +30,7 @@
             "description": "Jeu du Mastermind, avec solveur basé sur l'algorithme de Knuth, codé en Python.",
             "link": "https://github.com/HugoErb/Mastermind"
         },{
-            "imgPath": "../../assets/imgs/space_invaders.webp",
+            "imgPath": "../../assets/imgs/space_invaders.jpg",
             "name": "Space Invaders",
             "description": "Un Space Invaders 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
