@@ -3,7 +3,7 @@
         {
             "imgPath": "../../assets/imgs/poker.jpg",
             "name": "Poker HL",
-            "description": "Application Angular permettant de s'entraîner au Poker, consulter ses statistiques et gérer ses ranges d'actions.",
+            "description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
             "link": "https://github.com/lucasbaylon/PokerHL"
         },
         {
@@ -32,12 +32,12 @@
         },{
             "imgPath": "../../assets/imgs/space_invaders.jpg",
             "name": "Space Invaders",
-            "description": "Un Space Invaders 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
+            "description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
         },{
             "imgPath": "../../assets/imgs/logo_safesec.webp",
             "name": "Site de Safesec Formation",
-            "description": "Un site internet développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
+            "description": "Un site développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
             "link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
         },{
             "imgPath": "../../assets/imgs/dev.png",
@@ -57,7 +57,7 @@
         },{
             "imgPath": "../../assets/imgs/perceval.webp",
             "name": "Le cul de chouette",
-            "description": "Une application web Java permettant de jouer en multi-session au Cul de Chouette, inspirée de la série Kaamelott.",
+            "description": "Une application Java permettant de jouer en multi-session à ce jeu inspiré de la série Kaamelott.",
             "link": "https://github.com/ArnaudMarcel/CulDeChouette"
         },{
             "imgPath": "../../assets/imgs/logo_sdcs.png",
