@@ -50,8 +50,8 @@
             "description": "Un bot Discord Python envoyant des alertes lorsqu'un paris sportif au retour élevé apparaît.",
             "link": "https://github.com/HugoErb/Scrapping-Low-Rake"
         },{
-            "imgPath": "../../assets/imgs/poker.jpg",
-            "name": "Scrapping Best Daily Bet",
+            "imgPath": "../../assets/imgs/bet.webp",
+            "name": "Scrapping Best Bet",
             "description": "Un script Python permettant de récupérer la liste des meilleurs paris sportifs par bookmaker.",
             "link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
         },{
@@ -70,7 +70,7 @@
             "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
             "link": "https://github.com/HugoErb/AppWeb-TSR"
         },{
-            "imgPath": "../../assets/imgs/tir.webp",
+            "imgPath": "../../assets/imgs/aimdisplay.png",
             "name": "Aim Display",
             "description": "Une refonte de mon application App Web TSR, en Angular NodeJS, avec de nouvelles fonctionnalités.",
             "link": "https://github.com/HugoErb/AimDisplay"
