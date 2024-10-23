@@ -111,13 +111,11 @@
                     <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Mes projets personnels</h2>
                     <p
                         class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                        Découvrez quelques-uns de mes projets, pourquoi et comment je les ai créés, les défis rencontrés et
-                        comment
-                        je les utilise aujourd'hui.
+                        Découvrez mes réalisations personnelles à travers quelques-uns de mes projets.
                     </p>
                 </div>
             </div>
-    
+
             <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center">
                 <div (click)="prevPage('projects')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
@@ -125,19 +123,19 @@
                     }" class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
-    
+
                 <div [ngClass]="{
                         'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut, 
                         'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
                         'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
                         'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
                     }" class="grid gap-6 py-12 max-w-5xl lg:grid-cols-2 lg:gap-8 overflow-hidden items-center">
-                        <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
-                            <app-project [imgPath]="project.imgPath" [name]="project.name"
-                                [description]="project.description" [link]="project.link"></app-project>
-                        </ng-container>
+                    <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
+                        <app-project [imgPath]="project.imgPath" [name]="project.name"
+                            [description]="project.description" [link]="project.link"></app-project>
+                    </ng-container>
                 </div>
-    
+
                 <div (click)="nextPage('projects')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
@@ -154,7 +152,8 @@
             <div class="space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">Technologies connues</h2>
                 <p class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
-                    Je maîtrise un large éventail de technologies, langages et frameworks me permettant de créer des applications modernes sur la base d'un code propre et structuré.
+                    Je maîtrise un large éventail de technologies, langages et frameworks me permettant de créer des
+                    applications modernes sur la base d'un code propre et structuré.
                 </p>
             </div>
 
@@ -247,8 +246,10 @@
                     Je m'appelle <span class="font-bold">Hugo Eribon</span> et je suis Ingénieur Études et
                     Développement. Grâce à
                     une formation rigoureuse et des expériences variées, j'ai développé une expertise solide
-                    dans de nombeaux domaines informatiques. <br>La programmation est pour moi une véritable passion, car elle combine défis intellectuels et innovation permanente.
-                    Ce domaine me permet d'explorer constamment de nouvelles technologies, nourrissant ainsi ma créativité et mon désir
+                    dans de nombeaux domaines informatiques. <br>La programmation est pour moi une véritable passion,
+                    car elle combine défis intellectuels et innovation permanente.
+                    Ce domaine me permet d'explorer constamment de nouvelles technologies, nourrissant ainsi ma
+                    créativité et mon désir
                     perpétuel d'apprendre et de m'adapter aux dernières avancées.
                     <br><br>
                     Suite à mon Master informatique, j'ai eu l'opportunité de contribuer à des projets majeurs pour des
