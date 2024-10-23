@@ -19,9 +19,9 @@
             "link": "https://github.com/HugoErb/VelocityPredictor"
         },
         {
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/dofus.webp",
             "name": "Easy Breaking",
-            "description": "Application Angular sur Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
+            "description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
             "link": "https://github.com/HugoErb/EasyBreaking"
         },
         {
