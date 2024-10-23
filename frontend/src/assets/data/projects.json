@@ -1,41 +1,41 @@
 {
     "projects": [
         {
-            "imgPath": "../../assets/imgs/poker.jpg",
+            "imgPath": "../../assets/imgs/projects/poker.jpg",
             "name": "Poker HL",
             "description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
             "link": "https://github.com/lucasbaylon/PokerHL"
         },
         {
-            "imgPath": "../../assets/imgs/tiktok.jpg",
+            "imgPath": "../../assets/imgs/projects/tiktok.jpg",
             "name": "Tik Tok Dynamic Lives",
             "description": "Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons des viewers.",
             "link": "https://github.com/HugoErb/TikTok-Live-Project"
         },
         {
-            "imgPath": "../../assets/imgs/agile.webp",
+            "imgPath": "../../assets/imgs/projects/agile.jpg",
             "name": "Prédicteur de vélocité par sprint",
             "description": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
             "link": "https://github.com/HugoErb/VelocityPredictor"
         },
         {
-            "imgPath": "../../assets/imgs/dofus.webp",
+            "imgPath": "../../assets/imgs/projects/dofus.jpg",
             "name": "Easy Breaking",
             "description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
             "link": "https://github.com/HugoErb/EasyBreaking"
         },
         {
-            "imgPath": "../../assets/imgs/mastermind.jpg",
+            "imgPath": "../../assets/imgs/projects/mastermind.jpg",
             "name": "Mastermind",
             "description": "Jeu du Mastermind, avec solveur basé sur l'algorithme de Knuth, codé en Python.",
             "link": "https://github.com/HugoErb/Mastermind"
         },{
-            "imgPath": "../../assets/imgs/space_invaders.jpg",
+            "imgPath": "../../assets/imgs/projects/space_invaders.jpg",
             "name": "Space Invaders",
             "description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
         },{
-            "imgPath": "../../assets/imgs/logo_safesec.webp",
+            "imgPath": "../../assets/imgs/projects/logo_safesec.webp",
             "name": "Site de Safesec Formation",
             "description": "Un site développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
             "link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
@@ -45,37 +45,37 @@
             "description": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
             "link": "https://github.com/HugoErb/Portfolio"
         },{
-            "imgPath": "../../assets/imgs/bot.jpg",
+            "imgPath": "../../assets/imgs/projects/bot.jpg",
             "name": "Bot Low Rake",
             "description": "Un bot Discord Python envoyant des alertes lorsqu'un paris sportif au retour élevé apparaît.",
             "link": "https://github.com/HugoErb/Scrapping-Low-Rake"
         },{
-            "imgPath": "../../assets/imgs/bet.webp",
+            "imgPath": "../../assets/imgs/projects/bet.jpg",
             "name": "Scrapping Best Bet",
             "description": "Un script Python permettant de récupérer la liste des meilleurs paris sportifs par bookmaker.",
             "link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
         },{
-            "imgPath": "../../assets/imgs/perceval.webp",
+            "imgPath": "../../assets/imgs/projects/perceval.jpg",
             "name": "Le cul de chouette",
             "description": "Une application Java permettant de jouer en multi-session à ce jeu inspiré de la série Kaamelott.",
             "link": "https://github.com/ArnaudMarcel/CulDeChouette"
         },{
-            "imgPath": "../../assets/imgs/logo_sdcs.png",
+            "imgPath": "../../assets/imgs/projects/logo_sdcs.png",
             "name": "Site de la S.D.C.S",
             "description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
             "link": "https://github.com/HugoErb/sdcs"
         },{
-            "imgPath": "../../assets/imgs/tir.webp",
+            "imgPath": "../../assets/imgs/projects/tir.jpg",
             "name": "App Web TSR",
             "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
             "link": "https://github.com/HugoErb/AppWeb-TSR"
         },{
-            "imgPath": "../../assets/imgs/aimdisplay.png",
+            "imgPath": "../../assets/imgs/projects/aimdisplay.jpg",
             "name": "Aim Display",
             "description": "Une refonte de mon application App Web TSR, en Angular NodeJS, avec de nouvelles fonctionnalités.",
             "link": "https://github.com/HugoErb/AimDisplay"
         },{
-            "imgPath": "../../assets/imgs/pygame.png",
+            "imgPath": "../../assets/imgs/projects/pygame.png",
             "name": "Nameless Game",
             "description": "Un jeu rétro développé avec Pygame en Python, inspiré des premiers jeux Zelda.",
             "link": "https://github.com/HugoErb/Nameless-Game"
