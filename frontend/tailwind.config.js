@@ -48,6 +48,10 @@ module.exports = {
                     '85%': { transform: 'translateY(-390%)' },
                     '100%': { transform: 'translateY(-390%)' },
                 },
+                underline: {
+                    '0%': { width: '0%' },
+                    '100%': { width: '100%' },
+                },
             },
             animation: {
                 appear: 'appear 0.3s ease forwards',
@@ -56,6 +60,7 @@ module.exports = {
                 swipeLeftIn: 'swipeLeftIn 0.20s ease forwards',
                 swipeRightIn: 'swipeRightIn 0.20s ease forwards',
                 spinCustom: 'spinCustom 15s infinite',
+                'underline-grow': 'underline 0.2s ease-out forwards',
             },
             transformOrigin: {
                 'center': 'center',
@@ -69,7 +74,31 @@ module.exports = {
             }
         },
     },
-    plugins: [daisyui],
+    plugins: [
+        function ({ addUtilities }) {
+            addUtilities({
+                '.underline-animation': {
+                    position: 'relative',
+                },
+                '.underline-animation::before': {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '0',
+                    height: '0.125rem',
+                    backgroundColor: '#2d3748',
+                    transformOrigin: 'center',
+                    transition: 'width 0.2s ease',
+                },
+                '.underline-animation:hover::before': {
+                    width: '100%',
+                },
+            });
+        },
+        daisyui
+    ],
     daisyui: {
         themes: ["light"],
         prefix: "dui-",
