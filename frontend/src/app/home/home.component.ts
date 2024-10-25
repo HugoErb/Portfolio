@@ -115,8 +115,10 @@ export class HomeComponent {
         const screenWidth = window.innerWidth;
         if (screenWidth <= 768) {
             this.elementsConfig.projects.itemsPerPage = 2;
+            this.updateVisibleElements('projects')
         } else {
             this.elementsConfig.projects.itemsPerPage = 4;
+            this.updateVisibleElements('projects')
         }
     }
 
