@@ -89,8 +89,35 @@ export class HomeComponent {
     ngOnInit() {
         this.loadAssets('projects');
         this.loadAssets('technos');
-        
         this.loadAssets('certifs');
+        this.updateItemsPerPage();
+    }
+
+    /**
+   * Écoute les événements de redimensionnement de la fenêtre et ajuste
+   * dynamiquement le nombre d'éléments par page pour les projets en fonction
+   * de la taille de l'écran.
+   * 
+   * @param event - L'événement de redimensionnement de la fenêtre.
+   */
+    @HostListener('window:resize', ['$event'])
+    onResize(event: Event) {
+        this.updateItemsPerPage();
+    }
+
+    /**
+     * Met à jour la propriété `itemsPerPage` pour les projets en fonction de la
+     * largeur actuelle de l'écran. Si la largeur de la fenêtre est inférieure
+     * ou égale à 768 pixels (seuil mobile), `itemsPerPage` est réduit à 2.
+     * Au-delà de cette largeur, `itemsPerPage` est défini sur 4.
+     */
+    updateItemsPerPage() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 768) {
+            this.elementsConfig.projects.itemsPerPage = 2;
+        } else {
+            this.elementsConfig.projects.itemsPerPage = 4;
+        }
     }
 
     /**

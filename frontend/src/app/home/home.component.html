@@ -35,7 +35,7 @@
     <!-- Menu burger pour les petits écrans -->
     <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)">
         <iconify-icon icon="heroicons-outline:menu-alt-3"
-            class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1"></iconify-icon>
+            class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"></iconify-icon>
     </button>
     <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"
         *ngIf="burgerMenuOpened">
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    <section id="projects" class="flex justify-center items-center w-full pt-16 pb-20 bg-gray-100 mt-1">
+    <section id="projects" class="flex justify-center items-center w-full py-12 lg:pt-16 lg:pb-20 bg-gray-100 mt-1">
         <div class="container px-4 md:px-6">
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
                 <div class="space-y-2">
@@ -127,7 +127,7 @@
                 <div (click)="prevPage('projects')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
                         'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
-                    }" class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
+                    }" class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden lg:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
 
@@ -147,7 +147,7 @@
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                     }"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden lg:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
             </div>
