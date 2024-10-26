@@ -108,12 +108,12 @@ export class HomeComponent {
     /**
      * Met à jour la propriété `itemsPerPage` pour les projets en fonction de la
      * largeur actuelle de l'écran. Si la largeur de la fenêtre est inférieure
-     * ou égale à 768 pixels (seuil mobile), `itemsPerPage` est réduit à 2.
+     * ou égale à 1280 pixels (seuil mobile), `itemsPerPage` est réduit à 2.
      * Au-delà de cette largeur, `itemsPerPage` est défini sur 4.
      */
     updateItemsPerPage() {
         const screenWidth = window.innerWidth;
-        if (screenWidth <= 768) {
+        if (screenWidth <= 1280) {
             this.elementsConfig.projects.itemsPerPage = 2;
             this.updateVisibleElements('projects')
         } else {
@@ -228,9 +228,9 @@ export class HomeComponent {
     }
 
     /**
- * Charge les données à partir du fichier JSON pour le type spécifié.
- * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
- */
+    * Charge les données à partir du fichier JSON pour le type spécifié.
+    * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
+    */
     loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
         const filePath = {
             'technos': '../../assets/data/technos.json',
@@ -246,9 +246,9 @@ export class HomeComponent {
 
 
     /**
-     * Met à jour la liste des éléments visibles en fonction de la page actuelle.
-     * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
-     */
+    * Met à jour la liste des éléments visibles en fonction de la page actuelle.
+    * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
+    */
     updateVisibleElements(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         const startIndex = config.currentPage * config.itemsPerPage;
@@ -256,9 +256,9 @@ export class HomeComponent {
     }
 
     /**
-     * Passe à la page suivante d'éléments (icônes ou images).
-     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos", "certifs" ou "projects").
-     */
+    * Passe à la page suivante d'éléments (icônes ou images).
+    * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos", "certifs" ou "projects").
+    */
     nextPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && (config.currentPage + 1) * config.itemsPerPage < config.items.length) {
@@ -280,9 +280,9 @@ export class HomeComponent {
     }
 
     /**
-     * Retourne à la page précédente d'éléments (icônes ou images).
-     * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos", "certifs" ou "projects").
-     */
+    * Retourne à la page précédente d'éléments (icônes ou images).
+    * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos", "certifs" ou "projects").
+    */
     prevPage(type: 'technos' | 'certifs' | 'projects'): void {
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && config.currentPage > 0) {
