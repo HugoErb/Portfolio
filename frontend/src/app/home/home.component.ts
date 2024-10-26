@@ -125,7 +125,7 @@ export class HomeComponent {
     /**
     * Navigue vers un composant spécifié.
     *
-    * @param {string} composant - Le nom du composant vers lequel naviguer. Cela doit être le chemin ou
+    * @param {string} component - Le nom du composant vers lequel naviguer. Cela doit être le chemin ou
     *                             la route associée au composant cible dans la configuration de routage Angular.
     */
     navigateTo(component: string) {
