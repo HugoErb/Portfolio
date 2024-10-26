@@ -106,11 +106,11 @@ export class HomeComponent {
     }
 
     /**
-     * Met à jour la propriété `itemsPerPage` pour les projets en fonction de la
-     * largeur actuelle de l'écran. Si la largeur de la fenêtre est inférieure
-     * ou égale à 1280 pixels (seuil mobile), `itemsPerPage` est réduit à 2.
-     * Au-delà de cette largeur, `itemsPerPage` est défini sur 4.
-     */
+    * Met à jour la propriété `itemsPerPage` pour les projets en fonction de la
+    * largeur actuelle de l'écran. Si la largeur de la fenêtre est inférieure
+    * ou égale à 1280 pixels (seuil mobile), `itemsPerPage` est réduit à 2.
+    * Au-delà de cette largeur, `itemsPerPage` est défini sur 4.
+    */
     updateItemsPerPage() {
         const screenWidth = window.innerWidth;
         if (screenWidth <= 1280) {
@@ -236,7 +236,7 @@ export class HomeComponent {
             'technos': '../../assets/data/technos.json',
             'certifs': '../../assets/data/certifs.json',
             'projects': '../../assets/data/projects.json'
-        }[type]; // Sélectionne le bon fichier JSON en fonction du type
+        }[type];
 
         this.http.get<any>(filePath).subscribe(data => {
             this.elementsConfig[type].items = data[type];
