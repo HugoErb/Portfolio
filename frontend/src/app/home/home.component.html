@@ -123,14 +123,6 @@
             </div>
 
             <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center">
-                <!-- Bouton gauche pour les écrans larges -->
-                <div (click)="prevPage('projects')" [ngClass]="{
-                    'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
-                    'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
-                }"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
-                </div>
 
                 <!-- Contenu des projets -->
                 <div [ngClass]="{
@@ -145,7 +137,14 @@
                     </ng-container>
                 </div>
 
-                <!-- Bouton droit pour les écrans larges -->
+                <!-- Boutons de changement de page de projets pour les grands écrans, sur les côtés -->
+                <div (click)="prevPage('projects')" [ngClass]="{
+                                    'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
+                                    'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
+                                }"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                </div>
                 <div (click)="nextPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
@@ -170,6 +169,7 @@
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -184,13 +184,8 @@
             </div>
 
             <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
-                <div (click)="prevPage('technos')" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
-                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
-                    }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
-                </div>
+
+                <!-- Contenu des technologies -->
                 <div [ngClass]="{
                       'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut, 
                       'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
@@ -202,12 +197,40 @@
                             [description]="technology.description"></app-technology>
                     </ng-container>
                 </div>
+
+                <!-- Boutons de changement de page de projets pour les grands écrans, sur les côtés -->
+                <div (click)="prevPage('technos')" [ngClass]="{
+                                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
+                                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
+                                    }"
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
                     }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all">
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                </div>
+
+            </div>
+
+            <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
+            <div class="flex justify-center space-x-12 mt-4 md:hidden">
+                <div (click)="prevPage('technos')" [ngClass]="{
+                                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
+                                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
+                                    }"
+                    class="rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                </div>
+                <div (click)="nextPage('technos')" [ngClass]="{
+                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
+                        'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
+                    }"
+                    class="rounded-full z-10 transition-all">
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
             </div>
 
