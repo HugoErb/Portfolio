@@ -61,11 +61,10 @@
             <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div class="flex flex-col justify-center space-y-4 text-center lg:text-left">
                     <div class="space-y-2">
-                        <h1
-                            class="xl:text-6xl lg:text-5xl md:text-5xl sm:text-4xl text-4xl font-bold tracking-tighter text-gray-700">
+                        <h1 class="xl:text-6xl md:text-5xl text-4xl font-bold tracking-tighter text-gray-700">
                             Hugo Eribon
                         </h1>
-                        <div class="flex h-10 text-2xl box-content justify-center lg:justify-normal">
+                        <div class="flex h-10 md:text-2xl text-xl box-content justify-center lg:justify-normal">
                             <div class="relative overflow-hidden text-gray-800">
                                 <div class="absolute inset-0 z-20 bg-custom-gradient"></div>
                                 <span
@@ -75,8 +74,8 @@
                                     étude et développement</span>
                                 <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Passionné
                                     d'informatique</span>
-                                <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Disponible
-                                    pour toutes vos demandes</span>
+                                <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">A l'écoute
+                                    de vos demandes</span>
                                 <span class="block h-full text-gray-800 animate-spinCustom">Développeur
                                     Full-Stack</span>
                             </div>
@@ -129,7 +128,7 @@
                     'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
                 }"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden lg:block">
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
 
@@ -151,13 +150,13 @@
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                 }"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden lg:block">
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
             </div>
 
             <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 mt-4 lg:hidden">
+            <div class="flex justify-center space-x-12 mt-4 md:hidden">
                 <div (click)="prevPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
@@ -173,7 +172,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
         <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
@@ -303,7 +301,7 @@
                     N'hésitez pas à me contacter pour toute question ou demande de projet !
                 </div>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid sm:grid-cols-2 gap-6">
                 <div>
                     <h3 class="text-lg font-semibold">Infos personnelles</h3>
                     <ul class="mt-4 space-y-2 ">
