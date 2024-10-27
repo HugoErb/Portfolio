@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { TechnologyComponent } from '../components/technology/technology.component';
@@ -37,7 +37,7 @@ interface Project {
 })
 
 export class HomeComponent {
-    constructor(private router: Router, private http: HttpClient, protected commonService: CommonService) { }
+    constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpClient, protected commonService: CommonService) { }
 
     burgerMenuOpened: boolean = false;
 
@@ -91,6 +91,11 @@ export class HomeComponent {
         this.loadAssets('technos');
         this.loadAssets('certifs');
         this.updateItemsPerPage();
+
+        // On récupère le nom de la formation de la page home
+        if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
+            this.scrollToSection(this.activatedRoute.snapshot.params['redirectionSection']);
+        }
     }
 
     /**
