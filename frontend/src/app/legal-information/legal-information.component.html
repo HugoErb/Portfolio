@@ -1,39 +1,55 @@
-<header class="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-white z-50 shadow-sm border-b border-gray-200">
-    <div class="flex items-center justify-center mb-0.5 cursor-pointer" (click)="navigateTo('home','landing')">
-        <img src="../../assets/imgs/logo.webp" alt="Logo" class="w-14">
-        <span class="text-xl font-semibold ml-4">SAFESEC Formation</span>
+<header class="h-16 flex fixed w-full bg-white z-50 shadow-sm border-b border-gray-200">
+    <div class="flex pl-4 items-center justify-center mb-0.5 cursor-pointer" (click)="navigateTo('home','landing')">
+        <iconify-icon icon="mingcute:code-line" class="text-4xl text-gray-700"></iconify-icon>
+        <span class="text-xl font-semibold ml-4 mt-1 lg:mt-0">Hugo Eribon</span>
     </div>
 
     <!-- Navigation principale pour les grands écrans -->
-    <nav class="hidden lg:flex ml-auto gap-4 sm:gap-6 items-center">
-        <div class="text-base cursor-pointer font-medium hover:text-blue-600 transition-colors"
-            (click)="navigateTo('home','services')">
-            Services</div>
-        <div class="text-base cursor-pointer font-medium hover:text-blue-600 transition-colors"
-            (click)="navigateTo('home','formateur')">
-            Formateur</div>
-        <div class="text-base cursor-pointer font-medium hover:text-blue-600 transition-colors"
-            (click)="navigateTo('home','catalogue')">
-            Catalogue</div>
-        <div class="text-base cursor-pointer font-medium hover:text-blue-600 transition-colors"
+    <nav class="hidden lg:flex ml-auto h-full items-center">
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+            (click)="navigateTo('home','projects')">
+            Projets
+        </div>
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+            (click)="navigateTo('home','technologies')">
+            Technologies
+        </div>
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+            (click)="navigateTo('home','certifications')">
+            Diplômes
+        </div>
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+            (click)="navigateTo('home','about')">
+            À propos
+        </div>
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+            (click)="navigateTo('home','carrier')">
+            Parcours
+        </div>
+        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 ml-auto transition-all"
             (click)="navigateTo('home','contact')">
             Contact
         </div>
     </nav>
 
     <!-- Menu burger pour les petits écrans -->
-    <button class="lg:hidden ml-auto mr-3" (click)="toggleBurgerMenu($event)">
-        <i class="fa-solid fa-bars text-2xl text-gray-700"></i>
+    <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)">
+        <iconify-icon icon="heroicons-outline:menu-alt-3"
+            class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"></iconify-icon>
     </button>
     <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"
         *ngIf="burgerMenuOpened">
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-blue-500 hover:text-white"
-            (click)="navigateTo('home','services')">Services</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-blue-500 hover:text-white"
-            (click)="navigateTo('home','formateur')">Formateur</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-blue-500 hover:text-white"
-            (click)="navigateTo('home','catalogue')">Catalogue</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-blue-500 hover:text-white"
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
+            (click)="navigateTo('home','projects')">Projets</div>
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
+            (click)="navigateTo('home','technologies')">Technologies</div>
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
+            (click)="navigateTo('home','certifications')">Diplômes</div>
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
+            (click)="navigateTo('home','about')">À propos</div>
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
+            (click)="navigateTo('home','carrier')">Parcours</div>
+        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
             (click)="navigateTo('home','contact')">Contact</div>
     </div>
 </header>
@@ -583,9 +599,9 @@
 </main>
 
 <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-    <p class="text-sm text-gray-600">© SAFESEC Formation. Tous droits réservés.</p>
+    <p class="text-sm text-gray-600">© Eribon Hugo. Tous droits réservés.</p>
     <nav class="sm:ml-auto flex gap-4 sm:gap-6 ">
-        <p class="text-sm hover:text-blue-600 cursor-pointer" (click)="navigateTo('legal-information','')">
+        <p class="text-sm cursor-pointer font-medium underline-animation" (click)="navigateTo('legal-information','')">
             Mentions légales
         </p>
     </nav>

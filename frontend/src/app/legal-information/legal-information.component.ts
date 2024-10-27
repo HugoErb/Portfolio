@@ -1,12 +1,14 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
     selector: 'app-legal-infos',
     standalone: true,
     imports: [CommonModule],
-    templateUrl: './legal-information.component.html'
+    templateUrl: './legal-information.component.html',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class LegalInformationComponent {
 
