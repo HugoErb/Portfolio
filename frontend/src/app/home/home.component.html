@@ -129,7 +129,7 @@
                     'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
                     'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
                     'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
-                }" class="grid gap-6 py-12 max-w-5xl lg:grid-cols-2 lg:gap-8 overflow-hidden items-center">
+                }" class="grid gap-6 py-12 max-w-5xl xl:grid-cols-2 lg:gap-8 overflow-hidden items-center">
                     <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
                         <app-project [imgPath]="project.imgPath" [name]="project.name"
                             [description]="project.description" [link]="project.link"></app-project>
@@ -141,14 +141,14 @@
                                     'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
                                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
                                 }"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                 }"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
                 </div>
             </div>
