@@ -173,7 +173,7 @@
     </section>
 
     <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+        <div class="container mx-auto grid items-center gap-10 lg:pl-4 lg:pr-20 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
             <div class="space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl">Technologies maîtrisées</h2>
                 <p class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
@@ -202,14 +202,14 @@
                                         'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
                                         'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
                                     }"
-                    class="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
                     }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
 
@@ -235,14 +235,14 @@
     </section>
 
     <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
-        <div class="container mx-auto grid items-center gap-10 px-4 md:px-6 lg:grid-cols-2 lg:gap-20">
+        <div class="container mx-auto grid items-center gap-10 lg:pr-4 lg:pl-10 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
             <!-- Titre et sous titre de la section des certifications pour les petits écrans -->
             <div class="lg:hidden space-y-2">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">
                     Diplômes &amp; Certifications
                 </h2>
                 <p class="max-w-[600px] text-gray-400 text-lg">
-                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
+                    J'ai obtenus, au long de mon parcours professionnel, plusieurs diplômes et certifications
                     témoignant de mon expertise dans divers domaines et technologies.
                 </p>
             </div>
@@ -266,14 +266,14 @@
                                                     'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
                                                     'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
                                                 }"
-                    class="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('certifs')" [ngClass]="{
                                     'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
                                     'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
                                 }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-right-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
             </div>
@@ -294,13 +294,13 @@
                 </div>
             </div>
 
-            <!-- Titre et sous titre de la section des certifications pour les petits écrans -->
+            <!-- Titre et sous titre de la section des certifications pour les grands écrans -->
             <div class="hidden lg:block space-y-2 ml-10">
                 <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">
                     Diplômes &amp; Certifications
                 </h2>
                 <p class="max-w-[600px] text-gray-400 text-xl">
-                    J'ai obtenus tout au long de mon parcours professionnel plusieurs diplômes et certifications,
+                    J'ai obtenus, au long de mon parcours professionnel, plusieurs diplômes et certifications
                     témoignant de mon expertise dans divers domaines et technologies.
                 </p>
             </div>
