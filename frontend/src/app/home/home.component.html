@@ -182,7 +182,7 @@
                 </p>
             </div>
 
-            <div class="relative w-full max-w-4xl mx-auto lg:ml-10">
+            <div class="relative w-full mx-auto lg:ml-10 lg:w-full md:w-4/5">
 
                 <!-- Contenu des technologies -->
                 <div [ngClass]="{
@@ -203,14 +203,14 @@
                                         'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
                                     }"
                     class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
                     }"
                     class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[2.85rem]"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
 
             </div>
@@ -246,7 +246,7 @@
                     témoignant de mon expertise dans divers domaines et technologies.
                 </p>
             </div>
-            <div class="relative w-full max-w-4xl mx-auto">
+            <div class="relative w-full mx-auto lg:w-full md:w-4/5">
 
                 <!-- Contenu des certifications -->
                 <div [ngClass]="{
