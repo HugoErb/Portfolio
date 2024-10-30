@@ -202,7 +202,7 @@
                                         'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
                                         'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
                                     }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
@@ -254,7 +254,7 @@
                                   'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
                                   'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
                                   'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
-                                }" class="grid grid-cols-3 gap-y-3 overflow-hidden">
+                                }" class="grid grid-cols-3 overflow-hidden">
                     <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
                         <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
                             [link]="certif.link"></app-certification>
@@ -266,7 +266,7 @@
                                                     'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
                                                     'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
                                                 }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
+                    class="absolute left-[-1.5rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
                     <iconify-icon icon="f7:chevron-left-circle-fill" class="text-5xl"></iconify-icon>
                 </div>
                 <div (click)="nextPage('certifs')" [ngClass]="{
