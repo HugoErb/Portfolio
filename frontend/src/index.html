@@ -2,6 +2,8 @@
 <html lang="fr">
 
 <head>
+    <link rel="preload" as="image" href="/assets/imgs/dev.webp" type="image/webp"
+        imagesizes="(max-width: 1024px) 350px, 150rem" imagesrcset="/assets/imgs/dev.webp 1x, /assets/imgs/dev@2x.webp 2x">
     <meta charset="utf-8">
     <title>Hugo Eribon - Portfolio</title>
     <base href="/">
@@ -9,8 +11,15 @@
     <meta name="description"
         content="Hugo Eribon - Développeur passionné spécialisé dans la création de sites web modernes et d'applications robustes. Découvrez mes projets, compétences et contactez-moi pour vos besoins en développement.">
     <link rel="icon" type="image/x-icon" href="assets/imgs/code.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <!-- Préchargement et chargement optimisé des polices Google -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Script asynchrone pour Iconify -->
+    <script async src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 
 <body>
