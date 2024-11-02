@@ -34,5 +34,5 @@ else
     exit 1
 fi
 
-# Redémarrer l'application avec PM2 (id 0 dans cet exemple)
-pm2 restart 0
+# Redémarrer l'application avec PM2
+pm2 restart 3

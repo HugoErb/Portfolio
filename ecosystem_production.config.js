@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: "production",
+            name: "production_portfolio",
             script: "./server.js",
             watch: true,
             env: {
