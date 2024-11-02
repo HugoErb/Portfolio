@@ -33,7 +33,7 @@
     </nav>
 
     <!-- Menu burger pour les petits écrans -->
-    <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)">
+    <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)" aria-label="Menu burger">
         <iconify-icon icon="heroicons-outline:menu-alt-3"
             class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"></iconify-icon>
     </button>
@@ -633,7 +633,7 @@
                             id="message" #inputField [(ngModel)]="messageMail" placeholder="Entrez votre message">
             </textarea>
                     </div>
-                    <button (click)="sendMail()"
+                    <button (click)="sendMail()" aria-label="Envoyer un mail"
                         class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-800 text-white hover:bg-gray-600">Envoyer
                         le message
                     </button>
