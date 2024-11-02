@@ -35,12 +35,12 @@
             "description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
             "link": ""
         },{
-            "imgPath": "../../assets/imgs/projects/logo_safesec.webp",
+            "imgPath": "../../assets/imgs/projects/safesec.jpg",
             "name": "Site de Safesec Formation",
             "description": "Un site développé pour l'activité de formateur de mon père, avec Angular, Typescript et autre.",
             "link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
         },{
-            "imgPath": "../../assets/imgs/dev.png",
+            "imgPath": "../../assets/imgs/projects/portfolio.jpg",
             "name": "Site Portfolio",
             "description": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
             "link": "https://github.com/HugoErb/Portfolio"
