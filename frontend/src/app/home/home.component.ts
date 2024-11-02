@@ -233,9 +233,9 @@ export class HomeComponent {
     }
 
     /**
-    * Charge les données à partir du fichier JSON pour le type spécifié.
-    * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
-    */
+ * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
+ * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
+ */
     loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
         const filePath = {
             'technos': '../../assets/data/technos.json',
@@ -244,14 +244,17 @@ export class HomeComponent {
         }[type];
 
         this.http.get<any>(filePath).subscribe(data => {
+            // Charge toutes les données dans items
             this.elementsConfig[type].items = data[type];
+
+            // Affiche les premiers éléments (page 0)
             this.updateVisibleElements(type);
         });
     }
 
 
     /**
-    * Met à jour la liste des éléments visibles en fonction de la page actuelle.
+    * Met à jour `visibleItems` en fonction de la page actuelle pour afficher les éléments par groupes.
     * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
     */
     updateVisibleElements(type: 'technos' | 'certifs' | 'projects'): void {
@@ -259,6 +262,7 @@ export class HomeComponent {
         const startIndex = config.currentPage * config.itemsPerPage;
         config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
     }
+
 
     /**
     * Passe à la page suivante d'éléments (icônes ou images).
