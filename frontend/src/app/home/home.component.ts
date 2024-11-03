@@ -244,10 +244,7 @@ export class HomeComponent {
         }[type];
 
         this.http.get<any>(filePath).subscribe(data => {
-            // Charge toutes les données dans items
             this.elementsConfig[type].items = data[type];
-
-            // Affiche les premiers éléments (page 0)
             this.updateVisibleElements(type);
         });
     }
