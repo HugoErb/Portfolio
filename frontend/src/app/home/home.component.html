@@ -144,30 +144,30 @@
                                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
                                 }"
                     class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
                 <div (click)="nextPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                 }"
                     class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
             </div>
 
             <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden">
+            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
                 <div (click)="prevPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
                 }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
                 <div (click)="nextPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                 }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
             </div>
 
@@ -218,18 +218,18 @@
             </div>
 
             <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden">
+            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
                 <div (click)="prevPage('technos')" [ngClass]="{
                                         'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
                                         'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
                                     }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
                 <div (click)="nextPage('technos')" [ngClass]="{
                         'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
                         'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
                     }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
             </div>
 
@@ -281,18 +281,18 @@
             </div>
 
             <!-- Boutons de changement de page de certifications pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden">
+            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
                 <div (click)="prevPage('certifs')" [ngClass]="{
                     'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
                     'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
                 }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-left-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
                 <div (click)="nextPage('certifs')" [ngClass]="{
                     'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
                     'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
                 }" class="rounded-full z-10 transition-all">
-                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-6xl"></iconify-icon>
+                    <iconify-icon icon="f7:chevron-right-circle-fill" class="text-[3.4rem]"></iconify-icon>
                 </div>
             </div>
 
