@@ -232,10 +232,10 @@ export class HomeComponent {
         });
     }
 
-    /**
- * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
- * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
- */
+   /**
+   * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
+   * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
+   */
     loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
         const filePath = {
             'technos': '../../assets/data/technos.json',
