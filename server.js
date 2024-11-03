@@ -20,6 +20,15 @@ const app = express();
 app.use(express.json());
 app.use(cors(optionsCors));
 
+// Configurer le transporteur Nodemailer
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
+
 app.post('/send-mail', async (req, res) => {
     // On extrait les valeurs en fonction de l'ordre attendu
     const [name, email, phoneNumber, message] = Object.values(req.body);
