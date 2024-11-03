@@ -130,8 +130,7 @@ export class HomeComponent {
     /**
     * Navigue vers un composant spécifié.
     *
-    * @param {string} component - Le nom du composant vers lequel naviguer. Cela doit être le chemin ou
-    *                             la route associée au composant cible dans la configuration de routage Angular.
+    * @param {string} component - Le nom du composant vers lequel naviguer.
     */
     navigateTo(component: string) {
         this.router.navigate([component]).then(() => {
@@ -232,10 +231,10 @@ export class HomeComponent {
         });
     }
 
-   /**
-   * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
-   * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
-   */
+    /**
+    * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
+    * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
+    */
     loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
         const filePath = {
             'technos': '../../assets/data/technos.json',
@@ -249,7 +248,6 @@ export class HomeComponent {
         });
     }
 
-
     /**
     * Met à jour `visibleItems` en fonction de la page actuelle pour afficher les éléments par groupes.
     * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
@@ -259,7 +257,6 @@ export class HomeComponent {
         const startIndex = config.currentPage * config.itemsPerPage;
         config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
     }
-
 
     /**
     * Passe à la page suivante d'éléments (icônes ou images).
