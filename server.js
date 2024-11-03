@@ -49,7 +49,7 @@ app.post('/send-mail', async (req, res) => {
         'eribon.hugo@gmail.com',
         email,
         `Eribon Hugo - Réception de votre message`,
-        `Bonjour !\n\nJ'ai bien reçu votre message. Je vais l'examiner et j'y répondrai dans les plus brefs délais.\nEn attendant, vous pouvez visiter mon Linkedin. Merci pour votre confiance !\n\nERIBON Hugo`
+        `Bonjour !\n\nJ'ai bien reçu votre message. Je vais l'étudier attentivement et j'y répondrai dans les plus brefs délais.\nEn attendant, vous pouvez continuer de parcourir mon site internet, ou visiter mon Linkedin. Merci pour votre confiance !\n\nERIBON Hugo`
     );
 
     try {
