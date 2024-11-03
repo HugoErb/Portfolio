@@ -9,12 +9,7 @@ export class MailService {
 
   constructor(private http: HttpClient) { }
 
-  sendMail(data: any, trainingRequest: boolean): Observable<any> {
-    let apiUrl = '/send-mail'
-    if (trainingRequest) {
-      apiUrl = '/send-mail-training-request'
-    }
-    
-    return this.http.post(apiUrl, data);
+  sendMail(data: any): Observable<any> {
+      return this.http.post('/send-mail', data);
   }
 }

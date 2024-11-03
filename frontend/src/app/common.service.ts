@@ -48,13 +48,13 @@ export class CommonService {
         return formattedValue;
     }
 
-    /**
+   /**
    * Prépare et envoie un email à l'aide d'un service de messagerie. 
    * Avant l'envoi, on vérifie les entrées pour s'assurer qu'elles sont valides en utilisant la méthode `validateInputs`. 
    * Si les validations échouent, l'envoi est interrompu. Si les validations réussissent, les données sont envoyées au service de messagerie. 
    * Les réactions aux réponses du service de messagerie, qu'elles soient réussies ou en erreur, sont gérées via des alertes à l'utilisateur.
    */
-    async sendMail(inputLabelMap: Map<string, string>, trainingRequest: boolean): Promise<boolean> {
+    async sendMail(inputLabelMap: Map<string, string>): Promise<boolean> {
 
         // On vérifie les données
         const areInputsValid = await this.validateInputs(inputLabelMap);
@@ -65,7 +65,7 @@ export class CommonService {
         const mailData = this.createMailData(inputLabelMap);
 
         return new Promise((resolve, reject) => {
-            this.mailService.sendMail(mailData, trainingRequest).subscribe({
+            this.mailService.sendMail(mailData).subscribe({
                 next: (response) => {
                     Swal.fire({
                         position: 'top-end',

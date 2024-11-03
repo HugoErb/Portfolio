@@ -201,7 +201,7 @@ export class HomeComponent {
     */
     async sendMail(): Promise<void> {
         this.getDataIntoDictionary();
-        if (await this.commonService.sendMail(this.inputLabelMap, false)) {
+        if (await this.commonService.sendMail(this.inputLabelMap)) {
             this.resetInputFields();
         }
     }
