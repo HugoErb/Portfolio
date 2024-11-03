@@ -1,5 +1,5 @@
-<div class="flex justify-center items-center select-none">
-    <div class="flex flex-col items-center gap-3 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all min-h-[100px]"
+<div class="flex justify-center items-center select-none min-h-[100px]">
+    <div class="flex flex-col items-center gap-3 hover:bg-gray-200 rounded-lg py-3 w-28 cursor-pointer transition-all"
         (click)="this.commonService.showModal('modal' + label)">
         <iconify-icon [icon]="iconClass" class="text-[2.75rem] text-gray-700"></iconify-icon>
         <div class="text-sm font-medium w-full text-center">{{ label }}</div>
