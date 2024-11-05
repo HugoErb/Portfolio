@@ -8,6 +8,7 @@ import { TechnologyComponent } from '../components/technology/technology.compone
 import { CertificationComponent } from '../components/certification/certification.component';
 import { ProjectComponent } from '../components/project/project.component';
 import { HttpClient } from '@angular/common/http';
+import { PageNavigationButtonComponent } from '../components/page-navigation-button/page-navigation-button.component';
 
 interface Technology {
     iconClass: string;
@@ -31,7 +32,7 @@ interface Project {
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent, ProjectComponent],
+    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent, ProjectComponent, PageNavigationButtonComponent],
     templateUrl: './home.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -256,6 +257,23 @@ export class HomeComponent {
         const config = this.elementsConfig[type];
         const startIndex = config.currentPage * config.itemsPerPage;
         config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
+    }
+
+    /**
+    * Gère la navigation pour les boutons de pagination.
+    * Appelle `prevPage` ou `nextPage` en fonction de la direction indiquée dans l'événement `navigate`.
+    *
+    * @param event - Objet contenant le type de ressource (`resourceType`) et la direction (`direction`).
+    *                - `resourceType`: le type de ressource à naviguer (projects, technos, certifs).
+    *                - `direction`: la direction de la navigation (left pour page précédente, right pour page suivante).
+    */
+    handleNavigation(event: { resourceType: 'technos' | 'certifs' | 'projects', direction: 'left' | 'right' }) {
+        const { resourceType, direction } = event;
+        if (direction === 'left') {
+            this.prevPage(resourceType);
+        } else {
+            this.nextPage(resourceType);
+        }
     }
 
     /**
