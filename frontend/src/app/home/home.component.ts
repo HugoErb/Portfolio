@@ -42,6 +42,8 @@ export class HomeComponent {
 
     burgerMenuOpened: boolean = false;
 
+    @ViewChild(PageNavigationButtonComponent) pageNavigation!: PageNavigationButtonComponent;
+
     // Variables pour le mail
     @ViewChildren('inputField') inputFields!: QueryList<ElementRef>;
     public inputLabelMap = new Map<string, string>();
@@ -250,37 +252,21 @@ export class HomeComponent {
     }
 
     /**
-    * Met à jour `visibleItems` en fonction de la page actuelle pour afficher les éléments par groupes.
-    * @param type - Le type d'éléments à mettre à jour ("technos", "certifs" ou "projects").
-    */
-    updateVisibleElements(type: 'technos' | 'certifs' | 'projects'): void {
-        const config = this.elementsConfig[type];
+     * Met à jour les éléments visibles pour la ressource donnée.
+     * @param resourceType - Le type de ressource pour lequel mettre à jour les éléments visibles.
+     */
+    updateVisibleElements(resourceType: 'projects' | 'technos' | 'certifs') {
+        const config = this.elementsConfig[resourceType];
         const startIndex = config.currentPage * config.itemsPerPage;
         config.visibleItems = config.items.slice(startIndex, startIndex + config.itemsPerPage);
-    }
-
-    /**
-    * Gère la navigation pour les boutons de pagination.
-    * Appelle `prevPage` ou `nextPage` en fonction de la direction indiquée dans l'événement `navigate`.
-    *
-    * @param event - Objet contenant le type de ressource (`resourceType`) et la direction (`direction`).
-    *                - `resourceType`: le type de ressource à naviguer (projects, technos, certifs).
-    *                - `direction`: la direction de la navigation (left pour page précédente, right pour page suivante).
-    */
-    handleNavigation(event: { resourceType: 'technos' | 'certifs' | 'projects', direction: 'left' | 'right' }) {
-        const { resourceType, direction } = event;
-        if (direction === 'left') {
-            this.prevPage(resourceType);
-        } else {
-            this.nextPage(resourceType);
-        }
     }
 
     /**
     * Passe à la page suivante d'éléments (icônes ou images).
     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos", "certifs" ou "projects").
     */
-    nextPage(type: 'technos' | 'certifs' | 'projects'): void {
+    nextPage(type: 'technos' | 'certifs' | 'projects' = 'projects'): void {
+        console.log(type);
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && (config.currentPage + 1) * config.itemsPerPage < config.items.length) {
             config.isTransitioning = true;
@@ -304,7 +290,7 @@ export class HomeComponent {
     * Retourne à la page précédente d'éléments (icônes ou images).
     * @param type - Le type d'éléments pour lequel retourner à la page précédente ("technos", "certifs" ou "projects").
     */
-    prevPage(type: 'technos' | 'certifs' | 'projects'): void {
+    prevPage(type: 'technos' | 'certifs' | 'projects' = 'projects'): void {
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && config.currentPage > 0) {
             config.isTransitioning = true;

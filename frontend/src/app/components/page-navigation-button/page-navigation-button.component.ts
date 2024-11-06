@@ -8,14 +8,25 @@ import { CommonModule } from '@angular/common';
     templateUrl: './page-navigation-button.component.html',
 })
 export class PageNavigationButtonComponent {
+
     @Input() resourceType: 'projects' | 'technos' | 'certifs' = 'projects';
-    @Input() buttonDirection: 'left' | 'right' = 'left';
-    @Input() isLargeScreenButton: boolean = false;
     @Input() elementsConfig: any;
+    @Output() navigateLeft = new EventEmitter<'projects' | 'technos' | 'certifs'>();
+    @Output() navigateRight = new EventEmitter<'projects' | 'technos' | 'certifs'>();
 
-    @Output() navigate = new EventEmitter<{ resourceType: 'technos' | 'certifs' | 'projects', direction: 'left' | 'right' }>();
+    /**
+     * Méthode déclenchée au clic sur le bouton gauche.
+     * Émet l'événement `navigateLeft` avec `resourceType`.
+     */
+    onNavigateLeft() {
+        this.navigateLeft.emit(this.resourceType);
+    }
 
-    onClick() {
-        this.navigate.emit({ resourceType: this.resourceType, direction: this.buttonDirection });
+    /**
+     * Méthode déclenchée au clic sur le bouton droit.
+     * Émet l'événement `navigateRight` avec `resourceType`.
+     */
+    onNavigateRight() {
+        this.navigateRight.emit(this.resourceType);
     }
 }

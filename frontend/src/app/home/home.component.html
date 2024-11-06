@@ -144,26 +144,27 @@
                                     'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
                                 }"
                     class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56"><path fill="currentColor" d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m4.312-11.718c-.656.656-1.921.562-2.625-.07L19.422 30.46c-1.36-1.313-1.383-3.563 0-4.852l10.265-9.656c.774-.726 1.899-.773 2.602-.07c.727.726.797 1.945.047 2.648L22.21 28.023l10.125 9.54c.703.68.726 1.874-.024 2.624"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56">
+                        <path fill="currentColor"
+                            d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m4.312-11.718c-.656.656-1.921.562-2.625-.07L19.422 30.46c-1.36-1.313-1.383-3.563 0-4.852l10.265-9.656c.774-.726 1.899-.773 2.602-.07c.727.726.797 1.945.047 2.648L22.21 28.023l10.125 9.54c.703.68.726 1.874-.024 2.624" />
+                    </svg>
                 </div>
                 <div (click)="nextPage('projects')" [ngClass]="{
                     'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
                     'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
                 }"
                     class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56"><path fill="currentColor" d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m-5.133-11.718c-.75-.75-.75-1.946-.023-2.626l10.125-9.539l-10.125-9.492c-.774-.703-.68-1.922.046-2.648c.704-.703 1.829-.656 2.602.07l10.266 9.656c1.383 1.29 1.36 3.54 0 4.852l-10.266 9.656c-.703.633-1.969.727-2.625.07"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56">
+                        <path fill="currentColor"
+                            d="M28 51.906c13.055 0 23.906-10.828 23.906-23.906c0-13.055-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.945 4.095 28c0 13.078 10.828 23.906 23.906 23.906m-5.133-11.718c-.75-.75-.75-1.946-.023-2.626l10.125-9.539l-10.125-9.492c-.774-.703-.68-1.922.046-2.648c.704-.703 1.829-.656 2.602.07l10.266 9.656c1.383 1.29 1.36 3.54 0 4.852l-10.266 9.656c-.703.633-1.969.727-2.625.07" />
+                    </svg>
                 </div>
             </div>
 
             <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
-                <app-page-navigation-button [resourceType]="'projects'" [buttonDirection]="'left'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-                <app-page-navigation-button [resourceType]="'projects'" [buttonDirection]="'right'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-            </div>
+            <app-page-navigation-button class="md:hidden" [resourceType]="'projects'" [elementsConfig]="elementsConfig"
+                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
+            </app-page-navigation-button>
 
         </div>
     </section>
@@ -212,14 +213,9 @@
             </div>
 
             <!-- Boutons de changement de page de technos pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
-                <app-page-navigation-button [resourceType]="'technos'" [buttonDirection]="'left'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-                <app-page-navigation-button [resourceType]="'technos'" [buttonDirection]="'right'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-            </div>
+            <app-page-navigation-button class="md:hidden" [resourceType]="'technos'" [elementsConfig]="elementsConfig"
+                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
+            </app-page-navigation-button>
 
         </div>
     </section>
@@ -269,14 +265,9 @@
             </div>
 
             <!-- Boutons de changement de page de certifications pour les petits écrans, centrés en dessous -->
-            <div class="flex justify-center space-x-12 md:hidden min-h-[60px]">
-                <app-page-navigation-button [resourceType]="'certifs'" [buttonDirection]="'left'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-                <app-page-navigation-button [resourceType]="'certifs'" [buttonDirection]="'right'" [isLargeScreenButton]="false"
-                    [elementsConfig]="elementsConfig" (navigate)="handleNavigation($event)">
-                </app-page-navigation-button>
-            </div>
+            <app-page-navigation-button class="md:hidden" [resourceType]="'certifs'" [elementsConfig]="elementsConfig"
+                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
+            </app-page-navigation-button>
 
             <!-- Titre et sous titre de la section des certifications pour les grands écrans -->
             <div class="hidden lg:block space-y-2 ml-10">
