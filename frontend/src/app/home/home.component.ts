@@ -266,7 +266,6 @@ export class HomeComponent {
     * @param type - Le type d'éléments pour lequel passer à la page suivante ("technos", "certifs" ou "projects").
     */
     nextPage(type: 'technos' | 'certifs' | 'projects' = 'projects'): void {
-        console.log(type);
         const config = this.elementsConfig[type];
         if (!config.isTransitioning && (config.currentPage + 1) * config.itemsPerPage < config.items.length) {
             config.isTransitioning = true;
