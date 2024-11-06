@@ -1,8 +1,10 @@
-<div class="flex justify-center space-x-12">
+<div class="flex justify-center space-x-12 md:hidden">
     <!-- Bouton pour aller à la page précédente -->
     <div (click)="onNavigateLeft()" [ngClass]="{
-             'text-gray-700': elementsConfig[resourceType].currentPage > 0, 
-             'text-gray-300': elementsConfig[resourceType].currentPage === 0
+             'text-gray-700': resourceType !== 'certifs' && elementsConfig[resourceType].currentPage > 0,
+             'text-gray-300': resourceType !== 'certifs' && elementsConfig[resourceType].currentPage === 0,
+             'text-gray-100': resourceType === 'certifs' && elementsConfig[resourceType].currentPage > 0,
+             'text-gray-600': resourceType === 'certifs' && elementsConfig[resourceType].currentPage === 0
          }" class="rounded-full z-10 transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56">
             <path fill="currentColor"
@@ -12,8 +14,10 @@
 
     <!-- Bouton pour aller à la page suivante -->
     <div (click)="onNavigateRight()" [ngClass]="{
-             'text-gray-700': (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage < elementsConfig[resourceType].items.length, 
-             'text-gray-300': (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage >= elementsConfig[resourceType].items.length
+             'text-gray-700': resourceType !== 'certifs' && (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage < elementsConfig[resourceType].items.length,
+             'text-gray-300': resourceType !== 'certifs' && (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage >= elementsConfig[resourceType].items.length,
+             'text-gray-100': resourceType === 'certifs' && (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage < elementsConfig[resourceType].items.length,
+             'text-gray-600': resourceType === 'certifs' && (elementsConfig[resourceType].currentPage + 1) * elementsConfig[resourceType].itemsPerPage >= elementsConfig[resourceType].items.length
          }" class="rounded-full z-10 transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" width="3.4rem" height="3.4rem" viewBox="0 0 56 56">
             <path fill="currentColor"
