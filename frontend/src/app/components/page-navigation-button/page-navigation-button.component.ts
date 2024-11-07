@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SvgPageNavigationButtonComponent } from '../svg-page-navigation-button/svg-page-navigation-button.component';
 
 @Component({
     selector: 'app-page-navigation-button',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, SvgPageNavigationButtonComponent],
     templateUrl: './page-navigation-button.component.html',
 })
 export class PageNavigationButtonComponent {

@@ -9,6 +9,7 @@ import { CertificationComponent } from '../components/certification/certificatio
 import { ProjectComponent } from '../components/project/project.component';
 import { HttpClient } from '@angular/common/http';
 import { PageNavigationButtonComponent } from '../components/page-navigation-button/page-navigation-button.component';
+import { SvgPageNavigationButtonComponent } from '../components/svg-page-navigation-button/svg-page-navigation-button.component';
 
 interface Technology {
     iconClass: string;
@@ -32,7 +33,7 @@ interface Project {
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent, ProjectComponent, PageNavigationButtonComponent],
+    imports: [CommonModule, FormsModule, TechnologyComponent, CertificationComponent, ProjectComponent, PageNavigationButtonComponent,SvgPageNavigationButtonComponent],
     templateUrl: './home.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
