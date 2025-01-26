@@ -100,6 +100,14 @@ export class HomeComponent {
         if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
             this.scrollToSection(this.activatedRoute.snapshot.params['redirectionSection']);
         }
+
+        // Écoute l'événement popstate pour détecter un retour à la page via le bouton "Précédent"
+        window.addEventListener('popstate', () => {
+            this.loadAssets('projects');
+            this.loadAssets('technos');
+            this.loadAssets('certifs');
+            this.updateItemsPerPage();
+        });
     }
 
     /**
