@@ -1,3 +1,20 @@
-@import 'tailwindcss/base' layer(tailwindcss);
-@import 'tailwindcss/components' layer(tailwindcss);
-@import 'tailwindcss/utilities' layer(tailwindcss);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import des polices d'écriture */
+@font-face {
+	font-family: "Inter";
+	src: url("/assets/fonts/InterVariable.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: url("/assets/fonts/InterVariable-Italic.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
