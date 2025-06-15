@@ -1,595 +1,659 @@
 <header class="h-16 flex fixed w-full bg-white z-50 shadow-sm border-b border-gray-200">
-    <div class="flex pl-4 items-center justify-center mb-0.5 cursor-pointer" (click)="scrollToSection('landing')">
-        <iconify-icon icon="mingcute:code-line" class="text-4xl text-gray-700"></iconify-icon>
-        <span class="text-xl font-semibold ml-4 mt-1 lg:mt-0">Hugo Eribon</span>
-    </div>
+	<div class="flex pl-4 items-center justify-center mb-0.5 cursor-pointer" (click)="scrollToSection('landing')">
+		<iconify-icon icon="mingcute:code-line" class="text-4xl text-gray-700"></iconify-icon>
+		<span class="text-xl font-semibold ml-4 mt-1 lg:mt-0">Hugo Eribon</span>
+	</div>
 
-    <!-- Navigation principale pour les grands écrans -->
-    <nav class="hidden lg:flex ml-auto h-full items-center">
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-            (click)="scrollToSection('projects')">
-            Projets
-        </div>
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-            (click)="scrollToSection('technologies')">
-            Technologies
-        </div>
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-            (click)="scrollToSection('certifications')">
-            Diplômes
-        </div>
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-            (click)="scrollToSection('about')">
-            À propos
-        </div>
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-            (click)="scrollToSection('carrier')">
-            Parcours
-        </div>
-        <div class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 ml-auto transition-all"
-            (click)="scrollToSection('contact')">
-            Contact
-        </div>
-    </nav>
+	<!-- Navigation principale pour les grands écrans -->
+	<nav class="hidden lg:flex ml-auto h-full items-center">
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('projects')"
+		>
+			Projets
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('technologies')"
+		>
+			Technologies
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('certifications')"
+		>
+			Diplômes
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('about')"
+		>
+			À propos
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('carrier')"
+		>
+			Parcours
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 ml-auto transition-all"
+			(click)="scrollToSection('contact')"
+		>
+			Contact
+		</div>
+	</nav>
 
-    <!-- Menu burger pour les petits écrans -->
-    <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)" aria-label="Menu burger">
-        <iconify-icon icon="heroicons-outline:menu-alt-3"
-            class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"></iconify-icon>
-    </button>
-    <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"
-        *ngIf="burgerMenuOpened">
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('projects')">Projets</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('technologies')">Technologies</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('certifications')">Diplômes</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('about')">À propos</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('carrier')">Parcours</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200"
-            (click)="scrollToSection('contact')">Contact</div>
-    </div>
+	<!-- Menu burger pour les petits écrans -->
+	<button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)" aria-label="Menu burger">
+		<iconify-icon
+			icon="heroicons-outline:menu-alt-3"
+			class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"
+		></iconify-icon>
+	</button>
+	<div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]" *ngIf="burgerMenuOpened">
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('projects')">Projets</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('technologies')">
+			Technologies
+		</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('certifications')">Diplômes</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('about')">À propos</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('carrier')">Parcours</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('contact')">Contact</div>
+	</div>
 </header>
 
 <main class="flex-1">
-    <section id="landing"
-        class="relative w-full flex items-center justify-center border-y px-2 py-12 lg:py-24 animate-appear h-full">
-        <div class="container px-4 md:px-6 flex items-center justify-center mt-10">
-            <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-                <div class="flex flex-col justify-center space-y-4 text-center lg:text-left">
-                    <div class="md:space-y-2">
-                        <h1 class="xl:text-6xl md:text-5xl text-4xl font-bold tracking-tight text-gray-700">
-                            Hugo Eribon
-                        </h1>
-                        <div class="flex h-10 md:text-2xl text-xl box-content justify-center lg:justify-normal">
-                            <div class="relative overflow-hidden text-gray-800">
-                                <div class="absolute inset-0 z-20 bg-custom-gradient"></div>
-                                <span
-                                    class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Développeur
-                                    Full-Stack</span>
-                                <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">
-                                    <span class="hidden sm:inline">Ingénieur étude et développement</span>
-                                    <span class="inline sm:hidden">Ingénieur étude/développement</span>
-                                </span>
-                                <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Passionné
-                                    d'informatique</span>
-                                <span
-                                    class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Accélérateur
-                                    d'idées</span>
-                                <span class="block h-full text-gray-800 animate-spinCustom">Développeur
-                                    Full-Stack</span>
-                            </div>
-                        </div>
+	<section id="landing" class="relative w-full flex items-center justify-center border-y px-2 py-12 lg:py-24 animate-appear h-full">
+		<div class="container px-4 md:px-6 flex items-center justify-center mt-10">
+			<div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+				<div class="flex flex-col justify-center space-y-4 text-center lg:text-left">
+					<div class="md:space-y-2">
+						<h1 class="xl:text-6xl md:text-5xl text-4xl font-bold tracking-tight text-gray-700">Hugo Eribon</h1>
+						<div class="flex h-10 md:text-2xl text-xl box-content justify-center lg:justify-normal">
+							<div class="relative overflow-hidden text-gray-800">
+								<div class="absolute inset-0 z-20 bg-custom-gradient"></div>
+								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Développeur Full-Stack</span>
+								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">
+									<span class="hidden sm:inline">Ingénieur étude et développement</span>
+									<span class="inline sm:hidden">Ingénieur étude/développement</span>
+								</span>
+								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Passionné d'informatique</span>
+								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Accélérateur d'idées</span>
+								<span class="block h-full text-gray-800 animate-spinCustom">Développeur Full-Stack</span>
+							</div>
+						</div>
 
-                        <p class="max-w-[600px] text-gray-500 md:text-xl mx-auto lg:mx-0">
-                            Passionné par
-                            l'informatique, spécialisé dans le développement
-                            d'applications de
-                            toutes sortes et fervent des nouvelles technologies.
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
-                        <div class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 cursor-pointer"
-                            (click)="scrollToSection('projects')">
-                            Voir mes projets
-                        </div>
-                        <div class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 cursor-pointer"
-                            (click)="scrollToSection('contact')">
-                            Me contacter
-                        </div>
-                    </div>
-                </div>
+						<p class="max-w-[600px] text-gray-500 md:text-xl mx-auto lg:mx-0">
+							Passionné d'informatique spécialisé dans le développement d’applications, et fervent amateur de nouvelles
+							technologies.
+						</p>
+					</div>
+					<div class="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
+						<div
+							class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 cursor-pointer"
+							(click)="scrollToSection('projects')"
+						>
+							Voir mes projets
+						</div>
+						<div
+							class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 cursor-pointer"
+							(click)="scrollToSection('contact')"
+						>
+							Me contacter
+						</div>
+					</div>
+				</div>
 
-                <div class="relative mx-auto flex items-center justify-center xl:ml-14">
-                    <div
-                        class="absolute flex items-center justify-center rounded-full bg-gray-200 h-[350px] w-[350px] lg:h-[400px] lg:w-[400px] xl:h-[550px] xl:w-[550px] -z-10">
-                    </div>
-                    <img src="../../assets/imgs/dev.webp" alt="Hero" class="z-10 w-[350px] lg:w-[150rem]" />
-                </div>
-            </div>
-        </div>
-    </section>
+				<div class="relative mx-auto flex items-center justify-center xl:ml-14">
+					<div
+						class="absolute flex items-center justify-center rounded-full bg-gray-200 h-[350px] w-[350px] lg:h-[400px] lg:w-[400px] xl:h-[550px] xl:w-[550px] -z-10"
+					></div>
+					<img src="../../assets/imgs/dev.webp" alt="Hero" class="z-10 w-[350px] lg:w-[150rem]" />
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <section id="projects" class="flex justify-center items-center w-full py-12 bg-gray-100 mt-1">
-        <div class="container px-4 md:px-6">
-            <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <div class="space-y-2">
-                    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Mes projets personnels</h2>
-                    <p class="max-w-[800px] text-gray-500 text-xl">
-                        Découvrez mes réalisations personnelles à travers quelques-uns de mes projets.
-                    </p>
-                </div>
-            </div>
+	<section id="projects" class="flex justify-center items-center w-full py-12 bg-gray-100 mt-1">
+		<div class="container px-4 md:px-6">
+			<div class="flex flex-col items-center justify-center space-y-4 text-center">
+				<div class="space-y-2">
+					<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Mes projets personnels</h2>
+					<p class="max-w-[800px] text-gray-500 text-xl">Découvrez mes réalisations personnelles à travers quelques-uns de mes projets.</p>
+				</div>
+			</div>
 
-            <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center">
+			<div class="relative w-full max-w-6xl mx-auto flex items-center justify-center">
+				<!-- Contenu des projets -->
+				<div
+					[ngClass]="{
+						'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut,
+						'animate-swipeRightOut': elementsConfig.projects.swipeRightOut,
+						'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn,
+						'animate-swipeRightIn': elementsConfig.projects.swipeRightIn
+					}"
+					class="grid gap-6 py-12 max-w-5xl xl:grid-cols-2 lg:gap-8 overflow-hidden items-center"
+				>
+					<ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
+						<app-project
+							[imgPath]="project.imgPath"
+							[name]="project.name"
+							[description]="project.description"
+							[link]="project.link"
+						></app-project>
+					</ng-container>
+				</div>
 
-                <!-- Contenu des projets -->
-                <div [ngClass]="{
-                    'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut, 
-                    'animate-swipeRightOut': elementsConfig.projects.swipeRightOut, 
-                    'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn, 
-                    'animate-swipeRightIn': elementsConfig.projects.swipeRightIn 
-                }" class="grid gap-6 py-12 max-w-5xl xl:grid-cols-2 lg:gap-8 overflow-hidden items-center">
-                    <ng-container *ngFor="let project of elementsConfig.projects.visibleItems">
-                        <app-project [imgPath]="project.imgPath" [name]="project.name"
-                            [description]="project.description" [link]="project.link"></app-project>
-                    </ng-container>
-                </div>
+				<!-- Boutons de changement de page de projets pour les grands écrans, sur les côtés -->
+				<div
+					(click)="prevPage('projects')"
+					[ngClass]="{
+						'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0,
+						'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
+					}"
+					class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button></app-svg-page-navigation-button>
+				</div>
+				<div
+					(click)="nextPage('projects')"
+					[ngClass]="{
+						'text-gray-700 hover:text-gray-800 cursor-pointer':
+							(elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length,
+						'text-gray-300 pointer-events-none':
+							(elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
+					}"
+					class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
+				</div>
+			</div>
 
-                <!-- Boutons de changement de page de projets pour les grands écrans, sur les côtés -->
-                <div (click)="prevPage('projects')" [ngClass]="{
-                                    'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0, 
-                                    'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
-                                }"
-                    class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button></app-svg-page-navigation-button>
-                </div>
-                <div (click)="nextPage('projects')" [ngClass]="{
-                    'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length, 
-                    'text-gray-300 pointer-events-none': (elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
-                }"
-                    class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
-                </div>
-            </div>
+			<!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
+			<app-page-navigation-button
+				class="md:hidden"
+				[resourceType]="'projects'"
+				[elementsConfig]="elementsConfig"
+				(navigateLeft)="prevPage($event)"
+				(navigateRight)="nextPage($event)"
+			></app-page-navigation-button>
+		</div>
+	</section>
 
-            <!-- Boutons de changement de page de projets pour les petits écrans, centrés en dessous -->
-            <app-page-navigation-button class="md:hidden" [resourceType]="'projects'" [elementsConfig]="elementsConfig"
-                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
-            </app-page-navigation-button>
+	<section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
+		<div class="container mx-auto grid items-center gap-10 lg:pl-4 lg:pr-20 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
+			<div class="space-y-2">
+				<h2 class="text-3xl font-bold tracking-tight md:text-4xl">Technologies maîtrisées</h2>
+				<p class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
+					Je maîtrise un large éventail de technologies, langages et frameworks me permettant de créer des applications modernes sur la base
+					d'un code propre et structuré.
+				</p>
+			</div>
 
-        </div>
-    </section>
+			<div class="relative w-full mx-auto lg:ml-10 lg:w-full md:w-4/5">
+				<!-- Contenu des technologies -->
+				<div
+					[ngClass]="{
+						'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut,
+						'animate-swipeRightOut': elementsConfig.technos.swipeRightOut,
+						'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn,
+						'animate-swipeRightIn': elementsConfig.technos.swipeRightIn
+					}"
+					class="grid grid-cols-3 overflow-hidden"
+				>
+					<ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
+						<app-technology
+							[iconClass]="technology.iconClass"
+							[label]="technology.label"
+							[description]="technology.description"
+						></app-technology>
+					</ng-container>
+				</div>
 
-    <section id="technologies" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container mx-auto grid items-center gap-10 lg:pl-4 lg:pr-20 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
-            <div class="space-y-2">
-                <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Technologies maîtrisées</h2>
-                <p class="max-w-[600px] text-gray-500 text-lg lg:text-xl">
-                    Je maîtrise un large éventail de technologies, langages et frameworks me permettant de créer des
-                    applications modernes sur la base d'un code propre et structuré.
-                </p>
-            </div>
+				<!-- Boutons de changement de page de technos pour les grands écrans, sur les côtés -->
+				<div
+					(click)="prevPage('technos')"
+					[ngClass]="{
+						'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0,
+						'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
+					}"
+					class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button></app-svg-page-navigation-button>
+				</div>
+				<div
+					(click)="nextPage('technos')"
+					[ngClass]="{
+						'text-gray-700 hover:text-gray-800 cursor-pointer':
+							(elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length,
+						'text-gray-300 pointer-events-none':
+							(elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
+					}"
+					class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
+				</div>
+			</div>
 
-            <div class="relative w-full mx-auto lg:ml-10 lg:w-full md:w-4/5">
+			<!-- Boutons de changement de page de technos pour les petits écrans, centrés en dessous -->
+			<app-page-navigation-button
+				class="md:hidden"
+				[resourceType]="'technos'"
+				[elementsConfig]="elementsConfig"
+				(navigateLeft)="prevPage($event)"
+				(navigateRight)="nextPage($event)"
+			></app-page-navigation-button>
+		</div>
+	</section>
 
-                <!-- Contenu des technologies -->
-                <div [ngClass]="{
-                      'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut, 
-                      'animate-swipeRightOut': elementsConfig.technos.swipeRightOut, 
-                      'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn, 
-                      'animate-swipeRightIn': elementsConfig.technos.swipeRightIn 
-                    }" class="grid grid-cols-3 overflow-hidden">
-                    <ng-container *ngFor="let technology of elementsConfig.technos.visibleItems">
-                        <app-technology [iconClass]="technology.iconClass" [label]="technology.label"
-                            [description]="technology.description"></app-technology>
-                    </ng-container>
-                </div>
+	<section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
+		<div class="container mx-auto grid items-center gap-10 lg:pr-4 lg:pl-10 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
+			<!-- Titre et sous titre de la section des certifications pour les petits écrans -->
+			<div class="lg:hidden space-y-2">
+				<h2 class="text-3xl font-bold tracking-tight md:text-4xl text-gray-100">Diplômes &amp; Certifications</h2>
+				<p class="max-w-[600px] text-gray-400 text-lg">
+					J'ai obtenu, au long de mon parcours professionnel, plusieurs diplômes et certifications témoignant de mon expertise dans divers
+					domaines et technologies.
+				</p>
+			</div>
+			<div class="relative w-full mx-auto lg:w-full md:w-4/5">
+				<!-- Contenu des certifications -->
+				<div
+					[ngClass]="{
+						'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut,
+						'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut,
+						'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn,
+						'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn
+					}"
+					class="grid grid-cols-3 overflow-hidden"
+				>
+					<ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
+						<app-certification [imgPath]="certif.imgPath" [label]="certif.label" [link]="certif.link"></app-certification>
+					</ng-container>
+				</div>
 
-                <!-- Boutons de changement de page de technos pour les grands écrans, sur les côtés -->
-                <div (click)="prevPage('technos')" [ngClass]="{
-                                        'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0, 
-                                        'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
-                                    }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button></app-svg-page-navigation-button>
-                </div>
-                <div (click)="nextPage('technos')" [ngClass]="{
-                        'text-gray-700 hover:text-gray-800 cursor-pointer': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length, 
-                        'text-gray-300 pointer-events-none': (elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
-                    }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
-                </div>
+				<!-- Boutons de changement de page de certifications pour les grands écrans, sur les côtés -->
+				<div
+					(click)="prevPage('certifs')"
+					[ngClass]="{
+						'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0,
+						'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
+					}"
+					class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button></app-svg-page-navigation-button>
+				</div>
+				<div
+					(click)="nextPage('certifs')"
+					[ngClass]="{
+						'text-gray-100 hover:text-gray-400 cursor-pointer':
+							(elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length,
+						'text-gray-600 pointer-events-none':
+							(elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
+					}"
+					class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
+				>
+					<app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
+				</div>
+			</div>
 
-            </div>
+			<!-- Boutons de changement de page de certifications pour les petits écrans, centrés en dessous -->
+			<app-page-navigation-button
+				class="md:hidden"
+				[resourceType]="'certifs'"
+				[elementsConfig]="elementsConfig"
+				(navigateLeft)="prevPage($event)"
+				(navigateRight)="nextPage($event)"
+			></app-page-navigation-button>
 
-            <!-- Boutons de changement de page de technos pour les petits écrans, centrés en dessous -->
-            <app-page-navigation-button class="md:hidden" [resourceType]="'technos'" [elementsConfig]="elementsConfig"
-                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
-            </app-page-navigation-button>
+			<!-- Titre et sous titre de la section des certifications pour les grands écrans -->
+			<div class="hidden lg:block space-y-2 ml-10">
+				<h2 class="text-3xl font-bold tracking-tight md:text-4xl text-gray-100">Diplômes &amp; Certifications</h2>
+				<p class="max-w-[600px] text-gray-400 text-xl">
+					J'ai obtenus, au long de mon parcours professionnel, plusieurs diplômes et certifications témoignant de mon expertise dans divers
+					domaines et technologies.
+				</p>
+			</div>
+		</div>
+	</section>
 
-        </div>
-    </section>
+	<section id="about" class="w-full max-w-3xl mx-auto py-12 mt-1">
+		<div class="grid gap-8 px-5 lg:px-0 text-justify">
+			<div>
+				<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">À propos de moi</h2>
+				<div class="text-lg mt-5">
+					Je m'appelle
+					<span class="font-bold">Hugo Eribon</span>
+					et je suis Ingénieur Études et Développement. Grâce à une formation rigoureuse et des expériences variées, j'ai développé une
+					expertise solide dans de nombeaux domaines informatiques.
+					<br />
+					La programmation est pour moi une véritable passion, car elle combine défis intellectuels et innovation permanente. Ce domaine me
+					permet d'explorer constamment de nouvelles technologies, nourrissant ma créativité ainsi que mon désir d'apprendre et de m'adapter
+					aux dernières avancées.
+					<br />
+					<br />
+					Suite à mon Master informatique, j'ai eu l'opportunité de contribuer à des projets majeurs chez Sopra Steria, où j'ai pu mettre en
+					pratique mes compétences en développement, cloud computing, création d'architecture et gestion de projet. Ces expériences m'ont
+					permis de démontrer mon aptitude à résoudre des problèmes complexes et à livrer des solutions de qualité.
+					<br />
+					<br />
+					Sur le plan professionnel, je me distingue par mon écoute attentive, mon adaptabilité et mon professionnalisme. Je suis capable de
+					comprendre les besoins des clients et de collaborer efficacement avec les équipes pour proposer et mettre en place des solutions
+					innovantes permettant d'atteindre les objectifs fixés.
+					<br />
+					Mon sens de l'organisation et ma rigueur me permettent de gérer plusieurs projets simultanément tout en respectant les délais et
+					les critères de qualité requis.
+					<br />
+					<br />
+					<!-- N'hésitez pas à me contacter pour toute question ou demande de projet ! -->
+					N'hésitez pas à me contacter pour toute question !
+				</div>
+			</div>
+			<div class="grid sm:grid-cols-2 gap-6">
+				<div>
+					<h3 class="text-lg font-semibold">Infos personnelles</h3>
+					<ul class="mt-4 space-y-2">
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="ion:location-sharp" class="text-lg"></iconify-icon>
+								<span>Pau, France</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="f7:text-bubble-fill" class="text-lg"></iconify-icon>
+								<span>Français, Anglais</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2 cursor-pointer">
+								<iconify-icon icon="ic:round-mail" class="text-lg"></iconify-icon>
+								<span (click)="scrollToSection('contact')" class="underline-animation">eribon.hugo&#64;gmail.com</span>
+							</div>
+						</li>
+						<li>
+							<a href="www.linkedin.com/in/hugo-eribon" class="flex items-center gap-2 cursor-pointer">
+								<iconify-icon icon="jam:linkedin" class="text-lg"></iconify-icon>
+								<span class="underline-animation">linkedin.com/hugo-eribon</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/HugoErb" class="flex items-center gap-2 cursor-pointer">
+								<iconify-icon icon="eva:github-fill" class="text-lg"></iconify-icon>
+								<span class="underline-animation">github.com/HugoErb</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="text-lg font-semibold">Intérêts</h3>
+					<ul class="mt-4 space-y-2">
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+								<span>Informatique (développement, IA...)</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+								<span>Jeux Vidéo</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+								<span>Sport</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+								<span>Poker</span>
+							</div>
+						</li>
+						<li>
+							<div class="flex items-center gap-2">
+								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
+								<span>Animaux</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <section id="certifications" class="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
-        <div class="container mx-auto grid items-center gap-10 lg:pr-4 lg:pl-10 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
-            <!-- Titre et sous titre de la section des certifications pour les petits écrans -->
-            <div class="lg:hidden space-y-2">
-                <h2 class="text-3xl font-bold tracking-tight md:text-4xl text-gray-100">
-                    Diplômes &amp; Certifications
-                </h2>
-                <p class="max-w-[600px] text-gray-400 text-lg">
-                    J'ai obtenu, au long de mon parcours professionnel, plusieurs diplômes et certifications
-                    témoignant de mon expertise dans divers domaines et technologies.
-                </p>
-            </div>
-            <div class="relative w-full mx-auto lg:w-full md:w-4/5">
+	<section id="carrier" class="flex justify-center items-center w-full py-12 bg-gray-100">
+		<div class="container space-y-12 px-4 md:px-6">
+			<div class="flex flex-col items-center justify-center space-y-4 text-center">
+				<div class="space-y-2">
+					<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Mon parcours</h2>
+					<p class="max-w-[800px] text-gray-500 text-xl">
+						Voici une frise chronologique illustrant mon parcours et les moments marquants de ma carrière.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col items-center justify-center cursor-default">
+				<ul class="dui-timeline dui-timeline-snap-icon max-md:dui-timeline-compact dui-timeline-vertical">
+					<li>
+						<div class="dui-timeline-middle">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+								<path
+									fill-rule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div class="dui-timeline-start mb-5 md:text-end">
+							<time class="font-mono italic">2019</time>
+							<div class="text-lg font-black mb-1">
+								<a
+									href="https://www.lycee-saint-john-perse.fr/bts-services-informatiques-aux-orga"
+									target="_blank"
+									class="underline-animation"
+								>
+									BTS SIO SLAM
+								</a>
+								- Pau, Lycée Saint John Perse
+							</div>
+							Le BTS Services Informatiques aux Organisations, spécialité SLAM (Solutions Logicielles et Applications Métiers) est un
+							diplôme de niveau Bac+2 qui forme les étudiants à concevoir, développer et maintenir des applications informatiques, tout
+							en assurant leur cybersécurité. La formation couvre également des compétences transversales telles que la gestion de
+							projet, la culture économique et juridique, et l'anglais technique.
+						</div>
+						<hr />
+					</li>
+					<li>
+						<hr />
+						<div class="dui-timeline-middle">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+								<path
+									fill-rule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div class="dui-timeline-end mb-5">
+							<time class="font-mono italic">2020</time>
+							<div class="text-lg font-black mb-1">
+								<a
+									href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ/l1-l2-et-l3-parcours-informatique-L3VEOQMB.html"
+									target="_blank"
+									class="underline-animation"
+								>
+									Licence informatique
+								</a>
+								- Université de Pau et des Pays de l'Adour
+							</div>
+							La Licence d'Informatique Générale est un diplôme de niveau Bac+3 qui offre une formation complète en informatique,
+							couvrant des domaines tels que l'algorithmique, la programmation, les systèmes d'exploitation, les bases de données, et la
+							sécurité informatique. Ce programme inclut des cours théoriques et pratiques, et permet aux étudiants d'acquérir les
+							compétences nécessaires pour occuper des postes techniques ou pour poursuivre leurs études en master dans des spécialités
+							informatiques​.
+						</div>
+						<hr />
+					</li>
+					<li>
+						<hr />
+						<div class="dui-timeline-middle">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+								<path
+									fill-rule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div class="dui-timeline-start mb-5 md:text-end">
+							<time class="font-mono italic">2022</time>
+							<div class="text-lg font-black mb-1">
+								<a
+									href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-XB/master-mention-informatique-L3Y98DNU/parcours-technologies-de-l-internet-L3Y98T3K.html"
+									target="_blank"
+									class="underline-animation"
+								>
+									Master Technologies de l'internet
+								</a>
+								- UPPA
+							</div>
+							Le Master Technologies de l'internet est une formation de niveau Bac+5 qui se concentre sur le génie logiciel et les
+							systèmes distribués. Ce programme vise à former des ingénieurs capables de concevoir, développer et gérer des applications
+							modernes, en utilisant les technologies les plus récentes de l'internet. Les étudiants acquièrent des compétences en
+							programmation, ingénierie des réseaux, bases de données avancées, développement web, cloud computing, et sécurité des
+							systèmes informatiques. Le cursus inclut également un stage de fin d'études de six mois, permettant aux étudiants
+							d'appliquer leurs connaissances en milieu professionnel​.
+						</div>
+						<hr />
+					</li>
+					<li>
+						<hr />
+						<div class="dui-timeline-middle">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+								<path
+									fill-rule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div class="dui-timeline-end mb-5">
+							<time class="font-mono italic">2022</time>
+							<div class="text-lg font-black mb-1">Ingénieur stagiaire - Sopra Steria Pau</div>
+							Dans le cadre de mon Master, j'ai eu l'opportunité d'intégrer Sopra Steria en tant qu'ingénieur stagiaire. J'ai participé
+							à un projet ambitieux de refonte d'un module de calcul, utilisant principalement Python, Amazon Web Services et Terraform.
+							Cette expérience m'a permis de mettre en pratique mes compétences en développement et en infrastructure cloud, tout en
+							contribuant à des solutions innovantes pour un client majeur. Grâce à mon engagement et à la qualité de mon travail, j'ai
+							reçu une proposition d'emploi de la part de Sopra Steria à la fin de mon stage, que j'ai acceptée avec enthousiasme.
+						</div>
+						<hr />
+					</li>
+					<li>
+						<hr />
+						<div class="dui-timeline-middle">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+								<path
+									fill-rule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div class="dui-timeline-start mb-5 md:text-end">
+							<time class="font-mono italic">2022 - Aujourd'hui</time>
+							<div class="text-lg font-black mb-1">Ingénieur études et développement - Sopra Steria Pau</div>
+							Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria, un poste qui me permet de poursuivre sur la
+							lancée de mon stage en utilisant quotidiennement Python, AWS, Terraform, mais aussi .NET C#, PLSQL et plus encore. Mon
+							sérieux et mon efficacité m'ont valu la confiance de plusieurs acteurs, me permettant d'assumer le rôle de responsable
+							technique sur le projet d'un client majeur. Cette mission m'a offert de nouvelles opportunités, y compris la gestion de la
+							relation client, des responsabilités accrues et de nouveaux défis stimulants, me permettant de continuer à développer mes
+							compétences.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-                <!-- Contenu des certifications -->
-                <div [ngClass]="{
-                                  'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut, 
-                                  'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut, 
-                                  'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn, 
-                                  'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn 
-                                }" class="grid grid-cols-3 overflow-hidden">
-                    <ng-container *ngFor="let certif of elementsConfig.certifs.visibleItems">
-                        <app-certification [imgPath]="certif.imgPath" [label]="certif.label"
-                            [link]="certif.link"></app-certification>
-                    </ng-container>
-                </div>
-
-                <!-- Boutons de changement de page de certifications pour les grands écrans, sur les côtés -->
-                <div (click)="prevPage('certifs')" [ngClass]="{
-                                                    'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0, 
-                                                    'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
-                                                }"
-                    class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button></app-svg-page-navigation-button>
-                </div>
-                <div (click)="nextPage('certifs')" [ngClass]="{
-                                    'text-gray-100 hover:text-gray-400 cursor-pointer': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length, 
-                                    'text-gray-600 pointer-events-none': (elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
-                                }"
-                    class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block">
-                    <app-svg-page-navigation-button buttonDirection="right"></app-svg-page-navigation-button>
-                </div>
-            </div>
-
-            <!-- Boutons de changement de page de certifications pour les petits écrans, centrés en dessous -->
-            <app-page-navigation-button class="md:hidden" [resourceType]="'certifs'" [elementsConfig]="elementsConfig"
-                (navigateLeft)="prevPage($event)" (navigateRight)="nextPage($event)">
-            </app-page-navigation-button>
-
-            <!-- Titre et sous titre de la section des certifications pour les grands écrans -->
-            <div class="hidden lg:block space-y-2 ml-10">
-                <h2 class="text-3xl font-bold tracking-tight md:text-4xl text-gray-100">
-                    Diplômes &amp; Certifications
-                </h2>
-                <p class="max-w-[600px] text-gray-400 text-xl">
-                    J'ai obtenus, au long de mon parcours professionnel, plusieurs diplômes et certifications
-                    témoignant de mon expertise dans divers domaines et technologies.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="w-full max-w-3xl mx-auto py-12 mt-1">
-        <div class="grid gap-8 px-5 lg:px-0 text-justify">
-            <div>
-                <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">À propos de moi</h2>
-                <div class="text-lg mt-5">
-                    Je m'appelle <span class="font-bold">Hugo Eribon</span> et je suis Ingénieur Études et
-                    Développement. Grâce à
-                    une formation rigoureuse et des expériences variées, j'ai développé une expertise solide
-                    dans de nombeaux domaines informatiques. <br>La programmation est pour moi une véritable passion,
-                    car elle combine défis intellectuels et innovation permanente.
-                    Ce domaine me permet d'explorer constamment de nouvelles technologies, nourrissant ma
-                    créativité ainsi que mon désir d'apprendre et de m'adapter aux dernières avancées.
-                    <br><br>
-                    Suite à mon Master informatique, j'ai eu l'opportunité de contribuer à des projets majeurs
-                    chez Sopra Steria, où j'ai pu mettre en pratique mes compétences en développement, cloud
-                    computing, création d'architecture et gestion de projet. Ces expériences m'ont permis de
-                    démontrer mon aptitude à résoudre des problèmes complexes et à livrer des solutions de
-                    qualité.
-                    <br><br>
-                    Sur le plan professionnel, je me distingue par mon écoute attentive, mon adaptabilité et mon
-                    professionnalisme. Je suis capable de comprendre les besoins des clients et de collaborer
-                    efficacement avec les équipes pour proposer et mettre en place des solutions innovantes permettant
-                    d'atteindre les objectifs fixés.<br>
-                    Mon sens de l'organisation et ma rigueur me permettent de gérer
-                    plusieurs projets simultanément tout en respectant les délais et les critères de qualité requis.
-                    <br><br>
-                    <!-- N'hésitez pas à me contacter pour toute question ou demande de projet ! -->
-                    N'hésitez pas à me contacter pour toute question !
-                </div>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="text-lg font-semibold">Infos personnelles</h3>
-                    <ul class="mt-4 space-y-2 ">
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="ion:location-sharp" class="text-lg"></iconify-icon>
-                                <span>Pau, France</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="f7:text-bubble-fill" class="text-lg"></iconify-icon>
-                                <span>Français, Anglais</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2 cursor-pointer">
-                                <iconify-icon icon="ic:round-mail" class="text-lg"></iconify-icon>
-                                <span (click)="scrollToSection('contact')"
-                                    class="underline-animation">eribon.hugo&#64;gmail.com</span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="www.linkedin.com/in/hugo-eribon" class="flex items-center gap-2 cursor-pointer">
-                                <iconify-icon icon="jam:linkedin" class="text-lg"></iconify-icon>
-                                <span class="underline-animation">linkedin.com/hugo-eribon</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/HugoErb" class="flex items-center gap-2 cursor-pointer">
-                                <iconify-icon icon="eva:github-fill" class="text-lg"></iconify-icon>
-                                <span class="underline-animation">github.com/HugoErb</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold">Intérêts</h3>
-                    <ul class="mt-4 space-y-2 ">
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-                                <span>Informatique (développement, IA...)</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-                                <span>Jeux Vidéo</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-                                <span>Sport</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-                                <span>Poker</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center gap-2">
-                                <iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-                                <span>Animaux</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="carrier" class="flex justify-center items-center w-full py-12 bg-gray-100">
-        <div class="container space-y-12 px-4 md:px-6">
-            <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <div class="space-y-2">
-                    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Mon parcours</h2>
-                    <p class="max-w-[800px] text-gray-500 text-xl">
-                        Voici une frise chronologique illustrant mon parcours et les moments marquants de ma carrière.
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center justify-center cursor-default">
-                <ul class="dui-timeline dui-timeline-snap-icon max-md:dui-timeline-compact dui-timeline-vertical">
-                    <li>
-                        <div class="dui-timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="dui-timeline-start mb-5 md:text-end">
-                            <time class="font-mono italic">2019</time>
-                            <div class="text-lg font-black mb-1">
-                                <a href="https://www.lycee-saint-john-perse.fr/bts-services-informatiques-aux-orga"
-                                    target="_blank" class="underline-animation">
-                                    BTS SIO SLAM</a>
-                                - Pau, Lycée Saint John Perse
-                            </div>
-                            Le BTS Services Informatiques aux Organisations, spécialité SLAM (Solutions Logicielles et
-                            Applications Métiers) est un diplôme de niveau Bac+2 qui forme les étudiants à concevoir,
-                            développer et maintenir des applications informatiques, tout en assurant leur cybersécurité.
-                            La formation couvre également des compétences transversales telles que la gestion de projet,
-                            la culture économique et juridique, et l'anglais technique.
-                        </div>
-                        <hr />
-                    </li>
-                    <li>
-                        <hr />
-                        <div class="dui-timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="dui-timeline-end mb-5">
-                            <time class="font-mono italic">2020</time>
-                            <div class="text-lg font-black mb-1"><a
-                                    href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ/l1-l2-et-l3-parcours-informatique-L3VEOQMB.html"
-                                    target="_blank" class="underline-animation">Licence
-                                    informatique</a> - Université de Pau et des Pays de l'Adour
-                            </div>
-                            La Licence d'Informatique Générale est un diplôme de niveau Bac+3 qui offre une formation
-                            complète en informatique, couvrant des domaines tels que l'algorithmique, la programmation,
-                            les systèmes d'exploitation, les bases de données, et la sécurité informatique. Ce programme
-                            inclut des cours théoriques et pratiques, et permet aux étudiants d'acquérir les compétences
-                            nécessaires pour occuper des postes techniques ou pour poursuivre leurs études en master
-                            dans des spécialités informatiques​.
-                        </div>
-                        <hr />
-                    </li>
-                    <li>
-                        <hr />
-                        <div class="dui-timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="dui-timeline-start mb-5 md:text-end">
-                            <time class="font-mono italic">2022</time>
-                            <div class="text-lg font-black mb-1">
-                                <a href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-XB/master-mention-informatique-L3Y98DNU/parcours-technologies-de-l-internet-L3Y98T3K.html"
-                                    target="_blank" class="underline-animation">Master
-                                    Technologies de l'internet
-                                </a> - UPPA
-                            </div>
-                            Le Master Technologies de l'internet est une formation de niveau Bac+5 qui se concentre sur
-                            le génie logiciel et les systèmes distribués. Ce programme vise à former des ingénieurs
-                            capables de concevoir, développer et gérer des applications modernes, en utilisant les
-                            technologies les plus récentes de l'internet. Les étudiants acquièrent des
-                            compétences en programmation, ingénierie des réseaux, bases de données avancées,
-                            développement web, cloud computing, et sécurité des systèmes informatiques. Le
-                            cursus inclut également un stage de fin d'études de six mois, permettant aux étudiants
-                            d'appliquer leurs connaissances en milieu professionnel​.
-                        </div>
-                        <hr />
-                    </li>
-                    <li>
-                        <hr />
-                        <div class="dui-timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="dui-timeline-end mb-5">
-                            <time class="font-mono italic">2022</time>
-                            <div class="text-lg font-black mb-1">Ingénieur stagiaire - Sopra Steria Pau</div>
-                            Dans le cadre de mon Master, j'ai eu l'opportunité d'intégrer Sopra Steria en tant
-                            qu'ingénieur stagiaire. J'ai participé à un projet ambitieux de refonte d'un module de
-                            calcul, utilisant principalement Python, Amazon Web Services et Terraform. Cette
-                            expérience m'a permis de mettre en pratique mes compétences en développement et en
-                            infrastructure cloud, tout en contribuant à des solutions innovantes pour un client majeur.
-                            Grâce à mon engagement et à la qualité de mon travail, j'ai reçu une proposition
-                            d'emploi de la part de Sopra Steria à la fin de mon stage, que j'ai acceptée avec
-                            enthousiasme.
-                        </div>
-                        <hr />
-                    </li>
-                    <li>
-                        <hr />
-                        <div class="dui-timeline-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="h-5 w-5">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="dui-timeline-start mb-5 md:text-end">
-                            <time class="font-mono italic">2022 - Aujourd'hui</time>
-                            <div class="text-lg font-black mb-1">Ingénieur études et développement - Sopra Steria Pau
-                            </div>
-                            Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria, un poste qui me
-                            permet de poursuivre sur la lancée de mon stage en utilisant quotidiennement Python, AWS,
-                            Terraform, mais aussi .NET C#, PLSQL et plus encore. Mon sérieux et mon efficacité
-                            m'ont valu la confiance de plusieurs acteurs, me permettant d'assumer le rôle de
-                            responsable technique sur le projet d'un client majeur. Cette mission m'a offert de nouvelles
-                            opportunités, y compris la gestion de la relation client, des responsabilités accrues et de
-                            nouveaux défis stimulants, me permettant de continuer à développer mes compétences.
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="flex justify-center items-center w-full py-12">
-        <div class="container space-y-12 px-4 md:px-6">
-            <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <div class="space-y-2">
-                    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Contactez-moi</h2>
-                    <p class="max-w-[800px] text-gray-500 text-xl">
-                        Vous avez des questions ? Contactez-moi et je vous répondrai dans
-                        les plus
-                        brefs délais.
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center justify-center cursor-default">
-                <div class="inline-flex flex-col space-y-4 w-full max-w-md">
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium leading-none" for="name">Nom et prénom
-                        </label>
-                        <input
-                            class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                            id="name" #inputField [(ngModel)]="nameMail" placeholder="Entrez votre nom et votre prénom">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium leading-none" for="email">Adresse email
-                        </label>
-                        <input
-                            class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                            id="email" #inputField [(ngModel)]="emailMail" placeholder="Entrez votre adresse email"
-                            type="email">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium leading-none" for="phoneNumber">Téléphone
-                        </label>
-                        <input
-                            class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                            id="phoneNumber" #inputField placeholder="Entrez votre numéro de téléphone" type="tel"
-                            [(ngModel)]="phoneNumberMail" (input)="commonService.formatAndRestrictPhoneInput($event)">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium leading-none" for="message">Message
-                        </label>
-                        <textarea
-                            class="flex w-full transition-all duration-100 ease-out rounded-md border border-input resize-none bg-background px-3 py-2 text-sm ring-offset-background placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 min-h-[125px]"
-                            id="message" #inputField [(ngModel)]="messageMail" placeholder="Entrez votre message">
-            </textarea>
-                    </div>
-                    <button (click)="sendMail()" aria-label="Envoyer un mail"
-                        class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-800 text-white hover:bg-gray-600">Envoyer
-                        le message
-                    </button>
-                    <p class="text-gray-500 text-sm text-center mt-2">
-                        Tous les champs sont obligatoires. <br>Vos données ne seront pas enregistrées.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section id="contact" class="flex justify-center items-center w-full py-12">
+		<div class="container space-y-12 px-4 md:px-6">
+			<div class="flex flex-col items-center justify-center space-y-4 text-center">
+				<div class="space-y-2">
+					<h2 class="text-4xl font-bold tracking-tight sm:text-5xl">Contactez-moi</h2>
+					<p class="max-w-[800px] text-gray-500 text-xl">
+						Vous avez des questions ? Contactez-moi et je vous répondrai dans les plus brefs délais.
+					</p>
+				</div>
+			</div>
+			<div class="flex flex-col items-center justify-center cursor-default">
+				<div class="inline-flex flex-col space-y-4 w-full max-w-md">
+					<div class="space-y-2">
+						<label class="text-sm font-medium leading-none" for="name">Nom et prénom</label>
+						<input
+							class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+							id="name"
+							#inputField
+							[(ngModel)]="nameMail"
+							placeholder="Entrez votre nom et votre prénom"
+						/>
+					</div>
+					<div class="space-y-2">
+						<label class="text-sm font-medium leading-none" for="email">Adresse email</label>
+						<input
+							class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+							id="email"
+							#inputField
+							[(ngModel)]="emailMail"
+							placeholder="Entrez votre adresse email"
+							type="email"
+						/>
+					</div>
+					<div class="space-y-2">
+						<label class="text-sm font-medium leading-none" for="phoneNumber">Téléphone</label>
+						<input
+							class="flex h-10 w-full transition-all duration-100 ease-out rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+							id="phoneNumber"
+							#inputField
+							placeholder="Entrez votre numéro de téléphone"
+							type="tel"
+							[(ngModel)]="phoneNumberMail"
+							(input)="commonService.formatAndRestrictPhoneInput($event)"
+						/>
+					</div>
+					<div class="space-y-2">
+						<label class="text-sm font-medium leading-none" for="message">Message</label>
+						<textarea
+							class="flex w-full transition-all duration-100 ease-out rounded-md border border-input resize-none bg-background px-3 py-2 text-sm ring-offset-background placeholder: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 min-h-[125px]"
+							id="message"
+							#inputField
+							[(ngModel)]="messageMail"
+							placeholder="Entrez votre message"
+						></textarea>
+					</div>
+					<button
+						(click)="sendMail()"
+						aria-label="Envoyer un mail"
+						class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-800 text-white hover:bg-gray-600"
+					>
+						Envoyer le message
+					</button>
+					<p class="text-gray-500 text-sm text-center mt-2">
+						Tous les champs sont obligatoires.
+						<br />
+						Vos données ne seront pas enregistrées.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-    <p class="text-sm text-gray-600">© Eribon Hugo. Tous droits réservés.</p>
-    <nav class="sm:ml-auto flex gap-4 sm:gap-6 ">
-        <p class="text-sm cursor-pointer font-medium underline-animation" (click)="navigateTo('legal-information')">
-            Mentions légales
-        </p>
-    </nav>
+	<p class="text-sm text-gray-600">© Eribon Hugo. Tous droits réservés.</p>
+	<nav class="sm:ml-auto flex gap-4 sm:gap-6">
+		<p class="text-sm cursor-pointer font-medium underline-animation" (click)="navigateTo('legal-information')">Mentions légales</p>
+	</nav>
 </footer>
