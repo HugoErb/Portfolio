@@ -42,8 +42,8 @@ if pm2 describe "$nomApplication" > /dev/null; then
     echo "Redémarrage de l'application '$nomApplication' avec PM2..."
     pm2 restart "$nomApplication"
 else
-    echo "L'application '$nomApplication' n'est pas en cours. Tentative de démarrage via ecosystem.config.js..."
-    pm2 start ecosystem.config.js --only "$nomApplication"
+    echo "L'application '$nomApplication' n'est pas en cours. Tentative de démarrage via ecosystem_production.config.js..."
+    pm2 start ecosystem_production.config.js --only "$nomApplication"
 
     # Vérifier si le démarrage a réussi
     if pm2 describe "$nomApplication" > /dev/null; then
