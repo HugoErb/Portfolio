@@ -1,20 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<link
+			rel="preload"
+			as="image"
+			href="/assets/imgs/dev.webp"
+			type="image/webp"
+			imagesizes="(max-width: 1024px) 350px, 150rem"
+			imagesrcset="/assets/imgs/dev.webp 1x"
+		/>
+		<meta charset="utf-8" />
+		<title>Hugo Eribon - Portfolio</title>
+		<base href="/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Hugo Eribon - Développeur passionné spécialisé dans la création de sites web modernes et d'applications robustes. Découvrez mes projets, compétences et contactez-moi pour vos besoins en développement."
+		/>
+        <!-- Préchargement des fonts -->
+		<link rel="icon" type="image/x-icon" href="assets/imgs/code.webp" />
+		<link rel="preload" href="/assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+	</head>
 
-<head>
-    <link rel="preload" as="image" href="/assets/imgs/dev.webp" type="image/webp"
-        imagesizes="(max-width: 1024px) 350px, 150rem" imagesrcset="/assets/imgs/dev.webp 1x">
-    <meta charset="utf-8">
-    <title>Hugo Eribon - Portfolio</title>
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Hugo Eribon - Développeur passionné spécialisé dans la création de sites web modernes et d'applications robustes. Découvrez mes projets, compétences et contactez-moi pour vos besoins en développement.">
-    <link rel="icon" type="image/x-icon" href="assets/imgs/code.webp">
-</head>
-
-<body>
-    <app-root></app-root>
-</body>
-
+	<body>
+		<app-root></app-root>
+	</body>
 </html>
