@@ -16,6 +16,18 @@ export class CommonService {
 
     constructor(private mailService: MailService) { }
 
+    // Liste blanche des domaines populaires considérés comme fiables
+	private trustedEmailDomains = new Set([
+		'gmail.com',
+		'hotmail.com',
+		'outlook.com',
+		'yahoo.com',
+		'yahoo.fr',
+		'live.com',
+		'protonmail.com',
+		'icloud.com',
+	]);
+
     /**
     * Filtre et formate la saisie d'un numéro de téléphone dans un champ de saisie HTML.
     * Seules les valeurs numériques sont conservées, et un espace est ajouté tous les deux chiffres.
@@ -114,12 +126,17 @@ export class CommonService {
                 return false;
             }
 
-            // Vérification pour l'email
+            // Vérifications pour l'email
             if (lowerCaseLabel.includes('email')) {
                 if (!emailRegex.test(trimmedValue)) {
                     this.showValidationError('Le format de l\'adresse email est invalide.');
                     return false;
                 } else {
+                    // Vérification du domaine de l'email
+                    const domain = trimmedValue.split('@')[1]?.toLowerCase();
+                    if (this.trustedEmailDomains.has(domain)) {
+                        continue;
+                    }
                     const isEmailValid = await this.checkEmailValidity(trimmedValue);
                     if (!isEmailValid) {
                         this.showValidationError('Le domaine de l\'adresse email n\'est pas accepté.');
