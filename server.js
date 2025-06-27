@@ -62,7 +62,7 @@ app.post('/send-mail', async (req, res) => {
     to: email,
     from: process.env.SENDER_EMAIL,
     subject: 'Eribon Hugo - Réception de votre message',
-    text: "Bonjour !\n\nJ'ai bien reçu votre message. Je vais l'étudier attentivement et j'y répondrai dans les plus brefs délais.\nEn attendant, vous pouvez continuer de parcourir mon site internet, ou visiter mon Linkedin. Merci pour votre confiance !\n\nERIBON Hugo"
+      text: "Bonjour !\n\nJ'ai bien reçu votre message. Je vais l'étudier attentivement et j'y répondrai dans les plus brefs délais.\nEn attendant, vous pouvez continuer de parcourir mon site internet, ou visiter mon Linkedin. Merci pour votre confiance !\n\nERIBON Hugo\n\nCet e-mail a été envoyé automatiquement, merci de ne pas y répondre."
   };
 
   try {
