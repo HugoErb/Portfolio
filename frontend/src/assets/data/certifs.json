@@ -16,6 +16,11 @@
 			"link": "https://pythoninstitute.org/pcep"
 		},
 		{
+			"imgPath": "../../assets/imgs/certifications/python_essentials_2.webp",
+			"label": "Cisco Python Essentials 2",
+			"link": "https://www.netacad.com/fr/courses/python-essentials-2?courseLang=en-US"
+		},
+		{
 			"imgPath": "../../assets/imgs/certifications/python_essentials_1.webp",
 			"label": "Cisco Python Essentials 1",
 			"link": "https://www.netacad.com/fr/courses/python-essentials-1?courseLang=en-US"
