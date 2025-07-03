@@ -1,49 +1,54 @@
 {
-    "certifs": [
-        {
-            "imgPath": "../../assets/imgs/certifications/aws_cda.webp",
-            "label": "AWS Certified Developer Associate",
-            "link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/pcep.webp",
-            "label": "Certified Entry-Level Python Programmer",
-            "link": "https://pythoninstitute.org/pcep"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/python_essentials_1.webp",
-            "label": "Cisco Python Essentials 1",
-            "link": "https://www.netacad.com/fr/courses/python-essentials-1?courseLang=en-US"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/introduction_to_cybersecurity.webp",
-            "label": "Cisco Introduction To Cybersecurity",
-            "link": "https://www.netacad.com/fr/courses/introduction-to-cybersecurity?courseLang=fr-FR"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/bases_materiel_informatique.webp",
-            "label": "Cisco Computer Hardware Basics",
-            "link": "https://www.netacad.com/fr/courses/computer-hardware-basics?courseLang=fr-FR"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/sst.webp",
-            "label": "Sauveteur Secouriste du Travail (SST)",
-            "link": "https://www.inrs.fr/services/formation/publics/sauveteur-secouriste.html"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/uppa.webp",
-            "label": "Master Technologies de l'Internet",
-            "link": "https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-XB/master-mention-informatique-L3Y98DNU/parcours-technologies-de-l-internet-L3Y98T3K.html"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/uppa.webp",
-            "label": "Licence en Informatique",
-            "link": "https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ/l1-l2-et-l3-parcours-informatique-L3VEOQMB.html"
-        },
-        {
-            "imgPath": "../../assets/imgs/certifications/uppa.webp",
-            "label": "BTS SIO SLAM",
-            "link": "https://www.lycee-saint-john-perse.fr/bts-services-informatiques-aux-orga"
-        }
-    ]
+	"certifs": [
+		{
+			"imgPath": "../../assets/imgs/certifications/aws_cda.webp",
+			"label": "AWS Certified Developer Associate",
+			"link": "https://aws.amazon.com/fr/certification/certified-developer-associate/"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/pcap.webp",
+			"label": "Certified Associate Python Programmer",
+			"link": "https://pythoninstitute.org/pcap"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/pcep.webp",
+			"label": "Certified Entry-Level Python Programmer",
+			"link": "https://pythoninstitute.org/pcep"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/python_essentials_1.webp",
+			"label": "Cisco Python Essentials 1",
+			"link": "https://www.netacad.com/fr/courses/python-essentials-1?courseLang=en-US"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/introduction_to_cybersecurity.webp",
+			"label": "Cisco Introduction To Cybersecurity",
+			"link": "https://www.netacad.com/fr/courses/introduction-to-cybersecurity?courseLang=fr-FR"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/bases_materiel_informatique.webp",
+			"label": "Cisco Computer Hardware Basics",
+			"link": "https://www.netacad.com/fr/courses/computer-hardware-basics?courseLang=fr-FR"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/sst.webp",
+			"label": "Sauveteur Secouriste du Travail (SST)",
+			"link": "https://www.inrs.fr/services/formation/publics/sauveteur-secouriste.html"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/uppa.webp",
+			"label": "Master Technologies de l'Internet",
+			"link": "https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-XB/master-mention-informatique-L3Y98DNU/parcours-technologies-de-l-internet-L3Y98T3K.html"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/uppa.webp",
+			"label": "Licence en Informatique",
+			"link": "https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ/l1-l2-et-l3-parcours-informatique-L3VEOQMB.html"
+		},
+		{
+			"imgPath": "../../assets/imgs/certifications/uppa.webp",
+			"label": "BTS SIO SLAM",
+			"link": "https://www.lycee-saint-john-perse.fr/bts-services-informatiques-aux-orga"
+		}
+	]
 }
