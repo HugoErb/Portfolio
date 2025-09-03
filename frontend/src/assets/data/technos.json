@@ -1,134 +1,149 @@
 {
-    "technos": [
-        {
-            "iconClass": "fontisto:python",
-            "label": "Python",
-            "description": "Python est un langage de programmation incroyablement polyvalent, largement adopté pour des tâches variées telles que l'automatisation, l'analyse de données, l'intelligence artificielle, ainsi que le développement web.<br><br>J'ai découvert Python durant mon BTS, et ce fut un véritable coup de cœur. Ce langage est rapidement devenu mon favori grâce à sa simplicité, son intuitivité, et sa grande polyvalence. L'énorme quantité de bibliothèques développées par la communauté permet d'éviter de réinventer la roue à chaque projet, ce qui je trouve est un atout majeur dans la création de mes projets.<br><br>Ma passion pour Python m'a conduit à approfondir mes compétences en suivant des formations spécialisées, jusqu'à obtenir les certifications PCEP et PCAP du Python Institute, témoignant de ma maîtrise de cette technologie. Depuis, Python est resté mon outil de prédilection, que j'utilise aussi bien pour mes projets personnels que dans mon quotidien professionnel.<br><br>Pour mes projets personnels, j'ai exploité Python de multiples façons : création de jeux avec Pygame, machine learning avec Matplotlib, Pandas et Scikit-Learn, web scraping avec BeautifulSoup et Playwright, de la mise en place de bot Discord ou encore du développement de scripts d'automatisation.<br><br>Chez Sopra Steria, j'ai surtout mis Python à profit dans un projet en lien avec AWS dont j'étais le responsable technique."
-        },
-        {
-            "iconClass": "fa6-brands:aws",
-            "label": "SDK AWS",
-            "description": "AWS SDK permet aux développeurs d'intégrer facilement les services Amazon Web Services dans leurs applications avec des bibliothèques, exemples de code, et documentation.<br><br>Ce SDK m'a permis de développer des solutions robustes et évolutives, tout en m'épargnant de nombreux défis techniques. J'ai notamment utilisé le SDK AWS pour orchestrer des flux de données, et exploiter des services tels que les lambdas AWS pour le mapping des données des flux, SES pour l'envoi d'e-mails, SQS pour la gestion des files d'attente de messages, S3 pour le stockage d'objets, et DynamoDB pour des bases de données NoSQL performantes. Ces outils m'ont été indispensables, notamment dans certains projets professionnels. Aujourd'hui, je continue d'apprécier et d'exploiter le SDK AWS pour son efficacité et sa capacité à simplifier le développement sur le cloud."
-        },
-        {
-            "iconClass": "cib:angular",
-            "label": "Angular",
-            "description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client.<br><br>J'ai commencé à apprendre Angular de manière autodidacte, motivé par l'envie d'acquérir des compétences dans un framework web moderne. Sans aucune formation préalable, j'ai plongé directement dans l'apprentissage sur le tas, en explorant les nombreuses fonctionnalités offertes par Angular.<br><br>Au fil du temps, et à travers divers projets, j'ai progressivement maîtrisé cette technologie, notamment la version 17, avec laquelle j'ai travaillé sur plusieurs applications, comme par exemple ce portfolio, ou encore mon plus gros projet : PokerHL. Au fur et à mesure des projets, mon parcours m'a permis de comprendre en profondeur les concepts du framework.<br><br>Aujourd'hui, Angular est devenu l'un de mes outils préférés pour le développement web. J'apprécie particulièrement sa capacité à construire des composants réutilisables, me permettant de créer des applications performantes et facilement maintenables. C'est une technologie que je prends plaisir à utiliser et à recommander pour tout projet web ambitieux."
-        },
-        {
-            "iconClass": "uiw:html5",
-            "label": "HTML",
-            "description": "HTML (HyperText Markup Language) est le langage standard utilisé pour créer et structurer des pages web.HTML est la base incontournable de tout développement web.<br><br>Dès mes débuts, j'ai rapidement compris l'importance de maîtriser ce langage, car il constitue le fondement de toute structure de page web. Au fil des projets, j'ai acquis une solide expertise en HTML, ce qui me permet aujourd'hui de l'utiliser avec aisance dans une grande variété de contextes.<br><br>Que ce soit pour créer des interfaces utilisateur simples ou pour structurer des pages complexes, HTML est toujours au cœur de mes développements. J'ai eu l'occasion de l'intégrer dans de nombreux projets, qu'il s'agisse de sites web statiques, d'applications dynamiques ou de composants front-end dans des frameworks plus avancés. Aujourd'hui, je suis parfaitement rodé avec ce langage, qui reste un outil indispensable dans mon quotidien de développeur web."
-        },
-        {
-            "iconClass": "uiw:css3",
-            "label": "CSS",
-            "description": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour décrire la présentation d'un document HTML.<br><br>CSS va naturellement de pair avec HTML, formant le duo essentiel pour tout développement web. Dès que j'ai commencé à travailler avec HTML, j'ai aussi appris à maîtriser CSS pour donner vie à mes interfaces, en stylisant et en structurant les pages web avec cette technologie. Contrairement à beaucoup de mes collègues développeurs qui voient le CSS comme une tâche fastidieuse, j'ai toujours apprécié son utilisation. J'aime jouer avec les styles, les animations, et les mises en page pour créer des designs attrayants, fonctionnels mais tout en restant intuitifs.<br><br>Au fil des projets, j'ai utilisé CSS autant que HTML, prenant plaisir à explorer toutes les possibilités qu'il offre. Cependant, avec l'évolution des technologies, j'ai progressivement migré vers Tailwind CSS, qui simplifie grandement le processus de stylisation. Aujourd'hui, bien que je n'utilise plus vraiment CSS pur, mes connaissances approfondies de cette technologie continuent de m'être utiles dans mon travail avec Tailwind."
-        },
-        {
-            "iconClass": "bi:git",
-            "label": "Git",
-            "description": "Git est un système de contrôle de version décentralisé qui permet aux développeurs de suivre les modifications de code et de travailler en collaboration.<br><br>Comme tout développeur, j'utilise Git au quotidien pour gérer les versions de mon code. C'est un outil indispensable dans mon travail, me permettant de collaborer efficacement avec d'autres développeurs, de gérer les branches, et de suivre l'historique des modifications avec précision.<br><br>Au fil du temps, j'ai acquis des bases solides en Git, maîtrisant les commandes essentielles et les concepts clés tels que les merges, les rebasings, et les pull requests. Git fait partie intégrante de mon quotidien de développeur, et je l'utilise avec assurance dans tous mes projets, qu'ils soient personnels ou professionnels."
-        },
-        {
-            "iconClass": "simple-icons:php",
-            "label": "PHP",
-            "description": "PHP est un langage de script côté serveur principalement utilisé pour le développement de pages web dynamiques.<br><br>J'ai appris PHP durant mon BTS, et c'était l'un des premiers langages côté serveur que j'ai maîtrisé. J'ai utilisé PHP pour plusieurs projets il y a quelques années, notamment pour des sites web dynamiques et des applications simples. J'ai trouvé cette technologie intéressante, en particulier pour son intégration facile avec les bases de données.<br><br>Cependant, avec l'évolution rapide des technologies web, j'ai constaté que PHP est progressivement sur le déclin, ce qui m'a conduit à me concentrer sur d'autres langages et frameworks plus modernes. Aujourd'hui, je n'utilise plus vraiment PHP dans mes projets, mais mon expérience passée avec ce langage reste solide, me permettant de comprendre et de travailler avec des systèmes qui l'utilisent encore."
-        },
-        {
-            "iconClass": "akar-icons:javascript-fill",
-            "label": "Javascript",
-            "description": "JavaScript est un langage de programmation côté client utilisé pour créer des interactions dynamiques sur les pages web.<br><br>J'ai appris JavaScript en autodidacte, attiré par sa réputation pour créer des sites web interactifs. J'ai toujours aimé travailler avec cette technologie, qui est à la base de la majorité des applications web modernes. Cependant, au fil du temps, j'ai développé une préférence pour TypeScript, son \"petit frère\" typé, que je trouve plus structuré et mieux adapté pour des projets Angular.<br><br>J'ai réalisé plusieurs projets personnels avec JavaScript, dont un jeu Space Invaders, et j'ai exploré des bibliothèques comme Three.js pour créer des expériences 3D immersives.<br>De plus, j'ai souvent utilisé JavaScript pour ajouter des fonctionnalités dynamiques à mes sites internet, rendant mes pages web plus interactives et engageantes. Bien que je m'appuie désormais principalement sur TypeScript, mon expérience avec JavaScript reste un pilier de mes développements web."
-        },
-        {
-            "iconClass": "fa6-brands:java",
-            "label": "Java",
-            "description": "Java est un langage de programmation orienté objet largement utilisé pour le développement d'applications web, mobiles, et d'entreprise.<br><br>J'ai appris Java tout au long de mon parcours scolaire, où il a été l'un des langages principaux enseignés. Bien que Java ne soit pas le langage que j'apprécie le plus, j'ai acquis une bonne maîtrise en l'utilisant pour divers projets universitaires. J'ai notamment travaillé avec des frameworks comme Spring.<br><br>Cependant, malgré cette expérience académique, je n'ai jamais ressenti le besoin d'utiliser Java pour des projets personnels, préférant d'autres langages pour mes développements en dehors du cadre universitaire. Aujourd'hui, bien que Java ne soit pas mon langage de prédilection, je garde une solide expérience dans ce domaine grâce aux nombreux projets que j'ai réalisés durant mes études."
-        },
-        {
-            "iconClass": "devicon-plain:nodejs-wordmark",
-            "label": "Node JS",
-            "description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives.<br><br>J'ai appris Node.js en autodidacte en travaillant sur mes projets Angular, ce qui m'a permis d'acquérir une bonne expérience avec cette technologie au fil des nombreux projets que j'ai réalisés. Node.js s'est révélé être un outil puissant et parfaitement adapté aux besoins de mes applications, en particulier pour le développement full-stack.<br><br>J'apprécie particulièrement Node.js pour sa modernité et sa capacité à gérer efficacement des tâches côté serveur tout en s'intégrant harmonieusement avec Angular. Cette technologie est devenue un élément clé de mon workflow."
-        },
-        {
-            "iconClass": "devicon-plain:csharp",
-            "label": "C#",
-            "description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET.<br><br>J'ai appris C# principalement grâce aux projets sur lesquels j'ai travaillé chez Sopra Steria. Utilisant ce langage au quotidien, j'ai développé une solide expérience en C#, en travaillant sur des applications diverses et en maîtrisant ses fonctionnalités clés. Cependant, malgré mon usage intensif de C# dans le cadre professionnel, je n'ai jamais ressenti le besoin de l'utiliser pour des projets personnels.<br><br>Je trouve C# plutôt sympathique à utiliser, avec une syntaxe claire et des outils bien intégrés dans l'écosystème Microsoft. Toutefois, je le considère comme un langage assez basique, qui manque parfois de la flexibilité et de l'innovation que j'apprécie dans d'autres technologies. Néanmoins, il reste un langage efficace et fiable, bien adapté aux besoins de l'entreprise."
-        },
-        {
-            "iconClass": "simple-icons:express",
-            "label": "Express",
-            "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides.<br><br>J'ai utilisé Express dans plusieurs de mes projets Angular couplés à Node.js. Bien que je ne l'aie pas énormément exploité de A à Z, je m'en suis servi principalement pour gérer les routes nécessaires à l'envoi d'e-mails et pour exposer mon frontend, en le conservant dans le même projet que mon backend.<br><br>Express m'a permis de simplifier la gestion des requêtes et de structurer mes applications de manière efficace, même si mes besoins étaient assez spécifiques et limités à ces tâches. C'est une technologie que je trouve pratique, même si je n'ai pas encore eu l'occasion de l'explorer pleinement dans des projets plus complexes."
-        },
-        {
-            "iconClass": "akar-icons:typescript-fill",
-            "label": "TypeScript",
-            "description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle.<br><br>J'ai découvert TypeScript en travaillant sur des projets avec Angular, et il est rapidement devenu mon langage préféré pour le développement web. J'apprécie particulièrement TypeScript pour la structure et la sécurité qu'il apporte par rapport à JavaScript.<br><br>J'ai utilisé TypeScript dans bon nombre de mes projets, notamment pour des applications complexes, où sa flexibilité et ses fonctionnalités avancées se sont révélées indispensables. Que ce soit pour des projets personnels ou professionnels, TypeScript est devenu un de mes outils de prédilection, surpassant selon moi JavaScript en termes de clarté et de rigueur, tout en conservant puissance et modernité."
-        },
-        {
-            "iconClass": "ri:tailwind-css-fill",
-            "label": "Tailwind CSS",
-            "description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML.<br><br>Après avoir beaucoup travaillé avec CSS, la découverte de Tailwind CSS a été une véritable révélation. Ce framework a transformé ma façon de concevoir et de structurer mes interfaces, en rendant le processus de stylisation bien plus rapide et intuitif. Tailwind m'a permis de gagner un temps précieux tout en conservant une flexibilité totale dans mes designs.<br><br>J'apprécie beaucoup Tailwind, et je suis convaincu qu'il devrait devenir la norme pour le développement front-end. Son approche utilitaire me permet de créer efficacement des interfaces responsives et avec un dark thème, sans me perdre dans des feuilles de styles complexes. Aujourd'hui, je l'utilise dans tous mes projets, et il est devenu un outil indispensable dans mon workflow."
-        },
-        {
-            "iconClass": "cib:terraform",
-            "label": "Terraform",
-            "description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée.<br><br>J'ai appris Terraform à la fois grâce à de petites formations internes délivrées par Sopra Steria et en autodidacte sur différents projets professionnels, notamment sur des ressources AWS. Terraform m'a permis de me plonger dans l'infrastructure as code (IaC), un concept que je trouve intéressant pour l'automatisation et la gestion des ressources cloud.<br><br>Cependant, malgré l'intérêt de l'approche IaC, je trouve Terraform plutôt compliqué et peu intuitif pour un développeur. L'apprentissage a parfois été frustrant en raison de la complexité des configurations et des erreurs auxquelles j'ai dû faire face. Même si je suis désormais bien rodé sur la technologie et que j'ai acquis une solide expérience en résolvant de nombreux problèmes de configuration, Terraform n'est pas un outil que j'apprécie particulièrement."
-        },
-        {
-            "iconClass": "mdi:sql-query",
-            "label": "PL/SQL",
-            "description": "SQL (Structured Query Language) est un langage utilisé pour gérer et manipuler des bases de données relationnelles en permettant de créer, lire, mettre à jour et supprimer des données.<br><br>PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes.<br><br>J'ai appris le SQL dès le début de mes études, et depuis, je l'utilise quotidiennement dans mes projets. Comme tout développeur, je m'en sers pour interroger et manipuler les bases de données, qu'il s'agisse de réaliser des requêtes simples ou des opérations plus complexes.<br><br>À mon arrivée chez Sopra Steria, j'ai commencé à travailler avec PL/SQL, une version étendue de SQL qui intègre des fonctionnalités procédurales. Bien que PL/SQL soit sensiblement différent de SQL classique, il combine des opérations de langage que je maîtrise bien, ce qui m'a permis de rapidement prendre en main cette variante. Aujourd'hui, je suis à l'aise avec PL/SQL, tout en continuant à utiliser SQL au quotidien pour mes projets."
-        },
-        {
-            "iconClass": "mdi:dot-net",
-            "label": ".NET",
-            "description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation.<br><br>J'ai utilisé .NET en travaillant avec C# chez Sopra Steria, notamment sur des projets \"legacy\" complexes nécessitant une plateforme robuste et fiable.<br><br>Même si je trouve la technologie intéressante et adaptée à de nombreux scénarios professionnels, je la considère assez basique dans sa conception, et peut être un peu \"has been\". Malgré cela, grâce à mon expérience chez Sopra Steria, je maîtrise bien .NET et je l'utilise avec assurance dans les projets où il est requis."
-        },
-        {
-            "iconClass": "simple-icons:mongodb",
-            "label": "Mongo DB",
-            "description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées.<br><br>J'ai commencé à utiliser MongoDB pendant mes études, où j'ai réalisé plusieurs projets étudiants en exploitant cette base de données NoSQL si connue. Elle m'a rapidement séduit par son approche flexible et sa capacité à gérer de grandes quantités de données de manière efficace, et le tout, sans utiliser de SQL.<br><br>J'adore l'idée derrière MongoDB, de par sa puissance et sa structure de documents. Bien que je n'aie pas encore eu l'occasion de l'utiliser sur des projets professionnels majeurs, j'aimerais beaucoup en faire davantage et approfondir mes compétences avec cette technologie."
-        },
-        {
-            "iconClass": "cib:cplusplus",
-            "label": "C++",
-            "description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées.<br><br>Je n'ai pas eu beaucoup d'opportunités d'utiliser C++ dans mes projets personnels, mais je l'ai tout de même employé pour programmer des microcontrôleurs Arduino. Cette expérience m'a permis de mettre un pied dans le développement embarqué, une branche de l'informatique qui relie étroitement le logiciel et le matériel.<br><br>J'ai beaucoup apprécié ces projets, et j'ai trouvé C++ à la fois puissant et adapté à ce type de développement. Même si je n'ai pas encore eu l'occasion d'explorer pleinement ce langage, j'aimerais beaucoup l'utiliser davantage à l'avenir, notamment dans des projets liés au hardware."
-        },
-        {
-            "iconClass": "devicon-plain:bash",
-            "label": "Bash",
-            "description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix.<br><br>J'ai passé mes années à la faculté à travailler sous Linux, et par extension, à utiliser des commandes Bash régulièrement. Cet environnement m'a permis de développer une certaine maîtrise de Bash, que j'ai utilisé pour une variété de tâches, que ce soit pour l'automatisation de processus ou la gestion du système.<br><br>Aujourd'hui encore, j'utilise Bash pour automatiser des tâches, simplifier certaines opérations répétitives, et gérer mon VPS. Cependant, étant autodidacte dans ce langage, je reste un peu frileux, car il me manque encore de l'expérience pour être pleinement à l'aise avec Bash. J'ai encore des progrès à faire avant de me sentir totalement confiant avec cette technologie."
-        },
-        {
-            "iconClass": "uil:android",
-            "label": "SDK Android",
-            "description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android.<br><br>Durant mes années de BTS, j'ai eu l'occasion de coder plusieurs applications Android en utilisant le SDK Android. Étant déjà à l'aise avec Java, la prise en main de ce SDK s'est faite de manière assez naturelle, ce qui m'a permis de me concentrer rapidement sur le développement des fonctionnalités spécifiques à Android.<br><br>J'ai principalement travaillé avec Android Studio, l'outil de référence pour ce type de projets, et j'ai pris beaucoup de plaisir à créer des applications mobiles. Ces projets ont été particulièrement enrichissants, et j'ai beaucoup apprécié l'environnement de développement Android ainsi que la flexibilité qu'il offre. Cependant, depuis cette période, je n'ai pas eu l'opportunité de retravailler avec le SDK Android, bien que ce soit une expérience que j'aimerais réitérer."
-        },
-        {
-            "iconClass": "cib:ionic",
-            "label": "Ionic",
-            "description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript.<br><br>J'ai découvert Ionic grâce à mes projets Angular, et j'ai décidé d'utiliser ce framework pour développer une application mobile qui serait téléchargeable à la fois sur Android et iOS. Le projet consistait à créer une application de jeu de société, et j'ai pris beaucoup de plaisir à travailler dessus, en profitant de l'intégration entre Ionic et Angular pour structurer l'application.<br><br>Cependant, malgré l'intérêt que j'ai eu à réaliser ce projet, certains aspects d'Ionic n'étaient pas toujours clairs pour moi, et j'ai rencontré de nombreux problèmes, notamment en ce qui concerne l'interface utilisateur et le rendu sur téléphone. Ces difficultés ont un peu gâché mon expérience, car la gestion des détails de compatibilité et d'affichage sur différents appareils a été plus compliquée que prévu. Malgré tout, j'ai beaucoup appris à travers ce projet et reste intéressé par les possibilités offertes par Ionic."
-        },
-        {
-            "iconClass": "simple-icons:neo4j",
-            "label": "Cypher",
-            "description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées.<br><br>J'ai utilisé Cypher durant mes études, notamment dans des projets avec des bases de données orientées graphes. J'ai trouvé cette approche particulièrement originale, car elle offre une façon différente et plus naturelle de modéliser certaines relations complexes entre les données. L'utilisation de Cypher s'est révélée assez intuitive, et j'ai apprécié la manière dont ce langage de requête est bien adapté aux bases de données orientées graphes.<br><br>Bien que je n'aie pas utilisé ces technologies depuis longtemps, j'aimerais beaucoup avoir l'opportunité de retravailler avec Cypher et les bases de données orientées graphes un jour. Ces technologies m'ont laissé une impression positive et enrichissante, et je serai toujours curieux d'explorer davantage leur potentiel."
-        },
-        {
-            "iconClass": "simple-icons:lua",
-            "label": "Lua",
-            "description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances.<br><br>J'ai travaillé avec Lua sur des projets personnels en autodidacte, notamment pour des scripts d'automatisation, des outils de triche pour des jeux vidéo, ainsi que des macros. J'ai trouvé l'utilisation de Lua intéressante, surtout dans le cadre de tâches spécifiques où sa légèreté et sa flexibilité sont appréciables.<br><br>Cependant, bien que Lua soit pratique pour ces types de projets, je trouve que le langage lui-même reste assez simple et basique. Il manque de certaines fonctionnalités avancées que l'on retrouve dans d'autres langages. Malgré cela, j'ai apprécié l'utiliser pour des tâches ciblées, et il reste un outil utile dans mon arsenal pour des projets nécessitant un langage léger et rapide."
-        },
-        {
-            "iconClass": "simple-icons:autohotkey",
-            "label": "AHK",
-            "description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>J'ai travaillé avec AutoHotkey sur des projets personnels, principalement pour des scripts d'automatisation, des macros, et même des outils de triche pour des jeux vidéo. J'ai trouvé AutoHotkey pratique pour simplifier certaines tâches répétitives et automatiser des processus.<br><br>Cela dit, bien que son utilisation soit intéressante pour ces types de projets, AutoHotkey reste un langage assez rudimentaire. Il est facile à prendre en main, mais il manque de puissance et de fonctionnalités plus sophistiquées. Malgré cela, j'ai apprécié l'utiliser pour des besoins spécifiques, et il reste un excellent choix pour des scripts rapides et efficaces, même si je pense que Python le bat à plate couture dans toutes les catégories."
-        },
-        {
-            "iconClass": "mdi:google",
-            "label": "Google App Script",
-            "description": "Google Apps Script est un environnement de développement basé sur JavaScript pour automatiser et personnaliser les applications Google.<br><br>J'ai eu l'occasion de travailler avec Google Apps Script sur un projet chez Sopra Steria, où j'ai développé plusieurs fonctionnalités pour automatiser des tâches sur différentes feuilles de calcul Google Sheets. Ce projet m'a permis de découvrir la puissance de Google Apps Script pour optimiser et personnaliser les workflows au sein des applications Google.<br><br>J'ai trouvé ce langage très similaire à JavaScript, ce qui a facilité sa prise en main. Les fonctionnalités ajoutées par Google pour interagir avec ses différentes suites d'outils, comme Sheets, Docs, et Gmail, sont bien implémentées et rendent le langage particulièrement adapté pour automatiser des processus liés à ces services. C'est une technologie que j'ai trouvée pratique et efficace dans ce contexte."
-        }
-    ]
+	"technos": [
+		{
+			"iconClass": "fontisto:python",
+			"label": "Python",
+			"description": "Python est un langage de programmation incroyablement polyvalent, largement adopté pour des tâches variées telles que l'automatisation, l'analyse de données, l'intelligence artificielle, ainsi que le développement web.<br><br>J'ai découvert Python durant mon BTS, et ce fut un véritable coup de cœur. Ce langage est rapidement devenu mon favori grâce à sa simplicité, son intuitivité, et sa grande polyvalence. L'énorme quantité de bibliothèques développées par la communauté permet d'éviter de réinventer la roue à chaque projet, ce qui je trouve est un atout majeur dans la création de mes projets.<br><br>Ma passion pour Python m'a conduit à approfondir mes compétences en suivant des formations spécialisées, jusqu'à obtenir les certifications PCEP et PCAP du Python Institute, témoignant de ma maîtrise de cette technologie. Depuis, Python est resté mon outil de prédilection, que j'utilise aussi bien pour mes projets personnels que dans mon quotidien professionnel.<br><br>Pour mes projets personnels, j'ai exploité Python de multiples façons : création de jeux avec Pygame, machine learning avec Matplotlib, Pandas et Scikit-Learn, web scraping avec BeautifulSoup et Playwright, de la mise en place de bot Discord ou encore du développement de scripts d'automatisation.<br><br>Chez Sopra Steria, j'ai surtout mis Python à profit dans un projet en lien avec AWS dont j'étais le responsable technique."
+		},
+		{
+			"iconClass": "fa6-brands:aws",
+			"label": "SDK AWS",
+			"description": "AWS SDK permet aux développeurs d'intégrer facilement les services Amazon Web Services dans leurs applications avec des bibliothèques, exemples de code, et documentation.<br><br>Ce SDK m'a permis de développer des solutions robustes et évolutives, tout en m'épargnant de nombreux défis techniques. J'ai notamment utilisé le SDK AWS pour orchestrer des flux de données, et exploiter des services tels que les lambdas AWS pour le mapping des données des flux, SES pour l'envoi d'e-mails, SQS pour la gestion des files d'attente de messages, S3 pour le stockage d'objets, et DynamoDB pour des bases de données NoSQL performantes. Ces outils m'ont été indispensables, notamment dans certains projets professionnels. Aujourd'hui, je continue d'apprécier et d'exploiter le SDK AWS pour son efficacité et sa capacité à simplifier le développement sur le cloud."
+		},
+		{
+			"iconClass": "cib:angular",
+			"label": "Angular",
+			"description": "Angular est un framework open-source développé par Google pour créer des applications web dynamiques et riches en fonctionnalités côté client.<br><br>J'ai commencé à apprendre Angular de manière autodidacte, motivé par l'envie d'acquérir des compétences dans un framework web moderne. Sans aucune formation préalable, j'ai plongé directement dans l'apprentissage sur le tas, en explorant les nombreuses fonctionnalités offertes par Angular.<br><br>Au fil du temps, et à travers divers projets, j'ai progressivement maîtrisé cette technologie, notamment la version 17, avec laquelle j'ai travaillé sur plusieurs applications, comme par exemple ce portfolio, ou encore mon plus gros projet : PokerHL. Au fur et à mesure des projets, mon parcours m'a permis de comprendre en profondeur les concepts du framework.<br><br>Aujourd'hui, Angular est devenu l'un de mes outils préférés pour le développement web. J'apprécie particulièrement sa capacité à construire des composants réutilisables, me permettant de créer des applications performantes et facilement maintenables. C'est une technologie que je prends plaisir à utiliser et à recommander pour tout projet web ambitieux."
+		},
+		{
+			"iconClass": "uiw:html5",
+			"label": "HTML",
+			"description": "HTML (HyperText Markup Language) est le langage standard utilisé pour créer et structurer des pages web.HTML est la base incontournable de tout développement web.<br><br>Dès mes débuts, j'ai rapidement compris l'importance de maîtriser ce langage, car il constitue le fondement de toute structure de page web. Au fil des projets, j'ai acquis une solide expertise en HTML, ce qui me permet aujourd'hui de l'utiliser avec aisance dans une grande variété de contextes.<br><br>Que ce soit pour créer des interfaces utilisateur simples ou pour structurer des pages complexes, HTML est toujours au cœur de mes développements. J'ai eu l'occasion de l'intégrer dans de nombreux projets, qu'il s'agisse de sites web statiques, d'applications dynamiques ou de composants front-end dans des frameworks plus avancés. Aujourd'hui, je suis parfaitement rodé avec ce langage, qui reste un outil indispensable dans mon quotidien de développeur web."
+		},
+		{
+			"iconClass": "uiw:css3",
+			"label": "CSS",
+			"description": "CSS (Cascading Style Sheets) est un langage de feuille de style utilisé pour décrire la présentation d'un document HTML.<br><br>CSS va naturellement de pair avec HTML, formant le duo essentiel pour tout développement web. Dès que j'ai commencé à travailler avec HTML, j'ai aussi appris à maîtriser CSS pour donner vie à mes interfaces, en stylisant et en structurant les pages web avec cette technologie. Contrairement à beaucoup de mes collègues développeurs qui voient le CSS comme une tâche fastidieuse, j'ai toujours apprécié son utilisation. J'aime jouer avec les styles, les animations, et les mises en page pour créer des designs attrayants, fonctionnels mais tout en restant intuitifs.<br><br>Au fil des projets, j'ai utilisé CSS autant que HTML, prenant plaisir à explorer toutes les possibilités qu'il offre. Cependant, avec l'évolution des technologies, j'ai progressivement migré vers Tailwind CSS, qui simplifie grandement le processus de stylisation. Aujourd'hui, bien que je n'utilise plus vraiment CSS pur, mes connaissances approfondies de cette technologie continuent de m'être utiles dans mon travail avec Tailwind."
+		},
+		{
+			"iconClass": "bi:git",
+			"label": "Git",
+			"description": "Git est un système de contrôle de version décentralisé qui permet aux développeurs de suivre les modifications de code et de travailler en collaboration.<br><br>Comme tout développeur, j'utilise Git au quotidien pour gérer les versions de mon code. C'est un outil indispensable dans mon travail, me permettant de collaborer efficacement avec d'autres développeurs, de gérer les branches, et de suivre l'historique des modifications avec précision.<br><br>Au fil du temps, j'ai acquis des bases solides en Git, maîtrisant les commandes essentielles et les concepts clés tels que les merges, les rebasings, et les pull requests. Git fait partie intégrante de mon quotidien de développeur, et je l'utilise avec assurance dans tous mes projets, qu'ils soient personnels ou professionnels."
+		},
+		{
+			"iconClass": "simple-icons:php",
+			"label": "PHP",
+			"description": "PHP est un langage de script côté serveur principalement utilisé pour le développement de pages web dynamiques.<br><br>J'ai appris PHP durant mon BTS, et c'était l'un des premiers langages côté serveur que j'ai maîtrisé. J'ai utilisé PHP pour plusieurs projets il y a quelques années, notamment pour des sites web dynamiques et des applications simples. J'ai trouvé cette technologie intéressante, en particulier pour son intégration facile avec les bases de données.<br><br>Cependant, avec l'évolution rapide des technologies web, j'ai constaté que PHP est progressivement sur le déclin, ce qui m'a conduit à me concentrer sur d'autres langages et frameworks plus modernes. Aujourd'hui, je n'utilise plus vraiment PHP dans mes projets, mais mon expérience passée avec ce langage reste solide, me permettant de comprendre et de travailler avec des systèmes qui l'utilisent encore."
+		},
+		{
+			"iconClass": "akar-icons:javascript-fill",
+			"label": "Javascript",
+			"description": "JavaScript est un langage de programmation côté client utilisé pour créer des interactions dynamiques sur les pages web.<br><br>J'ai appris JavaScript en autodidacte, attiré par sa réputation pour créer des sites web interactifs. J'ai toujours aimé travailler avec cette technologie, qui est à la base de la majorité des applications web modernes. Cependant, au fil du temps, j'ai développé une préférence pour TypeScript, son \"petit frère\" typé, que je trouve plus structuré et mieux adapté pour des projets Angular.<br><br>J'ai réalisé plusieurs projets personnels avec JavaScript, dont un jeu Space Invaders, et j'ai exploré des bibliothèques comme Three.js pour créer des expériences 3D immersives.<br>De plus, j'ai souvent utilisé JavaScript pour ajouter des fonctionnalités dynamiques à mes sites internet, rendant mes pages web plus interactives et engageantes. Bien que je m'appuie désormais principalement sur TypeScript, mon expérience avec JavaScript reste un pilier de mes développements web."
+		},
+		{
+			"iconClass": "fa6-brands:java",
+			"label": "Java",
+			"description": "Java est un langage de programmation orienté objet largement utilisé pour le développement d'applications web, mobiles, et d'entreprise.<br><br>J'ai appris Java tout au long de mon parcours scolaire, où il a été l'un des langages principaux enseignés. Bien que Java ne soit pas le langage que j'apprécie le plus, j'ai acquis une bonne maîtrise en l'utilisant pour divers projets universitaires. J'ai notamment travaillé avec des frameworks comme Spring.<br><br>Cependant, malgré cette expérience académique, je n'ai jamais ressenti le besoin d'utiliser Java pour des projets personnels, préférant d'autres langages pour mes développements en dehors du cadre universitaire. Aujourd'hui, bien que Java ne soit pas mon langage de prédilection, je garde une solide expérience dans ce domaine grâce aux nombreux projets que j'ai réalisés durant mes études."
+		},
+		{
+			"iconClass": "devicon-plain:firebase",
+			"label": "Firebase",
+			"description": "Firebase est une plateforme Backend-as-a-Service de Google qui fournit des services permettant de créer et faire évoluer des applications web et mobiles : authentification, base de données, hébergement, stockage, etc.<br><br>Je l’ai utilisée au début de mon projet Aim Display pour l’authentification des utilisateurs. J’ai trouvé la technologie intéressante, avec un plan gratuit avantageux pour démarrer.<br><br>En revanche, la gestion des photos de profil m’a un peu rebuté. J’ai donc fini par me tourner vers Supabase, qui répond mieux à mes besoins actuels. Cela dit, cette expérience m’a donné une bonne connaissance de l’écosystème Firebase."
+		},
+		{
+			"iconClass": "simple-icons:supabase",
+			"label": "Supabase",
+			"description": "Supabase est une plateforme open source de type Backend as a Service bâtie autour de PostgreSQL. Elle fournit des services prêts à l’emploi comme une base de données SQL, authentification, stockage de fichiers via bucket, API générée automatiquement....<br><br>Je l’ai utilisée dans mon projet personnel Aim Display. J’ai adoré Supabase pour sa simplicité, son intuitivité et ses fonctionnalités gratuites, qui m’ont permis de mettre en place une base de données robuste et une gestion des comptes utilisateurs rapidement et sans complexité.<br><br>Cette expérience m’a conforté dans l’idée que Supabase est un très bon choix pour pour une BDD gratuite, solide, évolutive et stockée en ligne avec API fournie. Je recommande fortement !"
+		},
+		{
+			"iconClass": "file-icons:electron",
+			"label": "Electron",
+			"description": "Electron est un environnement qui permet d’emballer une application web dans un exécutable de bureau grâce à Chromium et Node, avec accès au système de fichiers, aux menus et aux notifications.<br><br>Je l’ai utilisé dans mon projet personnel Aim Display. Ce logiciel devait être utilisé uniquement sur ordinateur et je ne voulais pas héberger l’application, j’ai donc opté pour une solution avec installeur. J’ai trouvé cette approche efficace et assez simple pour les fonctionnalités de base. La gestion des mises à jour automatiques est très bien faite.<br><br>Cette combinaison m’a permis de livrer simplement une application de bureau moderne en réutilisant mon code Angular."
+		},
+		{
+			"iconClass": "devicon-plain:nodejs-wordmark",
+			"label": "Node JS",
+			"description": "Node.js est un environnement d'exécution JavaScript côté serveur qui permet de créer des applications web rapides et évolutives.<br><br>J'ai appris Node.js en autodidacte en travaillant sur mes projets Angular, ce qui m'a permis d'acquérir une bonne expérience avec cette technologie au fil des nombreux projets que j'ai réalisés. Node.js s'est révélé être un outil puissant et parfaitement adapté aux besoins de mes applications, en particulier pour le développement full-stack.<br><br>J'apprécie particulièrement Node.js pour sa modernité et sa capacité à gérer efficacement des tâches côté serveur tout en s'intégrant harmonieusement avec Angular. Cette technologie est devenue un élément clé de mon workflow."
+		},
+		{
+			"iconClass": "devicon-plain:csharp",
+			"label": "C#",
+			"description": "C# est un langage de programmation orienté objet développé par Microsoft, utilisé principalement pour le développement d'applications Windows et .NET.<br><br>J'ai appris C# principalement grâce aux projets sur lesquels j'ai travaillé chez Sopra Steria. Utilisant ce langage au quotidien, j'ai développé une solide expérience en C#, en travaillant sur des applications diverses et en maîtrisant ses fonctionnalités clés. Cependant, malgré mon usage intensif de C# dans le cadre professionnel, je n'ai jamais ressenti le besoin de l'utiliser pour des projets personnels.<br><br>Je trouve C# plutôt sympathique à utiliser, avec une syntaxe claire et des outils bien intégrés dans l'écosystème Microsoft. Toutefois, je le considère comme un langage assez basique, qui manque parfois de la flexibilité et de l'innovation que j'apprécie dans d'autres technologies. Néanmoins, il reste un langage efficace et fiable, bien adapté aux besoins de l'entreprise."
+		},
+		{
+			"iconClass": "simple-icons:express",
+			"label": "Express",
+			"description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et API robustes et rapides.<br><br>J'ai utilisé Express dans plusieurs de mes projets Angular couplés à Node.js. Bien que je ne l'aie pas énormément exploité de A à Z, je m'en suis servi principalement pour gérer les routes nécessaires à l'envoi d'e-mails et pour exposer mon frontend, en le conservant dans le même projet que mon backend.<br><br>Express m'a permis de simplifier la gestion des requêtes et de structurer mes applications de manière efficace, même si mes besoins étaient assez spécifiques et limités à ces tâches. C'est une technologie que je trouve pratique, même si je n'ai pas encore eu l'occasion de l'explorer pleinement dans des projets plus complexes."
+		},
+		{
+			"iconClass": "akar-icons:typescript-fill",
+			"label": "TypeScript",
+			"description": "TypeScript est un sur-ensemble de JavaScript qui ajoute des types statiques optionnels et des fonctionnalités modernes, facilitant la maintenance de code à grande échelle.<br><br>J'ai découvert TypeScript en travaillant sur des projets avec Angular, et il est rapidement devenu mon langage préféré pour le développement web. J'apprécie particulièrement TypeScript pour la structure et la sécurité qu'il apporte par rapport à JavaScript.<br><br>J'ai utilisé TypeScript dans bon nombre de mes projets, notamment pour des applications complexes, où sa flexibilité et ses fonctionnalités avancées se sont révélées indispensables. Que ce soit pour des projets personnels ou professionnels, TypeScript est devenu un de mes outils de prédilection, surpassant selon moi JavaScript en termes de clarté et de rigueur, tout en conservant puissance et modernité."
+		},
+		{
+			"iconClass": "ri:tailwind-css-fill",
+			"label": "Tailwind CSS",
+			"description": "Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur rapidement en utilisant des classes pré-définies directement dans le HTML.<br><br>Après avoir beaucoup travaillé avec CSS, la découverte de Tailwind CSS a été une véritable révélation. Ce framework a transformé ma façon de concevoir et de structurer mes interfaces, en rendant le processus de stylisation bien plus rapide et intuitif. Tailwind m'a permis de gagner un temps précieux tout en conservant une flexibilité totale dans mes designs.<br><br>J'apprécie beaucoup Tailwind, et je suis convaincu qu'il devrait devenir la norme pour le développement front-end. Son approche utilitaire me permet de créer efficacement des interfaces responsives et avec un dark thème, sans me perdre dans des feuilles de styles complexes. Aujourd'hui, je l'utilise dans tous mes projets, et il est devenu un outil indispensable dans mon workflow."
+		},
+		{
+			"iconClass": "cib:terraform",
+			"label": "Terraform",
+			"description": "Terraform est un outil d'infrastructure en tant que code (IaC) qui permet de définir et de provisionner des ressources cloud de manière automatisée.<br><br>J'ai appris Terraform à la fois grâce à de petites formations internes délivrées par Sopra Steria et en autodidacte sur différents projets professionnels, notamment sur des ressources AWS. Terraform m'a permis de me plonger dans l'infrastructure as code (IaC), un concept que je trouve intéressant pour l'automatisation et la gestion des ressources cloud.<br><br>Cependant, malgré l'intérêt de l'approche IaC, je trouve Terraform plutôt compliqué et peu intuitif pour un développeur. L'apprentissage a parfois été frustrant en raison de la complexité des configurations et des erreurs auxquelles j'ai dû faire face. Même si je suis désormais bien rodé sur la technologie et que j'ai acquis une solide expérience en résolvant de nombreux problèmes de configuration, Terraform n'est pas un outil que j'apprécie particulièrement."
+		},
+		{
+			"iconClass": "mdi:sql-query",
+			"label": "PL/SQL",
+			"description": "SQL (Structured Query Language) est un langage utilisé pour gérer et manipuler des bases de données relationnelles en permettant de créer, lire, mettre à jour et supprimer des données.<br><br>PL/SQL est une extension du langage SQL utilisée principalement dans les bases de données Oracle pour écrire des procédures stockées et des scripts complexes.<br><br>J'ai appris le SQL dès le début de mes études, et depuis, je l'utilise quotidiennement dans mes projets. Comme tout développeur, je m'en sers pour interroger et manipuler les bases de données, qu'il s'agisse de réaliser des requêtes simples ou des opérations plus complexes.<br><br>À mon arrivée chez Sopra Steria, j'ai commencé à travailler avec PL/SQL, une version étendue de SQL qui intègre des fonctionnalités procédurales. Bien que PL/SQL soit sensiblement différent de SQL classique, il combine des opérations de langage que je maîtrise bien, ce qui m'a permis de rapidement prendre en main cette variante. Aujourd'hui, je suis à l'aise avec PL/SQL, tout en continuant à utiliser SQL au quotidien pour mes projets."
+		},
+		{
+			"iconClass": "mdi:dot-net",
+			"label": ".NET",
+			"description": ".NET est un framework de développement de Microsoft permettant de créer des applications pour Windows, le web, et le cloud, en utilisant divers langages de programmation.<br><br>J'ai utilisé .NET en travaillant avec C# chez Sopra Steria, notamment sur des projets \"legacy\" complexes nécessitant une plateforme robuste et fiable.<br><br>Même si je trouve la technologie intéressante et adaptée à de nombreux scénarios professionnels, je la considère assez basique dans sa conception, et peut être un peu \"has been\". Malgré cela, grâce à mon expérience chez Sopra Steria, je maîtrise bien .NET et je l'utilise avec assurance dans les projets où il est requis."
+		},
+		{
+			"iconClass": "simple-icons:mongodb",
+			"label": "Mongo DB",
+			"description": "MongoDB est une base de données NoSQL orientée documents, populaire pour le stockage de données non structurées et semi-structurées.<br><br>J'ai commencé à utiliser MongoDB pendant mes études, où j'ai réalisé plusieurs projets étudiants en exploitant cette base de données NoSQL si connue. Elle m'a rapidement séduit par son approche flexible et sa capacité à gérer de grandes quantités de données de manière efficace, et le tout, sans utiliser de SQL.<br><br>J'adore l'idée derrière MongoDB, de par sa puissance et sa structure de documents. Bien que je n'aie pas encore eu l'occasion de l'utiliser sur des projets professionnels majeurs, j'aimerais beaucoup en faire davantage et approfondir mes compétences avec cette technologie."
+		},
+		{
+			"iconClass": "cib:cplusplus",
+			"label": "C++",
+			"description": "C++ est un langage de programmation orienté objet utilisé pour le développement de logiciels, de jeux vidéo, et de systèmes embarqués nécessitant des performances élevées.<br><br>Je n'ai pas eu beaucoup d'opportunités d'utiliser C++ dans mes projets personnels, mais je l'ai tout de même employé pour programmer des microcontrôleurs Arduino. Cette expérience m'a permis de mettre un pied dans le développement embarqué, une branche de l'informatique qui relie étroitement le logiciel et le matériel.<br><br>J'ai beaucoup apprécié ces projets, et j'ai trouvé C++ à la fois puissant et adapté à ce type de développement. Même si je n'ai pas encore eu l'occasion d'explorer pleinement ce langage, j'aimerais beaucoup l'utiliser davantage à l'avenir, notamment dans des projets liés au hardware."
+		},
+		{
+			"iconClass": "devicon-plain:bash",
+			"label": "Bash",
+			"description": "Bash est un shell Unix et un langage de commande utilisé pour écrire des scripts permettant d'automatiser les tâches sur les systèmes Linux et Unix.<br><br>J'ai passé mes années à la faculté à travailler sous Linux, et par extension, à utiliser des commandes Bash régulièrement. Cet environnement m'a permis de développer une certaine maîtrise de Bash, que j'ai utilisé pour une variété de tâches, que ce soit pour l'automatisation de processus ou la gestion du système.<br><br>Aujourd'hui encore, j'utilise Bash pour automatiser des tâches, simplifier certaines opérations répétitives, et gérer mon VPS. Cependant, étant autodidacte dans ce langage, je reste un peu frileux, car il me manque encore de l'expérience pour être pleinement à l'aise avec Bash. J'ai encore des progrès à faire avant de me sentir totalement confiant avec cette technologie."
+		},
+		{
+			"iconClass": "uil:android",
+			"label": "SDK Android",
+			"description": "Le SDK Android est un ensemble d'outils de développement logiciel fourni par Google pour créer des applications pour le système d'exploitation Android.<br><br>Durant mes années de BTS, j'ai eu l'occasion de coder plusieurs applications Android en utilisant le SDK Android. Étant déjà à l'aise avec Java, la prise en main de ce SDK s'est faite de manière assez naturelle, ce qui m'a permis de me concentrer rapidement sur le développement des fonctionnalités spécifiques à Android.<br><br>J'ai principalement travaillé avec Android Studio, l'outil de référence pour ce type de projets, et j'ai pris beaucoup de plaisir à créer des applications mobiles. Ces projets ont été particulièrement enrichissants, et j'ai beaucoup apprécié l'environnement de développement Android ainsi que la flexibilité qu'il offre. Cependant, depuis cette période, je n'ai pas eu l'opportunité de retravailler avec le SDK Android, bien que ce soit une expérience que j'aimerais réitérer."
+		},
+		{
+			"iconClass": "cib:ionic",
+			"label": "Ionic",
+			"description": "Ionic est un framework open-source pour le développement d'applications mobiles multiplateformes utilisant des technologies web comme HTML, CSS, et JavaScript.<br><br>J'ai découvert Ionic grâce à mes projets Angular, et j'ai décidé d'utiliser ce framework pour développer une application mobile qui serait téléchargeable à la fois sur Android et iOS. Le projet consistait à créer une application de jeu de société, et j'ai pris beaucoup de plaisir à travailler dessus, en profitant de l'intégration entre Ionic et Angular pour structurer l'application.<br><br>Cependant, malgré l'intérêt que j'ai eu à réaliser ce projet, certains aspects d'Ionic n'étaient pas toujours clairs pour moi, et j'ai rencontré de nombreux problèmes, notamment en ce qui concerne l'interface utilisateur et le rendu sur téléphone. Ces difficultés ont un peu gâché mon expérience, car la gestion des détails de compatibilité et d'affichage sur différents appareils a été plus compliquée que prévu. Malgré tout, j'ai beaucoup appris à travers ce projet et reste intéressé par les possibilités offertes par Ionic."
+		},
+		{
+			"iconClass": "simple-icons:neo4j",
+			"label": "Cypher",
+			"description": "Cypher est un langage de requête utilisé pour interroger les bases de données graphes Neo4j, permettant de manipuler et de récupérer des données connectées.<br><br>J'ai utilisé Cypher durant mes études, notamment dans des projets avec des bases de données orientées graphes. J'ai trouvé cette approche particulièrement originale, car elle offre une façon différente et plus naturelle de modéliser certaines relations complexes entre les données. L'utilisation de Cypher s'est révélée assez intuitive, et j'ai apprécié la manière dont ce langage de requête est bien adapté aux bases de données orientées graphes.<br><br>Bien que je n'aie pas utilisé ces technologies depuis longtemps, j'aimerais beaucoup avoir l'opportunité de retravailler avec Cypher et les bases de données orientées graphes un jour. Ces technologies m'ont laissé une impression positive et enrichissante, et je serai toujours curieux d'explorer davantage leur potentiel."
+		},
+		{
+			"iconClass": "simple-icons:lua",
+			"label": "Lua",
+			"description": "Lua est un langage de script léger et flexible, souvent utilisé pour les scripts embarqués dans les jeux vidéo et d'autres applications nécessitant des performances.<br><br>J'ai travaillé avec Lua sur des projets personnels en autodidacte, notamment pour des scripts d'automatisation, des outils de triche pour des jeux vidéo, ainsi que des macros. J'ai trouvé l'utilisation de Lua intéressante, surtout dans le cadre de tâches spécifiques où sa légèreté et sa flexibilité sont appréciables.<br><br>Cependant, bien que Lua soit pratique pour ces types de projets, je trouve que le langage lui-même reste assez simple et basique. Il manque de certaines fonctionnalités avancées que l'on retrouve dans d'autres langages. Malgré cela, j'ai apprécié l'utiliser pour des tâches ciblées, et il reste un outil utile dans mon arsenal pour des projets nécessitant un langage léger et rapide."
+		},
+		{
+			"iconClass": "simple-icons:autohotkey",
+			"label": "AHK",
+			"description": "AutoHotkey (AHK) est un langage de script open-source utilisé principalement pour l'automatisation des tâches sous Windows.<br><br>J'ai travaillé avec AutoHotkey sur des projets personnels, principalement pour des scripts d'automatisation, des macros, et même des outils de triche pour des jeux vidéo. J'ai trouvé AutoHotkey pratique pour simplifier certaines tâches répétitives et automatiser des processus.<br><br>Cela dit, bien que son utilisation soit intéressante pour ces types de projets, AutoHotkey reste un langage assez rudimentaire. Il est facile à prendre en main, mais il manque de puissance et de fonctionnalités plus sophistiquées. Malgré cela, j'ai apprécié l'utiliser pour des besoins spécifiques, et il reste un excellent choix pour des scripts rapides et efficaces, même si je pense que Python le bat à plate couture dans toutes les catégories."
+		},
+		{
+			"iconClass": "mdi:google",
+			"label": "Google App Script",
+			"description": "Google Apps Script est un environnement de développement basé sur JavaScript pour automatiser et personnaliser les applications Google.<br><br>J'ai eu l'occasion de travailler avec Google Apps Script sur un projet chez Sopra Steria, où j'ai développé plusieurs fonctionnalités pour automatiser des tâches sur différentes feuilles de calcul Google Sheets. Ce projet m'a permis de découvrir la puissance de Google Apps Script pour optimiser et personnaliser les workflows au sein des applications Google.<br><br>J'ai trouvé ce langage très similaire à JavaScript, ce qui a facilité sa prise en main. Les fonctionnalités ajoutées par Google pour interagir avec ses différentes suites d'outils, comme Sheets, Docs, et Gmail, sont bien implémentées et rendent le langage particulièrement adapté pour automatiser des processus liés à ces services. C'est une technologie que j'ai trouvée pratique et efficace dans ce contexte."
+		}
+	]
 }

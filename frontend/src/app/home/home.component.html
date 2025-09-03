@@ -85,8 +85,7 @@
 						</div>
 
 						<p class="max-w-[600px] text-gray-500 md:text-xl mx-auto lg:mx-0">
-							Passionné d'informatique spécialisé dans le développement d’applications, et fervent amateur de nouvelles
-							technologies.
+							Passionné d'informatique spécialisé dans le développement d’applications, et fervent amateur de nouvelles technologies.
 						</p>
 					</div>
 					<div class="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
@@ -178,6 +177,47 @@
 				(navigateLeft)="prevPage($event)"
 				(navigateRight)="nextPage($event)"
 			></app-page-navigation-button>
+		</div>
+	</section>
+
+	<section id="aim-display" class="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
+		<div class="container mx-auto grid items-center gap-10 lg:pr-4 lg:pl-10 md:px-6 px-4 lg:grid-cols-2 lg:gap-20">
+			<!-- Titre et sous titre de la section des certifications pour les petits écrans -->
+			<div class="lg:hidden space-y-2">
+				<h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">Téléchargez mon nouveau SAAS</h2>
+				<p class="max-w-[600px] text-gray-400 text-lg">
+					Découvrez Aim Display ! Une plateforme complète pour organiser, suivre, diffuser et analyser vos compétitions de tir sportif.
+				</p>
+			</div>
+			<div class="relative w-full mx-auto lg:w-full md:w-4/5">
+				<div class="flex items-center gap-6 mb-5">
+					<!-- Logo -->
+					<img src="assets/imgs/aim-display.svg" alt="Logo" class="w-40 h-40" />
+
+					<!-- Titre -->
+					<div class="text-left">
+						<h3 class="text-5xl font-bold md:text-7xl text-gray-200 transition-colors duration-500">
+							Aim
+							<br />
+							Display
+						</h3>
+					</div>
+				</div>
+			</div>
+
+			<!-- Titre et sous titre de la section des certifications pour les grands écrans -->
+			<div class="hidden lg:block space-y-2">
+				<h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-gray-100">Téléchargez mon nouveau SAAS</h2>
+				<p class="max-w-[600px] text-gray-400 text-xl">
+					Découvrez Aim Display ! Une plateforme complète pour organiser, suivre, diffuser et analyser vos compétitions de tir sportif.
+				</p>
+				<div
+					class="!mt-5 text-gray-700 inline-flex items-center justify-center rounded-md border bg-white pl-4 pr-3 py-2 font-medium shadow-sm transition-colors hover:bg-gray-300 cursor-pointer"
+				>
+					Télécharger Aim Display
+					<iconify-icon icon="material-symbols:download-rounded" class="ml-2 mr-0 text-2xl text-gray-600"></iconify-icon>
+				</div>
+			</div>
 		</div>
 	</section>
 
