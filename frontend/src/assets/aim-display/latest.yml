@@ -1,8 +1,8 @@
-version: 1.0.0
+version: 1.0.1
 files:
-  - url: Aim-Display-Setup-1.0.0.exe
-    sha512: 3gWm3wLTB1hCToMBG3r29prtgxZt9s4f8h26LEnfN/ojQQh6ou8T4nDuc5s4YhOa2PkCj7POvHP7yPH1dmKnOA==
-    size: 106989394
-path: Aim-Display-Setup-1.0.0.exe
-sha512: 3gWm3wLTB1hCToMBG3r29prtgxZt9s4f8h26LEnfN/ojQQh6ou8T4nDuc5s4YhOa2PkCj7POvHP7yPH1dmKnOA==
-releaseDate: '2025-09-04T19:02:51.234Z'
+  - url: Aim-Display-Setup-1.0.1.exe
+    sha512: uoZeRv7fynaB2b6HnAGV0SSqk7Rl2Y5onlaLUqx+FR7JGRV7lcEQAHuZxN3o9jX7Sa+ocZyzmiJz8ZeUbVmARA==
+    size: 106989141
+path: Aim-Display-Setup-1.0.1.exe
+sha512: uoZeRv7fynaB2b6HnAGV0SSqk7Rl2Y5onlaLUqx+FR7JGRV7lcEQAHuZxN3o9jX7Sa+ocZyzmiJz8ZeUbVmARA==
+releaseDate: '2025-09-08T18:40:38.466Z'
