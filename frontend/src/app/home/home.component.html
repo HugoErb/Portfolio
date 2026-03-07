@@ -12,17 +12,17 @@
 		>
 			Projets
 		</div>
-		<div
-			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
-			(click)="scrollToSection('technologies')"
-		>
-			Technologies
-		</div>
         <div
 			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
 			(click)="scrollToSection('aim-display')"
 		>
 			Aim Display
+		</div>
+		<div
+			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
+			(click)="scrollToSection('technologies')"
+		>
+			Technologies
 		</div>
 		<div
 			class="text-base cursor-pointer font-medium hover:bg-gray-100 border-b-2 border-transparent hover:border-gray-600 h-16 flex items-center px-4 transition-all"
@@ -59,10 +59,8 @@
 	</button>
 	<div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]" *ngIf="burgerMenuOpened">
 		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('projects')">Projets</div>
-		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('aim-display')">
-			Aim Display
-		</div>
-        <div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('technologies')">
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('aim-display')">Aim Display</div>
+		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('technologies')">
 			Technologies
 		</div>
 		<div class="block cursor-pointer px-4 py-2 text-sm text-gray-800 hover:bg-gray-200" (click)="scrollToSection('certifications')">Diplômes</div>
@@ -86,10 +84,10 @@
 									<span class="hidden sm:inline">Ingénieur étude et développement</span>
 									<span class="inline sm:hidden">Ingénieur étude/développement</span>
 								</span>
-                                <span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Responsable technique</span>
+								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Responsable technique</span>
 								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Passionné d'informatique</span>
 								<span class="block h-full text-gray-800 animate-spinCustom translate-y-[10%]">Développeur Full-Stack</span>
-                                <span class="block h-full text-gray-800 animate-spinCustom">
+								<span class="block h-full text-gray-800 animate-spinCustom">
 									<span class="hidden sm:inline">Ingénieur étude et développement</span>
 									<span class="inline sm:hidden">Ingénieur étude/développement</span>
 								</span>
@@ -142,7 +140,7 @@
 						'animate-swipeLeftOut': elementsConfig.projects.swipeLeftOut,
 						'animate-swipeRightOut': elementsConfig.projects.swipeRightOut,
 						'animate-swipeLeftIn': elementsConfig.projects.swipeLeftIn,
-						'animate-swipeRightIn': elementsConfig.projects.swipeRightIn
+						'animate-swipeRightIn': elementsConfig.projects.swipeRightIn,
 					}"
 					class="grid gap-6 py-12 max-w-5xl xl:grid-cols-2 lg:gap-8 overflow-hidden items-center"
 				>
@@ -161,7 +159,7 @@
 					(click)="prevPage('projects')"
 					[ngClass]="{
 						'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.projects.currentPage > 0,
-						'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0
+						'text-gray-300 pointer-events-none': elementsConfig.projects.currentPage === 0,
 					}"
 					class="absolute xl:left-0 lg:left-36 left-8 top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -173,7 +171,7 @@
 						'text-gray-700 hover:text-gray-800 cursor-pointer':
 							(elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage < elementsConfig.projects.items.length,
 						'text-gray-300 pointer-events-none':
-							(elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length
+							(elementsConfig.projects.currentPage + 1) * elementsConfig.projects.itemsPerPage >= elementsConfig.projects.items.length,
 					}"
 					class="absolute xl:right-0 lg:right-36 right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -285,7 +283,7 @@
 						'animate-swipeLeftOut': elementsConfig.technos.swipeLeftOut,
 						'animate-swipeRightOut': elementsConfig.technos.swipeRightOut,
 						'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn,
-						'animate-swipeRightIn': elementsConfig.technos.swipeRightIn
+						'animate-swipeRightIn': elementsConfig.technos.swipeRightIn,
 					}"
 					class="grid grid-cols-3 overflow-hidden"
 				>
@@ -303,7 +301,7 @@
 					(click)="prevPage('technos')"
 					[ngClass]="{
 						'text-gray-700 hover:text-gray-800 cursor-pointer': elementsConfig.technos.currentPage > 0,
-						'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0
+						'text-gray-300 pointer-events-none': elementsConfig.technos.currentPage === 0,
 					}"
 					class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -315,7 +313,7 @@
 						'text-gray-700 hover:text-gray-800 cursor-pointer':
 							(elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage < elementsConfig.technos.items.length,
 						'text-gray-300 pointer-events-none':
-							(elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length
+							(elementsConfig.technos.currentPage + 1) * elementsConfig.technos.itemsPerPage >= elementsConfig.technos.items.length,
 					}"
 					class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -351,7 +349,7 @@
 						'animate-swipeLeftOut': elementsConfig.certifs.swipeLeftOut,
 						'animate-swipeRightOut': elementsConfig.certifs.swipeRightOut,
 						'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn,
-						'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn
+						'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn,
 					}"
 					class="grid grid-cols-3 overflow-hidden"
 				>
@@ -365,7 +363,7 @@
 					(click)="prevPage('certifs')"
 					[ngClass]="{
 						'text-gray-100 hover:text-gray-400 cursor-pointer': elementsConfig.certifs.currentPage > 0,
-						'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0
+						'text-gray-600 pointer-events-none': elementsConfig.certifs.currentPage === 0,
 					}"
 					class="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -377,7 +375,7 @@
 						'text-gray-100 hover:text-gray-400 cursor-pointer':
 							(elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage < elementsConfig.certifs.items.length,
 						'text-gray-600 pointer-events-none':
-							(elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length
+							(elementsConfig.certifs.currentPage + 1) * elementsConfig.certifs.itemsPerPage >= elementsConfig.certifs.items.length,
 					}"
 					class="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 rounded-full z-10 transition-all hidden md:block"
 				>
@@ -407,35 +405,58 @@
 
 	<section id="about" class="w-full max-w-3xl mx-auto py-12 mt-1">
 		<div class="grid gap-8 px-5 lg:px-0 text-justify">
+			<!-- prettier-ignore -->
 			<div>
 				<h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">À propos de moi</h2>
-				<div class="text-lg mt-5">
-					Je m'appelle
-					<span class="font-bold">Hugo Eribon</span>
-					et je suis Ingénieur Études et Développement. Grâce à une formation rigoureuse et des expériences variées, j'ai développé une
-					expertise solide dans de nombeaux domaines informatiques.
-					<br />
-					La programmation est pour moi une véritable passion, car elle combine défis intellectuels et innovation permanente. Ce domaine me
-					permet d'explorer constamment de nouvelles technologies, nourrissant ma créativité ainsi que mon désir d'apprendre et de m'adapter
-					aux dernières avancées.
-					<br />
-					<br />
-					Suite à mon Master informatique, j'ai eu l'opportunité de contribuer à des projets majeurs chez Sopra Steria, où j'ai pu mettre en
-					pratique mes compétences en développement, cloud computing, création d'architecture et gestion de projet. Ces expériences m'ont
-					permis de démontrer mon aptitude à résoudre des problèmes complexes et à livrer des solutions de qualité.
-					<br />
-					<br />
-					Sur le plan professionnel, je me distingue par mon écoute attentive, mon adaptabilité et mon professionnalisme. Je suis capable de
-					comprendre les besoins des clients et de collaborer efficacement avec les équipes pour proposer et mettre en place des solutions
-					innovantes permettant d'atteindre les objectifs fixés.
-					<br />
-					Mon sens de l'organisation et ma rigueur me permettent de gérer plusieurs projets simultanément tout en respectant les délais et
-					les critères de qualité requis.
-					<br />
-					<br />
-					<!-- N'hésitez pas à me contacter pour toute question ou demande de projet ! -->
-					N'hésitez pas à me contacter pour toute question !
-				</div>
+				<div class="text-lg mt-6 space-y-4 leading-relaxed">
+                    <p>
+                    Je m'appelle <span class="font-bold">Hugo Eribon</span> et je suis
+                    <span class="font-bold">Ingénieur en études et développement</span>.
+                    Titulaire entre autre d’un
+                    <span class="font-bold">Master Technologies de l’Internet (UPPA)</span>,
+                    j’ai développé au fil de ma formation puis de mon expérience professionnelle
+                    une solide expertise en développement logiciel, architecture applicative et technologies cloud.
+                    </p>
+
+                    <p>
+                    Depuis plus de <span class="font-bold">{{ yearsExperience }} ans</span> chez
+                    <span class="font-bold">Sopra Steria</span>, j’ai eu l’opportunité de travailler
+                    sur plusieurs projets d’envergure, notamment en tant que
+                    <span class="font-bold">responsable technique sur des projets cloud AWS/Python</span>.
+                    Ces expériences m’ont permis de concevoir des architectures robustes et résilientes,
+                    de développer des applications performantes et de répondre à des
+                    problématiques techniques complexes.
+                    </p>
+
+                    <p>
+                    Je suis <span class="font-bold">développeur full-stack</span> avec une expertise
+                    autour de
+                    <span class="font-bold">Python, AWS, Angular, TypeScript et C#</span>.
+                    Très attentif à la qualité du code, à la performance et aux bonnes pratiques
+                    d’architecture, je m’attache à construire des solutions durables,
+                    maintenables et en adéquation directe avec les besoins métier.
+                    </p>
+
+                    <p>
+                    Certifié <span class="font-bold">AWS</span> et
+                    <span class="font-bold">doublement certifié Python</span>,
+                    j’évolue avec aisance dans des environnements
+                    <span class="font-bold">cloud et agiles</span>, souvent multi-projets,
+                    où la rigueur, l’organisation et la capacité d’adaptation sont essentielles.
+                    </p>
+
+                    <p>
+                    Passionné par le développement logiciel, je continue également à explorer
+                    de nouvelles technologies à travers une multitude de
+                    <span class="font-bold">projets personnels</span>, avec un intérêt
+                    particulier pour
+                    <span class="font-bold">l’intelligence artificielle</span>.
+                    </p>
+
+                    <p>
+                    N'hésitez pas à me contacter pour toute question !
+                    </p>
+                </div>
 			</div>
 			<div class="grid sm:grid-cols-2 gap-6">
 				<div>
@@ -450,7 +471,7 @@
 						<li>
 							<div class="flex items-center gap-2">
 								<iconify-icon icon="f7:text-bubble-fill" class="text-lg"></iconify-icon>
-								<span>Français, Anglais</span>
+								<span>Français natif, Anglais B2</span>
 							</div>
 						</li>
 						<li>
@@ -491,7 +512,7 @@
 						<li>
 							<div class="flex items-center gap-2">
 								<iconify-icon icon="octicon:check-16" class="text-lg"></iconify-icon>
-								<span>Sport</span>
+								<span>Sport (corde à sauter, muscul.)</span>
 							</div>
 						</li>
 						<li>
@@ -652,12 +673,13 @@
 						<div class="dui-timeline-start mb-5 md:text-end">
 							<time class="font-mono italic">2022 - Aujourd'hui</time>
 							<div class="text-lg font-black mb-1">Ingénieur études et développement - Sopra Steria Pau</div>
-							Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria, un poste qui me permet de poursuivre sur la
-							lancée de mon stage en utilisant quotidiennement Python, AWS, Terraform, mais aussi .NET C#, PLSQL et plus encore. Mon
-							sérieux et mon efficacité m'ont valu la confiance de plusieurs acteurs, me permettant d'assumer le rôle de responsable
-							technique sur le projet d'un client majeur. Cette mission m'a offert de nouvelles opportunités, y compris la gestion de la
-							relation client, des responsabilités accrues et de nouveaux défis stimulants, me permettant de continuer à développer mes
-							compétences.
+							Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria. J’y utilise quotidiennement des technologies
+							telles que Python, AWS et Terraform, mais également .NET C#, PL/SQL et d’autres outils selon les projets. Mon sérieux et
+							mon efficacité m’ont rapidement valu la confiance de plusieurs acteurs, me permettant d’assumer le rôle de responsable
+							technique sur le projet d’un client majeur. Cette mission m’a offert l’opportunité de prendre davantage de
+							responsabilités, notamment dans la gestion de la relation client, tout en relevant de nouveaux défis techniques
+							stimulants. Ces expériences m’ont permis de développer bien plus que des compétences techniques, en renforçant également
+							ma capacité à piloter un projet, à collaborer avec les équipes et à évoluer dans un environnement agile exigeant.
 						</div>
 					</li>
 				</ul>
