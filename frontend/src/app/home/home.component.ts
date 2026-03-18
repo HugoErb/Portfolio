@@ -65,6 +65,8 @@ export class HomeComponent {
 	emailMail: string = '';
 	phoneNumberMail: string = '';
 	messageMail: string = '';
+	aimDisplayDownloadUrl: string = 'assets/aim-display/Aim-Display-Setup-1.0.4.exe';
+	aimDisplayFilename: string = 'Aim-Display-Setup-1.0.4.exe';
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -107,6 +109,7 @@ export class HomeComponent {
 		this.loadAssets('projects');
 		this.loadAssets('technos');
 		this.loadAssets('certifs');
+		this.loadAimDisplayVersion();
 		this.updateItemsPerPage();
 		this.yearsExperience = this.calculateExperience();
 
@@ -350,5 +353,23 @@ export class HomeComponent {
 		}
 
 		return years;
+	}
+
+	/**
+	 * Charge la version actuelle d'Aim Display depuis le fichier latest.yml.
+	 */
+	private loadAimDisplayVersion(): void {
+		this.http.get('assets/aim-display/latest.yml', { responseType: 'text' }).subscribe({
+			next: (data) => {
+				const pathMatch = data.match(/path:\s*(.*)/);
+				if (pathMatch && pathMatch[1]) {
+					this.aimDisplayFilename = pathMatch[1].trim();
+					this.aimDisplayDownloadUrl = `assets/aim-display/${this.aimDisplayFilename}`;
+				}
+			},
+			error: (err) => {
+				console.error("Erreur lors de la récupération de la version d'Aim Display", err);
+			},
+		});
 	}
 }
