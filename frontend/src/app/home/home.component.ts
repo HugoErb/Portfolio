@@ -56,8 +56,6 @@ export class HomeComponent {
 	burgerMenuOpened: boolean = false;
 	yearsExperience: number = 4;
 
-	@ViewChild(PageNavigationButtonComponent) pageNavigation!: PageNavigationButtonComponent;
-
 	// Variables pour le mail
 	@ViewChildren('inputField') inputFields!: QueryList<ElementRef>;
 	public inputLabelMap = new Map<string, string>();
@@ -271,9 +269,12 @@ export class HomeComponent {
 			projects: '../../assets/data/projects.json',
 		}[type];
 
-		this.http.get<any>(filePath).subscribe((data) => {
-			this.elementsConfig[type].items = data[type];
-			this.updateVisibleElements(type);
+		this.http.get<any>(filePath).subscribe({
+			next: (data) => {
+				this.elementsConfig[type].items = data[type];
+				this.updateVisibleElements(type);
+			},
+			error: (err) => console.error(`Erreur lors du chargement de ${type} :`, err),
 		});
 	}
 

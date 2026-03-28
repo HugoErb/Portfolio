@@ -1,10 +1,9 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
-    selector: 'app-legal-infos',
+    selector: 'app-legal-information',
     standalone: true,
     imports: [CommonModule],
     templateUrl: './legal-information.component.html',
@@ -12,7 +11,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class LegalInformationComponent {
 
-    constructor(private router: Router) {
+    constructor(private readonly router: Router) {
     }
 
     burgerMenuOpened: boolean = false;
@@ -26,7 +25,6 @@ export class LegalInformationComponent {
     * 
     * @param event L'objet MouseEvent associé au clic du document.
     */
-    @ViewChild('menuContainerRef') menuContainerRef!: ElementRef;
     @ViewChild('menuBurger') menuBurger!: ElementRef;
     @HostListener('document:click', ['$event'])
     onClickOutside(event: MouseEvent) {

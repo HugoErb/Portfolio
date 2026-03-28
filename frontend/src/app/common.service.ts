@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MailService } from './mail.service';
 import Swal from 'sweetalert2';
-import axios from 'axios';
 
 // Définition de l'interface pour la réponse de l'API de MailCheck.ai
 interface EmailValidityResponse {
@@ -181,18 +180,20 @@ export class CommonService {
     async checkEmailValidity(email: string): Promise<boolean> {
         const url = `https://api.mailcheck.ai/email/${email}`;
         try {
-            const response = await axios.get<EmailValidityResponse>(url);
+            const response = await fetch(url);
+            if (!response.ok) {
+                console.error(`Impossible de vérifier l'email : HTTP ${response.status}`);
+                return false;
+            }
+            const data: EmailValidityResponse = await response.json();
             // Retourne false si l'email est jetable ou si mx est false
-            if (response.data.disposable || !response.data.mx) {
+            if (data.disposable || !data.mx) {
                 return false;
             }
             return true;
-        } catch (error) {
-            if (axios.isAxiosError(error)) {
-                console.error(`Impossible de vérifier l'email : ${error.message}`);
-            } else {
-                console.error('Erreur inattendue lors de la vérification de l\email.');
-            }
+        } catch (error: unknown) {
+            const message = error instanceof Error ? error.message : String(error);
+            console.error(`Erreur inattendue lors de la vérification de l'email : ${message}`);
             return false;
         }
     }
