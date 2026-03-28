@@ -5,10 +5,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
     selector: 'app-technology',
-    standalone: true,
     templateUrl: './technology.component.html',
     imports: [CommonModule],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class TechnologyComponent {
     constructor(protected commonService: CommonService) { }

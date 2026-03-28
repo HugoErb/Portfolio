@@ -31,19 +31,18 @@ interface Project {
 }
 
 @Component({
-	selector: 'app-home',
-	standalone: true,
-	imports: [
-		CommonModule,
-		FormsModule,
-		TechnologyComponent,
-		CertificationComponent,
-		ProjectComponent,
-		PageNavigationButtonComponent,
-		SvgPageNavigationButtonComponent,
-	],
-	templateUrl: './home.component.html',
-	schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-home',
+    imports: [
+        CommonModule,
+        FormsModule,
+        TechnologyComponent,
+        CertificationComponent,
+        ProjectComponent,
+        PageNavigationButtonComponent,
+        SvgPageNavigationButtonComponent,
+    ],
+    templateUrl: './home.component.html',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeComponent {
 	constructor(
