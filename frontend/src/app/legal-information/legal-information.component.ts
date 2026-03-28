@@ -1,10 +1,10 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-legal-information',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './legal-information.component.html',
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
