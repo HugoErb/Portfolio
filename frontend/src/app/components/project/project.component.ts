@@ -4,7 +4,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
     selector: 'app-project',
-    standalone: true,
     imports: [CommonModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './project.component.html'

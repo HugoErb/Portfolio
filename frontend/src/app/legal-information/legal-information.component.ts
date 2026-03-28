@@ -4,10 +4,9 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-legal-information',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './legal-information.component.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LegalInformationComponent {
 

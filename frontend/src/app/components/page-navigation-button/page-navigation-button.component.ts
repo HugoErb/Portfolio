@@ -4,9 +4,8 @@ import { SvgPageNavigationButtonComponent } from '../svg-page-navigation-button/
 
 @Component({
     selector: 'app-page-navigation-button',
-    standalone: true,
     imports: [CommonModule, SvgPageNavigationButtonComponent],
-    templateUrl: './page-navigation-button.component.html',
+    templateUrl: './page-navigation-button.component.html'
 })
 export class PageNavigationButtonComponent {
 
