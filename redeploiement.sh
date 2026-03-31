@@ -3,7 +3,7 @@
 # Charger NVM et rendre npm/pm2 disponibles dans un contexte systemd
 export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"
+export PATH="$NVM_DIR/versions/node/$(nvm version default)/bin:$PATH"
 
 # Sortie console + fichier log
 exec > >(tee -a /home/ubuntu/Portfolio/redeploy.log) 2>&1
@@ -36,8 +36,11 @@ rm -rf "$dossierDistRacine"
 rm -rf "$dossierRacine/frontend/dist"
 
 # Build frontend
-echo "Lancement du build frontend..."
+echo "Installation des dépendances..."
 cd frontend || exit 1
+$NPM_CMD install
+
+echo "Lancement du build frontend..."
 $NPM_CMD run build
 
 # Copier le build
