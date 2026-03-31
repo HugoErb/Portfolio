@@ -3,6 +3,7 @@
 # Charger NVM et rendre npm/pm2 disponibles dans un contexte systemd
 export NVM_DIR="/home/ubuntu/.nvm"
 export PATH="$NVM_DIR/versions/node/v22.22.2/bin:$PATH"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Sortie console + fichier log
 exec > >(tee -a /home/ubuntu/Portfolio/redeploy.log) 2>&1
