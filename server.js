@@ -78,7 +78,7 @@ app.post('/send-mail', async (req, res) => {
 
 // Service des fichiers statiques du frontend en production
 if (process.env.NODE_ENV !== 'dev') {
-    const distDir = __dirname + '/dist/';
+    const distDir = __dirname + "/dist/portfolio/";
     app.use(express.static(distDir));                // Sert les fichiers du dossier dist/
     app.get('*', (req, res) => {
         res.sendFile(distDir + 'index.html');          // Route toutes les requêtes vers index.html pour Angular
