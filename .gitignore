@@ -3,3 +3,4 @@ prod/
 .env
 /dist
 redeploy.log
+frontend/src/assets/aim-display/
