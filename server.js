@@ -3,6 +3,7 @@ require('dotenv').config();
 
 // Importation des modules nécessaires
 const express = require('express');               // Framework web pour gérer les requêtes HTTP
+const path = require('path');                     // Utilitaires de chemins compatibles avec l'OS
 const sgMail = require('@sendgrid/mail');         // SDK SendGrid pour l'envoi d'e-mails
 const cors = require('cors');                     // Middleware pour gérer les CORS
 const rateLimit = require('express-rate-limit');  // Middleware pour limiter le nombre de requêtes
@@ -78,10 +79,27 @@ app.post('/send-mail', async (req, res) => {
 
 // Service des fichiers statiques du frontend en production
 if (process.env.NODE_ENV !== 'dev') {
-    const distDir = __dirname + "/dist/browser/";
-    app.use(express.static(distDir));                // Sert les fichiers du dossier dist/
+    const distDir = path.join(__dirname, 'dist', 'browser');
+
+    const sendPage = (page) => (req, res) => {
+        res.setHeader('Cache-Control', 'no-cache');
+        res.sendFile(path.join(distDir, page, 'index.html'));
+    };
+
+    app.get('/home', sendPage('home'));
+    app.get('/legal-information', sendPage('legal-information'));
+
+    app.use(express.static(distDir, {
+        setHeaders: (res, filePath) => {
+            if (/-[A-Z0-9]{8}\.(?:js|css)$/.test(filePath)) {
+                res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+            }
+        }
+    }));
+
     app.get('*', (req, res) => {
-        res.sendFile(distDir + 'index.html');          // Route toutes les requêtes vers index.html pour Angular
+        res.setHeader('Cache-Control', 'no-cache');
+        res.sendFile(path.join(distDir, 'index.html'));
     });
 }
 

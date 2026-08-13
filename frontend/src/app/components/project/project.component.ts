@@ -8,6 +8,7 @@ import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class ProjectComponent {
     @Input() imgPath: string = '';
+    @Input() srcSet: string = '';
     @Input() name: string = '';
     @Input() description: string = '';
     @Input() link: string = '';

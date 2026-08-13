@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MailService } from './mail.service';
-import Swal from 'sweetalert2';
+import type { SweetAlertOptions } from 'sweetalert2';
 
 // Définition de l'interface pour la réponse de l'API de MailCheck.ai
 interface EmailValidityResponse {
@@ -78,7 +78,7 @@ export class CommonService {
         return new Promise((resolve, reject) => {
             this.mailService.sendMail(mailData).subscribe({
                 next: (response) => {
-                    Swal.fire({
+                    void this.showAlert({
                         position: 'top-end',
                         toast: true,
                         icon: 'success',
@@ -90,7 +90,7 @@ export class CommonService {
                     resolve(true);
                 },
                 error: (error) => {
-                    Swal.fire({
+                    void this.showAlert({
                         position: 'top-end',
                         toast: true,
                         icon: 'error',
@@ -161,12 +161,17 @@ export class CommonService {
     * @param message Le message à afficher dans l'alerte.
     */
     private showValidationError(message: string): void {
-        Swal.fire({
+        void this.showAlert({
             icon: 'error',
             title: 'Erreur de saisie',
             text: message,
             confirmButtonColor: "#3B82F6"
         });
+    }
+
+    private async showAlert(options: SweetAlertOptions): Promise<void> {
+        const { default: Swal } = await import('sweetalert2');
+        await Swal.fire(options);
     }
 
     /**

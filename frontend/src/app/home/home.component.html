@@ -120,7 +120,17 @@
           <div
             class="absolute flex items-center justify-center rounded-full bg-gray-200 h-[350px] w-[350px] lg:h-[400px] lg:w-[400px] xl:h-[550px] xl:w-[550px] -z-10"
           ></div>
-          <img src="../../assets/imgs/dev.webp" width="550" height="550" alt="Hero" class="z-10 w-[350px] lg:w-[550px]" />
+          <img
+            src="../../assets/imgs/dev.webp"
+            srcset="../../assets/imgs/dev-700.webp 700w, ../../assets/imgs/dev.webp 1024w"
+            sizes="(max-width: 1024px) 350px, 550px"
+            width="550"
+            height="550"
+            alt="Hero"
+            fetchpriority="high"
+            decoding="async"
+            class="z-10 w-[350px] lg:w-[550px]"
+          />
         </div>
       </div>
     </div>
@@ -131,7 +141,7 @@
       <div class="flex flex-col items-center justify-center space-y-4 text-center">
         <div class="space-y-2">
           <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">Mes projets personnels</h2>
-          <p class="max-w-[800px] text-gray-500 text-xl">Découvrez mes réalisations personnelles à travers quelques-uns de mes projets.</p>
+          <p class="max-w-[800px] text-[#6a707f] text-xl">Découvrez mes réalisations personnelles à travers quelques-uns de mes projets.</p>
         </div>
       </div>
 
@@ -149,6 +159,7 @@
           @for (project of elementsConfig.projects.visibleItems; track project) {
             <app-project
               [imgPath]="project.imgPath"
+              [srcSet]="project.srcSet ?? ''"
               [name]="project.name"
               [description]="project.description"
               [link]="project.link"
@@ -355,7 +366,12 @@
         class="grid grid-cols-3 overflow-hidden"
         >
         @for (certif of elementsConfig.certifs.visibleItems; track certif) {
-          <app-certification [imgPath]="certif.imgPath" [label]="certif.label" [link]="certif.link"></app-certification>
+          <app-certification
+            [imgPath]="certif.imgPath"
+            [srcSet]="certif.srcSet ?? ''"
+            [label]="certif.label"
+            [link]="certif.link"
+          ></app-certification>
         }
       </div>
 
@@ -539,7 +555,7 @@
     <div class="flex flex-col items-center justify-center space-y-4 text-center">
       <div class="space-y-2">
         <h2 class="text-4xl font-bold tracking-tighter sm:text-5xl">Mon parcours</h2>
-        <p class="max-w-[800px] text-gray-500 text-xl">
+        <p class="max-w-[800px] text-[#6a707f] text-xl">
           Voici une frise chronologique illustrant mon parcours et les moments marquants de ma carrière.
         </p>
       </div>
@@ -745,7 +761,7 @@
                         </div>
                         <button
                           (click)="sendMail()"
-                          aria-label="Envoyer un mail"
+                          aria-label="Envoyer le message"
                           class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-800 text-white hover:bg-gray-600"
                           >
                           Envoyer le message

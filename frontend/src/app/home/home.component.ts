@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
@@ -18,12 +18,14 @@ interface Technology {
 
 interface Certification {
     imgPath: string;
+    srcSet?: string;
     label: string;
     link: string;
 }
 
 interface Project {
     imgPath: string;
+    srcSet?: string;
     name: string;
     description: string;
     link: string;
@@ -44,6 +46,8 @@ interface Project {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeComponent {
+	private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
 	constructor(
 		private router: Router,
 		private activatedRoute: ActivatedRoute,
@@ -102,25 +106,19 @@ export class HomeComponent {
 	};
 
 	ngOnInit() {
-		this.loadAssets('projects');
-		this.loadAssets('technos');
-		this.loadAssets('certifs');
-		this.loadAimDisplayVersion();
-		this.updateItemsPerPage();
 		this.yearsExperience = this.calculateExperience();
 
-		// On récupère le nom de la formation de la page home
-		if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
-			this.scrollToSection(this.activatedRoute.snapshot.params['redirectionSection']);
-		}
-
-		// Écoute l'événement popstate pour détecter un retour à la page via le bouton "Précédent"
-		window.addEventListener('popstate', () => {
+		if (this.isBrowser) {
 			this.loadAssets('projects');
 			this.loadAssets('technos');
 			this.loadAssets('certifs');
+			this.loadAimDisplayVersion();
 			this.updateItemsPerPage();
-		});
+
+			if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
+				this.scrollToSection(this.activatedRoute.snapshot.params['redirectionSection']);
+			}
+		}
 	}
 
 	/**
