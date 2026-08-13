@@ -1,14 +1,11 @@
-import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-certification',
     templateUrl: './certification.component.html',
-    imports: [],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    imports: []
 })
 export class CertificationComponent {
-    constructor() { }
-
     @Input() imgPath: string = '';
     @Input() srcSet: string = '';
     @Input() label: string = '';

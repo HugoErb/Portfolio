@@ -99,8 +99,6 @@
           ></div>
           <img
             src="../../assets/imgs/dev.webp"
-            srcset="../../assets/imgs/dev-700.webp 700w, ../../assets/imgs/dev.webp 1024w"
-            sizes="(max-width: 1024px) 350px, 550px"
             width="550"
             height="550"
             alt="Illustration d’un développeur devant son ordinateur"
@@ -400,31 +398,41 @@
         <ul class="mt-5 space-y-3 text-sm text-gray-600 sm:text-base">
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="ion:location-sharp" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 512 512" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144m0 224a64 64 0 1 1 64-64a64.07 64.07 0 0 1-64 64" />
+              </svg>
               <span>Pau, France</span>
             </div>
           </li>
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="f7:text-bubble-fill" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 56 56" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M16.094 52.316c.937 0 1.594-.468 2.695-1.5l8.484-7.734l15.82.023c6.985.024 10.735-3.867 10.735-10.734V14.418c0-6.867-3.75-10.734-10.734-10.734H12.906c-6.96 0-10.734 3.843-10.734 10.734v17.953c0 6.89 3.773 10.734 10.734 10.711h1.102v6.82c0 1.453.773 2.414 2.086 2.414M14.898 16.81c-.843 0-1.5-.657-1.5-1.524c0-.773.657-1.453 1.5-1.453h26.227c.82 0 1.5.68 1.5 1.453a1.5 1.5 0 0 1-1.5 1.524Zm0 8.39a1.48 1.48 0 0 1-1.5-1.5a1.49 1.49 0 0 1 1.5-1.476h26.227c.82 0 1.5.68 1.5 1.476c0 .844-.68 1.5-1.5 1.5Zm0 8.414c-.843 0-1.5-.68-1.5-1.5c0-.867.657-1.5 1.5-1.5h17.063c.797 0 1.477.633 1.477 1.5c0 .82-.68 1.5-1.477 1.5Z" />
+              </svg>
               <span>Français natif, Anglais B2</span>
             </div>
           </li>
           <li>
             <button type="button" class="site-focus flex items-center gap-2 rounded-sm text-left hover:text-gray-950" (click)="scrollToSection('contact')">
-              <iconify-icon icon="ic:round-mail" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-6.54 4.09c-.65.41-1.47.41-2.12 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44" />
+              </svg>
               <span class="underline-animation">eribon.hugo&#64;gmail.com</span>
             </button>
           </li>
           <li>
             <a href="https://linkedin.com/in/hugo-eribon" target="_blank" rel="noopener noreferrer" class="site-focus flex items-center gap-2 rounded-sm hover:text-gray-950">
-              <iconify-icon icon="jam:linkedin" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M19.959 11.719v7.379h-4.278v-6.885c0-1.73-.619-2.91-2.167-2.91c-1.182 0-1.886.796-2.195 1.565c-.113.275-.142.658-.142 1.043v7.187h-4.28s.058-11.66 0-12.869h4.28v1.824l-.028.042h.028v-.042c.568-.875 1.583-2.126 3.856-2.126c2.815 0 4.926 1.84 4.926 5.792M2.421.026C.958.026 0 .986 0 2.249c0 1.235.93 2.224 2.365 2.224h.028c1.493 0 2.42-.989 2.42-2.224C4.787.986 3.887.026 2.422.026zM.254 19.098h4.278V6.229H.254z" />
+              </svg>
               <span class="underline-animation">linkedin.com/hugo-eribon</span>
             </a>
           </li>
           <li>
             <a href="https://github.com/HugoErb" target="_blank" rel="noopener noreferrer" class="site-focus flex items-center gap-2 rounded-sm hover:text-gray-950">
-              <iconify-icon icon="eva:github-fill" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
+              </svg>
               <span class="underline-animation">github.com/HugoErb</span>
             </a>
           </li>
@@ -435,31 +443,41 @@
         <ul class="mt-5 space-y-3 text-sm text-gray-600 sm:text-base">
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="octicon:check-16" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042a.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0" />
+              </svg>
               <span>Informatique (développement, IA...)</span>
             </div>
           </li>
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="octicon:check-16" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042a.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0" />
+              </svg>
               <span>Jeux Vidéo</span>
             </div>
           </li>
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="octicon:check-16" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042a.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0" />
+              </svg>
               <span>Sport (corde à sauter, muscul.)</span>
             </div>
           </li>
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="octicon:check-16" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042a.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0" />
+              </svg>
               <span>Poker</span>
             </div>
           </li>
           <li>
             <div class="flex items-center gap-2">
-              <iconify-icon icon="octicon:check-16" class="text-lg text-gray-700" aria-hidden="true"></iconify-icon>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
+                <path fill="currentColor" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042a.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0" />
+              </svg>
               <span>Animaux</span>
             </div>
           </li>
@@ -492,8 +510,8 @@
               </svg>
             </div>
             <div class="dui-timeline-start">
-              <time>2019</time>
-              <div class="mb-2 text-lg font-bold leading-snug text-gray-900">
+              <time>2018 - 2019</time>
+              <div class="text-lg font-bold leading-snug text-gray-900">
                 <a
                   href="https://www.lycee-saint-john-perse.fr/bts-services-informatiques-aux-orga"
                   target="_blank"
@@ -502,8 +520,8 @@
                   >
                   BTS SIO SLAM
                 </a>
-                - Pau, Lycée Saint John Perse
               </div>
+              <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Pau, Lycée Saint John Perse</div>
               Le BTS Services Informatiques aux Organisations, spécialité SLAM (Solutions Logicielles et Applications Métiers) est un
               diplôme de niveau Bac+2 qui forme les étudiants à concevoir, développer et maintenir des applications informatiques, tout
               en assurant leur cybersécurité. La formation couvre également des compétences transversales telles que la gestion de
@@ -523,8 +541,8 @@
                 </svg>
               </div>
               <div class="dui-timeline-end">
-                <time>2020</time>
-                <div class="mb-2 text-lg font-bold leading-snug text-gray-900">
+                <time>2019 - 2020</time>
+                <div class="text-lg font-bold leading-snug text-gray-900">
                   <a
                     href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ/l1-l2-et-l3-parcours-informatique-L3VEOQMB.html"
                     target="_blank"
@@ -533,8 +551,8 @@
                     >
                     Licence informatique
                   </a>
-                  - Université de Pau et des Pays de l'Adour
                 </div>
+                <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Université de Pau et des Pays de l'Adour</div>
                 La Licence d'Informatique Générale est un diplôme de niveau Bac+3 qui offre une formation complète en informatique,
                 couvrant des domaines tels que l'algorithmique, la programmation, les systèmes d'exploitation, les bases de données, et la
                 sécurité informatique. Ce programme inclut des cours théoriques et pratiques, et permet aux étudiants d'acquérir les
@@ -555,8 +573,8 @@
                   </svg>
                 </div>
                 <div class="dui-timeline-start">
-                  <time>2022</time>
-                  <div class="mb-2 text-lg font-bold leading-snug text-gray-900">
+                  <time>2020 - 2022</time>
+                  <div class="text-lg font-bold leading-snug text-gray-900">
                     <a
                       href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/master-XB/master-mention-informatique-L3Y98DNU/parcours-technologies-de-l-internet-L3Y98T3K.html"
                       target="_blank"
@@ -565,8 +583,8 @@
                       >
                       Master Technologies de l'internet
                     </a>
-                    - UPPA
                   </div>
+                  <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Université de Pau et des Pays de l'Adour</div>
                   Le Master Technologies de l'internet est une formation de niveau Bac+5 qui se concentre sur le génie logiciel et les
                   systèmes distribués. Ce programme vise à former des ingénieurs capables de concevoir, développer et gérer des applications
                   modernes, en utilisant les technologies les plus récentes de l'internet. Les étudiants acquièrent des compétences en
@@ -588,8 +606,9 @@
                     </svg>
                   </div>
                   <div class="dui-timeline-end">
-                    <time>2022</time>
-                    <div class="mb-2 text-lg font-bold leading-snug text-gray-900">Ingénieur stagiaire - Sopra Steria Pau</div>
+                    <time>2022 — Stage de fin d’études</time>
+                    <div class="text-lg font-bold leading-snug text-gray-900">Ingénieur stagiaire</div>
+                    <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Sopra Steria Pau</div>
                     Dans le cadre de mon Master, j'ai eu l'opportunité d'intégrer Sopra Steria en tant qu'ingénieur stagiaire. J'ai participé
                     à un projet ambitieux de refonte d'un module de calcul, utilisant principalement Python, Amazon Web Services et Terraform.
                     Cette expérience m'a permis de mettre en pratique mes compétences en développement et en infrastructure cloud, tout en
@@ -610,15 +629,35 @@
                       </svg>
                     </div>
                     <div class="dui-timeline-start">
-                      <time>2022 - Aujourd'hui</time>
-                      <div class="mb-2 text-lg font-bold leading-snug text-gray-900">Ingénieur études et développement - Sopra Steria Pau</div>
-                      Actuellement, je suis Ingénieur Études et Développement chez Sopra Steria. J’y utilise quotidiennement des technologies
-                      telles que Python, AWS et Terraform, mais également .NET C#, PL/SQL et d’autres outils selon les projets. Mon sérieux et
-                      mon efficacité m’ont rapidement valu la confiance de plusieurs acteurs, me permettant d’assumer le rôle de responsable
-                      technique sur le projet d’un client majeur. Cette mission m’a offert l’opportunité de prendre davantage de
-                      responsabilités, notamment dans la gestion de la relation client, tout en relevant de nouveaux défis techniques
-                      stimulants. Ces expériences m’ont permis de développer bien plus que des compétences techniques, en renforçant également
-                      ma capacité à piloter un projet, à collaborer avec les équipes et à évoluer dans un environnement agile exigeant.
+                      <time>2022 - 2025</time>
+                      <div class="text-lg font-bold leading-snug text-gray-900">Ingénieur études et développement</div>
+                      <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Sopra Steria Pau</div>
+                      De 2022 à 2025, j’ai exercé en tant qu’Ingénieur Études et Développement chez Sopra Steria. J’y ai utilisé quotidiennement
+                      des technologies telles que Python, AWS et Terraform, mais également .NET C#, PL/SQL et d’autres outils selon les projets.
+                      Cette expérience m’a permis de consolider mes compétences techniques, de collaborer avec différentes équipes et d’évoluer
+                      dans un environnement agile exigeant.
+                    </div>
+                    <hr />
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="dui-timeline-middle">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6 text-gray-700" aria-hidden="true">
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div class="dui-timeline-end">
+                      <time>2025 - Aujourd’hui</time>
+                      <div class="text-lg font-bold leading-snug text-gray-900">Responsable technique &amp; Tech Lead</div>
+                      <div class="mb-3 border-b border-gray-100 pb-3 text-sm font-medium text-gray-500">Sopra Steria Pau</div>
+                      Responsable technique depuis 2025 et Tech Lead depuis 2026, je suis toujours Ingénieur Études et Développement chez Sopra Steria.
+                      J’encadre une équipe de plusieurs développeurs et assume davantage de responsabilités, notamment la prise de décisions
+                      techniques, le pilotage des travaux ainsi que le management et l’accompagnement des développeurs. Je conçois et anime
+                      également des formations techniques, notamment autour de l’intelligence artificielle et de Python.
                     </div>
                   </li>
                 </ul>

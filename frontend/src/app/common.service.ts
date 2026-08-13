@@ -60,7 +60,7 @@ export class CommonService {
 
         return new Promise((resolve) => {
             this.mailService.sendMail(mailData).subscribe({
-                next: (response) => {
+                next: () => {
                     void this.showAlert({
                         position: 'top-end',
                         toast: true,

@@ -1,9 +1,8 @@
-import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-project',
     imports: [],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
     templateUrl: './project.component.html'
 })
 export class ProjectComponent {
