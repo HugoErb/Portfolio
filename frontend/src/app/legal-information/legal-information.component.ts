@@ -1,12 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
     selector: 'app-legal-information',
     imports: [],
-    templateUrl: './legal-information.component.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: './legal-information.component.html'
 })
 export class LegalInformationComponent {
 

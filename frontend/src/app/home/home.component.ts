@@ -1,6 +1,6 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { TechnologyComponent } from '../components/technology/technology.component';
@@ -42,14 +42,12 @@ interface Project {
         PageNavigationButtonComponent,
         SvgPageNavigationButtonComponent,
     ],
-    templateUrl: './home.component.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: './home.component.html'
 })
 export class HomeComponent {
 	private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
 	constructor(
-		private router: Router,
 		private activatedRoute: ActivatedRoute,
 		private http: HttpClient,
 		private changeDetectorRef: ChangeDetectorRef,
@@ -126,8 +124,8 @@ export class HomeComponent {
 	 *
 	 * @param event - L'événement de redimensionnement de la fenêtre.
 	 */
-	@HostListener('window:resize', ['$event'])
-	onResize(event: Event) {
+	@HostListener('window:resize')
+	onResize() {
 		this.updateItemsPerPage();
 	}
 
@@ -149,17 +147,6 @@ export class HomeComponent {
 	}
 
 	/**
-	 * Navigue vers un composant spécifié.
-	 *
-	 * @param {string} component - Le nom du composant vers lequel naviguer.
-	 */
-	navigateTo(component: string) {
-		this.router.navigate([component]).then(() => {
-			window.scrollTo(0, 0);
-		});
-	}
-
-	/**
 	 * Gère les clics à l'extérieur du menu burger pour fermer le menu.
 	 *
 	 * Cette méthode est déclenchée par un écouteur d'événements qui surveille tous les clics dans le document.
@@ -168,7 +155,6 @@ export class HomeComponent {
 	 *
 	 * @param event L'objet MouseEvent associé au clic du document.
 	 */
-	@ViewChild('menuContainerRef') menuContainerRef!: ElementRef;
 	@ViewChild('menuBurger') menuBurger!: ElementRef;
 	@HostListener('document:click', ['$event'])
 	onClickOutside(event: MouseEvent) {

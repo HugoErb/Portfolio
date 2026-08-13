@@ -21,7 +21,8 @@
 			"link": "https://github.com/HugoErb/TikTok-Live-Project"
 		},
 		{
-			"imgPath": "../../assets/imgs/projects/agile.webp",
+			"imgPath": "../../assets/imgs/projects/agile-v2.webp",
+			"srcSet": "../../assets/imgs/projects/agile-v2-480.webp 480w, ../../assets/imgs/projects/agile-v2-720.webp 720w, ../../assets/imgs/projects/agile-v2-960.webp 960w",
 			"name": "Prédicteur de vélocité par sprint",
 			"description": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
 			"link": "https://github.com/HugoErb/VelocityPredictor"
