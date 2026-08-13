@@ -7,11 +7,13 @@
 		},
 		{
 			"imgPath": "../../assets/imgs/certifications/pcap.webp",
+			"srcSet": "../../assets/imgs/certifications/pcap-160.webp 160w, ../../assets/imgs/certifications/pcap-240.webp 240w",
 			"label": "Certified Associate Python Programmer",
 			"link": "https://pythoninstitute.org/pcap"
 		},
 		{
 			"imgPath": "../../assets/imgs/certifications/pcep.webp",
+			"srcSet": "../../assets/imgs/certifications/pcep-160.webp 160w, ../../assets/imgs/certifications/pcep-240.webp 240w",
 			"label": "Certified Entry-Level Python Programmer",
 			"link": "https://pythoninstitute.org/pcep"
 		},

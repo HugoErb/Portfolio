@@ -1,0 +1,7 @@
+# Portfolio de Hugo Eribon
+
+Portfolio professionnel de Hugo Eribon, ingénieur études et développement.
+
+- [Accueil](https://hugoeribon.fr/home)
+- [Mentions légales](https://hugoeribon.fr/legal-information)
+- [Plan du site](https://hugoeribon.fr/sitemap.xml)

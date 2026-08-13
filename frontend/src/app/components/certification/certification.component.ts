@@ -10,6 +10,7 @@ export class CertificationComponent {
     constructor() { }
 
     @Input() imgPath: string = '';
+    @Input() srcSet: string = '';
     @Input() label: string = '';
     @Input() link: string = '';
 }

@@ -2,12 +2,14 @@
     "projects": [
 		{
 			"imgPath": "../../assets/imgs/projects/poker.webp",
+			"srcSet": "../../assets/imgs/projects/poker-480.webp 480w, ../../assets/imgs/projects/poker-720.webp 720w, ../../assets/imgs/projects/poker-960.webp 960w",
 			"name": "Poker HL",
 			"description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
 			"link": "https://github.com/lucasbaylon/PokerHL"
 		},
 		{
 			"imgPath": "../../assets/imgs/projects/aimdisplay.webp",
+			"srcSet": "../../assets/imgs/projects/aimdisplay-480.webp 480w, ../../assets/imgs/projects/aimdisplay-720.webp 720w, ../../assets/imgs/projects/aimdisplay-960.webp 960w",
 			"name": "Aim Display",
 			"description": "Mon plus gros projet Angular Typescript et Electron : gestion intuitive de compétitions de tir sportif.",
 			"link": "https://github.com/HugoErb/AimDisplay"
