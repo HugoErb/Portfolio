@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { MailService } from './mail.service';
 import type { SweetAlertOptions } from 'sweetalert2';
 
@@ -57,7 +58,7 @@ export class CommonService {
 
         const mailData = this.createMailData(inputLabelMap);
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             this.mailService.sendMail(mailData).subscribe({
                 next: (response) => {
                     void this.showAlert({
@@ -71,20 +72,42 @@ export class CommonService {
                     });
                     resolve(true);
                 },
-                error: (error) => {
+                error: (error: HttpErrorResponse) => {
+                    const errorMessage = this.getMailErrorMessage(error);
                     void this.showAlert({
                         position: 'top-end',
                         toast: true,
                         icon: 'error',
-                        html: '<span class="font-medium text-xl">Erreur lors de l\'envoi du message.</span>',
+                        title: "Échec de l'envoi",
+                        text: errorMessage,
                         showConfirmButton: false,
                         width: 'auto',
-                        timer: 3500
+                        timer: 7000
                     });
-                    reject(false);
+                    resolve(false);
                 }
             });
         });
+    }
+
+    private getMailErrorMessage(error: HttpErrorResponse): string {
+        if (error.status === 0) {
+            return "Le serveur d'envoi est injoignable. Vérifiez votre connexion ou réessayez plus tard.";
+        }
+
+        const apiError = typeof error.error === 'string'
+            ? error.error
+            : error.error?.error;
+
+        if (typeof apiError === 'string' && apiError.trim()) {
+            return apiError;
+        }
+
+        if (error.status === 429) {
+            return "Trop de tentatives d'envoi. Veuillez réessayer plus tard.";
+        }
+
+        return `Le serveur n'a pas pu envoyer le message (erreur ${error.status || 'inconnue'}).`;
     }
 
 

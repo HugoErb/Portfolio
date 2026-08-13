@@ -55,6 +55,7 @@ module.exports = {
             },
             animation: {
                 appear: 'appear 0.4s ease-out forwards',
+                mobileMenuAppear: 'appear 0.3s ease-out forwards',
                 swipeLeftOut: 'swipeLeftOut 0.20s ease forwards',
                 swipeRightOut: 'swipeRightOut 0.20s ease forwards',
                 swipeLeftIn: 'swipeLeftIn 0.20s ease forwards',
