@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -10,10 +10,14 @@ import { Router } from '@angular/router';
 })
 export class LegalInformationComponent {
 
-    constructor(private readonly router: Router) {
+    constructor(
+        private readonly router: Router,
+        private readonly activatedRoute: ActivatedRoute,
+    ) {
     }
 
     burgerMenuOpened: boolean = false;
+    protected readonly personalDataOpened = this.activatedRoute.snapshot.fragment === 'personal-data';
 
     /**
     * Gère les clics à l'extérieur du menu burger pour fermer le menu.

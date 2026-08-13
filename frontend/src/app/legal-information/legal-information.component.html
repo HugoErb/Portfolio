@@ -44,393 +44,149 @@
     <div class="mx-auto mb-10 max-w-3xl space-y-4 text-center sm:mb-14">
       <h1 class="site-heading">Mentions légales</h1>
       <p class="site-copy mx-auto max-w-2xl">
-        Retrouvez ici les détails juridiques, les
-        informations obligatoires ou encore les coordonnées du responsable du site.
+        Informations relatives à l’éditeur, à l’hébergement et au traitement des données du site.
       </p>
       <button type="button" class="site-button-secondary !mt-6" (click)="navigateTo('home','landing')">
         Retour à l’accueil
       </button>
     </div>
+
     <div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-      <input type="radio" name="accordion" checked="checked" aria-label="Afficher les définitions" />
-      <div class="dui-collapse-title text-xl font-medium">
-        Définitions
-      </div>
+      <input type="radio" name="accordion" [checked]="!personalDataOpened" aria-label="Afficher l’identification du site" />
+      <div class="dui-collapse-title text-xl font-medium">1. Éditeur et hébergeur</div>
       <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-        <p><b>Client :</b> tout professionnel ou personne physique capable au sens des articles 1123 et suivants
-        du Code civil,
-        ou personne morale, qui visite le Site objet des présentes conditions générales.<br>
-      </p>
-      <p>
-        <b>Prestations et Services : </b> <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>
-        met à disposition
-        des Clients :
-      </p>
+        <p>
+          Conformément à l’article 1-1 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans
+          l’économie numérique, les intervenants du site sont les suivants.
+        </p>
+        <p>
+          <strong>Éditeur</strong> : Hugo Eribon – 64000 Pau, France – eribon.hugo&#64;gmail.com<br>
+          <strong>Directeur de la publication</strong> : Hugo Eribon<br>
+          <strong>Webmaster</strong> : Hugo Eribon – eribon.hugo&#64;gmail.com<br>
+          <strong>Hébergeur</strong> : OVH SAS – 2 rue Kellermann, 59100 Roubaix, France – Téléphone : 1007<br>
+          <strong>Contact pour la protection des données</strong> : Hugo Eribon – eribon.hugo&#64;gmail.com
+        </p>
+      </div>
+    </div>
 
-      <p><b>Contenu :</b> Ensemble des éléments constituants l’information présente sur le Site, notamment
-      textes – images –
-    vidéos.</p>
+    <div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
+      <input type="radio" name="accordion" aria-label="Afficher l’objet du site" />
+      <div class="dui-collapse-title text-xl font-medium">2. Objet du site</div>
+      <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
+        <p>
+          Ce site présente le parcours, les compétences et les projets de Hugo Eribon. Les informations
+          publiées sont fournies à titre informatif et peuvent être mises à jour sans préavis.
+        </p>
+      </div>
+    </div>
 
-    <p><b>Informations clients :</b> Ci après dénommé « Information (s) » qui correspondent à l’ensemble des
-    données
-    personnelles susceptibles d’être détenues par <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> pour
-  la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de
-statistiques.</p>
+    <div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
+      <input type="radio" name="accordion" aria-label="Afficher les informations sur la propriété intellectuelle" />
+      <div class="dui-collapse-title text-xl font-medium">3. Propriété intellectuelle</div>
+      <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
+        <p>
+          La structure du site et les contenus originaux créés par Hugo Eribon sont protégés par le droit
+          de la propriété intellectuelle. Toute reproduction substantielle nécessite son autorisation préalable.
+        </p>
+        <p>
+          Les marques, logos, technologies, certifications et icônes appartenant à des tiers restent la
+          propriété de leurs titulaires respectifs et sont utilisés selon les licences ou droits applicables.
+        </p>
+      </div>
+    </div>
 
+    <div id="personal-data" class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
+      <input type="radio" name="accordion" [checked]="personalDataOpened" aria-label="Afficher les informations sur les données personnelles" />
+      <div class="dui-collapse-title text-xl font-medium">4. Données personnelles</div>
+      <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
+        <p class="font-bold">4.1 Responsable du traitement</p>
+        <p>
+          Le responsable du traitement est Hugo Eribon. Pour toute question concernant vos données
+          personnelles, vous pouvez écrire à eribon.hugo&#64;gmail.com.
+        </p>
 
-<p><b>Utilisateur :</b> Internaute se connectant, utilisant le site susnommé.</p>
-<p><b>Informations personnelles :</b> « Les informations qui permettent, sous quelque forme que ce soit,
-directement ou
-non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi
-n° 78-17 du 6
-janvier 1978).</p>
-<p>Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données
-  sensibles » ont
-le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679)</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher la présentation du site internet" />
-  <div class="dui-collapse-title text-xl font-medium">
-    1. Présentation du site internet
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie
-      numérique, il est
-      précisé aux utilisateurs du site internet <a
-    href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>
-    l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
-  </p>
-  <p><strong>Propriétaire</strong> : Hugo Eribon – 64000 Pau<br>
+        <p class="font-bold">4.2 Données collectées, finalités et base légale</p>
+        <p>
+          Le formulaire de contact collecte obligatoirement votre nom et prénom, votre adresse électronique
+          et votre message. Le numéro de téléphone est facultatif. Ces données servent uniquement à recevoir
+          votre demande, vous répondre et vous envoyer un accusé de réception.
+        </p>
+        <p>
+          Votre adresse IP est traitée temporairement afin de limiter les envois abusifs à cinq demandes
+          par période de 24 heures.
+        </p>
+        <p>
+          Ces traitements reposent sur l’intérêt légitime du responsable du traitement à répondre aux
+          demandes qui lui sont adressées et à sécuriser le formulaire. Sans les informations obligatoires,
+          la demande ne peut pas être envoyée. Aucune donnée n’est utilisée à des fins de prospection
+          commerciale ni vendue.
+        </p>
 
-  <strong>Responsable publication</strong> : Eribon Hugo – eribon.hugo&#64;gmail.com<br>
-  Le responsable publication est une personne physique ou une personne morale.<br>
-  <strong>Webmaster</strong> : Eribon Hugo – eribon.hugo&#64;gmail.com<br>
-  <strong>Hébergeur</strong> : OVH SAS – 2 rue Kellermann, 59100 Roubaix, France – Téléphone : 1007<br>
-  <strong>Contact pour la protection des données</strong> : Eribon Hugo – eribon.hugo&#64;gmail.com<br>
-</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les conditions générales d’utilisation" />
-  <div class="dui-collapse-title text-xl font-medium">
-    2. Conditions générales d’utilisation du site et des services proposés
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété
-      Intellectuelle et des
-      Réglementations Internationales applicables.
-      Le Client ne peut en aucune manière réutiliser, céder ou exploiter pour son propre compte tout ou
-      partie des
-    éléments ou travaux du Site.</p>
+        <p class="font-bold">4.3 Destinataires, conservation et transferts</p>
+        <p>
+          Les données sont accessibles à Hugo Eribon, à son fournisseur de messagerie et à Twilio SendGrid,
+          utilisé comme sous-traitant pour acheminer les courriels.
+        </p>
+        <p>
+          Les messages sont conservés au maximum douze mois après le dernier échange, puis supprimés, sauf
+          obligation légale ou nécessité de conserver temporairement un échange à titre de preuve. L’adresse
+          IP utilisée pour limiter les abus est conservée au maximum 24 heures.
+        </p>
+        <p>
+          Twilio SendGrid peut traiter des données aux États-Unis ou dans d’autres pays situés hors de
+          l’Espace économique européen. Ces transferts sont encadrés, selon leur destination, par une décision
+          d’adéquation applicable ou par les clauses contractuelles types de la Commission européenne prévues dans son
+          <a href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer">accord de traitement des données</a>.
+        </p>
 
-    <p>L’utilisation du site <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> implique
-    l’acceptation pleine
-    et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation
-    sont susceptibles
-    d’être modifiées ou complétées à tout moment, les utilisateurs du site <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> sont donc invités à les consulter
-  de manière
-régulière.</p>
+        <p class="font-bold">4.4 Vos droits</p>
+        <p>
+          Vous disposez des droits d’accès, de rectification, d’effacement, de limitation et d’opposition au
+          traitement de vos données. Vous pouvez les exercer en écrivant à eribon.hugo&#64;gmail.com. Une preuve
+          d’identité ne sera demandée qu’en cas de doute raisonnable sur votre identité.
+        </p>
+        <p>
+          Si vous estimez, après avoir contacté le responsable du traitement, que vos droits ne sont pas
+          respectés, vous pouvez adresser une réclamation à la
+          <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">CNIL</a>.
+        </p>
+      </div>
+    </div>
 
-<p>Ce site internet est normalement accessible à tout moment aux utilisateurs. Une interruption pour
-  raison de
-  maintenance technique peut être toutefois décidée par <a
-href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>.
-Le site web <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> est mis à jour
-régulièrement par <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> responsable. De
-la même façon, les mentions
-légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est
-invité à s’y
-référer le plus souvent possible afin d’en prendre connaissance.</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher la description des services fournis" />
-  <div class="dui-collapse-title text-xl font-medium">
-    3. Description des services fournis
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>Le site internet <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> a pour objet de
-    fournir une
-    information concernant l’ensemble des activités de la société.
-    <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> s’efforce de fournir sur le site
-    <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> des informations aussi précises
-    que possible.
-    Toutefois, il ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la
-    mise à jour,
-    qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
-  </p>
+    <div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
+      <input type="radio" name="accordion" aria-label="Afficher les informations sur les cookies et services externes" />
+      <div class="dui-collapse-title text-xl font-medium">5. Cookies et services externes</div>
+      <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
+        <p>
+          L’éditeur n’utilise aucun outil de mesure d’audience, de publicité ou de suivi de navigation et ne
+          dépose volontairement aucun traceur non essentiel.
+        </p>
+        <p>
+          Les icônes sont chargées depuis le service externe
+          <a href="https://iconify.design/privacy/" target="_blank" rel="noopener noreferrer">Iconify</a>.
+          Ce chargement transmet à Iconify et à son prestataire Cloudflare les informations techniques
+          nécessaires à la connexion, notamment l’adresse IP. Cloudflare est susceptible d’utiliser des
+          cookies techniques destinés à la sécurité ou aux performances de son service. Les traceurs
+          strictement nécessaires ne requièrent pas de consentement préalable.
+        </p>
+        <p>
+          Les liens vers des sites tiers, notamment LinkedIn et GitHub, sont de simples liens. Aucune
+          connexion avec ces plateformes n’est établie avant que l’utilisateur ne clique sur le lien concerné.
+        </p>
+      </div>
+    </div>
 
-  <p>Toutes les informations indiquées sur le site <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> sont
-  données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant
-  sur le site <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> ne sont pas
-  exhaustifs. Ils sont donnés sous
-réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les limitations contractuelles sur les données techniques" />
-  <div class="dui-collapse-title text-xl font-medium">
-    4. Limitations contractuelles sur les données techniques
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>Le site utilise la technologie JavaScript.
-
-      Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site.
-      De plus,
-      l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas
-      de virus et avec
-      un navigateur de dernière génération mis-à-jour
-      Le site <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> est hébergé chez un
-      prestataire sur le
-      territoire de l’Union Européenne conformément aux dispositions du Règlement Général sur la
-      Protection des Données
-    (RGPD : n° 2016-679)</p>
-
-    <p>L’objectif est d’apporter une prestation qui assure le meilleur taux d’accessibilité. L’hébergeur
-      assure la
-      continuité de son service 24 Heures sur 24, tous les jours de l’année. Il se réserve néanmoins la
-      possibilité
-      d’interrompre le service d’hébergement pour les durées les plus courtes possibles notamment à des
-      fins de
-      maintenance, d’amélioration de ses infrastructures, de défaillance de ses infrastructures ou si les
-      Prestations et
-    Services génèrent un trafic réputé anormal.</p>
-
-    <p><a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> et l’hébergeur ne pourront être
-    tenus responsables
-    en cas de dysfonctionnement du réseau Internet, des lignes téléphoniques ou du matériel informatique
-    et de
-  téléphonie lié notamment à l’encombrement du réseau empêchant l’accès au serveur.</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les informations sur la propriété intellectuelle" />
-  <div class="dui-collapse-title text-xl font-medium">
-    5. Propriété intellectuelle et contrefaçons
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p><a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> est propriétaire des droits de
-    propriété
-    intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet,
-    notamment les
-    textes, images, graphismes, logos, vidéos, icônes et sons.
-    Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des
-    éléments du site,
-    quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de :
-    <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>.
-  </p>
-
-  <p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera
-    considérée comme
-    constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et
-    suivants du Code
-  de Propriété Intellectuelle.</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les limitations de responsabilité" />
-  <div class="dui-collapse-title text-xl font-medium">
-    6. Limitations de responsabilité
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p><a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> agit en tant qu’éditeur du site. <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> est responsable de la qualité et
-  de la véracité
-du Contenu qu’il publie. </p>
-
-<p><a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> ne pourra être tenu responsable des
-dommages
-directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site internet <a
-href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>, et résultant soit de
-l’utilisation d’un matériel
-ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une
-incompatibilité.
-</p>
-
-<p><a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> ne pourra également être tenu
-responsable des
-dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à
-l’utilisation du
-site <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>.
-Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la
-disposition des
-utilisateurs. <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> se réserve le droit
-de supprimer,
-sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la
-législation applicable
-en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, <a
-href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> se réserve également la
-possibilité de mettre en
-cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à
-caractère raciste,
-injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie …).
-</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les informations sur les données personnelles" />
-  <div class="dui-collapse-title text-xl font-medium">
-    7. Gestion des données personnelles
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>Le Client est informé des réglementations concernant la communication marketing, la loi du 21 Juin
-      2014 pour la
-      confiance dans l’Economie Numérique, la Loi Informatique et Liberté du 06 Août 2004 ainsi que du
-      Règlement Général
-    sur la Protection des Données (RGPD : n° 2016-679). </p>
-
-    <p class="font-bold">7.1 Responsable du traitement</p>
-
-    <p>
-      Le responsable du traitement est Hugo Eribon. Pour toute question concernant vos données
-      personnelles, vous pouvez écrire à eribon.hugo&#64;gmail.com.
-    </p>
-
-    <p class="font-bold">7.2 Données collectées, finalités et base légale</p>
-
-    <p>
-      Le formulaire de contact collecte votre nom et prénom, votre adresse électronique, votre numéro
-      de téléphone et le contenu de votre message. Ces données sont utilisées pour recevoir votre
-      demande, vous répondre et vous envoyer un accusé de réception.
-    </p>
-    <p>
-      Votre adresse IP est également traitée temporairement afin de limiter les envois abusifs à cinq
-      demandes par période de 24 heures.
-    </p>
-    <p>
-      Ces traitements reposent sur l’intérêt légitime du responsable du traitement à répondre aux
-      demandes qui lui sont adressées et à sécuriser le formulaire de contact.
-    </p>
-    <p>
-      Tous les champs du formulaire sont obligatoires. Sans ces informations, la demande ne peut pas
-      être envoyée. Aucune donnée n’est utilisée à des fins de prospection commerciale ni vendue.
-    </p>
-
-    <p class="font-bold">7.3 Destinataires, conservation et transferts</p>
-
-    <p>
-      Les données sont accessibles à Hugo Eribon et aux prestataires de messagerie nécessaires à
-      l’acheminement des courriels. Twilio SendGrid intervient comme sous-traitant pour cet acheminement.
-    </p>
-    <p>
-      Les messages sont conservés pendant la durée nécessaire au traitement de la demande et de ses
-      éventuelles suites, puis supprimés. L’adresse IP utilisée pour limiter les abus est conservée au
-      maximum 24 heures.
-    </p>
-    <p>
-      Twilio SendGrid peut traiter des données en dehors de l’Espace économique européen. Selon les cas,
-      ces transferts sont encadrés par le cadre de protection des données UE–États-Unis ou par les clauses
-      contractuelles types de la Commission européenne prévues dans son
-      <a href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer">accord de traitement des données</a>.
-    </p>
-
-    <p class="font-bold">7.4 Vos droits</p>
-
-    <p>
-      Vous disposez des droits d’accès, de rectification, d’effacement, de limitation et d’opposition au
-      traitement de vos données. Vous pouvez les exercer en écrivant à eribon.hugo&#64;gmail.com. Une preuve
-      d’identité ne sera demandée qu’en cas de doute raisonnable sur votre identité.
-    </p>
-    <p>
-      Si vous estimez, après avoir contacté le responsable du traitement, que vos droits ne sont pas
-      respectés, vous pouvez adresser une réclamation à la
-      <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">CNIL</a>.
-    </p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les informations sur les notifications d’incident" />
-  <div class="dui-collapse-title text-xl font-medium">
-    8. Notification d’incident
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>
-      Quels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode
-      de stockage
-      électronique n'est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité
-      absolue.
-      Si nous prenions connaissance d'une brèche de la sécurité, nous avertirions les utilisateurs
-      concernés afin qu'ils
-      puissent prendre les mesures appropriées. Nos procédures de notification d’incident tiennent compte
-      de nos
-      obligations légales, qu'elles se situent au niveau national ou européen. Nous nous engageons à
-      informer pleinement
-      nos clients de toutes les questions relevant de la sécurité de leur compte et à leur fournir toutes
-      les informations
-      nécessaires pour les aider à respecter leurs propres obligations réglementaires en matière de
-    reporting.</p>
-    <p>
-      Aucune information personnelle de l'utilisateur du site <a
-    href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> n'est publiée à l'insu de
-    l'utilisateur,
-    échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du
-    rachat de <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> et de ses droits
-    permettrait la transmission des
-    dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de
-    conservation et de
-    modification des données vis à vis de l'utilisateur du site <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>.</p>
-
-  <p class="font-bold">Sécurité</p>
-
-  <p>
-    Pour assurer la sécurité et la confidentialité des Données Personnelles et des Données Personnelles
-    de Santé, <a href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> utilise des réseaux
-    protégés par des dispositifs
-  standards tels que par pare-feu, la pseudonymisation, l’encryption et mot de passe. </p>
-
-  <p>
-    Lors du traitement des Données Personnelles, <a
-  href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a> prend
-  toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée,
-  accès non autorisé,
-divulgation, altération ou destruction.</p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2">
-  <input type="radio" name="accordion" aria-label="Afficher les informations sur les cookies et services externes" />
-  <div class="dui-collapse-title text-xl font-medium">
-    9. Cookies et services externes
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>
-      Ce site ne dépose aucun cookie ni autre traceur sur le terminal de l’utilisateur. Il n’utilise
-      aucun outil de mesure d’audience, de publicité ou de suivi de navigation. Aucun bandeau de
-      consentement n’est donc nécessaire.
-    </p>
-    <p>
-      Les icônes sont chargées depuis le service externe
-      <a href="https://iconify.design/privacy/" target="_blank" rel="noopener noreferrer">Iconify</a>.
-      Ce chargement transmet à ce service les informations techniques nécessaires à la connexion,
-      notamment l’adresse IP. Iconify ne dépose aucun cookie par l’intermédiaire de ce site.
-    </p>
-    <p>
-      Les liens vers des sites tiers, notamment LinkedIn, sont de simples liens. Aucun contenu de ces
-      plateformes n’est intégré au site et aucune connexion avec celles-ci n’est établie avant que
-      l’utilisateur ne clique sur le lien concerné.
-    </p>
-</div>
-</div>
-<div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2 mb-14">
-  <input type="radio" name="accordion" aria-label="Afficher le droit applicable et l’attribution de juridiction" />
-  <div class="dui-collapse-title text-xl font-medium">
-    10. Droit applicable et attribution de juridiction
-  </div>
-  <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
-    <p>
-      Tout litige en relation avec l’utilisation du site <a
-    href="https://www.hugoeribon.fr">https://www.hugoeribon.fr</a>
-    est soumis au droit français.
-    En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux
-    tribunaux
-  compétents de Pau</p>
-</div>
-</div>
-</section>
+    <div class="dui-collapse dui-collapse-arrow bg-base-200 py-1 my-6 px-2 mb-14">
+      <input type="radio" name="accordion" aria-label="Afficher le droit applicable" />
+      <div class="dui-collapse-title text-xl font-medium">6. Droit applicable</div>
+      <div class="dui-collapse-content text-justify overflow-x-auto overflow-y-hidden break-words space-y-4">
+        <p>
+          Le présent site est soumis au droit français. En cas de litige, les juridictions compétentes sont
+          déterminées conformément aux règles légales applicables.
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="w-full shrink-0 border-t border-gray-200 bg-white py-7">

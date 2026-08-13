@@ -103,6 +103,9 @@ export class CommonService {
 
             // Vérification des champs obligatoires
             if (!trimmedValue) {
+                if (lowerCaseLabel.includes('téléphone')) {
+                    continue;
+                }
                 this.showValidationError(`Le champ "${label}" est obligatoire.`);
                 return false;
             }
