@@ -2,30 +2,12 @@ import { Injectable } from '@angular/core';
 import { MailService } from './mail.service';
 import type { SweetAlertOptions } from 'sweetalert2';
 
-// Définition de l'interface pour la réponse de l'API de MailCheck.ai
-interface EmailValidityResponse {
-    disposable: boolean;
-    mx: boolean;
-}
-
 @Injectable({
     providedIn: 'root'
 })
 export class CommonService {
 
     constructor(private mailService: MailService) { }
-
-    // Liste blanche des domaines populaires considérés comme fiables
-	private trustedEmailDomains = new Set([
-		'gmail.com',
-		'hotmail.com',
-		'outlook.com',
-		'yahoo.com',
-		'yahoo.fr',
-		'live.com',
-		'protonmail.com',
-		'icloud.com',
-	]);
 
     /**
     * Filtre et formate la saisie d'un numéro de téléphone dans un champ de saisie HTML.
@@ -130,17 +112,6 @@ export class CommonService {
                 if (!emailRegex.test(trimmedValue)) {
                     this.showValidationError('Le format de l\'adresse email est invalide.');
                     return false;
-                } else {
-                    // Vérification du domaine de l'email
-                    const domain = trimmedValue.split('@')[1]?.toLowerCase();
-                    if (this.trustedEmailDomains.has(domain)) {
-                        continue;
-                    }
-                    const isEmailValid = await this.checkEmailValidity(trimmedValue);
-                    if (!isEmailValid) {
-                        this.showValidationError('Le domaine de l\'adresse email n\'est pas accepté.');
-                        return false;
-                    }
                 }
             }
             // Vérification pour le numéro de téléphone
@@ -172,35 +143,6 @@ export class CommonService {
     private async showAlert(options: SweetAlertOptions): Promise<void> {
         const { default: Swal } = await import('sweetalert2');
         await Swal.fire(options);
-    }
-
-    /**
-    * Vérifie la validité d'une adresse email en utilisant l'API Mailcheck AI.
-    * Pour cela la méthode évalue si l'email n'est pas jetable et si un enregistrement MX valide est présent.
-    * 
-    * @param {string} email L'adresse email à vérifier.
-    * @returns {Promise<boolean>} La promesse renvoie `true` si l'email n'est pas jetable et a un enregistrement MX valide,
-    *                             sinon `false`. Renvoie également `false` en cas d'erreur lors de la requête à l'API.
-    */
-    async checkEmailValidity(email: string): Promise<boolean> {
-        const url = `https://api.mailcheck.ai/email/${email}`;
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                console.error(`Impossible de vérifier l'email : HTTP ${response.status}`);
-                return false;
-            }
-            const data: EmailValidityResponse = await response.json();
-            // Retourne false si l'email est jetable ou si mx est false
-            if (data.disposable || !data.mx) {
-                return false;
-            }
-            return true;
-        } catch (error: unknown) {
-            const message = error instanceof Error ? error.message : String(error);
-            console.error(`Erreur inattendue lors de la vérification de l'email : ${message}`);
-            return false;
-        }
     }
 
     /**
