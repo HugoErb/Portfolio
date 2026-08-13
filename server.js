@@ -12,7 +12,9 @@ const rateLimit = require('express-rate-limit');  // Middleware pour limiter le 
 const PORT = process.env.PORT || 3002;
 
 // Configuration de SendGrid avec la clé API
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+if (process.env.SENDGRID_API_KEY) {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+}
 
 // Initialisation de l'application Express
 const app = express();
@@ -24,7 +26,7 @@ app.use(express.json());
 const limiter = rateLimit({
     windowMs: 24 * 60 * 60 * 1000, // fenêtre de 24 heures
     max: 5,                       // maximum 5 requêtes par fenêtre par adresse IP
-    message: "Trop de requêtes depuis cette IP, veuillez réessayer demain." // réponse en cas de dépassement
+    message: { error: "Trop de tentatives d'envoi depuis cette adresse IP. Veuillez réessayer demain." }
 });
 app.use('/send-mail', limiter);
 
@@ -61,6 +63,15 @@ app.post('/send-mail', async (req, res) => {
         return res.status(400).json({ error: 'Champs invalides.' });
     }
 
+    const missingMailConfiguration = ['SENDGRID_API_KEY', 'ADMIN_EMAIL', 'SENDER_EMAIL']
+        .filter((variableName) => !process.env[variableName]);
+    if (missingMailConfiguration.length > 0) {
+        console.error(`Configuration e-mail incomplète : ${missingMailConfiguration.join(', ')}`);
+        return res.status(503).json({
+            error: "Le service d'e-mail est indisponible car sa configuration serveur est incomplète."
+        });
+    }
+
     // Préparation du message à envoyer à l'administrateur
     const msgToMe = {
         to: process.env.ADMIN_EMAIL,
@@ -84,8 +95,19 @@ app.post('/send-mail', async (req, res) => {
         return res.status(200).json({ message: 'Emails envoyés avec succès.' });
     } catch (err) {
         // En cas d'erreur lors de l'envoi
-        console.error(err);
-        return res.status(500).json({ error: err.message });
+        const statusCode = Number(err.code || err.response?.statusCode);
+        let publicMessage = "Le service d'e-mail est temporairement indisponible. Veuillez réessayer plus tard.";
+
+        if (statusCode === 400) {
+            publicMessage = "Le service d'e-mail a refusé l'adresse ou le contenu du message.";
+        } else if (statusCode === 401 || statusCode === 403) {
+            publicMessage = "Le service d'e-mail refuse l'authentification du serveur. Le propriétaire du site doit renouveler sa configuration.";
+        } else if (statusCode === 429) {
+            publicMessage = "Le quota du service d'e-mail est temporairement dépassé. Veuillez réessayer plus tard.";
+        }
+
+        console.error('Échec SendGrid :', err.response?.body || err);
+        return res.status(503).json({ error: publicMessage });
     }
 });
 
