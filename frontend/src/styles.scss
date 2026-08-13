@@ -147,6 +147,40 @@
 		@apply w-full py-16 md:py-24 lg:py-28;
 	}
 
+	#projects.site-section,
+	#carrier.site-section,
+	#contact.site-section {
+		padding-block: 2.25rem;
+	}
+
+	#about.site-section {
+		padding-block: 3.25rem;
+	}
+
+	@media (min-width: 768px) {
+		#projects.site-section,
+		#carrier.site-section,
+		#contact.site-section {
+			padding-block: 3.25rem;
+		}
+
+		#about.site-section {
+			padding-block: 5.25rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		#projects.site-section,
+		#carrier.site-section,
+		#contact.site-section {
+			padding-block: 4.25rem;
+		}
+
+		#about.site-section {
+			padding-block: 6.25rem;
+		}
+	}
+
 	.site-section-muted {
 		@apply border-y border-gray-200/80 bg-gray-50;
 		background-image: radial-gradient(circle at 50% 0%, rgb(255 255 255 / 0.95), transparent 42%);
