@@ -66,8 +66,6 @@ export class HomeComponent {
 	emailMail: string = '';
 	phoneNumberMail: string = '';
 	messageMail: string = '';
-	aimDisplayDownloadUrl: string = 'assets/aim-display/Aim-Display-Setup-1.0.4.exe';
-	aimDisplayFilename: string = 'Aim-Display-Setup-1.0.4.exe';
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -113,7 +111,6 @@ export class HomeComponent {
 			this.loadAssets('projects');
 			this.loadAssets('technos');
 			this.loadAssets('certifs');
-			this.loadAimDisplayVersion();
 			this.updateItemsPerPage();
 
 			if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
@@ -180,6 +177,11 @@ export class HomeComponent {
 		}
 	}
 
+	@HostListener('document:keydown.escape')
+	onEscapeKey(): void {
+		this.burgerMenuOpened = false;
+	}
+
 	/**
 	 * Permet la navigation vers différentes sections de la page en utilisant un défilement fluide.
 	 * Si le menu burger est ouvert, il est d'abord fermé avant de procéder au défilement.
@@ -199,7 +201,8 @@ export class HomeComponent {
 				const sectionTop = section.getBoundingClientRect().top + window.scrollY;
 				const headerHeight = 64;
 				const position = sectionTop - headerHeight;
-				window.scrollTo({ top: position, behavior: 'smooth' });
+				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				window.scrollTo({ top: position, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 			}
 		}, 50);
 	}
@@ -356,24 +359,5 @@ export class HomeComponent {
 		}
 
 		return years;
-	}
-
-	/**
-	 * Charge la version actuelle d'Aim Display depuis le fichier latest.yml.
-	 */
-	private loadAimDisplayVersion(): void {
-		this.http.get('assets/aim-display/latest.yml', { responseType: 'text' }).subscribe({
-			next: (data) => {
-				const pathMatch = data.match(/path:\s*(.*)/);
-				if (pathMatch && pathMatch[1]) {
-					this.aimDisplayFilename = pathMatch[1].trim();
-					this.aimDisplayDownloadUrl = `assets/aim-display/${this.aimDisplayFilename}`;
-					this.changeDetectorRef.markForCheck();
-				}
-			},
-			error: (err) => {
-				console.error("Erreur lors de la récupération de la version d'Aim Display", err);
-			},
-		});
 	}
 }
