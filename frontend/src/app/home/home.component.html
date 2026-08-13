@@ -48,7 +48,7 @@
 
 <main id="main-content" class="flex-1">
   <section id="landing" class="relative flex min-h-[680px] w-full items-center overflow-hidden border-b border-gray-200 px-2 pb-16 pt-28 animate-appear lg:min-h-[760px] lg:py-28">
-    <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_75%_38%,rgba(209,213,219,0.55),transparent_25%),linear-gradient(to_bottom,#ffffff,#f9fafb)]"></div>
+    <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_75%_38%,rgba(209,213,219,0.35),transparent_25%),linear-gradient(to_bottom,#ffffff,#fdfdfd)]"></div>
     <div class="site-shell flex items-center justify-center">
       <div class="grid w-full items-center gap-12 lg:grid-cols-[minmax(0,1fr)_400px] lg:gap-16 xl:grid-cols-[minmax(0,1fr)_560px]">
         <div class="flex min-w-0 flex-col justify-center space-y-6 text-center lg:text-left">
@@ -113,7 +113,7 @@
     </div>
   </section>
 
-  <section id="projects" class="site-section site-section-muted flex items-center justify-center">
+  <section id="projects" class="projects-section site-section site-section-muted flex items-center justify-center">
     <div class="site-shell">
       <div class="flex flex-col items-center justify-center text-center">
         <div class="space-y-3">
@@ -187,7 +187,7 @@
   </section>
 
 <section id="technologies" class="site-section">
-  <div class="site-shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+  <div class="site-shell grid items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
     <div class="space-y-3">
       <h2 class="site-heading">Technologies maîtrisées</h2>
       <p class="site-copy max-w-[600px]">
@@ -195,7 +195,7 @@
       </p>
     </div>
 
-    <div class="site-card relative mx-auto w-full p-3 sm:p-5 md:w-4/5 lg:ml-0 lg:w-full">
+    <div class="site-card relative mx-auto w-full p-4 sm:px-8 sm:py-6 md:w-[92%] lg:ml-0 lg:w-full">
       <!-- Contenu des technologies -->
       <div
 					[ngClass]="{
@@ -204,7 +204,7 @@
 						'animate-swipeLeftIn': elementsConfig.technos.swipeLeftIn,
 						'animate-swipeRightIn': elementsConfig.technos.swipeRightIn,
 					}"
-        class="grid grid-cols-3 gap-1 overflow-hidden"
+        class="mx-auto grid w-full max-w-[33rem] grid-cols-3 gap-1 overflow-hidden"
         >
         @for (technology of elementsConfig.technos.visibleItems; track technology) {
           <app-technology
@@ -258,7 +258,7 @@
 </section>
 
 <section id="certifications" class="site-section site-section-dark">
-  <div class="site-shell grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+  <div class="site-shell grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
     <!-- Titre et sous titre de la section des certifications pour les petits écrans -->
     <div class="space-y-3 lg:hidden">
       <h2 class="site-heading-dark">Diplômes &amp; Certifications</h2>
@@ -267,7 +267,7 @@
         domaines et technologies.
       </p>
     </div>
-    <div class="relative mx-auto w-full rounded-xl border border-white/10 bg-white/[0.035] p-3 shadow-[0_18px_45px_rgba(0,0,0,0.18)] sm:p-5 md:w-4/5 lg:w-full">
+    <div class="relative mx-auto w-full rounded-xl border border-white/10 bg-white/[0.035] p-4 shadow-[0_18px_45px_rgba(0,0,0,0.18)] sm:px-8 sm:py-6 md:w-[92%] lg:w-full">
       <!-- Contenu des certifications -->
       <div
 					[ngClass]="{
@@ -276,7 +276,7 @@
 						'animate-swipeLeftIn': elementsConfig.certifs.swipeLeftIn,
 						'animate-swipeRightIn': elementsConfig.certifs.swipeRightIn,
 					}"
-        class="grid grid-cols-3 gap-1 overflow-hidden"
+        class="mx-auto grid w-full max-w-[33rem] grid-cols-3 gap-1 overflow-hidden"
         >
         @for (certif of elementsConfig.certifs.visibleItems; track certif) {
           <app-certification
