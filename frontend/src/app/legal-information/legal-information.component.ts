@@ -32,6 +32,11 @@ export class LegalInformationComponent {
         }
     }
 
+    @HostListener('document:keydown.escape')
+    onEscapeKey(): void {
+        this.burgerMenuOpened = false;
+    }
+
     /**
     * Navigue vers un composant spécifié et, optionnellement, fait défiler vers une section au sein de ce composant.
     *
@@ -42,6 +47,7 @@ export class LegalInformationComponent {
     *                           un fragment spécifique au sein du composant.
     */
     navigateTo(component: string, section: string) {
+        this.burgerMenuOpened = false;
         this.router.navigate([component, { redirectionSection: section }]);
     }
 
