@@ -1,8 +1,5 @@
 <div class="flex justify-center items-center select-none min-h-[176px]">
-	<a [href]="link" target="_blank" class="block w-28">
-		<div
-			class="flex flex-col items-center gap-3 hover:bg-gray-500 text-gray-200 hover:text-gray-100 rounded-lg py-3 cursor-pointer transition-all"
-		>
+	<a [href]="link" target="_blank" rel="noopener noreferrer" class="site-icon-card-dark min-w-0 w-full">
 			<img
 				[src]="imgPath"
 				[attr.srcset]="srcSet || null"
@@ -11,10 +8,9 @@
 				height="80"
 				loading="lazy"
 				decoding="async"
-				[alt]="label + ' Img'"
+				[alt]="label"
 				class="w-20"
 			/>
 			<div class="text-sm font-medium text-center">{{ label }}</div>
-		</div>
 	</a>
 </div>

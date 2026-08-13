@@ -18,8 +18,8 @@ module.exports = {
             },
             keyframes: {
                 appear: {
-                    '0%': { transform: 'translateY(-10px)', opacity: '0' },
-                    '100%': { transform: 'translateY(5px)', opacity: '1' },
+                    '0%': { transform: 'translateY(8px)', opacity: '0' },
+                    '100%': { transform: 'translateY(0)', opacity: '1' },
                 },
                 swipeLeftOut: {
                     '0%': { opacity: '1', transform: 'translateX(0)' },
@@ -54,7 +54,7 @@ module.exports = {
                 },
             },
             animation: {
-                appear: 'appear 0.3s ease forwards',
+                appear: 'appear 0.4s ease-out forwards',
                 swipeLeftOut: 'swipeLeftOut 0.20s ease forwards',
                 swipeRightOut: 'swipeRightOut 0.20s ease forwards',
                 swipeLeftIn: 'swipeLeftIn 0.20s ease forwards',
