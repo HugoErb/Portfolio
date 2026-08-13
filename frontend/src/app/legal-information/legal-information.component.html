@@ -1,6 +1,20 @@
 <header class="h-16 flex fixed w-full bg-white z-50 shadow-sm border-b border-gray-200">
   <div class="flex pl-4 items-center justify-center mb-0.5 cursor-pointer" (click)="navigateTo('home','landing')">
-    <iconify-icon icon="mingcute:code-line" class="text-4xl text-gray-700"></iconify-icon>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      class="w-9 h-9 text-gray-700"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M14.216 4.106L9.784 19.894M6.5 7.757L2.257 12L6.5 16.243m11-8.486L21.743 12L17.5 16.243"
+      />
+    </svg>
     <span class="text-xl font-semibold ml-4 mt-1 lg:mt-0">Hugo Eribon</span>
   </div>
 
@@ -34,8 +48,21 @@
 
   <!-- Menu burger pour les petits écrans -->
   <button class="lg:hidden ml-auto" (click)="toggleBurgerMenu($event)" aria-label="Menu burger">
-    <iconify-icon icon="heroicons-outline:menu-alt-3"
-    class="text-gray-700 text-2xl p-2 hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"></iconify-icon>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      class="text-gray-700 w-6 h-6 p-2 box-content hover:bg-gray-300 transition-all rounded-lg mt-1 mr-3"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16m-7 6h7"
+      />
+    </svg>
   </button>
   @if (burgerMenuOpened) {
     <div #menuBurger class="lg:hidden absolute top-full left-0 w-full bg-white shadow-md animate-appear mt-[-5px]"

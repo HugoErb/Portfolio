@@ -22,9 +22,7 @@
                         "browser": "src/main.ts",
                         "server": "src/main.server.ts",
                         "outputMode": "static",
-                        "polyfills": [
-                            "zone.js"
-                        ],
+                        "polyfills": [],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
@@ -37,9 +35,7 @@
                         "styles": [
                             "src/styles.scss"
                         ],
-                        "scripts": [
-                            "node_modules/iconify-icon/dist/iconify-icon.min.js"
-                        ]
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
@@ -98,10 +94,7 @@
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "polyfills": [
-                            "zone.js",
-                            "zone.js/testing"
-                        ],
+                        "polyfills": [],
                         "tsConfig": "tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [

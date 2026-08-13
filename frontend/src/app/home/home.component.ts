@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -52,6 +52,7 @@ export class HomeComponent {
 		private router: Router,
 		private activatedRoute: ActivatedRoute,
 		private http: HttpClient,
+		private changeDetectorRef: ChangeDetectorRef,
 		protected commonService: CommonService,
 	) {}
 
@@ -269,6 +270,7 @@ export class HomeComponent {
 			next: (data) => {
 				this.elementsConfig[type].items = data[type];
 				this.updateVisibleElements(type);
+				this.changeDetectorRef.markForCheck();
 			},
 			error: (err) => console.error(`Erreur lors du chargement de ${type} :`, err),
 		});
@@ -299,10 +301,12 @@ export class HomeComponent {
 				this.updateVisibleElements(type);
 				config.swipeLeftOut = false;
 				config.swipeLeftIn = true;
+				this.changeDetectorRef.markForCheck();
 
 				setTimeout(() => {
 					config.swipeLeftIn = false;
 					config.isTransitioning = false;
+					this.changeDetectorRef.markForCheck();
 				}, 125); // Durée de l'animation d'entrée
 			}, 125); // Durée de l'animation de sortie
 		}
@@ -323,10 +327,12 @@ export class HomeComponent {
 				this.updateVisibleElements(type);
 				config.swipeRightOut = false;
 				config.swipeRightIn = true;
+				this.changeDetectorRef.markForCheck();
 
 				setTimeout(() => {
 					config.swipeRightIn = false;
 					config.isTransitioning = false;
+					this.changeDetectorRef.markForCheck();
 				}, 125); // Durée de l'animation d'entrée
 			}, 125); // Durée de l'animation de sortie
 		}
@@ -362,6 +368,7 @@ export class HomeComponent {
 				if (pathMatch && pathMatch[1]) {
 					this.aimDisplayFilename = pathMatch[1].trim();
 					this.aimDisplayDownloadUrl = `assets/aim-display/${this.aimDisplayFilename}`;
+					this.changeDetectorRef.markForCheck();
 				}
 			},
 			error: (err) => {
