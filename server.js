@@ -42,11 +42,23 @@ app.use(cors(corsOptions));
 // Point de terminaison pour l'envoi d'e-mails
 app.post('/send-mail', async (req, res) => {
     // Récupération des données envoyées depuis le formulaire
-    const [name, email, phoneNumber, message] = Object.values(req.body);
+    const {
+        nometprenom: name,
+        adresseemail: email,
+        telephone: phoneNumber = '',
+        message
+    } = req.body;
 
-    // Vérification de la présence de tous les champs requis
-    if (!name || !email || !phoneNumber || !message) {
-        return res.status(400).json({ error: 'Champs manquants.' });
+    // Validation des champs reçus, y compris lorsque l'API est appelée sans passer par le frontend
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneNumberRegex = /^(0[1-9]) (\d{2}) (\d{2}) (\d{2}) (\d{2})$/;
+    if (
+        typeof name !== 'string' || !name.trim() || name.length > 100 ||
+        typeof email !== 'string' || !emailRegex.test(email) || email.length > 254 ||
+        typeof message !== 'string' || !message.trim() || message.length > 2000 ||
+        typeof phoneNumber !== 'string' || (phoneNumber && !phoneNumberRegex.test(phoneNumber))
+    ) {
+        return res.status(400).json({ error: 'Champs invalides.' });
     }
 
     // Préparation du message à envoyer à l'administrateur
@@ -55,7 +67,7 @@ app.post('/send-mail', async (req, res) => {
         from: process.env.SENDER_EMAIL,
         replyTo: email, // l'utilisateur pourra répondre directement
         subject: `Nouveau message de ${name}`,
-        text: `Nom : ${name}\nEmail : ${email}\nNuméro de tél : ${phoneNumber}\n\nMessage :\n${message}`
+        text: `Nom : ${name}\nEmail : ${email}\nNuméro de tél : ${phoneNumber || 'Non renseigné'}\n\nMessage :\n${message}`
     };
 
     // Préparation du message de confirmation à l'utilisateur

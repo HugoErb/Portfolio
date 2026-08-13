@@ -647,7 +647,9 @@
                       autocomplete="name"
                       #inputField
                       [(ngModel)]="nameMail"
+                      maxlength="100"
                       placeholder="Entrez votre nom et votre prénom…"
+                      required
                       />
                     </div>
                     <div class="space-y-2">
@@ -660,19 +662,25 @@
                         spellcheck="false"
                         #inputField
                         [(ngModel)]="emailMail"
+                        maxlength="254"
                         placeholder="Entrez votre adresse email…"
+                        required
                         type="email"
                         />
                       </div>
                       <div class="space-y-2">
-                        <label class="text-sm font-semibold leading-none text-gray-800" for="phoneNumber">Téléphone</label>
+                         <div class="flex items-baseline justify-between gap-3">
+                           <label class="text-sm font-semibold leading-none text-gray-800" for="phoneNumber">Téléphone</label>
+                           <span class="text-xs text-gray-500">Facultatif</span>
+                         </div>
                         <input
                           class="site-field h-11"
                           id="phoneNumber"
                           name="phoneNumber"
                           autocomplete="tel"
                           inputmode="tel"
-                          #inputField
+                           #inputField
+                           maxlength="14"
                           placeholder="Entrez votre numéro de téléphone…"
                           type="tel"
                           [(ngModel)]="phoneNumberMail"
@@ -688,7 +696,9 @@
                             autocomplete="off"
                             #inputField
                             [(ngModel)]="messageMail"
+                            maxlength="2000"
                             placeholder="Entrez votre message…"
+                            required
                           ></textarea>
                         </div>
                         <button
@@ -698,12 +708,13 @@
                           Envoyer le message
                         </button>
                         <p class="mt-1 text-center text-sm leading-relaxed text-gray-500">
-                          Tous les champs sont obligatoires.
+                          Le nom, l’adresse email et le message sont obligatoires.
                           <br />
                           Vos données sont utilisées uniquement pour répondre à votre demande.
-                          <button type="button" class="site-focus rounded-sm underline" (click)="navigateTo('legal-information')">
-                            En savoir plus
-                          </button>
+                          <br />
+                          <a class="site-focus rounded-sm underline" href="/legal-information#personal-data">
+                            Politique de confidentialité
+                          </a>
                         </p>
                       </form>
                     </div>
@@ -715,7 +726,7 @@
                 <div class="site-shell flex flex-col items-center gap-3 sm:flex-row">
                   <p class="text-sm text-gray-600">© Eribon Hugo. Tous droits réservés.</p>
                   <nav class="flex gap-4 sm:ml-auto sm:gap-6" aria-label="Navigation secondaire">
-                    <button type="button" class="site-focus rounded-sm text-sm font-medium text-gray-700 underline-animation hover:text-gray-950" (click)="navigateTo('legal-information')">Mentions légales</button>
+                    <a class="site-focus rounded-sm text-sm font-medium text-gray-700 underline-animation hover:text-gray-950" href="/legal-information">Mentions légales</a>
                   </nav>
                 </div>
               </footer>
