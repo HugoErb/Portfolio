@@ -117,7 +117,7 @@
 	}
 
 	.site-header {
-		@apply fixed inset-x-0 top-0 z-50 h-16 border-b border-gray-200/80 bg-white/90 shadow-[0_1px_18px_rgba(15,23,42,0.05)] backdrop-blur-xl;
+		@apply fixed inset-x-0 top-0 z-50 h-16 border-b border-gray-200 bg-white shadow-[0_1px_18px_rgba(15,23,42,0.05)];
 	}
 
 	.site-focus {
@@ -125,7 +125,18 @@
 	}
 
 	.site-nav-button {
-		@apply site-focus relative flex h-10 items-center rounded-md px-3 text-sm font-medium text-gray-600 transition-[color,background-color] duration-200 hover:bg-gray-100 hover:text-gray-950;
+		@apply site-focus relative flex h-10 items-center rounded-md px-3 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-950;
+		backface-visibility: hidden;
+		transform: translate3d(0, 0, 0);
+		transition:
+			transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+			color 200ms ease,
+			background-color 200ms ease;
+		will-change: transform;
+	}
+
+	.site-nav-button:hover {
+		transform: translate3d(0, -2px, 0);
 	}
 
 	.site-mobile-nav-button {
@@ -139,6 +150,12 @@
 	.site-section-muted {
 		@apply border-y border-gray-200/80 bg-gray-50;
 		background-image: radial-gradient(circle at 50% 0%, rgb(255 255 255 / 0.95), transparent 42%);
+	}
+
+	.projects-section {
+		background-image:
+			radial-gradient(circle at 75% 38%, rgb(209 213 219 / 0.55), transparent 25%),
+			linear-gradient(to bottom, #fff, #f9fafb);
 	}
 
 	.site-section-dark {
@@ -181,11 +198,11 @@
 	}
 
 	.site-icon-card {
-		@apply site-focus flex flex-col items-center gap-3 rounded-xl border border-transparent px-2 py-4 transition-[background-color,border-color,box-shadow,transform,color] duration-200 hover:-translate-y-1 hover:border-gray-200 hover:bg-white hover:shadow-[0_10px_26px_rgba(15,23,42,0.09)];
+		@apply site-focus relative top-0 flex flex-col items-center gap-3 rounded-xl border border-transparent px-2 py-4 transition-[top,background-color,border-color,box-shadow,color] duration-200 hover:-top-1 hover:border-gray-200 hover:bg-white hover:shadow-[0_10px_26px_rgba(15,23,42,0.09)];
 	}
 
 	.site-icon-card-dark {
-		@apply site-focus flex flex-col items-center gap-3 rounded-xl border border-transparent px-2 py-4 text-gray-200 transition-[background-color,border-color,box-shadow,transform,color] duration-200 hover:-translate-y-1 hover:border-white/10 hover:bg-white/10 hover:text-white hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)];
+		@apply site-focus relative top-0 flex flex-col items-center gap-3 rounded-xl border border-transparent px-2 py-4 text-gray-200 transition-[top,background-color,border-color,box-shadow,color] duration-200 hover:-top-1 hover:border-white/10 hover:bg-white/10 hover:text-white hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)];
 	}
 
 	.site-carousel-button {
