@@ -1,7 +1,6 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { CommonService } from '../common.service';
 import { TechnologyComponent } from '../components/technology/technology.component';
 import { CertificationComponent } from '../components/certification/certification.component';
@@ -35,7 +34,6 @@ interface Project {
     selector: 'app-home',
     imports: [
         CommonModule,
-        FormsModule,
         TechnologyComponent,
         CertificationComponent,
         ProjectComponent,
@@ -56,14 +54,6 @@ export class HomeComponent {
 
 	burgerMenuOpened: boolean = false;
 	yearsExperience: number = 4;
-
-	// Variables pour le mail
-	@ViewChildren('inputField') inputFields!: QueryList<ElementRef>;
-	public inputLabelMap = new Map<string, string>();
-	nameMail: string = '';
-	emailMail: string = '';
-	phoneNumberMail: string = '';
-	messageMail: string = '';
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -202,46 +192,6 @@ export class HomeComponent {
 	toggleBurgerMenu(event: MouseEvent): void {
 		event.stopPropagation();
 		this.burgerMenuOpened = !this.burgerMenuOpened;
-	}
-
-	/**
-	 * Prépare et envoie un email en utilisant le service commun.
-	 * Si l'envoi de l'email réussit, on réinitialise les champs de saisie.
-	 *
-	 * @returns {Promise<void>} Une promesse qui se résout une fois que l'email a été envoyé et que les
-	 * champs de saisie ont été réinitialisés en cas de succès.
-	 */
-	async sendMail(): Promise<void> {
-		this.getDataIntoDictionary();
-		if (await this.commonService.sendMail(this.inputLabelMap)) {
-			this.resetInputFields();
-		}
-	}
-
-	/**
-	 * Parcourt les champs de saisie dans le HTML et mappe leurs valeurs à leurs labels correspondants.
-	 * La méthode utilise `inputFields` pour obtenir une liste des éléments de saisie. Pour chaque champ de saisie, elle récupère
-	 * le label associé en utilisant son attribut 'id'. Si un label est trouvé pour une valeur de champ, la méthode les mappent dans `inputLabelMap`.
-	 */
-	private getDataIntoDictionary() {
-		this.inputFields.forEach((input) => {
-			const label = document.querySelector(`label[for="${input.nativeElement.id}"]`);
-			if (label) {
-				this.inputLabelMap.set(label.textContent!.trim(), input.nativeElement.value);
-			}
-		});
-	}
-
-	/**
-	 * Réinitialise les valeurs de tous les champs de saisie marqués avec la directive locale #inputField.
-	 * En l'occurence, la méthode permet de réinitialiser la valeur des champs de l'envoi de mail.
-	 */
-	resetInputFields() {
-		this.inputFields.forEach((field) => {
-			if (field.nativeElement instanceof HTMLInputElement || field.nativeElement instanceof HTMLTextAreaElement) {
-				field.nativeElement.value = '';
-			}
-		});
 	}
 
 	/**

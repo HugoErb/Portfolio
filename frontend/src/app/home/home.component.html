@@ -17,7 +17,6 @@
       <button type="button" class="site-nav-button" (click)="scrollToSection('certifications')">Diplômes</button>
       <button type="button" class="site-nav-button" (click)="scrollToSection('about')">À propos</button>
       <button type="button" class="site-nav-button" (click)="scrollToSection('carrier')">Parcours</button>
-      <button type="button" class="site-nav-button" (click)="scrollToSection('contact')">Contact</button>
     </nav>
 
     <button
@@ -40,7 +39,6 @@
         <button type="button" class="site-mobile-nav-button" (click)="scrollToSection('certifications')">Diplômes</button>
         <button type="button" class="site-mobile-nav-button" (click)="scrollToSection('about')">À propos</button>
         <button type="button" class="site-mobile-nav-button" (click)="scrollToSection('carrier')">Parcours</button>
-        <button type="button" class="site-mobile-nav-button" (click)="scrollToSection('contact')">Contact</button>
       </nav>
     }
   </div>
@@ -82,13 +80,6 @@
               (click)="scrollToSection('projects')"
               >
               Mes projets
-            </button>
-            <button
-              type="button"
-              class="site-button-secondary"
-              (click)="scrollToSection('contact')"
-              >
-              Me contacter
             </button>
           </div>
         </div>
@@ -387,9 +378,6 @@
           <span class="font-bold">l’intelligence artificielle</span>.
         </p>
 
-        <p>
-          N'hésitez pas à me contacter pour toute question !
-        </p>
       </div>
     </div>
     <div class="grid gap-5 sm:grid-cols-2">
@@ -411,14 +399,6 @@
               </svg>
               <span>Français natif, Anglais B2</span>
             </div>
-          </li>
-          <li>
-            <button type="button" class="site-focus flex items-center gap-2 rounded-sm text-left hover:text-gray-950" (click)="scrollToSection('contact')">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-[1em] shrink-0 text-lg text-gray-700">
-                <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-6.54 4.09c-.65.41-1.47.41-2.12 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44" />
-              </svg>
-              <span class="underline-animation">eribon.hugo&#64;gmail.com</span>
-            </button>
           </li>
           <li>
             <a href="https://linkedin.com/in/hugo-eribon" target="_blank" rel="noopener noreferrer" class="site-focus flex items-center gap-2 rounded-sm hover:text-gray-950">
@@ -665,100 +645,6 @@
             </div>
           </section>
 
-          <section id="contact" class="site-section flex items-center justify-center">
-            <div class="site-shell space-y-12">
-              <div class="flex flex-col items-center justify-center text-center">
-                <div class="space-y-3">
-                  <h2 class="site-heading">Contactez-moi</h2>
-                  <p class="site-copy mx-auto max-w-[760px]">
-                    Vous avez des questions ? Contactez-moi et je vous répondrai dans les plus brefs délais.
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col items-center justify-center">
-                <form class="site-card inline-flex w-full max-w-2xl flex-col space-y-5 p-6 sm:p-8" (ngSubmit)="sendMail()">
-                  <div class="space-y-2">
-                    <label class="text-sm font-semibold leading-none text-gray-800" for="name">Nom et prénom</label>
-                    <input
-                      class="site-field h-11"
-                      id="name"
-                      name="name"
-                      autocomplete="name"
-                      #inputField
-                      [(ngModel)]="nameMail"
-                      maxlength="100"
-                      placeholder="Entrez votre nom et votre prénom…"
-                      required
-                      />
-                    </div>
-                    <div class="space-y-2">
-                      <label class="text-sm font-semibold leading-none text-gray-800" for="email">Adresse email</label>
-                      <input
-                        class="site-field h-11"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        spellcheck="false"
-                        #inputField
-                        [(ngModel)]="emailMail"
-                        maxlength="254"
-                        placeholder="Entrez votre adresse email…"
-                        required
-                        type="email"
-                        />
-                      </div>
-                      <div class="space-y-2">
-                         <div class="flex items-baseline justify-between gap-3">
-                           <label class="text-sm font-semibold leading-none text-gray-800" for="phoneNumber">Téléphone</label>
-                           <span class="text-xs text-gray-500">Facultatif</span>
-                         </div>
-                        <input
-                          class="site-field h-11"
-                          id="phoneNumber"
-                          name="phoneNumber"
-                          autocomplete="tel"
-                          inputmode="tel"
-                           #inputField
-                           maxlength="14"
-                          placeholder="Entrez votre numéro de téléphone…"
-                          type="tel"
-                          [(ngModel)]="phoneNumberMail"
-                          (input)="commonService.formatAndRestrictPhoneInput($event)"
-                          />
-                        </div>
-                      <div class="space-y-2">
-                          <label class="text-sm font-semibold leading-none text-gray-800" for="message">Message</label>
-                          <textarea
-                            class="site-field min-h-[145px] resize-none"
-                            id="message"
-                            name="message"
-                            autocomplete="off"
-                            #inputField
-                            [(ngModel)]="messageMail"
-                            maxlength="2000"
-                            placeholder="Entrez votre message…"
-                            required
-                          ></textarea>
-                        </div>
-                        <button
-                          type="submit"
-                          class="site-button-primary w-full"
-                          >
-                          Envoyer le message
-                        </button>
-                        <p class="mt-1 text-center text-sm leading-relaxed text-gray-500">
-                          Le nom, l’adresse email et le message sont obligatoires.
-                          <br />
-                          Vos données sont utilisées uniquement pour répondre à votre demande.
-                          <br />
-                          <a class="site-focus rounded-sm underline" href="/legal-information#personal-data">
-                            Politique de confidentialité
-                          </a>
-                        </p>
-                      </form>
-                    </div>
-                  </div>
-                </section>
               </main>
 
               <footer class="w-full shrink-0 border-t border-gray-200 bg-gray-50/70 py-7">

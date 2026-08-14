@@ -17,7 +17,6 @@
       <button type="button" class="site-nav-button" (click)="navigateTo('home','certifications')">Diplômes</button>
       <button type="button" class="site-nav-button" (click)="navigateTo('home','about')">À propos</button>
       <button type="button" class="site-nav-button" (click)="navigateTo('home','carrier')">Parcours</button>
-      <button type="button" class="site-nav-button" (click)="navigateTo('home','contact')">Contact</button>
     </nav>
 
     <button type="button" class="site-focus ml-auto inline-flex size-11 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 lg:hidden" (click)="toggleBurgerMenu($event)" [attr.aria-expanded]="burgerMenuOpened" aria-controls="legal-mobile-navigation" aria-label="Ouvrir ou fermer la navigation">
@@ -33,7 +32,6 @@
         <button type="button" class="site-mobile-nav-button" (click)="navigateTo('home','certifications')">Diplômes</button>
         <button type="button" class="site-mobile-nav-button" (click)="navigateTo('home','about')">À propos</button>
         <button type="button" class="site-mobile-nav-button" (click)="navigateTo('home','carrier')">Parcours</button>
-        <button type="button" class="site-mobile-nav-button" (click)="navigateTo('home','contact')">Contact</button>
       </nav>
     }
   </div>
@@ -107,36 +105,30 @@
 
         <p class="font-bold">4.2 Données collectées, finalités et base légale</p>
         <p>
-          Le formulaire de contact collecte obligatoirement votre nom et prénom, votre adresse électronique
-          et votre message. Le numéro de téléphone est facultatif. Ces données servent uniquement à recevoir
-          votre demande, vous répondre et vous envoyer un accusé de réception.
+          Le site ne comporte aucun formulaire et ne collecte directement aucune donnée personnelle. Si vous
+          contactez Hugo Eribon à l’adresse électronique affichée sur le site, les informations que vous choisissez
+          de transmettre sont utilisées uniquement pour traiter votre demande et vous répondre.
         </p>
         <p>
-          Votre adresse IP est traitée temporairement afin de limiter les envois abusifs à cinq demandes
-          par période de 24 heures.
-        </p>
-        <p>
-          Ces traitements reposent sur l’intérêt légitime du responsable du traitement à répondre aux
-          demandes qui lui sont adressées et à sécuriser le formulaire. Sans les informations obligatoires,
-          la demande ne peut pas être envoyée. Aucune donnée n’est utilisée à des fins de prospection
+          Ce traitement repose sur l’intérêt légitime du responsable du traitement à répondre aux demandes qui
+          lui sont adressées ou, lorsque votre demande concerne un éventuel contrat, sur les mesures
+          précontractuelles prises à votre initiative. Aucune donnée n’est utilisée à des fins de prospection
           commerciale ni vendue.
         </p>
 
         <p class="font-bold">4.3 Destinataires, conservation et transferts</p>
         <p>
-          Les données sont accessibles à Hugo Eribon, à son fournisseur de messagerie et à Twilio SendGrid,
-          utilisé comme sous-traitant pour acheminer les courriels.
+          Les informations envoyées par courrier électronique sont accessibles à Hugo Eribon ainsi qu’aux
+          fournisseurs de messagerie nécessaires à leur acheminement, notamment Google pour l’adresse de réception.
         </p>
         <p>
           Les messages sont conservés au maximum douze mois après le dernier échange, puis supprimés, sauf
-          obligation légale ou nécessité de conserver temporairement un échange à titre de preuve. L’adresse
-          IP utilisée pour limiter les abus est conservée au maximum 24 heures.
+          obligation légale ou nécessité de conserver temporairement un échange à titre de preuve.
         </p>
         <p>
-          Twilio SendGrid peut traiter des données aux États-Unis ou dans d’autres pays situés hors de
-          l’Espace économique européen. Ces transferts sont encadrés, selon leur destination, par une décision
-          d’adéquation applicable ou par les clauses contractuelles types de la Commission européenne prévues dans son
-          <a href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer">accord de traitement des données</a>.
+          Google peut traiter ces informations sur des serveurs situés hors de votre pays de résidence. Les garanties
+          appliquées à ces transferts sont présentées dans ses
+          <a href="https://policies.google.com/privacy/frameworks?hl=fr" target="_blank" rel="noopener noreferrer">cadres légaux pour les transferts de données</a>.
         </p>
 
         <p class="font-bold">4.4 Vos droits</p>
