@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Charger NVM et rendre npm/pm2 disponibles dans un contexte systemd
 export NVM_DIR="/home/ubuntu/.nvm"
 export PATH="$NVM_DIR/versions/node/v22.22.2/bin:$PATH"
@@ -38,7 +40,7 @@ rm -rf "$dossierRacine/frontend/dist"
 # Build frontend
 echo "Installation des dépendances..."
 cd frontend || exit 1
-$NPM_CMD install
+$NPM_CMD ci
 
 echo "Lancement du build frontend..."
 $NPM_CMD run build
