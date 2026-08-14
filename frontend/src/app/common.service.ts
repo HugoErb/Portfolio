@@ -162,7 +162,10 @@ export class CommonService {
             icon: 'error',
             title: 'Erreur de saisie',
             text: message,
-            confirmButtonColor: "#3B82F6"
+            confirmButtonColor: "#3B82F6",
+            customClass: {
+                confirmButton: 'site-alert-confirm'
+            }
         });
     }
 
