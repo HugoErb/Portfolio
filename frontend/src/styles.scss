@@ -148,8 +148,7 @@
 	}
 
 	#projects.site-section,
-	#carrier.site-section,
-	#contact.site-section {
+	#carrier.site-section {
 		padding-block: 2.25rem;
 	}
 
@@ -159,8 +158,7 @@
 
 	@media (min-width: 768px) {
 		#projects.site-section,
-		#carrier.site-section,
-		#contact.site-section {
+		#carrier.site-section {
 			padding-block: 3.25rem;
 		}
 
@@ -171,8 +169,7 @@
 
 	@media (min-width: 1024px) {
 		#projects.site-section,
-		#carrier.site-section,
-		#contact.site-section {
+		#carrier.site-section {
 			padding-block: 4.25rem;
 		}
 
@@ -243,10 +240,6 @@
 		@apply site-focus inline-flex size-11 items-center justify-center rounded-full transition-[background-color,color,box-shadow] duration-200 enabled:hover:bg-white enabled:hover:shadow-md disabled:cursor-not-allowed disabled:opacity-35;
 	}
 
-	.site-field {
-		@apply site-focus flex w-full rounded-lg border border-gray-200 bg-white px-3.5 py-2.5 text-sm text-gray-900 shadow-sm transition-[border-color,box-shadow] duration-200 placeholder:text-gray-400 hover:border-gray-300 focus-visible:border-gray-500 focus-visible:ring-gray-500/30;
-	}
-
 	.career-timeline .dui-timeline-start,
 	.career-timeline .dui-timeline-end {
 		@apply mb-8 w-full max-w-xl rounded-xl border border-gray-200 bg-white p-5 text-left text-sm leading-relaxed text-gray-600 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-6;
@@ -307,9 +300,4 @@
 		scroll-behavior: auto !important;
 		transition-duration: 0.01ms !important;
 	}
-}
-
-.swal2-confirm.site-alert-confirm {
-	background-color: #3b82f6 !important;
-	color: #fff !important;
 }
