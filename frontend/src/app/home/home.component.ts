@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from '../common.service';
@@ -52,22 +52,7 @@ export class HomeComponent {
 		protected commonService: CommonService,
 	) {}
 
-	burgerMenuOpened: boolean = false;
-	emailCopied: boolean = false;
 	yearsExperience: number = 4;
-	private emailCopyFeedbackTimeout?: ReturnType<typeof setTimeout>;
-
-	async copyEmail(): Promise<void> {
-		await navigator.clipboard.writeText('eribon.hugo@gmail.com');
-		this.emailCopied = true;
-		this.changeDetectorRef.markForCheck();
-
-		clearTimeout(this.emailCopyFeedbackTimeout);
-		this.emailCopyFeedbackTimeout = setTimeout(() => {
-			this.emailCopied = false;
-			this.changeDetectorRef.markForCheck();
-		}, 2000);
-	}
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -151,28 +136,6 @@ export class HomeComponent {
 	}
 
 	/**
-	 * Gère les clics à l'extérieur du menu burger pour fermer le menu.
-	 *
-	 * Cette méthode est déclenchée par un écouteur d'événements qui surveille tous les clics dans le document.
-	 * Si le menu burger est ouvert et que le clic n'est pas dans le menu burger,
-	 * alors le menu sera fermé. Ceci est vérifié en utilisant la méthode `contains` sur l'élément natif du menu burger.
-	 *
-	 * @param event L'objet MouseEvent associé au clic du document.
-	 */
-	@ViewChild('menuBurger') menuBurger!: ElementRef;
-	@HostListener('document:click', ['$event'])
-	onClickOutside(event: MouseEvent) {
-		if (this.burgerMenuOpened && !this.menuBurger.nativeElement.contains(event.target)) {
-			this.burgerMenuOpened = false;
-		}
-	}
-
-	@HostListener('document:keydown.escape')
-	onEscapeKey(): void {
-		this.burgerMenuOpened = false;
-	}
-
-	/**
 	 * Permet la navigation vers différentes sections de la page en utilisant un défilement fluide.
 	 * Si le menu burger est ouvert, il est d'abord fermé avant de procéder au défilement.
 	 * La méthode recherche l'élément de section par son identifiant. Si l'élément est trouvé, elle calcule la position de l'élément
@@ -181,10 +144,6 @@ export class HomeComponent {
 	 * @param sectionId L'identifiant de l'élément HTML vers lequel défiler.
 	 */
 	scrollToSection(sectionId: string): void {
-		if (this.burgerMenuOpened) {
-			this.burgerMenuOpened = !this.burgerMenuOpened;
-		}
-
 		setTimeout(() => {
 			const section = document.getElementById(sectionId);
 			if (section) {
@@ -195,17 +154,6 @@ export class HomeComponent {
 				window.scrollTo({ top: position, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 			}
 		}, 50);
-	}
-
-	/**
-	 * Sert à ouvrir ou fermer le menu burger en inversant l'état actuel du menu.
-	 * Elle arrête également la propagation de l'événement de clic pour éviter des interactions indésirables avec d'autres éléments de l'interface utilisateur.
-	 *
-	 * @param {MouseEvent} event - L'événement de clic qui a déclenché l'appel de la méthode. Utilisé pour arrêter la propagation de l'événement.
-	 */
-	toggleBurgerMenu(event: MouseEvent): void {
-		event.stopPropagation();
-		this.burgerMenuOpened = !this.burgerMenuOpened;
 	}
 
 	/**
