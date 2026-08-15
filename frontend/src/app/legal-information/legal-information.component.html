@@ -181,11 +181,54 @@
   </section>
 </main>
 
-<footer class="w-full shrink-0 border-t border-gray-200 bg-white py-7">
-  <div class="site-shell flex flex-col items-center gap-3 sm:flex-row">
-    <p class="text-sm text-gray-600">© Eribon Hugo. Tous droits réservés.</p>
-    <nav class="flex gap-4 sm:ml-auto sm:gap-6" aria-label="Navigation secondaire">
-      <span class="text-sm font-medium text-gray-900" aria-current="page">Mentions légales</span>
-    </nav>
+<footer class="site-footer w-full shrink-0">
+  <div class="site-shell py-10 sm:py-12">
+    <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+      <div class="max-w-sm">
+        <a href="/" class="inline-flex items-center gap-3 rounded-lg text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+          <span class="flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/10">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="size-6">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.216 4.106L9.784 19.894M6.5 7.757L2.257 12L6.5 16.243m11-8.486L21.743 12L17.5 16.243" />
+            </svg>
+          </span>
+          <span class="text-lg font-semibold tracking-tight">Hugo Eribon</span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-gray-400">Tech Lead spécialisé en AWS et Python, je transforme des besoins métier complexes en solutions robustes, performantes et durables.</p>
+      </div>
+
+      <div class="grid gap-7 sm:grid-cols-2 sm:gap-12">
+        <nav aria-label="Explorer le portfolio">
+          <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Navigation</p>
+          <div class="flex flex-wrap lg:flex-col lg:items-start">
+            <a class="site-footer-link" href="/#projects">Projets</a>
+            <a class="site-footer-link" href="/#technologies">Technologies</a>
+            <a class="site-footer-link" href="/#carrier">Parcours</a>
+          </div>
+        </nav>
+
+        <nav aria-label="Liens externes">
+          <p class="mb-2 px-3 text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Me retrouver</p>
+          <div class="flex flex-wrap lg:flex-col lg:items-start">
+            <a class="site-footer-link" href="https://linkedin.com/in/hugo-eribon" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-4 shrink-0"><path fill="currentColor" d="M19.959 11.719v7.379h-4.278v-6.885c0-1.73-.619-2.91-2.167-2.91c-1.182 0-1.886.796-2.195 1.565c-.113.275-.142.658-.142 1.043v7.187h-4.28s.058-11.66 0-12.869h4.28v1.824c.568-.875 1.583-2.126 3.856-2.126c2.815 0 4.926 1.84 4.926 5.792M2.421.026C.958.026 0 .986 0 2.249c0 1.235.93 2.224 2.365 2.224h.028c1.493 0 2.42-.989 2.42-2.224C4.787.986 3.887.026 2.422.026zM.254 19.098h4.278V6.229H.254z" /></svg>
+              LinkedIn
+            </a>
+            <a class="site-footer-link" href="https://github.com/HugoErb" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-4 shrink-0"><path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" /></svg>
+              GitHub
+            </a>
+            <button type="button" class="site-footer-link" (click)="copyEmail()" aria-label="Copier l’adresse e-mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="size-4 shrink-0"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16v12H4zM4 7l8 6l8-6" /></svg>
+              <span aria-live="polite">{{ emailCopied ? 'Copié !' : 'E-mail' }}</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mt-9 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-gray-500 sm:flex-row sm:items-center">
+      <p>© Hugo Eribon. Tous droits réservés.</p>
+      <span class="sm:ml-auto" aria-current="page">Mentions légales</span>
+    </div>
   </div>
 </footer>

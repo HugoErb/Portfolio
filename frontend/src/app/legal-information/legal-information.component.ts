@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -12,11 +12,26 @@ export class LegalInformationComponent {
     constructor(
         private readonly router: Router,
         private readonly activatedRoute: ActivatedRoute,
+        private readonly changeDetectorRef: ChangeDetectorRef,
     ) {
     }
 
     burgerMenuOpened: boolean = false;
+    emailCopied: boolean = false;
+    private emailCopyFeedbackTimeout?: ReturnType<typeof setTimeout>;
     protected readonly personalDataOpened = this.activatedRoute.snapshot.fragment === 'personal-data';
+
+    async copyEmail(): Promise<void> {
+        await navigator.clipboard.writeText('eribon.hugo@gmail.com');
+        this.emailCopied = true;
+        this.changeDetectorRef.markForCheck();
+
+        clearTimeout(this.emailCopyFeedbackTimeout);
+        this.emailCopyFeedbackTimeout = setTimeout(() => {
+            this.emailCopied = false;
+            this.changeDetectorRef.markForCheck();
+        }, 2000);
+    }
 
     /**
     * Gère les clics à l'extérieur du menu burger pour fermer le menu.
