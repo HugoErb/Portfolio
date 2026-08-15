@@ -53,7 +53,21 @@ export class HomeComponent {
 	) {}
 
 	burgerMenuOpened: boolean = false;
+	emailCopied: boolean = false;
 	yearsExperience: number = 4;
+	private emailCopyFeedbackTimeout?: ReturnType<typeof setTimeout>;
+
+	async copyEmail(): Promise<void> {
+		await navigator.clipboard.writeText('eribon.hugo@gmail.com');
+		this.emailCopied = true;
+		this.changeDetectorRef.markForCheck();
+
+		clearTimeout(this.emailCopyFeedbackTimeout);
+		this.emailCopyFeedbackTimeout = setTimeout(() => {
+			this.emailCopied = false;
+			this.changeDetectorRef.markForCheck();
+		}, 2000);
+	}
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
