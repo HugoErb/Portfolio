@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -12,48 +12,10 @@ export class LegalInformationComponent {
     constructor(
         private readonly router: Router,
         private readonly activatedRoute: ActivatedRoute,
-        private readonly changeDetectorRef: ChangeDetectorRef,
     ) {
     }
 
-    burgerMenuOpened: boolean = false;
-    emailCopied: boolean = false;
-    private emailCopyFeedbackTimeout?: ReturnType<typeof setTimeout>;
     protected readonly personalDataOpened = this.activatedRoute.snapshot.fragment === 'personal-data';
-
-    async copyEmail(): Promise<void> {
-        await navigator.clipboard.writeText('eribon.hugo@gmail.com');
-        this.emailCopied = true;
-        this.changeDetectorRef.markForCheck();
-
-        clearTimeout(this.emailCopyFeedbackTimeout);
-        this.emailCopyFeedbackTimeout = setTimeout(() => {
-            this.emailCopied = false;
-            this.changeDetectorRef.markForCheck();
-        }, 2000);
-    }
-
-    /**
-    * Gère les clics à l'extérieur du menu burger pour fermer le menu.
-    * 
-    * Cette méthode est déclenchée par un écouteur d'événements qui surveille tous les clics dans le document.
-    * Si le menu burger est ouvert et que le clic n'est pas dans le menu burger,
-    * alors le menu sera fermé. Ceci est vérifié en utilisant la méthode `contains` sur l'élément natif du menu burger.
-    * 
-    * @param event L'objet MouseEvent associé au clic du document.
-    */
-    @ViewChild('menuBurger') menuBurger!: ElementRef;
-    @HostListener('document:click', ['$event'])
-    onClickOutside(event: MouseEvent) {
-        if (this.burgerMenuOpened && !this.menuBurger.nativeElement.contains(event.target)) {
-            this.burgerMenuOpened = false;
-        }
-    }
-
-    @HostListener('document:keydown.escape')
-    onEscapeKey(): void {
-        this.burgerMenuOpened = false;
-    }
 
     /**
     * Navigue vers un composant spécifié et, optionnellement, fait défiler vers une section au sein de ce composant.
@@ -65,18 +27,7 @@ export class LegalInformationComponent {
     *                           un fragment spécifique au sein du composant.
     */
     navigateTo(component: string, section: string) {
-        this.burgerMenuOpened = false;
         this.router.navigate([component, { redirectionSection: section }]);
     }
 
-    /**
-    * Sert à ouvrir ou fermer le menu burger en inversant l'état actuel du menu. 
-    * Elle arrête également la propagation de l'événement de clic pour éviter des interactions indésirables avec d'autres éléments de l'interface utilisateur.
-    * 
-    * @param {MouseEvent} event - L'événement de clic qui a déclenché l'appel de la méthode. Utilisé pour arrêter la propagation de l'événement.
-    */
-    toggleBurgerMenu(event: MouseEvent): void {
-        event.stopPropagation();
-        this.burgerMenuOpened = !this.burgerMenuOpened;
-    }
 }

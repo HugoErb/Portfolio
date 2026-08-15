@@ -1,0 +1,45 @@
+<a href="#main-content" class="site-focus fixed left-4 top-3 z-[60] -translate-y-20 rounded-md bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-transform focus:translate-y-0">
+  Aller au contenu
+</a>
+
+<header class="site-header">
+  <div class="site-shell flex h-full items-center">
+    <button type="button" class="site-focus flex items-center rounded-md py-1.5 pr-2 text-gray-800" (click)="navigateToSection('landing')" aria-label="Revenir à l’accueil">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="size-8 text-gray-700">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.216 4.106L9.784 19.894M6.5 7.757L2.257 12L6.5 16.243m11-8.486L21.743 12L17.5 16.243" />
+      </svg>
+      <span class="ml-3 text-base font-semibold tracking-tight sm:text-lg">Hugo Eribon</span>
+    </button>
+
+    <nav class="ml-auto hidden items-center gap-0.5 lg:flex" aria-label="Navigation principale">
+      <button type="button" class="site-nav-button" (click)="navigateToSection('projects')">Projets</button>
+      <button type="button" class="site-nav-button" (click)="navigateToSection('technologies')">Technologies</button>
+      <button type="button" class="site-nav-button" (click)="navigateToSection('certifications')">Diplômes</button>
+      <button type="button" class="site-nav-button" (click)="navigateToSection('about')">À propos</button>
+      <button type="button" class="site-nav-button" (click)="navigateToSection('carrier')">Parcours</button>
+    </nav>
+
+    <button
+      type="button"
+      class="site-focus ml-auto inline-flex size-11 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 lg:hidden"
+      (click)="toggleBurgerMenu($event)"
+      [attr.aria-expanded]="burgerMenuOpened"
+      aria-controls="mobile-navigation"
+      aria-label="Ouvrir ou fermer la navigation"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="size-6">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    @if (burgerMenuOpened) {
+      <nav #menuBurger id="mobile-navigation" class="absolute inset-x-3 top-[calc(100%+0.5rem)] rounded-xl border border-gray-200 bg-white/95 p-2 shadow-[0_18px_45px_rgba(15,23,42,0.16)] backdrop-blur-xl animate-mobileMenuAppear lg:hidden" aria-label="Navigation mobile">
+        <button type="button" class="site-mobile-nav-button" (click)="navigateToSection('projects')">Projets</button>
+        <button type="button" class="site-mobile-nav-button" (click)="navigateToSection('technologies')">Technologies</button>
+        <button type="button" class="site-mobile-nav-button" (click)="navigateToSection('certifications')">Diplômes</button>
+        <button type="button" class="site-mobile-nav-button" (click)="navigateToSection('about')">À propos</button>
+        <button type="button" class="site-mobile-nav-button" (click)="navigateToSection('carrier')">Parcours</button>
+      </nav>
+    }
+  </div>
+</header>
