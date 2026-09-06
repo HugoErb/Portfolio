@@ -1,97 +1,118 @@
 {
     "projects": [
-		{
-			"imgPath": "../../assets/imgs/projects/poker.webp",
-			"srcSet": "../../assets/imgs/projects/poker-480.webp 480w, ../../assets/imgs/projects/poker-720.webp 720w, ../../assets/imgs/projects/poker-960.webp 960w",
-			"name": "Poker HL",
-			"description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
-			"link": "https://github.com/lucasbaylon/PokerHL"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/aimdisplay.webp",
-			"srcSet": "../../assets/imgs/projects/aimdisplay-480.webp 480w, ../../assets/imgs/projects/aimdisplay-720.webp 720w, ../../assets/imgs/projects/aimdisplay-960.webp 960w",
-			"name": "Aim Display",
-			"description": "Mon plus gros projet Angular Typescript et Electron : gestion intuitive de compétitions de tir sportif.",
-			"link": "https://github.com/HugoErb/AimDisplay"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/tiktok.webp",
-			"name": "Tik Tok Dynamic Lives",
-			"description": "Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons des viewers.",
-			"link": "https://github.com/HugoErb/TikTok-Live-Project"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/agile-v2.webp",
-			"srcSet": "../../assets/imgs/projects/agile-v2-480.webp 480w, ../../assets/imgs/projects/agile-v2-720.webp 720w, ../../assets/imgs/projects/agile-v2-960.webp 960w",
-			"name": "Prédicteur de vélocité par sprint",
-			"description": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
-			"link": "https://github.com/HugoErb/VelocityPredictor"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/dofus.webp",
-			"name": "Easy Breaking",
-			"description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
-			"link": "https://github.com/HugoErb/EasyBreaking"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/mastermind.webp",
-			"name": "Mastermind",
-			"description": "Jeu du Mastermind, avec solveur basé sur l'algorithme de Knuth, codé en Python.",
-			"link": "https://github.com/HugoErb/Mastermind"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/space_invaders.webp",
-			"name": "Space Invaders",
-			"description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
-			"link": ""
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/safesec.webp",
-			"name": "Site de Safesec Formation",
-			"description": "Un site développé pour l'activité professionelle d'un formateur, avec Angular, Typescript et autre.",
-			"link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/portfolio.webp",
-			"name": "Site Portfolio",
-			"description": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
-			"link": "https://github.com/HugoErb/Portfolio"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/bot.webp",
-			"name": "Bot Low Rake",
-			"description": "Une intelligence automatisée sous Python pour Discord, alertant sur des paris sportifs à fort rendement.",
-			"link": "https://github.com/HugoErb/Scrapping-Low-Rake"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/bet.webp",
-			"name": "Scrapping Best Bet",
-			"description": "Un outil Python conçu pour identifier et classer les paris journaliers les plus rentables selon les bookmakers.",
-			"link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/perceval.webp",
-			"name": "Le cul de chouette",
-			"description": "Une application Java permettant de jouer en multi-session au célèbre jeu inspiré de la série Kaamelott.",
-			"link": "https://github.com/ArnaudMarcel/CulDeChouette"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/logo_sdcs.webp",
-			"name": "Site de la S.D.C.S",
-			"description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
-			"link": "https://github.com/HugoErb/sdcs"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/tir.webp",
-			"name": "App Web TSR",
-			"description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
-			"link": "https://github.com/HugoErb/AppWeb-TSR"
-		},
-		{
-			"imgPath": "../../assets/imgs/projects/pygame.webp",
-			"name": "Nameless Game",
-			"description": "Un jeu rétro développé avec Pygame en Python, inspiré des premiers jeux Zelda.",
-			"link": "https://github.com/HugoErb/Nameless-Game"
-		}
-	]
+        {
+            "imgPath": "../../assets/imgs/projects/pokeludik.webp",
+            "srcSet": "../../assets/imgs/projects/pokeludik-480.webp 480w, ../../assets/imgs/projects/pokeludik-720.webp 720w, ../../assets/imgs/projects/pokeludik-960.webp 960w",
+            "name": "PokeLudik",
+            "description": "Application Angular de mini-jeux Pokémon en solo et en multijoueur, avec authentification, amis, salons et synchronisation en temps réel via Supabase.",
+            "link": "https://github.com/HugoErb/PokeLudik"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/aimdisplay.webp",
+            "srcSet": "../../assets/imgs/projects/aimdisplay-480.webp 480w, ../../assets/imgs/projects/aimdisplay-720.webp 720w, ../../assets/imgs/projects/aimdisplay-960.webp 960w",
+            "name": "Aim Display",
+            "description": "Application Angular, TypeScript et Electron pour gérer les compétitions de tir sportif, accompagnée d'un site vitrine dédié.",
+            "link": "https://github.com/HugoErb/AimDisplay"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/poker.webp",
+            "srcSet": "../../assets/imgs/projects/poker-480.webp 480w, ../../assets/imgs/projects/poker-720.webp 720w, ../../assets/imgs/projects/poker-960.webp 960w",
+            "name": "Poker HL",
+            "description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
+            "link": "https://github.com/lucasbaylon/PokerHL"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/werewolf-manager.webp",
+            "srcSet": "../../assets/imgs/projects/werewolf-manager-480.webp 480w, ../../assets/imgs/projects/werewolf-manager-720.webp 720w, ../../assets/imgs/projects/werewolf-manager-960.webp 960w",
+            "name": "WereWolf Manager",
+            "description": "Application web pour maître du jeu centralisant la préparation, les rôles, les nuits, les votes et les éliminations d'une partie de Loup-Garou.",
+            "link": "https://github.com/HugoErb/WereWolf-Manager"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/tir.webp",
+            "name": "App Web TSR",
+            "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
+            "link": "https://github.com/HugoErb/AppWeb-TSR"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/portfolio.webp",
+            "name": "Site Portfolio",
+            "description": "Mon site internet personnel, me servant de portfolio, sur lequel vous êtes actuellement.",
+            "link": "https://github.com/HugoErb/Portfolio"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/safesec.webp",
+            "name": "Site de Safesec Formation",
+            "description": "Un site développé pour l'activité professionelle d'un formateur, avec Angular, Typescript et autre.",
+            "link": "https://github.com/HugoErb/Site-SAFESEC-Formation"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/nightreign-patterns.webp",
+            "srcSet": "../../assets/imgs/projects/nightreign-patterns-480.webp 480w, ../../assets/imgs/projects/nightreign-patterns-720.webp 720w, ../../assets/imgs/projects/nightreign-patterns-960.webp 960w",
+            "name": "Nightreign Patterns",
+            "description": "Outil JavaScript permettant de retrouver une carte possible d'Elden Ring Nightreign selon le Nightlord, le type de carte et le point d'apparition.",
+            "link": "https://github.com/HugoErb/Nightreign-Patterns"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/tiktok.webp",
+            "name": "Tik Tok Dynamic Lives",
+            "description": "Un outil Angular et Python permettant de rendre des lives Tik Tok réactifs aux dons des viewers.",
+            "link": "https://github.com/HugoErb/TikTok-Live-Project"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/dofus.webp",
+            "name": "Easy Breaking",
+            "description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
+            "link": "https://github.com/HugoErb/EasyBreaking"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/pygame.webp",
+            "name": "Nameless Game",
+            "description": "Un jeu rétro développé avec Pygame en Python, inspiré des premiers jeux Zelda.",
+            "link": "https://github.com/HugoErb/Nameless-Game"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/bot.webp",
+            "name": "Bot Low Rake",
+            "description": "Une intelligence automatisée sous Python pour Discord, alertant sur des paris sportifs à fort rendement.",
+            "link": "https://github.com/HugoErb/Scrapping-Low-Rake"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/bet.webp",
+            "name": "Scrapping Best Bet",
+            "description": "Un outil Python conçu pour identifier et classer les paris journaliers les plus rentables selon les bookmakers.",
+            "link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/agile-v2.webp",
+            "srcSet": "../../assets/imgs/projects/agile-v2-480.webp 480w, ../../assets/imgs/projects/agile-v2-720.webp 720w, ../../assets/imgs/projects/agile-v2-960.webp 960w",
+            "name": "Prédicteur de vélocité par sprint",
+            "description": "Un outil Python utilisant le machine learning pour calculer la vélocité d'une équipe agile sur un sprint.",
+            "link": "https://github.com/HugoErb/VelocityPredictor"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/mastermind.webp",
+            "name": "Mastermind",
+            "description": "Jeu du Mastermind, avec solveur basé sur l'algorithme de Knuth, codé en Python.",
+            "link": "https://github.com/HugoErb/Mastermind"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/logo_sdcs.webp",
+            "name": "Site de la S.D.C.S",
+            "description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
+            "link": "https://github.com/HugoErb/Site-S.D.C.S"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/space_invaders.webp",
+            "name": "Space Invaders",
+            "description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
+            "link": ""
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/perceval.webp",
+            "name": "Le cul de chouette",
+            "description": "Une application Java permettant de jouer en multi-session au célèbre jeu inspiré de la série Kaamelott.",
+            "link": "https://github.com/ArnaudMarcel/CulDeChouette"
+        }
+    ]
 }
