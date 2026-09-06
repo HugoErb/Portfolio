@@ -1,13 +1,6 @@
 {
     "projects": [
         {
-            "imgPath": "../../assets/imgs/projects/pokeludik.webp",
-            "srcSet": "../../assets/imgs/projects/pokeludik-480.webp 480w, ../../assets/imgs/projects/pokeludik-720.webp 720w, ../../assets/imgs/projects/pokeludik-960.webp 960w",
-            "name": "PokeLudik",
-            "description": "Application Angular de mini-jeux Pokémon en solo et en multijoueur, avec authentification, amis, salons et synchronisation en temps réel via Supabase.",
-            "link": "https://github.com/HugoErb/PokeLudik"
-        },
-        {
             "imgPath": "../../assets/imgs/projects/aimdisplay.webp",
             "srcSet": "../../assets/imgs/projects/aimdisplay-480.webp 480w, ../../assets/imgs/projects/aimdisplay-720.webp 720w, ../../assets/imgs/projects/aimdisplay-960.webp 960w",
             "name": "Aim Display",
@@ -21,18 +14,26 @@
             "description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
             "link": "https://github.com/lucasbaylon/PokerHL"
         },
+        
+        {
+            "imgPath": "../../assets/imgs/projects/dofus.webp",
+            "name": "Easy Breaking",
+            "description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
+            "link": "https://github.com/HugoErb/EasyBreaking"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/pokeludik.webp",
+            "srcSet": "../../assets/imgs/projects/pokeludik-480.webp 480w, ../../assets/imgs/projects/pokeludik-720.webp 720w, ../../assets/imgs/projects/pokeludik-960.webp 960w",
+            "name": "PokeLudik",
+            "description": "Application Angular de mini-jeux Pokémon en solo et multijoueur, avec authentification, amis, salons etc...",
+            "link": "https://github.com/HugoErb/PokeLudik"
+        },
         {
             "imgPath": "../../assets/imgs/projects/werewolf-manager.webp",
             "srcSet": "../../assets/imgs/projects/werewolf-manager-480.webp 480w, ../../assets/imgs/projects/werewolf-manager-720.webp 720w, ../../assets/imgs/projects/werewolf-manager-960.webp 960w",
             "name": "WereWolf Manager",
             "description": "Application web pour maître du jeu centralisant la préparation, les rôles, les nuits, les votes et les éliminations d'une partie de Loup-Garou.",
             "link": "https://github.com/HugoErb/WereWolf-Manager"
-        },
-        {
-            "imgPath": "../../assets/imgs/projects/tir.webp",
-            "name": "App Web TSR",
-            "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
-            "link": "https://github.com/HugoErb/AppWeb-TSR"
         },
         {
             "imgPath": "../../assets/imgs/projects/portfolio.webp",
@@ -60,12 +61,6 @@
             "link": "https://github.com/HugoErb/TikTok-Live-Project"
         },
         {
-            "imgPath": "../../assets/imgs/projects/dofus.webp",
-            "name": "Easy Breaking",
-            "description": "Application Angular pour Dofus permettant d'optimiser le brisage d'items afin de maximiser la rentabilité.",
-            "link": "https://github.com/HugoErb/EasyBreaking"
-        },
-        {
             "imgPath": "../../assets/imgs/projects/pygame.webp",
             "name": "Nameless Game",
             "description": "Un jeu rétro développé avec Pygame en Python, inspiré des premiers jeux Zelda.",
@@ -84,6 +79,12 @@
             "link": "https://github.com/HugoErb/Scrapping-Best-Daily-Bet"
         },
         {
+            "imgPath": "../../assets/imgs/projects/logo_sdcs.webp",
+            "name": "Site de la S.D.C.S",
+            "description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
+            "link": "https://github.com/HugoErb/Site-S.D.C.S"
+        },
+        {
             "imgPath": "../../assets/imgs/projects/agile-v2.webp",
             "srcSet": "../../assets/imgs/projects/agile-v2-480.webp 480w, ../../assets/imgs/projects/agile-v2-720.webp 720w, ../../assets/imgs/projects/agile-v2-960.webp 960w",
             "name": "Prédicteur de vélocité par sprint",
@@ -97,12 +98,6 @@
             "link": "https://github.com/HugoErb/Mastermind"
         },
         {
-            "imgPath": "../../assets/imgs/projects/logo_sdcs.webp",
-            "name": "Site de la S.D.C.S",
-            "description": "Un site internet développé pour une association de self défense, combat et secours aux victimes.",
-            "link": "https://github.com/HugoErb/Site-S.D.C.S"
-        },
-        {
             "imgPath": "../../assets/imgs/projects/space_invaders.webp",
             "name": "Space Invaders",
             "description": "Un jeu 3D en Javascript avec Three.js, doté de 3 niveaux d'intelligence artificielle des ennemis.",
@@ -113,6 +108,12 @@
             "name": "Le cul de chouette",
             "description": "Une application Java permettant de jouer en multi-session au célèbre jeu inspiré de la série Kaamelott.",
             "link": "https://github.com/ArnaudMarcel/CulDeChouette"
+        },
+        {
+            "imgPath": "../../assets/imgs/projects/tir.webp",
+            "name": "App Web TSR",
+            "description": "Une application web PHP permettant de gérer facilement des compétitions de tir sportif.",
+            "link": "https://github.com/HugoErb/AppWeb-TSR"
         }
     ]
 }
