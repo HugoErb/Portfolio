@@ -50,7 +50,7 @@ $NPM_CMD exec --yes --package=npm@11 -- npm ci
 
 echo "Installation des dépendances..."
 cd frontend || exit 1
-$NPM_CMD exec --yes --package=npm@11 -- npm ci
+$NPM_CMD exec --yes --package=npm@11 -- npm ci --include=dev
 
 echo "Lancement du build frontend..."
 $NPM_CMD run build
