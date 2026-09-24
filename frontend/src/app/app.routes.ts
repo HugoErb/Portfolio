@@ -8,4 +8,8 @@ export const routes: Routes = [
 		path: 'legal-information',
 		loadComponent: () => import('./legal-information/legal-information.component').then((module) => module.LegalInformationComponent),
 	},
+	{
+		path: '**',
+		loadComponent: () => import('./not-found/not-found.component').then((module) => module.NotFoundComponent),
+	},
 ];
