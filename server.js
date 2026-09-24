@@ -54,8 +54,8 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
     // Champ invisible : une soumission automatique reçoit une réponse neutre sans envoyer d’e-mail.
     if (website?.trim()) return res.status(202).json({ message: 'Votre message a bien été envoyé.' });
 
-    const { RESEND_API_KEY, CONTACT_FROM, CONTACT_TO } = process.env;
-    if (!RESEND_API_KEY || !CONTACT_FROM || !CONTACT_TO) {
+    const { RESEND_API_KEY, SENDER_EMAIL, ADMIN_EMAIL } = process.env;
+    if (!RESEND_API_KEY || !SENDER_EMAIL || !ADMIN_EMAIL) {
         console.error('Configuration Resend incomplète.');
         return res.status(503).json({ message: 'Le formulaire est momentanément indisponible.' });
     }
@@ -63,8 +63,8 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
     try {
         const resend = new Resend(RESEND_API_KEY);
         const { error } = await resend.emails.send({
-            from: CONTACT_FROM,
-            to: [CONTACT_TO],
+            from: SENDER_EMAIL,
+            to: [ADMIN_EMAIL],
             replyTo: senderEmail,
             subject: `Nouveau message de ${senderName}`,
             text: `Nom : ${senderName}\nE-mail : ${senderEmail}${senderPhone ? `\nTéléphone : ${senderPhone}` : ''}\n\nMessage :\n${senderMessage}`,
