@@ -56,8 +56,7 @@ export class HomeComponent {
 
 	yearsExperience: number = 4;
 	contact = { name: '', email: '', phone: '', message: '', website: '' };
-	contactStatus: 'idle' | 'sending' | 'success' | 'error' = 'idle';
-	contactFeedback = '';
+	isContactSending = false;
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -183,20 +182,56 @@ export class HomeComponent {
 	}
 
 	sendContactMessage(): void {
-		if (this.contactStatus === 'sending') return;
+		if (this.isContactSending) return;
+		const name = this.contact.name.trim();
+		const email = this.contact.email.trim();
+		const message = this.contact.message.trim();
+		const phone = this.contact.phone.trim();
 
-		this.contactStatus = 'sending';
-		this.contactFeedback = '';
+		if (name.length < 2 || name.length > 100) {
+			this.showContactValidationError('Indiquez votre nom et prénom.');
+			return;
+		}
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) {
+			this.showContactValidationError('Indiquez une adresse e-mail valide.');
+			return;
+		}
+		if (phone.length > 30 || !/^[0-9+(). -]*$/.test(phone)) {
+			this.showContactValidationError('Indiquez un numéro de téléphone valide ou laissez ce champ vide.');
+			return;
+		}
+		if (message.length < 10 || message.length > 5000) {
+			this.showContactValidationError('Votre message doit contenir entre 10 et 5 000 caractères.');
+			return;
+		}
+
+		this.isContactSending = true;
 		this.http.post<{ message: string }>('/api/contact', this.contact).subscribe({
 			next: (response) => {
-				this.contactStatus = 'success';
-				this.contactFeedback = response.message;
+				this.isContactSending = false;
 				this.contact = { name: '', email: '', phone: '', message: '', website: '' };
+				void this.showContactAlert('success', 'Message envoyé', response.message);
 			},
 			error: (error) => {
-				this.contactStatus = 'error';
-				this.contactFeedback = error?.error?.message || 'Une erreur est survenue. Réessayez plus tard.';
+				this.isContactSending = false;
+				void this.showContactAlert('error', 'Échec de l’envoi', error?.error?.message || 'Une erreur est survenue. Réessayez plus tard.');
 			},
+		});
+	}
+
+	private showContactValidationError(message: string): void {
+		void this.showContactAlert('error', 'Erreur de saisie', message);
+	}
+
+	private async showContactAlert(icon: 'success' | 'error', title: string, text: string): Promise<void> {
+		const { default: Swal } = await import('sweetalert2');
+		await Swal.fire({
+			icon,
+			title,
+			text,
+			confirmButtonColor: '#1f2937',
+			confirmButtonText: 'Fermer',
+			scrollbarPadding: false,
 		});
 	}
 
