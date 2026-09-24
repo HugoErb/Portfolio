@@ -62,7 +62,7 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
 
     try {
         const resend = new Resend(RESEND_API_KEY);
-        const { error } = await resend.emails.send({
+        const { error: contactEmailError } = await resend.emails.send({
             from: SENDER_EMAIL,
             to: [ADMIN_EMAIL],
             replyTo: senderEmail,
@@ -71,9 +71,21 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
             headers: { 'X-Entity-Ref-ID': crypto.randomUUID() },
         });
 
-        if (error) {
-            console.error('Échec Resend :', error.name ?? 'erreur inconnue');
+        if (contactEmailError) {
+            console.error('Échec Resend :', contactEmailError.name ?? 'erreur inconnue');
             return res.status(502).json({ message: 'L’envoi du message a échoué. Réessayez plus tard.' });
+        }
+
+        const { error: acknowledgementError } = await resend.emails.send({
+            from: SENDER_EMAIL,
+            to: [senderEmail],
+            replyTo: ADMIN_EMAIL,
+            subject: 'Votre message a bien été reçu',
+            text: `Bonjour ${senderName},\n\nJ’ai bien reçu votre message et vous remercie de m’avoir contacté. Je vais l’étudier et reviendrai vers vous dans les meilleurs délais.\n\nCordialement,\nHugo Eribon`,
+            headers: { 'X-Entity-Ref-ID': crypto.randomUUID() },
+        });
+        if (acknowledgementError) {
+            console.error('Échec de l’accusé de réception Resend :', acknowledgementError.name ?? 'erreur inconnue');
         }
         return res.status(202).json({ message: 'Votre message a bien été envoyé.' });
     } catch (error) {

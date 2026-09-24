@@ -225,13 +225,19 @@ export class HomeComponent {
 
 	private async showContactAlert(icon: 'success' | 'error', title: string, text: string): Promise<void> {
 		const { default: Swal } = await import('sweetalert2');
+		const isSuccess = icon === 'success';
 		await Swal.fire({
 			icon,
 			title,
 			text,
+			position: isSuccess ? 'top-end' : 'center',
+			toast: isSuccess,
+			showConfirmButton: !isSuccess,
 			confirmButtonColor: '#1f2937',
 			confirmButtonText: 'Fermer',
 			scrollbarPadding: false,
+			timer: isSuccess ? 3500 : undefined,
+			timerProgressBar: isSuccess,
 		});
 	}
 
