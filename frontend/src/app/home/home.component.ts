@@ -9,6 +9,9 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PageNavigationButtonComponent } from '../components/page-navigation-button/page-navigation-button.component';
 import { SvgPageNavigationButtonComponent } from '../components/svg-page-navigation-button/svg-page-navigation-button.component';
+import certifsData from '../../assets/data/certifs.json';
+import projectsData from '../../assets/data/projects.json';
+import technosData from '../../assets/data/technos.json';
 
 interface Technology {
     iconClass: string;
@@ -98,10 +101,11 @@ export class HomeComponent {
 	ngOnInit() {
 		this.yearsExperience = this.calculateExperience();
 
+		this.loadAssets('projects');
+		this.loadAssets('technos');
+		this.loadAssets('certifs');
+
 		if (this.isBrowser) {
-			this.loadAssets('projects');
-			this.loadAssets('technos');
-			this.loadAssets('certifs');
 			this.updateItemsPerPage();
 
 			if (this.activatedRoute.snapshot.params.hasOwnProperty('redirectionSection')) {
@@ -161,24 +165,23 @@ export class HomeComponent {
 	}
 
 	/**
-	 * Charge toutes les données d'un fichier JSON et les stocke dans `elementsConfig[type].items`.
+	 * Charge les données statiques et les stocke dans `elementsConfig[type].items`.
 	 * @param type - Le type d'éléments à charger ("technos", "certifs" ou "projects").
 	 */
 	loadAssets(type: 'technos' | 'certifs' | 'projects'): void {
-		const filePath = {
-			technos: '../../assets/data/technos.json',
-			certifs: '../../assets/data/certifs.json',
-			projects: '../../assets/data/projects.json',
-		}[type];
+		switch (type) {
+			case 'technos':
+				this.elementsConfig.technos.items = technosData.technos;
+				break;
+			case 'certifs':
+				this.elementsConfig.certifs.items = certifsData.certifs;
+				break;
+			case 'projects':
+				this.elementsConfig.projects.items = projectsData.projects;
+				break;
+		}
 
-		this.http.get<any>(filePath).subscribe({
-			next: (data) => {
-				this.elementsConfig[type].items = data[type];
-				this.updateVisibleElements(type);
-				this.changeDetectorRef.markForCheck();
-			},
-			error: (err) => console.error(`Erreur lors du chargement de ${type} :`, err),
-		});
+		this.updateVisibleElements(type);
 	}
 
 	sendContactMessage(): void {
@@ -225,19 +228,27 @@ export class HomeComponent {
 
 	private async showContactAlert(icon: 'success' | 'error', title: string, text: string): Promise<void> {
 		const { default: Swal } = await import('sweetalert2');
-		const isSuccess = icon === 'success';
+		if (icon === 'success') {
+			await Swal.fire({
+				position: 'top-end',
+				toast: true,
+				icon: 'success',
+				html: '<span class="font-medium text-xl">Message envoyé !</span>',
+				showConfirmButton: false,
+				width: 'auto',
+				timer: 3500,
+				scrollbarPadding: false,
+			});
+			return;
+		}
+
 		await Swal.fire({
 			icon,
 			title,
 			text,
-			position: isSuccess ? 'top-end' : 'center',
-			toast: isSuccess,
-			showConfirmButton: !isSuccess,
 			confirmButtonColor: '#1f2937',
 			confirmButtonText: 'Fermer',
 			scrollbarPadding: false,
-			timer: isSuccess ? 3500 : undefined,
-			timerProgressBar: isSuccess,
 		});
 	}
 

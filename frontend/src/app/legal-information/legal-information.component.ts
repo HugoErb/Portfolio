@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -7,27 +9,26 @@ import { ActivatedRoute, Router } from '@angular/router';
     imports: [],
     templateUrl: './legal-information.component.html'
 })
-export class LegalInformationComponent {
+export class LegalInformationComponent implements OnInit {
 
-    constructor(
-        private readonly router: Router,
-        private readonly activatedRoute: ActivatedRoute,
-    ) {
-    }
+    private readonly document = inject(DOCUMENT);
+    private readonly meta = inject(Meta);
+    private readonly title = inject(Title);
+
+    constructor(private readonly activatedRoute: ActivatedRoute) {}
 
     protected readonly personalDataOpened = this.activatedRoute.snapshot.fragment === 'personal-data';
 
-    /**
-    * Navigue vers un composant spécifié et, optionnellement, fait défiler vers une section au sein de ce composant.
-    *
-    * @param {string} component - Le nom du composant vers lequel naviguer. Cela doit être le chemin ou
-    *                             la route associée au composant cible dans la configuration de routage Angular.
-    * @param {string} section - La section au sein du composant cible vers laquelle l'utilisateur doit être redirigé.
-    *                           Ce paramètre est optionnel et est utilisé pour indiquer une section ou
-    *                           un fragment spécifique au sein du composant.
-    */
-    navigateTo(component: string, section: string) {
-        this.router.navigate([component, { redirectionSection: section }]);
-    }
+    ngOnInit(): void {
+        const pageTitle = 'Mentions légales | Hugo Eribon';
+        const description = 'Mentions légales et informations relatives au traitement des données du portfolio de Hugo Eribon.';
+        const url = 'https://hugoeribon.fr/legal-information';
 
+        this.title.setTitle(pageTitle);
+        this.meta.updateTag({ name: 'description', content: description });
+        this.meta.updateTag({ property: 'og:title', content: pageTitle });
+        this.meta.updateTag({ property: 'og:description', content: description });
+        this.meta.updateTag({ property: 'og:url', content: url });
+        this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', url);
+    }
 }
