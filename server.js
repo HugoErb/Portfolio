@@ -81,7 +81,7 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
             to: [senderEmail],
             replyTo: ADMIN_EMAIL,
             subject: 'Votre message a bien été reçu',
-            text: `Bonjour ${senderName},\n\nJ’ai bien reçu votre message et vous remercie de m’avoir contacté. Je vais l’étudier et reviendrai vers vous dans les meilleurs délais.\n\nCordialement,\nHugo Eribon`,
+            text: `Bonjour ${senderName},\n\nJ’ai bien reçu votre message et vous remercie de m’avoir contacté. Je vais l’étudier et reviendrai vers vous dans les meilleurs délais.\n\nEn attendant, vous pouvez découvrir mon travail :\n- Portfolio : https://hugoeribon.fr/home\n- LinkedIn : https://linkedin.com/in/hugo-eribon\n- GitHub : https://github.com/HugoErb\n\nCordialement,\nHugo Eribon`,
             headers: { 'X-Entity-Ref-ID': crypto.randomUUID() },
         });
         if (acknowledgementError) {
