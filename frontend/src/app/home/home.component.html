@@ -609,11 +609,11 @@
       <div class="grid gap-5 sm:grid-cols-2">
         <div class="space-y-2">
           <label class="text-sm font-semibold text-gray-800" for="name">Nom et prénom</label>
-          <input class="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus:border-gray-400 focus:outline-none" id="name" name="name" [(ngModel)]="contact.name" placeholder="Votre nom" required minlength="2" maxlength="100" autocomplete="name" />
+          <input class="site-focus h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus-visible:border-gray-400" id="name" name="name" [(ngModel)]="contact.name" placeholder="Votre nom" required minlength="2" maxlength="100" autocomplete="name" />
         </div>
         <div class="space-y-2">
           <label class="text-sm font-semibold text-gray-800" for="email">Adresse e-mail</label>
-          <input class="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus:border-gray-400 focus:outline-none" id="email" name="email" [(ngModel)]="contact.email" placeholder="vous@exemple.fr" required maxlength="254" autocomplete="email" spellcheck="false" type="email" />
+          <input class="site-focus h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus-visible:border-gray-400" id="email" name="email" [(ngModel)]="contact.email" placeholder="vous@exemple.fr" required maxlength="254" autocomplete="email" spellcheck="false" type="email" />
         </div>
       </div>
       <div class="space-y-2">
@@ -621,14 +621,14 @@
           <label class="text-sm font-semibold text-gray-800" for="phone">Téléphone</label>
           <span class="text-xs text-gray-500">Facultatif</span>
         </div>
-        <input class="h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus:border-gray-400 focus:outline-none" id="phone" name="phone" [(ngModel)]="contact.phone" placeholder="06 00 00 00 00" maxlength="30" autocomplete="tel" inputmode="tel" type="tel" />
+        <input class="site-focus h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus-visible:border-gray-400" id="phone" name="phone" [(ngModel)]="contact.phone" placeholder="06 00 00 00 00" maxlength="30" autocomplete="tel" inputmode="tel" type="tel" />
       </div>
       <div class="space-y-2">
         <div class="flex items-baseline justify-between gap-3">
           <label class="text-sm font-semibold text-gray-800" for="message">Votre message</label>
           <span class="text-xs text-gray-500">10 caractères minimum</span>
         </div>
-        <textarea class="min-h-40 w-full resize-y rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-3 text-sm text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gray-400 focus:outline-none" id="message" name="message" [(ngModel)]="contact.message" placeholder="Décrivez votre demande…" required minlength="10" maxlength="5000" autocomplete="off"></textarea>
+        <textarea class="site-focus min-h-40 w-full resize-y rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-3 text-sm text-gray-900 shadow-sm transition placeholder:text-gray-400 focus-visible:border-gray-400" id="message" name="message" [(ngModel)]="contact.message" placeholder="Décrivez votre demande…" required minlength="10" maxlength="5000" autocomplete="off"></textarea>
       </div>
       <div class="sr-only" aria-hidden="true"><label>Ne pas remplir ce champ<input type="text" name="website" [(ngModel)]="contact.website" tabindex="-1" autocomplete="off" /></label></div>
       <div class="flex flex-col-reverse gap-4 border-t border-gray-100 pt-5 sm:flex-row sm:items-center sm:justify-between">

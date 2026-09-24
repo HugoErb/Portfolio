@@ -107,7 +107,7 @@ if (process.env.NODE_ENV !== 'dev') {
     }}));
     app.get('/{*splat}', (req, res) => {
         res.setHeader('Cache-Control', 'no-cache');
-        res.status(404).sendFile(path.join(distDir, 'index.html'));
+        res.status(404).sendFile(path.join(distDir, 'index.csr.html'));
     });
 }
 

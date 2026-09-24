@@ -1,6 +1,17 @@
 node_modules/
 prod/
 .env
+.env.*
+!.env.example
+!.env.sample
 /dist
+frontend/dist/
 redeploy.log
+*.log
+.angular/
+.cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 frontend/src/assets/aim-display/
