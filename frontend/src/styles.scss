@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "sweetalert2/dist/sweetalert2.min.css";
+
 /* Polices complètes, chargées uniquement pour les caractères hors latin. */
 @font-face {
 	font-family: "Inter";
@@ -79,6 +81,7 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
+		scrollbar-gutter: stable;
 	}
 
 	body {
@@ -314,4 +317,10 @@
 		scroll-behavior: auto !important;
 		transition-duration: 0.01ms !important;
 	}
+}
+
+/* Tailwind réinitialise les couleurs des boutons SweetAlert2. */
+.swal2-container button.swal2-styled.swal2-confirm {
+	background-color: var(--swal2-confirm-button-background-color);
+	color: var(--swal2-confirm-button-color);
 }
