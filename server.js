@@ -34,7 +34,7 @@ const getAllowedOrigin = (req) => `${isProduction ? 'https' : req.protocol}://${
 
 app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' }), contactLimiter, async (req, res) => {
     const origin = req.get('origin');
-    const allowedOrigin = isProduction ? process.env.SITE_ORIGIN : getAllowedOrigin(req);
+    const allowedOrigin = isProduction ? (process.env.SITE_ORIGIN || 'https://hugoeribon.fr') : getAllowedOrigin(req);
     if (!allowedOrigin) return res.status(503).json({ message: 'Le formulaire est momentanément indisponible.' });
     if (!origin || origin !== allowedOrigin.replace(/\/$/, '')) return res.status(403).json({ message: 'Requête non autorisée.' });
 

@@ -633,7 +633,7 @@
       <div class="sr-only" aria-hidden="true"><label>Ne pas remplir ce champ<input type="text" name="website" [(ngModel)]="contact.website" tabindex="-1" autocomplete="off" /></label></div>
       <div class="flex flex-col-reverse gap-4 border-t border-gray-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
         <p class="max-w-sm text-xs leading-relaxed text-gray-500">Vos données sont utilisées uniquement pour répondre à votre demande.</p>
-        <button type="submit" class="site-button-primary shrink-0 cursor-pointer" [disabled]="contactForm.invalid || contactStatus === 'sending'">{{ contactStatus === 'sending' ? 'Envoi…' : 'Envoyer le message' }}</button>
+        <button type="submit" class="site-button-primary shrink-0 cursor-pointer" [disabled]="contactStatus === 'sending'">{{ contactStatus === 'sending' ? 'Envoi…' : 'Envoyer le message' }}</button>
       </div>
       @if (contactStatus !== 'idle') {
         <p class="rounded-lg px-3 py-2 text-sm" [class.bg-green-50]="contactStatus === 'success'" [class.text-green-700]="contactStatus === 'success'" [class.bg-red-50]="contactStatus === 'error'" [class.text-red-700]="contactStatus === 'error'" aria-live="polite">{{ contactFeedback }}</p>
