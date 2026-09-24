@@ -19,6 +19,13 @@ dossierRacine=$(pwd)
 dossierDistRacine="$dossierRacine/dist"
 nomApplication="Portfolio"
 
+# Charge les secrets du serveur sans les versionner.
+if [ -f "$dossierRacine/.env" ]; then
+    set -a
+    . "$dossierRacine/.env"
+    set +a
+fi
+
 # Déterminer les chemins dynamiques
 NPM_CMD=$(which npm)
 PM2_CMD=$(which pm2)
@@ -38,6 +45,9 @@ rm -rf "$dossierDistRacine"
 rm -rf "$dossierRacine/frontend/dist"
 
 # Build frontend
+echo "Installation des dépendances backend..."
+$NPM_CMD exec --yes --package=npm@11 -- npm ci
+
 echo "Installation des dépendances..."
 cd frontend || exit 1
 $NPM_CMD exec --yes --package=npm@11 -- npm ci

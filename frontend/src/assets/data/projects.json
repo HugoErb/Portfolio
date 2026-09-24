@@ -14,7 +14,6 @@
             "description": "Application Angular permettant de s'entraîner au Poker, voir ses statistiques et gérer ses ranges d'actions.",
             "link": "https://github.com/lucasbaylon/PokerHL"
         },
-        
         {
             "imgPath": "../../assets/imgs/projects/dofus.webp",
             "name": "Easy Breaking",

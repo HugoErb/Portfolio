@@ -6,6 +6,7 @@ import { TechnologyComponent } from '../components/technology/technology.compone
 import { CertificationComponent } from '../components/certification/certification.component';
 import { ProjectComponent } from '../components/project/project.component';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { PageNavigationButtonComponent } from '../components/page-navigation-button/page-navigation-button.component';
 import { SvgPageNavigationButtonComponent } from '../components/svg-page-navigation-button/svg-page-navigation-button.component';
 
@@ -34,6 +35,7 @@ interface Project {
     selector: 'app-home',
     imports: [
         CommonModule,
+        FormsModule,
         TechnologyComponent,
         CertificationComponent,
         ProjectComponent,
@@ -53,6 +55,9 @@ export class HomeComponent {
 	) {}
 
 	yearsExperience: number = 4;
+	contact = { name: '', email: '', phone: '', message: '', website: '' };
+	contactStatus: 'idle' | 'sending' | 'success' | 'error' = 'idle';
+	contactFeedback = '';
 
 	// Objets génériques pour stocker les états et les méthodes liés aux technos, aux certifs et aux projets
 	elementsConfig = {
@@ -174,6 +179,24 @@ export class HomeComponent {
 				this.changeDetectorRef.markForCheck();
 			},
 			error: (err) => console.error(`Erreur lors du chargement de ${type} :`, err),
+		});
+	}
+
+	sendContactMessage(): void {
+		if (this.contactStatus === 'sending') return;
+
+		this.contactStatus = 'sending';
+		this.contactFeedback = '';
+		this.http.post<{ message: string }>('/api/contact', this.contact).subscribe({
+			next: (response) => {
+				this.contactStatus = 'success';
+				this.contactFeedback = response.message;
+				this.contact = { name: '', email: '', phone: '', message: '', website: '' };
+			},
+			error: (error) => {
+				this.contactStatus = 'error';
+				this.contactFeedback = error?.error?.message || 'Une erreur est survenue. Réessayez plus tard.';
+			},
 		});
 	}
 

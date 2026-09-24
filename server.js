@@ -1,38 +1,102 @@
-// Importation des modules nécessaires
-const express = require('express'); // Framework web pour servir le frontend
-const path = require('path');       // Utilitaires de chemins compatibles avec l'OS
+const crypto = require('crypto');
+const express = require('express');
+const path = require('path');
+const { rateLimit } = require('express-rate-limit');
+const { Resend } = require('resend');
 
-// Port d'écoute du serveur (par défaut 3002)
 const PORT = process.env.PORT || 3002;
-
-// Initialisation de l'application Express
+const isProduction = process.env.NODE_ENV === 'production';
 const app = express();
 
-// Service des fichiers statiques du frontend en production
+app.disable('x-powered-by');
+app.set('trust proxy', 1);
+app.use((req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'DENY');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+    if (isProduction) res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+    next();
+});
+
+const contactLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    limit: 5,
+    standardHeaders: 'draft-8',
+    legacyHeaders: false,
+    message: { message: 'Trop de demandes. Réessayez dans quelques minutes.' },
+});
+
+const isString = (value) => typeof value === 'string';
+const clean = (value) => value.trim().replace(/\r?\n/g, ' ');
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 254;
+const getAllowedOrigin = (req) => `${isProduction ? 'https' : req.protocol}://${req.get('host')}`;
+
+app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' }), contactLimiter, async (req, res) => {
+    const origin = req.get('origin');
+    const allowedOrigin = isProduction ? process.env.SITE_ORIGIN : getAllowedOrigin(req);
+    if (!allowedOrigin) return res.status(503).json({ message: 'Le formulaire est momentanément indisponible.' });
+    if (!origin || origin !== allowedOrigin.replace(/\/$/, '')) return res.status(403).json({ message: 'Requête non autorisée.' });
+
+    const { name, email, phone, message, website } = req.body ?? {};
+    if (!isString(name) || !isString(email) || !isString(message) || (phone !== undefined && !isString(phone)) || (website !== undefined && !isString(website))) {
+        return res.status(400).json({ message: 'Les informations envoyées sont invalides.' });
+    }
+
+    const senderName = clean(name);
+    const senderEmail = clean(email).toLowerCase();
+    const senderPhone = phone ? clean(phone) : '';
+    const senderMessage = message.trim();
+    if (!senderName || senderName.length > 100 || !isValidEmail(senderEmail) || senderPhone.length > 30 || !/^[0-9+(). -]*$/.test(senderPhone) || senderMessage.length < 10 || senderMessage.length > 5000) {
+        return res.status(400).json({ message: 'Vérifiez les informations du formulaire.' });
+    }
+
+    // Champ invisible : une soumission automatique reçoit une réponse neutre sans envoyer d’e-mail.
+    if (website?.trim()) return res.status(202).json({ message: 'Votre message a bien été envoyé.' });
+
+    const { RESEND_API_KEY, CONTACT_FROM, CONTACT_TO } = process.env;
+    if (!RESEND_API_KEY || !CONTACT_FROM || !CONTACT_TO) {
+        console.error('Configuration Resend incomplète.');
+        return res.status(503).json({ message: 'Le formulaire est momentanément indisponible.' });
+    }
+
+    try {
+        const resend = new Resend(RESEND_API_KEY);
+        const { error } = await resend.emails.send({
+            from: CONTACT_FROM,
+            to: [CONTACT_TO],
+            replyTo: senderEmail,
+            subject: `Nouveau message de ${senderName}`,
+            text: `Nom : ${senderName}\nE-mail : ${senderEmail}${senderPhone ? `\nTéléphone : ${senderPhone}` : ''}\n\nMessage :\n${senderMessage}`,
+            headers: { 'X-Entity-Ref-ID': crypto.randomUUID() },
+        });
+
+        if (error) {
+            console.error('Échec Resend :', error.name ?? 'erreur inconnue');
+            return res.status(502).json({ message: 'L’envoi du message a échoué. Réessayez plus tard.' });
+        }
+        return res.status(202).json({ message: 'Votre message a bien été envoyé.' });
+    } catch (error) {
+        console.error('Erreur lors de l’envoi du message :', error instanceof Error ? error.message : 'erreur inconnue');
+        return res.status(502).json({ message: 'L’envoi du message a échoué. Réessayez plus tard.' });
+    }
+});
+
 if (process.env.NODE_ENV !== 'dev') {
     const distDir = path.join(__dirname, 'dist', 'browser');
-
     const sendPage = (page) => (req, res) => {
         res.setHeader('Cache-Control', 'no-cache');
         res.sendFile(path.join(distDir, page, 'index.html'));
     };
-
     app.get('/home', sendPage('home'));
     app.get('/legal-information', sendPage('legal-information'));
-
-    app.use(express.static(distDir, {
-        setHeaders: (res, filePath) => {
-            if (/-[A-Z0-9]{8}\.(?:js|css)$/.test(filePath)) {
-                res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-            }
-        }
-    }));
-
-    app.get('*', (req, res) => {
+    app.use(express.static(distDir, { setHeaders: (res, filePath) => {
+        if (/-[A-Z0-9]{8}\.(?:js|css)$/.test(filePath)) res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }}));
+    app.get('/{*splat}', (req, res) => {
         res.setHeader('Cache-Control', 'no-cache');
         res.sendFile(path.join(distDir, 'index.html'));
     });
 }
 
-// Démarrage du serveur Express
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
