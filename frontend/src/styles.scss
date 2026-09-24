@@ -159,7 +159,8 @@
 	}
 
 	#projects.site-section,
-	#carrier.site-section {
+	#carrier.site-section,
+	#contact.site-section {
 		padding-block: 2.25rem;
 	}
 
@@ -169,7 +170,8 @@
 
 	@media (min-width: 768px) {
 		#projects.site-section,
-		#carrier.site-section {
+		#carrier.site-section,
+		#contact.site-section {
 			padding-block: 3.25rem;
 		}
 
@@ -180,7 +182,8 @@
 
 	@media (min-width: 1024px) {
 		#projects.site-section,
-		#carrier.site-section {
+		#carrier.site-section,
+		#contact.site-section {
 			padding-block: 4.25rem;
 		}
 
@@ -224,11 +227,11 @@
 	}
 
 	.site-button-primary {
-		@apply site-focus inline-flex min-h-11 items-center justify-center rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(17,24,39,0.18)] transition-[background-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:bg-gray-700 hover:shadow-[0_12px_30px_rgba(17,24,39,0.24)] active:translate-y-0;
+		@apply site-focus inline-flex min-h-11 items-center justify-center rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(17,24,39,0.18)] transition-[background-color,box-shadow] duration-200 hover:bg-gray-700 hover:shadow-[0_12px_30px_rgba(17,24,39,0.24)];
 	}
 
 	.site-button-secondary {
-		@apply site-focus inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-800 shadow-sm transition-[background-color,border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:bg-gray-50 hover:shadow-md active:translate-y-0;
+		@apply site-focus inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-800 shadow-sm transition-[background-color,border-color,box-shadow] duration-200 hover:border-gray-300 hover:bg-gray-50 hover:shadow-md;
 	}
 
 	.site-button-light {
