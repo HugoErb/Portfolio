@@ -622,7 +622,7 @@
           <label class="text-sm font-semibold text-gray-800" for="phone">Téléphone</label>
           <span class="text-xs text-gray-500">Facultatif</span>
         </div>
-        <input class="site-focus h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus-visible:border-gray-400" id="phone" name="phone" [(ngModel)]="contact.phone" placeholder="06 00 00 00 00" maxlength="30" autocomplete="tel" inputmode="tel" type="tel" />
+        <input class="site-focus h-11 w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 text-sm text-gray-900 shadow-sm transition focus-visible:border-gray-400" id="phone" name="phone" [(ngModel)]="contact.phone" (ngModelChange)="formatPhoneNumber($event)" placeholder="06 00 00 00 00" maxlength="14" autocomplete="tel" inputmode="tel" type="tel" />
       </div>
       <div class="space-y-2">
         <div class="flex items-baseline justify-between gap-3">
