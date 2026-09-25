@@ -605,7 +605,8 @@
       <h2 class="site-heading">Parlons de votre projet</h2>
       <p class="site-copy">Une question ou une opportunité ? Je vous répondrai dans les meilleurs délais.</p>
     </div>
-    <form #contactForm="ngForm" (ngSubmit)="sendContactMessage()" class="site-card space-y-6 px-6 pb-4 pt-6 sm:px-8 sm:pb-6 sm:pt-8" novalidate>
+    <form #contactForm="ngForm" (ngSubmit)="sendContactMessage()" class="site-card px-6 pb-4 pt-6 sm:px-8 sm:pb-6 sm:pt-8" [attr.aria-busy]="isContactSending" novalidate>
+      <fieldset class="m-0 min-w-0 space-y-6 border-0 p-0 transition-opacity" [disabled]="isContactSending" [class.opacity-60]="isContactSending">
       <div class="grid gap-5 sm:grid-cols-2">
         <div class="space-y-2">
           <label class="text-sm font-semibold text-gray-800" for="name">Nom et prénom</label>
@@ -633,8 +634,15 @@
       <div class="sr-only" aria-hidden="true"><label>Ne pas remplir ce champ<input type="text" name="website" [(ngModel)]="contact.website" tabindex="-1" autocomplete="off" /></label></div>
       <div class="flex flex-col-reverse gap-4 border-t border-gray-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
         <p class="max-w-sm text-xs leading-relaxed text-gray-500">Vos données sont utilisées uniquement pour répondre à votre demande.</p>
-        <button type="submit" class="site-button-primary shrink-0 cursor-pointer" [disabled]="isContactSending">{{ isContactSending ? 'Envoi…' : 'Envoyer le message' }}</button>
+        <button type="submit" class="site-button-primary shrink-0 cursor-pointer" [disabled]="isContactSending">
+          @if (isContactSending) {
+            <span class="inline-flex items-baseline">Envoi<span class="contact-sending-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
+          } @else {
+            Envoyer le message
+          }
+        </button>
       </div>
+      </fieldset>
     </form>
   </div>
 </section>
