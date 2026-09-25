@@ -213,10 +213,12 @@ export class HomeComponent {
 			next: (response) => {
 				this.isContactSending = false;
 				this.contact = { name: '', email: '', phone: '', message: '', website: '' };
+				this.changeDetectorRef.detectChanges();
 				void this.showContactAlert('success', 'Message envoyé', response.message);
 			},
 			error: (error) => {
 				this.isContactSending = false;
+				this.changeDetectorRef.detectChanges();
 				void this.showContactAlert('error', 'Échec de l’envoi', error?.error?.message || 'Une erreur est survenue. Réessayez plus tard.');
 			},
 		});
