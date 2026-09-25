@@ -30,6 +30,10 @@ const contactLimiter = rateLimit({
 const isString = (value) => typeof value === 'string';
 const clean = (value) => value.trim().replace(/\r?\n/g, ' ');
 const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 254;
+const formatFrenchPhone = (phone) => {
+    const digits = phone.replace(/\D/g, '');
+    return /^0[1-9]\d{8}$/.test(digits) ? digits.match(/\d{2}/g).join(' ') : null;
+};
 const getAllowedOrigin = (req) => `${isProduction ? 'https' : req.protocol}://${req.get('host')}`;
 
 app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' }), contactLimiter, async (req, res) => {
@@ -45,9 +49,10 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
 
     const senderName = clean(name);
     const senderEmail = clean(email).toLowerCase();
-    const senderPhone = phone ? clean(phone) : '';
+    const rawPhone = phone ? clean(phone) : '';
+    const senderPhone = rawPhone ? formatFrenchPhone(rawPhone) : '';
     const senderMessage = message.trim();
-    if (!senderName || senderName.length > 100 || !isValidEmail(senderEmail) || senderPhone.length > 30 || !/^[0-9+(). -]*$/.test(senderPhone) || senderMessage.length < 10 || senderMessage.length > 5000) {
+    if (!senderName || senderName.length > 100 || !isValidEmail(senderEmail) || (rawPhone && (!/^[0-9(). -]*$/.test(rawPhone) || !senderPhone)) || senderMessage.length < 10 || senderMessage.length > 5000) {
         return res.status(400).json({ message: 'Vérifiez les informations du formulaire.' });
     }
 

@@ -199,8 +199,8 @@ export class HomeComponent {
 			this.showContactValidationError('Indiquez une adresse e-mail valide.');
 			return;
 		}
-		if (phone.length > 30 || !/^[0-9+(). -]*$/.test(phone)) {
-			this.showContactValidationError('Indiquez un numéro de téléphone valide ou laissez ce champ vide.');
+		if (phone && !/^0[1-9](?: \d{2}){4}$/.test(phone)) {
+			this.showContactValidationError('Indiquez un numéro de téléphone français à 10 chiffres ou laissez ce champ vide.');
 			return;
 		}
 		if (message.length < 10 || message.length > 5000) {
@@ -222,6 +222,11 @@ export class HomeComponent {
 				void this.showContactAlert('error', 'Échec de l’envoi', error?.error?.message || 'Une erreur est survenue. Réessayez plus tard.');
 			},
 		});
+	}
+
+	formatPhoneNumber(value: string): void {
+		const digits = value.replace(/\D/g, '').slice(0, 10);
+		this.contact.phone = digits.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
 	}
 
 	private showContactValidationError(message: string): void {
