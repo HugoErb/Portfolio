@@ -304,6 +304,36 @@
 	}
 }
 
+@keyframes contact-sending-dot {
+	0%,
+	60%,
+	100% {
+		transform: translateY(0);
+	}
+
+	30% {
+		transform: translateY(-0.3em);
+	}
+}
+
+.contact-sending-dots {
+	display: inline-flex;
+	margin-left: 0.05em;
+}
+
+.contact-sending-dots span {
+	display: inline-block;
+	animation: contact-sending-dot 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.contact-sending-dots span:nth-child(2) {
+	animation-delay: 0.13s;
+}
+
+.contact-sending-dots span:nth-child(3) {
+	animation-delay: 0.26s;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;

@@ -76,17 +76,20 @@ app.post('/api/contact', express.json({ limit: '10kb', type: 'application/json' 
             return res.status(502).json({ message: 'L’envoi du message a échoué. Réessayez plus tard.' });
         }
 
-        const { error: acknowledgementError } = await resend.emails.send({
+        void resend.emails.send({
             from: SENDER_EMAIL,
             to: [senderEmail],
             replyTo: ADMIN_EMAIL,
             subject: 'Votre message a bien été reçu',
             text: `Bonjour ${senderName},\n\nJ’ai bien reçu votre message et vous remercie de m’avoir contacté. Je vais l’étudier et reviendrai vers vous dans les meilleurs délais.\n\nEn attendant, vous pouvez découvrir mon travail :\n- Portfolio : https://hugoeribon.fr/home\n- LinkedIn : https://linkedin.com/in/hugo-eribon\n- GitHub : https://github.com/HugoErb\n\nCordialement,\nHugo Eribon`,
             headers: { 'X-Entity-Ref-ID': crypto.randomUUID() },
+        }).then(({ error: acknowledgementError }) => {
+            if (acknowledgementError) {
+                console.error('Échec de l’accusé de réception Resend :', acknowledgementError.name ?? 'erreur inconnue');
+            }
+        }).catch((error) => {
+            console.error('Erreur lors de l’envoi de l’accusé de réception :', error instanceof Error ? error.message : 'erreur inconnue');
         });
-        if (acknowledgementError) {
-            console.error('Échec de l’accusé de réception Resend :', acknowledgementError.name ?? 'erreur inconnue');
-        }
         return res.status(202).json({ message: 'Votre message a bien été envoyé.' });
     } catch (error) {
         console.error('Erreur lors de l’envoi du message :', error instanceof Error ? error.message : 'erreur inconnue');
