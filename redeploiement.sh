@@ -67,6 +67,10 @@ else
     exit 1
 fi
 
+# Effacement des logs PM2 de la version précédente
+echo "Effacement des logs PM2 de '$nomApplication'..."
+$PM2_CMD flush "$nomApplication" || true
+
 # Lancement/redémarrage avec PM2
 echo "(Re)démarrage de l'application '$nomApplication' via PM2..."
 $PM2_CMD startOrRestart ecosystem_production.config.js --only "$nomApplication"
